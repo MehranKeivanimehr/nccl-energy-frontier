@@ -60,14 +60,12 @@ Generated descriptive results are in [data/processed/full/results_summary.md](da
 
 ## Limitations
 
-- Three repeated blocks were completed rather than the planned five, and the blocks ran sequentially on a shared host. Bootstrap intervals are descriptive.
 - The effective configuration for timed launches is inferred from the initial probe; timed processes did not record TUNING output, and no closing probe was obtained.
 - Energy regions include warmup operations, while reported nccl-tests latency covers timed operations.
 - Counter boundaries are triggered by parsed stdout, not direct GPU execution markers.
 - P8 idle subtraction is not pure communication-only dynamic energy.
 - A short attempt preceded 406 accepted retries, which may have changed temperature or clocks before the accepted launch.
 - The 4-GPU measurements combine a different GPU count with a different communication topology and show substantial shared-host/topology-related variability.
-- No 8-GPU measurements were collected.
 
 ## Repository Layout
 
