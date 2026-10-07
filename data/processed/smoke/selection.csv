@@ -1,0 +1,109 @@
+coll,gpu_set,algo,proto,config,size_bytes,probe_status,probe_end_status,selected,selected_end,selection_stable,sel_algo,sel_proto,forced_honoured,oop_wrong,ip_wrong,reason
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,4096,ok,ok,RING/LL128[0-0],RING/LL128[0-0],True,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,1048576,ok,ok,RING/LL128[0-3],RING/LL128[0-3],True,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,67108864,ok,ok,RING/LL128[0-3],RING/LL128[0-3],True,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,4096,ok,ok,RING/LL[0-0],RING/LL[0-0],True,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,1048576,ok,ok,RING/SIMPLE[0-3],RING/SIMPLE[0-3],True,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,67108864,ok,ok,RING/SIMPLE[0-3],RING/SIMPLE[0-3],True,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,4096,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,1048576,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,67108864,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,4096,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,1048576,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,67108864,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,4096,ok,ok,RING/LL128[0-0],RING/LL128[0-0],True,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,1048576,ok,ok,RING/LL128[0-3],RING/LL128[0-3],True,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,67108864,ok,ok,RING/LL128[0-3],RING/LL128[0-3],True,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,4096,ok,ok,RING/LL[0-0],RING/LL[0-0],True,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,1048576,ok,ok,RING/SIMPLE[0-3],RING/SIMPLE[0-3],True,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,67108864,ok,ok,RING/SIMPLE[0-3],RING/SIMPLE[0-3],True,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,4096,ok,ok,RING/LL128[0-0],RING/LL128[0-0],True,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,1048576,ok,ok,RING/LL128[0-7],RING/LL128[0-7],True,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,67108864,ok,ok,RING/LL128[0-7],RING/LL128[0-7],True,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,4096,ok,ok,RING/LL[0-0],RING/LL[0-0],True,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,1048576,ok,ok,RING/SIMPLE[0-7],RING/SIMPLE[0-7],True,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,67108864,ok,ok,RING/SIMPLE[0-7],RING/SIMPLE[0-7],True,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Tree,LL128,Tree/LL128,4096,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,1048576,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,67108864,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,default,Tree/auto,4096,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,1048576,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,67108864,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,default,LL128,auto/LL128,4096,ok,ok,RING/LL128[0-0],RING/LL128[0-0],True,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,1048576,ok,ok,RING/LL128[0-7],RING/LL128[0-7],True,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,67108864,ok,ok,RING/LL128[0-7],RING/LL128[0-7],True,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,4096,ok,ok,RING/LL[0-0],RING/LL[0-0],True,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,1048576,ok,ok,RING/SIMPLE[0-7],RING/SIMPLE[0-7],True,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,67108864,ok,ok,RING/SIMPLE[0-7],RING/SIMPLE[0-7],True,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,4096,ok,ok,RING/LL128[0-0],RING/LL128[0-0],True,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,1048576,ok,ok,RING/LL128[0-3],RING/LL128[0-3],True,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,67108864,ok,ok,RING/LL128[0-3],RING/LL128[0-3],True,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,4096,ok,ok,RING/LL[0-0],RING/LL[0-0],True,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,1048576,ok,ok,RING/SIMPLE[0-3],RING/SIMPLE[0-3],True,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,67108864,ok,ok,RING/SIMPLE[0-3],RING/SIMPLE[0-3],True,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,4096,ok,ok,TREE/LL128[0-0],TREE/LL128[0-0],True,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,1048576,ok,ok,TREE/LL128[0-3],TREE/LL128[0-3],True,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,67108864,ok,ok,TREE/LL128[0-3],TREE/LL128[0-3],True,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,4096,ok,ok,TREE/LL[0-0],TREE/LL[0-0],True,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,1048576,ok,ok,TREE/SIMPLE[0-3],TREE/SIMPLE[0-3],True,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,67108864,ok,ok,TREE/SIMPLE[0-3],TREE/SIMPLE[0-3],True,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,4096,ok,ok,TREE/LL128[0-0],TREE/LL128[0-0],True,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,1048576,ok,ok,RING/LL128[0-3],RING/LL128[0-3],True,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,67108864,ok,ok,RING/LL128[0-3],RING/LL128[0-3],True,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,4096,ok,ok,RING/LL[0-0],RING/LL[0-0],True,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,1048576,ok,ok,RING/SIMPLE[0-3],RING/SIMPLE[0-3],True,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,67108864,ok,ok,RING/SIMPLE[0-3],RING/SIMPLE[0-3],True,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,4096,ok,ok,RING/LL128[0-0],RING/LL128[0-0],True,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,1048576,ok,ok,RING/LL128[0-7],RING/LL128[0-7],True,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,67108864,ok,ok,RING/LL128[0-7],RING/LL128[0-7],True,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,4096,ok,ok,RING/LL[0-0],RING/LL[0-0],True,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,1048576,ok,ok,RING/SIMPLE[0-7],RING/SIMPLE[0-7],True,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,67108864,ok,ok,RING/SIMPLE[0-7],RING/SIMPLE[0-7],True,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,4096,ok,ok,TREE/LL128[0-0],TREE/LL128[0-0],True,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,1048576,ok,ok,TREE/LL128[0-7],TREE/LL128[0-7],True,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,67108864,ok,ok,TREE/LL128[0-7],TREE/LL128[0-7],True,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,4096,ok,ok,TREE/LL[0-0],TREE/LL[0-0],True,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,1048576,ok,ok,TREE/SIMPLE[0-7],TREE/SIMPLE[0-7],True,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,67108864,ok,ok,TREE/SIMPLE[0-7],TREE/SIMPLE[0-7],True,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,4096,ok,ok,TREE/LL128[0-0],TREE/LL128[0-0],True,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,1048576,ok,ok,RING/LL128[0-7],RING/LL128[0-7],True,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,67108864,ok,ok,RING/LL128[0-7],RING/LL128[0-7],True,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,4096,ok,ok,RING/LL[0-0],RING/LL[0-0],True,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,1048576,ok,ok,RING/SIMPLE[0-7],RING/SIMPLE[0-7],True,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,67108864,ok,ok,RING/SIMPLE[0-7],RING/SIMPLE[0-7],True,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,4096,ok,ok,RING/LL128[0-0],RING/LL128[0-0],True,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,1048576,ok,ok,RING/LL128[0-3],RING/LL128[0-3],True,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,67108864,ok,ok,RING/LL128[0-3],RING/LL128[0-3],True,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,4096,ok,ok,RING/LL[0-0],RING/LL[0-0],True,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,1048576,ok,ok,RING/SIMPLE[0-3],RING/SIMPLE[0-3],True,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,67108864,ok,ok,RING/SIMPLE[0-3],RING/SIMPLE[0-3],True,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,4096,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,1048576,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,67108864,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,4096,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,1048576,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,67108864,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,4096,ok,ok,RING/LL128[0-0],RING/LL128[0-0],True,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,1048576,ok,ok,RING/LL128[0-3],RING/LL128[0-3],True,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,67108864,ok,ok,RING/LL128[0-3],RING/LL128[0-3],True,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,4096,ok,ok,RING/LL[0-0],RING/LL[0-0],True,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,1048576,ok,ok,RING/SIMPLE[0-3],RING/SIMPLE[0-3],True,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,67108864,ok,ok,RING/SIMPLE[0-3],RING/SIMPLE[0-3],True,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,4096,ok,ok,RING/LL128[0-0],RING/LL128[0-0],True,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,1048576,ok,ok,RING/LL128[0-7],RING/LL128[0-7],True,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,67108864,ok,ok,RING/LL128[0-7],RING/LL128[0-7],True,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,4096,ok,ok,RING/LL[0-0],RING/LL[0-0],True,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,1048576,ok,ok,RING/SIMPLE[0-7],RING/SIMPLE[0-7],True,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,67108864,ok,ok,RING/SIMPLE[0-7],RING/SIMPLE[0-7],True,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,4096,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,1048576,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,67108864,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,4096,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,1048576,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,67108864,unsupported,unsupported,,,True,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,default,LL128,auto/LL128,4096,ok,ok,RING/LL128[0-0],RING/LL128[0-0],True,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,1048576,ok,ok,RING/LL128[0-7],RING/LL128[0-7],True,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,67108864,ok,ok,RING/LL128[0-7],RING/LL128[0-7],True,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,4096,ok,ok,RING/LL[0-0],RING/LL[0-0],True,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,1048576,ok,ok,RING/SIMPLE[0-7],RING/SIMPLE[0-7],True,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,67108864,ok,ok,RING/SIMPLE[0-7],RING/SIMPLE[0-7],True,RING,SIMPLE,True,0.0,0.0,

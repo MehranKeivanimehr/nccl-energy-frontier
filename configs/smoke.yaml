@@ -1,0 +1,67 @@
+# Smoke test: few sizes, a subset of configurations, 2 trials.
+# Purpose: validate the pipeline (probe/unsupported handling, region
+# detection, energy-counter reads, parsing) before the full sweep.
+# Results from this config are NOT used for any finding.
+name: smoke
+seed: 20261005
+trials: 2
+output_root: data/raw
+
+nccl_tests:
+  src_dir: third_party/nccl-tests
+  build_dir: third_party/nccl-tests/build
+  nccl_lib_dir: third_party/nccl_home/lib
+  cuda_home: /usr/local/cuda-12.4
+  datatype: float
+  op: sum
+  extra_env:
+    # Connect channels during communicator initialization so connection setup
+    # remains outside the measured collective regions.
+    NCCL_RUNTIME_CONNECT: "0"
+
+collectives: [all_reduce, all_gather, reduce_scatter]
+
+# GPU indices are NVML / nvidia-smi indices (PCI bus order). CUDA_VISIBLE_DEVICES
+# is set to the corresponding UUIDs with CUDA_DEVICE_ORDER=PCI_BUS_ID.
+gpu_sets:
+  - {name: 2gpu_nvlink, gpus: [4, 5], numa_bind: 1}
+  - {name: 4gpu, gpus: [4, 5, 6, 7], numa_bind: 1}
+
+sizes:
+  list: [4096, 1048576, 67108864]
+
+algorithms: [default, Ring, Tree]
+protocols: [default, LL128]
+
+timing:
+  min_region_s: 2.0        # every timed region must last >= 2 s (timed iterations only)
+  target_region_s: 2.4     # iteration count is sized from calibration to hit this
+  warmup_s: 0.2            # warm-up iterations inside each region (nccl-tests -w)
+  min_iters: 5
+  min_warmup_iters: 1
+  max_retries_short: 1
+  wall_vs_reported_tol: 0.10
+  launch_timeout_min_s: 120
+  launch_timeout_factor: 4
+  probe_timeout_s: 600
+
+calibration:
+  small_max_bytes: 1048576
+  small_iters: 200
+  small_warmup: 20
+  large_iters: 5
+  large_warmup: 1
+
+sampler:
+  period_s: 0.05           # PowerUsage updates every ~100 ms under load on this GPU
+  proc_period_s: 1.0
+
+idle:
+  duration_s: 10
+  settle_timeout_s: 180
+  min_settle_s: 5
+  every_n_launches: 60
+
+foreign_process:
+  wait_s: 600
+  poll_s: 30

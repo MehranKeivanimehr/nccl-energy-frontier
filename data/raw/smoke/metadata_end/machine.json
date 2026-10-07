@@ -1,0 +1,420 @@
+{
+  "captured_at_utc": "2026-10-06T04:08:02Z",
+  "hostname": "benchmark-host",
+  "platform": "Linux-6.11.0-25-generic-x86_64-with-glibc2.39",
+  "kernel": "6.11.0-25-generic",
+  "python": "3.11.14 (main, Oct 21 2025, 18:31:21) [GCC 11.2.0]",
+  "python_executable": "/path/to/python",
+  "nvidia_driver": "550.144.03",
+  "cuda_driver_api": 12040,
+  "nvml_python": null,
+  "nccl_library_version_code": 22705,
+  "nccl_library_path": "/path/to/libnccl.so.2",
+  "nccl_library_sha256": "1d9c10322efacde695cf640db1f29fc1586c929f1087f0e1202d2d5e70fb7168",
+  "nccl_tests_binaries_sha256": {
+    "all_gather_perf": "7b40c98953b4dba13fb4daa1a752b29f993a599ebb0725162317eea0aec685af",
+    "all_reduce_perf": "735602605e680e58e489709eb32bdf7896533b7574d3efa45570c4c8dd8d1528",
+    "alltoall_perf": "2dc8d6cf790d14962504f0b9edbec4c0bca7b15c72bd007905689416409e43b1",
+    "alltoallv_perf": "9f59f5412e51e1b65dfa967a68c340751c5cf3fe1b0281d78815d8b525baab34",
+    "broadcast_perf": "a5e629fae41da0cfda313b27c5a09eac8442747b6cbe770780f2f3f4e9fc0c66",
+    "gather_perf": "dcf08e6b00de5ace6d207212b85360930dd79b33c6290794ea23eaf194fe2aa7",
+    "hypercube_perf": "f23b85658b0ac32c8e59cdf2ee74d3b632d9f4d97e5d824ff9769bcac793cbeb",
+    "reduce_perf": "fc6fd428c46096bba5e2444228a8bea684d1683eb81c7eaac0539c9e6084572e",
+    "reduce_scatter_perf": "45e4fd916e1cbf3afafbf178de846c91f55cb9d5c774acd257eed4a323ac6b19",
+    "scatter_perf": "bedef70f15b0a511ef958b3ec8583d6d4292c4bd189af4b53520bbab32597f2c",
+    "sendrecv_perf": "670df0da4ea2d82283baf91c333a418fe1a7b18d2fa94fd555f70da5907934d9"
+  },
+  "torch": {
+    "torch": "2.9.1+cu128",
+    "torch_cuda": "12.8",
+    "torch_nccl": "2.27.5"
+  },
+  "git_head": "HEAD\n\n[stderr]\nfatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'",
+  "git_dirty": true,
+  "nccl_tests_commit": "afd59abab774a6a4b492eb344bd0c845a0b7bb4d Mon Oct 5 14:40:17 2026 -0500 bump nccl-tests version to 2.21.1",
+  "load_average": [
+    10.02001953125,
+    10.04345703125,
+    10.1962890625
+  ],
+  "env": {},
+  "gpus": [
+    {
+      "index": 0,
+      "name": "NVIDIA RTX A6000",
+      "uuid": "GPU-REDACTED-0",
+      "serial": "REDACTED-GPU-0",
+      "pci_bus_id": "00000000:01:00.0",
+      "vbios": "94.02.5C.00.02",
+      "memory_total_bytes": 51527024640,
+      "power_limit_mw": 300000,
+      "power_default_limit_mw": 300000,
+      "power_enforced_limit_mw": 300000,
+      "max_clock_graphics_mhz": 2100,
+      "max_clock_sm_mhz": 2100,
+      "max_clock_mem_mhz": 8001,
+      "persistence_mode": 0,
+      "compute_mode": 0,
+      "ecc_mode_current": 0,
+      "pcie_link_gen_max": 4,
+      "pcie_link_width_max": 16,
+      "energy_counter_supported": true,
+      "nvlinks": [
+        {
+          "link": 0,
+          "active": true,
+          "remote_pci": "00000000:23:00.0"
+        },
+        {
+          "link": 1,
+          "active": true,
+          "remote_pci": "00000000:23:00.0"
+        },
+        {
+          "link": 2,
+          "active": true,
+          "remote_pci": "00000000:23:00.0"
+        },
+        {
+          "link": 3,
+          "active": true,
+          "remote_pci": "00000000:23:00.0"
+        }
+      ],
+      "processes_at_capture": []
+    },
+    {
+      "index": 1,
+      "name": "NVIDIA RTX A6000",
+      "uuid": "GPU-REDACTED-1",
+      "serial": "REDACTED-GPU-1",
+      "pci_bus_id": "00000000:23:00.0",
+      "vbios": "94.02.5C.00.02",
+      "memory_total_bytes": 51527024640,
+      "power_limit_mw": 300000,
+      "power_default_limit_mw": 300000,
+      "power_enforced_limit_mw": 300000,
+      "max_clock_graphics_mhz": 2100,
+      "max_clock_sm_mhz": 2100,
+      "max_clock_mem_mhz": 8001,
+      "persistence_mode": 0,
+      "compute_mode": 0,
+      "ecc_mode_current": 0,
+      "pcie_link_gen_max": 4,
+      "pcie_link_width_max": 16,
+      "energy_counter_supported": true,
+      "nvlinks": [
+        {
+          "link": 0,
+          "active": true,
+          "remote_pci": "00000000:01:00.0"
+        },
+        {
+          "link": 1,
+          "active": true,
+          "remote_pci": "00000000:01:00.0"
+        },
+        {
+          "link": 2,
+          "active": true,
+          "remote_pci": "00000000:01:00.0"
+        },
+        {
+          "link": 3,
+          "active": true,
+          "remote_pci": "00000000:01:00.0"
+        }
+      ],
+      "processes_at_capture": [
+        {
+          "pid": 2287837,
+          "used_mem": 38489030656
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "name": "NVIDIA RTX A6000",
+      "uuid": "GPU-REDACTED-2",
+      "serial": "REDACTED-GPU-2",
+      "pci_bus_id": "00000000:41:00.0",
+      "vbios": "94.02.5C.00.02",
+      "memory_total_bytes": 51527024640,
+      "power_limit_mw": 300000,
+      "power_default_limit_mw": 300000,
+      "power_enforced_limit_mw": 300000,
+      "max_clock_graphics_mhz": 2100,
+      "max_clock_sm_mhz": 2100,
+      "max_clock_mem_mhz": 8001,
+      "persistence_mode": 0,
+      "compute_mode": 0,
+      "ecc_mode_current": 0,
+      "pcie_link_gen_max": 4,
+      "pcie_link_width_max": 16,
+      "energy_counter_supported": true,
+      "nvlinks": [
+        {
+          "link": 0,
+          "active": true,
+          "remote_pci": "00000000:61:00.0"
+        },
+        {
+          "link": 1,
+          "active": true,
+          "remote_pci": "00000000:61:00.0"
+        },
+        {
+          "link": 2,
+          "active": true,
+          "remote_pci": "00000000:61:00.0"
+        },
+        {
+          "link": 3,
+          "active": true,
+          "remote_pci": "00000000:61:00.0"
+        }
+      ],
+      "processes_at_capture": []
+    },
+    {
+      "index": 3,
+      "name": "NVIDIA RTX A6000",
+      "uuid": "GPU-REDACTED-3",
+      "serial": "REDACTED-GPU-3",
+      "pci_bus_id": "00000000:61:00.0",
+      "vbios": "94.02.5C.00.02",
+      "memory_total_bytes": 51527024640,
+      "power_limit_mw": 300000,
+      "power_default_limit_mw": 300000,
+      "power_enforced_limit_mw": 300000,
+      "max_clock_graphics_mhz": 2100,
+      "max_clock_sm_mhz": 2100,
+      "max_clock_mem_mhz": 8001,
+      "persistence_mode": 0,
+      "compute_mode": 0,
+      "ecc_mode_current": 0,
+      "pcie_link_gen_max": 4,
+      "pcie_link_width_max": 16,
+      "energy_counter_supported": true,
+      "nvlinks": [
+        {
+          "link": 0,
+          "active": true,
+          "remote_pci": "00000000:41:00.0"
+        },
+        {
+          "link": 1,
+          "active": true,
+          "remote_pci": "00000000:41:00.0"
+        },
+        {
+          "link": 2,
+          "active": true,
+          "remote_pci": "00000000:41:00.0"
+        },
+        {
+          "link": 3,
+          "active": true,
+          "remote_pci": "00000000:41:00.0"
+        }
+      ],
+      "processes_at_capture": []
+    },
+    {
+      "index": 4,
+      "name": "NVIDIA RTX A6000",
+      "uuid": "GPU-REDACTED-4",
+      "serial": "REDACTED-GPU-4",
+      "pci_bus_id": "00000000:81:00.0",
+      "vbios": "94.02.5C.00.02",
+      "memory_total_bytes": 51527024640,
+      "power_limit_mw": 300000,
+      "power_default_limit_mw": 300000,
+      "power_enforced_limit_mw": 300000,
+      "max_clock_graphics_mhz": 2100,
+      "max_clock_sm_mhz": 2100,
+      "max_clock_mem_mhz": 8001,
+      "persistence_mode": 0,
+      "compute_mode": 0,
+      "ecc_mode_current": 0,
+      "pcie_link_gen_max": 4,
+      "pcie_link_width_max": 16,
+      "energy_counter_supported": true,
+      "nvlinks": [
+        {
+          "link": 0,
+          "active": true,
+          "remote_pci": "00000000:A1:00.0"
+        },
+        {
+          "link": 1,
+          "active": true,
+          "remote_pci": "00000000:A1:00.0"
+        },
+        {
+          "link": 2,
+          "active": true,
+          "remote_pci": "00000000:A1:00.0"
+        },
+        {
+          "link": 3,
+          "active": true,
+          "remote_pci": "00000000:A1:00.0"
+        }
+      ],
+      "processes_at_capture": []
+    },
+    {
+      "index": 5,
+      "name": "NVIDIA RTX A6000",
+      "uuid": "GPU-REDACTED-5",
+      "serial": "REDACTED-GPU-5",
+      "pci_bus_id": "00000000:A1:00.0",
+      "vbios": "94.02.5C.00.02",
+      "memory_total_bytes": 51527024640,
+      "power_limit_mw": 300000,
+      "power_default_limit_mw": 300000,
+      "power_enforced_limit_mw": 300000,
+      "max_clock_graphics_mhz": 2100,
+      "max_clock_sm_mhz": 2100,
+      "max_clock_mem_mhz": 8001,
+      "persistence_mode": 0,
+      "compute_mode": 0,
+      "ecc_mode_current": 0,
+      "pcie_link_gen_max": 4,
+      "pcie_link_width_max": 16,
+      "energy_counter_supported": true,
+      "nvlinks": [
+        {
+          "link": 0,
+          "active": true,
+          "remote_pci": "00000000:81:00.0"
+        },
+        {
+          "link": 1,
+          "active": true,
+          "remote_pci": "00000000:81:00.0"
+        },
+        {
+          "link": 2,
+          "active": true,
+          "remote_pci": "00000000:81:00.0"
+        },
+        {
+          "link": 3,
+          "active": true,
+          "remote_pci": "00000000:81:00.0"
+        }
+      ],
+      "processes_at_capture": []
+    },
+    {
+      "index": 6,
+      "name": "NVIDIA RTX A6000",
+      "uuid": "GPU-REDACTED-6",
+      "serial": "REDACTED-GPU-6",
+      "pci_bus_id": "00000000:C1:00.0",
+      "vbios": "94.02.5C.00.02",
+      "memory_total_bytes": 51527024640,
+      "power_limit_mw": 300000,
+      "power_default_limit_mw": 300000,
+      "power_enforced_limit_mw": 300000,
+      "max_clock_graphics_mhz": 2100,
+      "max_clock_sm_mhz": 2100,
+      "max_clock_mem_mhz": 8001,
+      "persistence_mode": 0,
+      "compute_mode": 0,
+      "ecc_mode_current": 0,
+      "pcie_link_gen_max": 4,
+      "pcie_link_width_max": 16,
+      "energy_counter_supported": true,
+      "nvlinks": [
+        {
+          "link": 0,
+          "active": true,
+          "remote_pci": "00000000:E1:00.0"
+        },
+        {
+          "link": 1,
+          "active": true,
+          "remote_pci": "00000000:E1:00.0"
+        },
+        {
+          "link": 2,
+          "active": true,
+          "remote_pci": "00000000:E1:00.0"
+        },
+        {
+          "link": 3,
+          "active": true,
+          "remote_pci": "00000000:E1:00.0"
+        }
+      ],
+      "processes_at_capture": []
+    },
+    {
+      "index": 7,
+      "name": "NVIDIA RTX A6000",
+      "uuid": "GPU-REDACTED-7",
+      "serial": "REDACTED-GPU-7",
+      "pci_bus_id": "00000000:E1:00.0",
+      "vbios": "94.02.5C.00.02",
+      "memory_total_bytes": 51527024640,
+      "power_limit_mw": 300000,
+      "power_default_limit_mw": 300000,
+      "power_enforced_limit_mw": 300000,
+      "max_clock_graphics_mhz": 2100,
+      "max_clock_sm_mhz": 2100,
+      "max_clock_mem_mhz": 8001,
+      "persistence_mode": 0,
+      "compute_mode": 0,
+      "ecc_mode_current": 0,
+      "pcie_link_gen_max": 4,
+      "pcie_link_width_max": 16,
+      "energy_counter_supported": true,
+      "nvlinks": [
+        {
+          "link": 0,
+          "active": true,
+          "remote_pci": "00000000:C1:00.0"
+        },
+        {
+          "link": 1,
+          "active": true,
+          "remote_pci": "00000000:C1:00.0"
+        },
+        {
+          "link": 2,
+          "active": true,
+          "remote_pci": "00000000:C1:00.0"
+        },
+        {
+          "link": 3,
+          "active": true,
+          "remote_pci": "00000000:C1:00.0"
+        }
+      ],
+      "processes_at_capture": []
+    }
+  ],
+  "command_return_codes": {
+    "nvidia-smi.txt": 0,
+    "nvidia-smi-topo.txt": 0,
+    "nvidia-smi-q.txt": 0,
+    "nvidia-smi-nvlink.txt": 0,
+    "nvidia-smi-compute-apps.txt": 0,
+    "nvcc-version.txt": 0,
+    "lscpu.txt": 0,
+    "lscpu-e.txt": 0,
+    "numactl-H.txt": 0,
+    "uname.txt": 0,
+    "hostname.txt": 0,
+    "os-release.txt": 0,
+    "free.txt": 0,
+    "uptime.txt": 0,
+    "git-head.txt": 128,
+    "git-status.txt": 0,
+    "nccl-tests-git.txt": 0,
+    "pip-freeze.txt": 0
+  }
+}

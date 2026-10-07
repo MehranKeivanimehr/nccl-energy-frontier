@@ -1,0 +1,20 @@
+{
+ "2gpu_nvlink": {
+  "status": "ok"
+ },
+ "4gpu": {
+  "status": "ok"
+ },
+ "8gpu": {
+  "status": "foreign_process",
+  "foreign": {
+   "1": [
+    {
+     "pid": 2287837,
+     "kind": "compute",
+     "used_mem_bytes": 38489030656
+    }
+   ]
+  }
+ }
+}

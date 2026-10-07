@@ -1,0 +1,2 @@
+gpu_uuid, pid, process_name, used_gpu_memory [MiB]
+GPU-REDACTED-1, 2287837, python, 36706 MiB

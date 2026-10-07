@@ -1,0 +1,24 @@
+# nccl-tests version 2.21.1 (afd59ab) nccl-headers=22705 nccl-library=22705
+# Collective test starting: all_gather_perf
+# nThread 2 nGpus 1 minBytes 4096 maxBytes 67108864 step: 2(factor) warmup iters: 0 iters: 1 agg iters: 1 validation: 1 graph: 0 unalign: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid 2344150 on benchmark-host device  0 [0000:81:00] NVIDIA RTX A6000
+#  Rank  1 Group  0 Pid 2344150 on benchmark-host device  1 [0000:a1:00] NVIDIA RTX A6000
+#
+#                                                              out-of-place                       in-place
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)             (us)  (GB/s)  (GB/s)        
+        4096           512     float    none      -1benchmark-host: Test NCCL failure all_gather.cu:106 'invalid usage (run with NCCL_DEBUG=WARN for details) / '
+ .. benchmark-host pid 2344150: Test failure common.cu:623
+ .. benchmark-host pid 2344150: Test failure common.cu:762
+ .. benchmark-host pid 2344150: Test failure common.cu:958
+ .. benchmark-host pid 2344150: Test failure all_gather.cu:147
+ .. benchmark-host pid 2344150: Test failure common.cu:991
+benchmark-host: Test NCCL failure all_gather.cu:106 'invalid usage (run with NCCL_DEBUG=WARN for details) / '
+ .. benchmark-host pid 2344150: Test failure common.cu:623
+ .. benchmark-host pid 2344150: Test failure common.cu:762
+ .. benchmark-host pid 2344150: Test failure common.cu:958
+ .. benchmark-host pid 2344150: Test failure all_gather.cu:147
+ .. benchmark-host pid 2344150: Test failure common.cu:991
+ .. benchmark-host pid 2344150: Test failure common.cu:1870

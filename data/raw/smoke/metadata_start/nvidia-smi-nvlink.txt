@@ -1,0 +1,40 @@
+GPU 0: NVIDIA RTX A6000 (UUID: GPU-REDACTED-0)
+	 Link 0: 14.062 GB/s
+	 Link 1: 14.062 GB/s
+	 Link 2: 14.062 GB/s
+	 Link 3: 14.062 GB/s
+GPU 1: NVIDIA RTX A6000 (UUID: GPU-REDACTED-1)
+	 Link 0: 14.062 GB/s
+	 Link 1: 14.062 GB/s
+	 Link 2: 14.062 GB/s
+	 Link 3: 14.062 GB/s
+GPU 2: NVIDIA RTX A6000 (UUID: GPU-REDACTED-2)
+	 Link 0: 14.062 GB/s
+	 Link 1: 14.062 GB/s
+	 Link 2: 14.062 GB/s
+	 Link 3: 14.062 GB/s
+GPU 3: NVIDIA RTX A6000 (UUID: GPU-REDACTED-3)
+	 Link 0: 14.062 GB/s
+	 Link 1: 14.062 GB/s
+	 Link 2: 14.062 GB/s
+	 Link 3: 14.062 GB/s
+GPU 4: NVIDIA RTX A6000 (UUID: GPU-REDACTED-4)
+	 Link 0: 14.062 GB/s
+	 Link 1: 14.062 GB/s
+	 Link 2: 14.062 GB/s
+	 Link 3: 14.062 GB/s
+GPU 5: NVIDIA RTX A6000 (UUID: GPU-REDACTED-5)
+	 Link 0: 14.062 GB/s
+	 Link 1: 14.062 GB/s
+	 Link 2: 14.062 GB/s
+	 Link 3: 14.062 GB/s
+GPU 6: NVIDIA RTX A6000 (UUID: GPU-REDACTED-6)
+	 Link 0: 14.062 GB/s
+	 Link 1: 14.062 GB/s
+	 Link 2: 14.062 GB/s
+	 Link 3: 14.062 GB/s
+GPU 7: NVIDIA RTX A6000 (UUID: GPU-REDACTED-7)
+	 Link 0: 14.062 GB/s
+	 Link 1: 14.062 GB/s
+	 Link 2: 14.062 GB/s
+	 Link 3: 14.062 GB/s

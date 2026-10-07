@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nccl-energy-frontier"
+version = "0.1.0"
+description = "Pilot characterization of NCCL latency and participating-GPU board energy"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [{name = "Mehran Keivanimehr"}]
+
+[tool.setuptools.packages.find]
+where = ["src"]

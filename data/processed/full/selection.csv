@@ -1,0 +1,1513 @@
+coll,gpu_set,algo,proto,config,size_bytes,probe_status,probe_end_status,selected,selected_end,selection_stable,sel_algo,sel_proto,forced_honoured,oop_wrong,ip_wrong,reason
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,16384,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,32768,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,131072,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,262144,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,524288,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,1048576,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,2097152,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,4194304,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,8388608,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,16777216,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,33554432,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,67108864,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,134217728,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,268435456,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,536870912,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL,Ring/LL,1073741824,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,1024,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,2048,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,4096,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,8192,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,16384,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,32768,ok,,RING/LL128[0-1],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,65536,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,131072,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,262144,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,524288,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,1048576,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,2097152,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,4194304,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,8388608,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,16777216,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,33554432,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,67108864,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,134217728,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,268435456,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,536870912,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,LL128,Ring/LL128,1073741824,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,1024,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,2048,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,4096,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,8192,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,16384,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,32768,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,65536,ok,,RING/SIMPLE[0-1],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,131072,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,262144,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,524288,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,1048576,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,2097152,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,4194304,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,8388608,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,16777216,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,33554432,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,67108864,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,134217728,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,268435456,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,536870912,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,Simple,Ring/Simple,1073741824,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,16384,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,32768,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,131072,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,262144,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,524288,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,1048576,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,2097152,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,4194304,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,8388608,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,16777216,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,33554432,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,67108864,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,134217728,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,268435456,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,536870912,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Ring,default,Ring/auto,1073741824,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL,Tree/LL,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,LL128,Tree/LL128,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,Simple,Tree/Simple,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,Tree,default,Tree/auto,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,2gpu_nvlink,default,LL,auto/LL,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,16384,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,32768,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,131072,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,262144,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,524288,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,1048576,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,2097152,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,4194304,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,8388608,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,16777216,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,33554432,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,67108864,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,134217728,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,268435456,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,536870912,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL,auto/LL,1073741824,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,1024,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,2048,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,4096,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,8192,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,16384,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,32768,ok,,RING/LL128[0-1],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,65536,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,131072,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,262144,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,524288,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,1048576,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,2097152,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,4194304,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,8388608,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,16777216,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,33554432,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,67108864,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,134217728,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,268435456,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,536870912,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,LL128,auto/LL128,1073741824,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,1024,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,2048,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,4096,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,8192,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,16384,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,32768,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,65536,ok,,RING/SIMPLE[0-1],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,131072,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,262144,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,524288,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,1048576,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,2097152,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,4194304,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,8388608,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,16777216,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,33554432,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,67108864,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,134217728,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,268435456,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,536870912,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,Simple,auto/Simple,1073741824,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,16384,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,32768,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,131072,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,262144,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,524288,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,1048576,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,2097152,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,4194304,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,8388608,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,16777216,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,33554432,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,67108864,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,134217728,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,268435456,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,536870912,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,2gpu_nvlink,default,default,auto/auto,1073741824,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,16384,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,32768,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,131072,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,262144,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,524288,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,1048576,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,2097152,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,4194304,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,8388608,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,16777216,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,33554432,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,67108864,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,134217728,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,268435456,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,536870912,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL,Ring/LL,1073741824,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,1024,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,2048,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,4096,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,8192,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,16384,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,32768,ok,,RING/LL128[0-1],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,65536,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,131072,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,262144,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,524288,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,1048576,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,2097152,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,4194304,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,8388608,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,16777216,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,33554432,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,67108864,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,134217728,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,268435456,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,536870912,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,LL128,Ring/LL128,1073741824,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,1024,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,2048,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,4096,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,8192,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,16384,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,32768,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,65536,ok,,RING/SIMPLE[0-1],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,131072,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,262144,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,524288,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,1048576,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,2097152,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,4194304,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,8388608,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,16777216,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,33554432,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,67108864,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,134217728,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,268435456,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,536870912,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,Simple,Ring/Simple,1073741824,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,16384,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,32768,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,131072,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,262144,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,524288,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,1048576,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,2097152,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,4194304,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,8388608,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,16777216,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,33554432,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,67108864,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,134217728,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,268435456,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,536870912,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Ring,default,Ring/auto,1073741824,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,Tree,LL,Tree/LL,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL,Tree/LL,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,LL128,Tree/LL128,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,Simple,Tree/Simple,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+all_gather,4gpu,Tree,default,Tree/auto,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,Tree,default,Tree/auto,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function AllGather with datatype ncclInt8. NCCL_ALGO was set to Tree."""
+all_gather,4gpu,default,LL,auto/LL,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,16384,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,32768,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,131072,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,262144,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,524288,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,1048576,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,2097152,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,4194304,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,8388608,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,16777216,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,33554432,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,67108864,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,134217728,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,268435456,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,536870912,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL,auto/LL,1073741824,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,1024,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,2048,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,4096,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,8192,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,16384,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,32768,ok,,RING/LL128[0-1],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,65536,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,131072,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,262144,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,524288,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,1048576,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,2097152,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,4194304,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,8388608,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,16777216,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,33554432,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,67108864,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,134217728,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,268435456,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,536870912,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,LL128,auto/LL128,1073741824,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,1024,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,2048,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,4096,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,8192,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,16384,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,32768,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,65536,ok,,RING/SIMPLE[0-1],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,131072,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,262144,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,524288,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,1048576,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,2097152,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,4194304,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,8388608,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,16777216,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,33554432,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,67108864,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,134217728,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,268435456,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,536870912,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,Simple,auto/Simple,1073741824,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,16384,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,32768,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,131072,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,262144,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,524288,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,1048576,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,2097152,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,4194304,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,8388608,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,16777216,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,33554432,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,67108864,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,134217728,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,268435456,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,536870912,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_gather,4gpu,default,default,auto/auto,1073741824,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,16384,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,32768,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,131072,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,262144,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,524288,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,1048576,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,2097152,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,4194304,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,8388608,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,16777216,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,33554432,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,67108864,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,134217728,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,268435456,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,536870912,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL,Ring/LL,1073741824,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,1024,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,2048,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,4096,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,8192,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,16384,ok,,RING/LL128[0-1],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,32768,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,65536,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,131072,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,262144,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,524288,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,1048576,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,2097152,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,4194304,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,8388608,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,16777216,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,33554432,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,67108864,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,134217728,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,268435456,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,536870912,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,LL128,Ring/LL128,1073741824,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,1024,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,2048,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,4096,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,8192,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,16384,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,32768,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,65536,ok,,RING/SIMPLE[0-1],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,131072,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,262144,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,524288,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,1048576,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,2097152,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,4194304,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,8388608,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,16777216,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,33554432,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,67108864,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,134217728,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,268435456,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,536870912,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,Simple,Ring/Simple,1073741824,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,16384,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,32768,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,131072,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,262144,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,524288,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,1048576,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,2097152,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,4194304,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,8388608,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,16777216,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,33554432,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,67108864,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,134217728,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,268435456,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,536870912,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Ring,default,Ring/auto,1073741824,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,1024,ok,,TREE/LL[0-0],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,2048,ok,,TREE/LL[0-0],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,4096,ok,,TREE/LL[0-0],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,8192,ok,,TREE/LL[0-1],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,16384,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,32768,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,65536,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,131072,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,262144,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,524288,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,1048576,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,2097152,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,4194304,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,8388608,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,16777216,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,33554432,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,67108864,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,134217728,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,268435456,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,536870912,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL,Tree/LL,1073741824,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,1024,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,2048,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,4096,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,8192,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,16384,ok,,TREE/LL128[0-1],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,32768,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,65536,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,131072,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,262144,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,524288,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,1048576,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,2097152,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,4194304,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,8388608,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,16777216,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,33554432,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,67108864,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,134217728,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,268435456,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,536870912,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,LL128,Tree/LL128,1073741824,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,1024,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,2048,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,4096,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,8192,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,16384,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,32768,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,65536,ok,,TREE/SIMPLE[0-1],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,131072,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,262144,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,524288,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,1048576,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,2097152,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,4194304,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,8388608,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,16777216,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,33554432,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,67108864,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,134217728,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,268435456,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,536870912,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,Simple,Tree/Simple,1073741824,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,1024,ok,,TREE/LL[0-0],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,2048,ok,,TREE/LL[0-0],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,4096,ok,,TREE/LL[0-0],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,8192,ok,,TREE/LL[0-1],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,16384,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,32768,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,65536,ok,,TREE/SIMPLE[0-1],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,131072,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,262144,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,524288,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,1048576,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,2097152,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,4194304,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,8388608,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,16777216,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,33554432,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,67108864,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,134217728,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,268435456,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,536870912,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,Tree,default,Tree/auto,1073741824,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,16384,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,32768,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,131072,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,262144,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,524288,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,1048576,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,2097152,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,4194304,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,8388608,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,16777216,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,33554432,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,67108864,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,134217728,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,268435456,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,536870912,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL,auto/LL,1073741824,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,1024,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,2048,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,4096,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,8192,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,16384,ok,,TREE/LL128[0-1],,,TREE,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,32768,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,65536,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,131072,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,262144,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,524288,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,1048576,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,2097152,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,4194304,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,8388608,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,16777216,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,33554432,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,67108864,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,134217728,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,268435456,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,536870912,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,LL128,auto/LL128,1073741824,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,1024,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,2048,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,4096,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,8192,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,16384,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,32768,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,65536,ok,,RING/SIMPLE[0-1],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,131072,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,262144,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,524288,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,1048576,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,2097152,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,4194304,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,8388608,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,16777216,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,33554432,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,67108864,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,134217728,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,268435456,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,536870912,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,Simple,auto/Simple,1073741824,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,16384,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,32768,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,131072,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,262144,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,524288,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,1048576,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,2097152,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,4194304,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,8388608,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,16777216,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,33554432,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,67108864,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,134217728,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,268435456,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,536870912,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,2gpu_nvlink,default,default,auto/auto,1073741824,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,16384,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,32768,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,131072,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,262144,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,524288,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,1048576,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,2097152,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,4194304,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,8388608,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,16777216,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,33554432,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,67108864,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,134217728,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,268435456,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,536870912,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL,Ring/LL,1073741824,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,1024,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,2048,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,4096,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,8192,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,16384,ok,,RING/LL128[0-1],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,32768,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,65536,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,131072,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,262144,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,524288,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,1048576,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,2097152,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,4194304,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,8388608,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,16777216,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,33554432,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,67108864,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,134217728,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,268435456,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,536870912,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,LL128,Ring/LL128,1073741824,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,1024,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,2048,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,4096,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,8192,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,16384,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,32768,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,65536,ok,,RING/SIMPLE[0-1],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,131072,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,262144,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,524288,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,1048576,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,2097152,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,4194304,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,8388608,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,16777216,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,33554432,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,67108864,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,134217728,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,268435456,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,536870912,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,Simple,Ring/Simple,1073741824,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,16384,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,32768,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,131072,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,262144,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,524288,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,1048576,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,2097152,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,4194304,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,8388608,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,16777216,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,33554432,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,67108864,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,134217728,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,268435456,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,536870912,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Ring,default,Ring/auto,1073741824,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,1024,ok,,TREE/LL[0-0],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,2048,ok,,TREE/LL[0-0],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,4096,ok,,TREE/LL[0-0],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,8192,ok,,TREE/LL[0-1],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,16384,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,32768,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,65536,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,131072,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,262144,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,524288,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,1048576,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,2097152,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,4194304,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,8388608,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,16777216,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,33554432,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,67108864,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,134217728,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,268435456,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,536870912,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL,Tree/LL,1073741824,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,1024,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,2048,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,4096,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,8192,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,16384,ok,,TREE/LL128[0-1],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,32768,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,65536,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,131072,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,262144,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,524288,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,1048576,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,2097152,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,4194304,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,8388608,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,16777216,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,33554432,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,67108864,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,134217728,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,268435456,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,536870912,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,LL128,Tree/LL128,1073741824,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,1024,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,2048,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,4096,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,8192,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,16384,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,32768,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,65536,ok,,TREE/SIMPLE[0-1],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,131072,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,262144,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,524288,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,1048576,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,2097152,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,4194304,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,8388608,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,16777216,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,33554432,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,67108864,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,134217728,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,268435456,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,536870912,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,Simple,Tree/Simple,1073741824,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,1024,ok,,TREE/LL[0-0],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,2048,ok,,TREE/LL[0-0],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,4096,ok,,TREE/LL[0-0],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,8192,ok,,TREE/LL[0-1],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,16384,ok,,TREE/LL[0-3],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,32768,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,65536,ok,,TREE/LL[0-7],,,TREE,LL,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,131072,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,262144,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,524288,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,1048576,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,2097152,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,4194304,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,8388608,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,16777216,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,33554432,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,67108864,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,134217728,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,268435456,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,536870912,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,Tree,default,Tree/auto,1073741824,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,16384,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,32768,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,131072,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,262144,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,524288,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,1048576,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,2097152,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,4194304,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,8388608,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,16777216,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,33554432,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,67108864,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,134217728,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,268435456,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,536870912,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL,auto/LL,1073741824,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,1024,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,2048,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,4096,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,8192,ok,,TREE/LL128[0-0],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,16384,ok,,TREE/LL128[0-1],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,32768,ok,,TREE/LL128[0-3],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,65536,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,131072,ok,,TREE/LL128[0-7],,,TREE,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,262144,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,524288,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,1048576,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,2097152,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,4194304,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,8388608,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,16777216,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,33554432,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,67108864,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,134217728,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,268435456,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,536870912,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,LL128,auto/LL128,1073741824,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,1024,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,2048,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,4096,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,8192,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,16384,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,32768,ok,,TREE/SIMPLE[0-0],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,65536,ok,,TREE/SIMPLE[0-1],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,131072,ok,,TREE/SIMPLE[0-3],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,262144,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,524288,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,1048576,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,2097152,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,4194304,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,8388608,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,16777216,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,33554432,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,67108864,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,134217728,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,268435456,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,536870912,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,Simple,auto/Simple,1073741824,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,16384,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,32768,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,131072,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,262144,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,524288,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,1048576,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,2097152,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,4194304,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,8388608,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,16777216,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,33554432,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,67108864,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,134217728,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,268435456,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,536870912,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+all_reduce,4gpu,default,default,auto/auto,1073741824,ok,,TREE/SIMPLE[0-7],,,TREE,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,16384,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,32768,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,131072,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,262144,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,524288,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,1048576,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,2097152,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,4194304,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,8388608,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,16777216,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,33554432,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,67108864,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,134217728,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,268435456,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,536870912,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL,Ring/LL,1073741824,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,1024,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,2048,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,4096,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,8192,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,16384,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,32768,ok,,RING/LL128[0-1],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,65536,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,131072,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,262144,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,524288,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,1048576,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,2097152,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,4194304,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,8388608,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,16777216,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,33554432,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,67108864,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,134217728,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,268435456,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,536870912,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,LL128,Ring/LL128,1073741824,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,1024,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,2048,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,4096,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,8192,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,16384,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,32768,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,65536,ok,,RING/SIMPLE[0-1],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,131072,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,262144,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,524288,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,1048576,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,2097152,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,4194304,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,8388608,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,16777216,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,33554432,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,67108864,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,134217728,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,268435456,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,536870912,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,Simple,Ring/Simple,1073741824,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,16384,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,32768,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,131072,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,262144,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,524288,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,1048576,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,2097152,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,4194304,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,8388608,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,16777216,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,33554432,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,67108864,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,134217728,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,268435456,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,536870912,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Ring,default,Ring/auto,1073741824,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL,Tree/LL,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,LL128,Tree/LL128,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,Simple,Tree/Simple,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,Tree,default,Tree/auto,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,16384,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,32768,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,131072,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,262144,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,524288,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,1048576,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,2097152,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,4194304,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,8388608,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,16777216,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,33554432,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,67108864,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,134217728,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,268435456,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,536870912,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL,auto/LL,1073741824,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,1024,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,2048,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,4096,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,8192,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,16384,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,32768,ok,,RING/LL128[0-1],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,65536,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,131072,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,262144,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,524288,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,1048576,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,2097152,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,4194304,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,8388608,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,16777216,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,33554432,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,67108864,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,134217728,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,268435456,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,536870912,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,LL128,auto/LL128,1073741824,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,1024,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,2048,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,4096,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,8192,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,16384,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,32768,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,65536,ok,,RING/SIMPLE[0-1],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,131072,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,262144,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,524288,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,1048576,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,2097152,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,4194304,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,8388608,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,16777216,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,33554432,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,67108864,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,134217728,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,268435456,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,536870912,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,Simple,auto/Simple,1073741824,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,16384,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,32768,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,131072,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,262144,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,524288,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,1048576,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,2097152,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,4194304,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,8388608,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,16777216,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,33554432,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,67108864,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,134217728,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,268435456,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,536870912,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,2gpu_nvlink,default,default,auto/auto,1073741824,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,16384,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,32768,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,131072,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,262144,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,524288,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,1048576,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,2097152,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,4194304,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,8388608,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,16777216,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,33554432,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,67108864,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,134217728,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,268435456,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,536870912,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL,Ring/LL,1073741824,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,1024,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,2048,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,4096,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,8192,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,16384,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,32768,ok,,RING/LL128[0-1],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,65536,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,131072,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,262144,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,524288,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,1048576,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,2097152,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,4194304,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,8388608,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,16777216,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,33554432,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,67108864,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,134217728,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,268435456,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,536870912,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,LL128,Ring/LL128,1073741824,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,1024,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,2048,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,4096,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,8192,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,16384,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,32768,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,65536,ok,,RING/SIMPLE[0-1],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,131072,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,262144,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,524288,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,1048576,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,2097152,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,4194304,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,8388608,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,16777216,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,33554432,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,67108864,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,134217728,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,268435456,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,536870912,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,Simple,Ring/Simple,1073741824,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,16384,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,32768,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,131072,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,262144,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,524288,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,1048576,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,2097152,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,4194304,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,8388608,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,16777216,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,33554432,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,67108864,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,134217728,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,268435456,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,536870912,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Ring,default,Ring/auto,1073741824,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,Tree,LL,Tree/LL,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL,Tree/LL,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,LL128,Tree/LL128,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to LL128."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,Simple,Tree/Simple,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree. NCCL_PROTO was set to Simple."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,1024,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,2048,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,4096,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,8192,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,16384,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,32768,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,65536,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,131072,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,262144,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,524288,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,1048576,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,2097152,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,4194304,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,8388608,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,16777216,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,33554432,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,67108864,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,134217728,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,268435456,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,536870912,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,Tree,default,Tree/auto,1073741824,unsupported,,,,,,,,,,"""Error : no algorithm/protocol available for function ReduceScatter with datatype ncclFloat32. NCCL_ALGO was set to Tree."""
+reduce_scatter,4gpu,default,LL,auto/LL,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,16384,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,32768,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,131072,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,262144,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,524288,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,1048576,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,2097152,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,4194304,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,8388608,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,16777216,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,33554432,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,67108864,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,134217728,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,268435456,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,536870912,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL,auto/LL,1073741824,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,1024,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,2048,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,4096,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,8192,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,16384,ok,,RING/LL128[0-0],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,32768,ok,,RING/LL128[0-1],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,65536,ok,,RING/LL128[0-3],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,131072,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,262144,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,524288,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,1048576,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,2097152,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,4194304,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,8388608,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,16777216,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,33554432,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,67108864,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,134217728,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,268435456,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,536870912,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,LL128,auto/LL128,1073741824,ok,,RING/LL128[0-7],,,RING,LL128,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,1024,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,2048,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,4096,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,8192,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,16384,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,32768,ok,,RING/SIMPLE[0-0],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,65536,ok,,RING/SIMPLE[0-1],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,131072,ok,,RING/SIMPLE[0-3],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,262144,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,524288,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,1048576,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,2097152,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,4194304,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,8388608,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,16777216,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,33554432,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,67108864,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,134217728,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,268435456,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,536870912,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,Simple,auto/Simple,1073741824,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,1024,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,2048,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,4096,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,8192,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,16384,ok,,RING/LL[0-0],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,32768,ok,,RING/LL[0-1],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,65536,ok,,RING/LL[0-3],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,131072,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,262144,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,524288,ok,,RING/LL[0-7],,,RING,LL,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,1048576,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,2097152,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,4194304,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,8388608,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,16777216,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,33554432,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,67108864,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,134217728,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,268435456,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,536870912,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,
+reduce_scatter,4gpu,default,default,auto/auto,1073741824,ok,,RING/SIMPLE[0-7],,,RING,SIMPLE,True,0.0,0.0,

@@ -1,0 +1,17 @@
+ M data/raw/full/events.jsonl
+ M figures/smoke/fig1_latency_vs_size.png
+ M figures/smoke/fig2a_energy_per_op_vs_size.png
+ M figures/smoke/fig2b_energy_dyn_per_op_vs_size.png
+ M figures/smoke/fig3a_gb_per_j_vs_size.png
+ M figures/smoke/fig3b_gb_per_j_dyn_vs_size.png
+ M figures/smoke/fig4_edp_vs_size.png
+ M src/ncclenergy/analyze.py
+ M src/ncclenergy/plots.py
+?? data/raw/full/metadata_end/
+?? data/raw/full/order_trial1.json
+?? data/raw/full/order_trial2.json
+?? data/raw/full/order_trial3.json
+?? data/raw/full/order_trial4.json
+?? figures/smoke/figS1_power_per_gpu_vs_size.png
+?? figures/smoke/figS2_latency_rel_auto.png
+?? figures/smoke/figS3_energy_rel_auto.png

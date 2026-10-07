@@ -1,0 +1,32 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+build/
+dist/
+*.egg-info/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+logs/
+
+# built from source by scripts/build_nccl_tests.sh
+third_party/nccl-tests/
+third_party/nccl_home/
+third_party/build.log
+
+# Per-launch artifacts contain private host/network identifiers and create
+# tens of thousands of small files. Public data coverage is documented in
+# data/raw/README.md.
+data/raw/*/launches/
+data/raw/*/probe/
+data/raw/*/probe_end/
+data/raw/*/calibrate/
+data/raw/*/launches.jsonl
+data/raw/*.tar.gz
+data/raw/*.tar.gz.sha256

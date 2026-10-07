@@ -1,0 +1,286 @@
+{"t_wall": 1791257893.1067219, "kind": "start", "run_dir": "/path/to/nccl-energy-frontier/data/raw/smoke", "phases": ["probe", "calibrate", "trials", "probe_end"], "gpu_sets": {"2gpu_nvlink": {"status": "ok"}, "4gpu": {"status": "ok"}}, "config_sha256": "35198d45113630b5b270b1a890ff89c20c174afed7d58608da9c3a70e7a85898"}
+{"t_wall": 1791257893.1078484, "kind": "metadata", "tag": "start"}
+{"t_wall": 1791257901.0716164, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__default__default", "status": "ok"}
+{"t_wall": 1791257902.4184983, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__default__LL128", "status": "ok"}
+{"t_wall": 1791257903.7392335, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__Ring__default", "status": "ok"}
+{"t_wall": 1791257905.0978577, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__Ring__LL128", "status": "ok"}
+{"t_wall": 1791257906.451829, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__Tree__default", "status": "ok"}
+{"t_wall": 1791257907.7887537, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__Tree__LL128", "status": "ok"}
+{"t_wall": 1791257910.3865592, "kind": "probe", "cond": "all_reduce__4gpu__default__default", "status": "ok"}
+{"t_wall": 1791257912.948491, "kind": "probe", "cond": "all_reduce__4gpu__default__LL128", "status": "ok"}
+{"t_wall": 1791257915.5414345, "kind": "probe", "cond": "all_reduce__4gpu__Ring__default", "status": "ok"}
+{"t_wall": 1791257918.1320274, "kind": "probe", "cond": "all_reduce__4gpu__Ring__LL128", "status": "ok"}
+{"t_wall": 1791257920.7292266, "kind": "probe", "cond": "all_reduce__4gpu__Tree__default", "status": "ok"}
+{"t_wall": 1791257923.2669928, "kind": "probe", "cond": "all_reduce__4gpu__Tree__LL128", "status": "ok"}
+{"t_wall": 1791257924.6320436, "kind": "probe", "cond": "all_gather__2gpu_nvlink__default__default", "status": "ok"}
+{"t_wall": 1791257925.9969215, "kind": "probe", "cond": "all_gather__2gpu_nvlink__default__LL128", "status": "ok"}
+{"t_wall": 1791257927.3484735, "kind": "probe", "cond": "all_gather__2gpu_nvlink__Ring__default", "status": "ok"}
+{"t_wall": 1791257928.730692, "kind": "probe", "cond": "all_gather__2gpu_nvlink__Ring__LL128", "status": "ok"}
+{"t_wall": 1791257934.7738035, "kind": "probe", "cond": "all_gather__2gpu_nvlink__Tree__default", "status": "unsupported"}
+{"t_wall": 1791257940.826967, "kind": "probe", "cond": "all_gather__2gpu_nvlink__Tree__LL128", "status": "unsupported"}
+{"t_wall": 1791257943.3982666, "kind": "probe", "cond": "all_gather__4gpu__default__default", "status": "ok"}
+{"t_wall": 1791257945.9871628, "kind": "probe", "cond": "all_gather__4gpu__default__LL128", "status": "ok"}
+{"t_wall": 1791257948.5418077, "kind": "probe", "cond": "all_gather__4gpu__Ring__default", "status": "ok"}
+{"t_wall": 1791257951.0904272, "kind": "probe", "cond": "all_gather__4gpu__Ring__LL128", "status": "ok"}
+{"t_wall": 1791257960.6041813, "kind": "probe", "cond": "all_gather__4gpu__Tree__default", "status": "unsupported"}
+{"t_wall": 1791257970.124497, "kind": "probe", "cond": "all_gather__4gpu__Tree__LL128", "status": "unsupported"}
+{"t_wall": 1791257971.4928267, "kind": "probe", "cond": "reduce_scatter__2gpu_nvlink__default__default", "status": "ok"}
+{"t_wall": 1791257972.8384855, "kind": "probe", "cond": "reduce_scatter__2gpu_nvlink__default__LL128", "status": "ok"}
+{"t_wall": 1791257974.199231, "kind": "probe", "cond": "reduce_scatter__2gpu_nvlink__Ring__default", "status": "ok"}
+{"t_wall": 1791257975.548179, "kind": "probe", "cond": "reduce_scatter__2gpu_nvlink__Ring__LL128", "status": "ok"}
+{"t_wall": 1791257981.5636883, "kind": "probe", "cond": "reduce_scatter__2gpu_nvlink__Tree__default", "status": "unsupported"}
+{"t_wall": 1791257987.5422256, "kind": "probe", "cond": "reduce_scatter__2gpu_nvlink__Tree__LL128", "status": "unsupported"}
+{"t_wall": 1791257990.1145716, "kind": "probe", "cond": "reduce_scatter__4gpu__default__default", "status": "ok"}
+{"t_wall": 1791257992.6438124, "kind": "probe", "cond": "reduce_scatter__4gpu__default__LL128", "status": "ok"}
+{"t_wall": 1791257995.198602, "kind": "probe", "cond": "reduce_scatter__4gpu__Ring__default", "status": "ok"}
+{"t_wall": 1791257997.7482166, "kind": "probe", "cond": "reduce_scatter__4gpu__Ring__LL128", "status": "ok"}
+{"t_wall": 1791258007.159654, "kind": "probe", "cond": "reduce_scatter__4gpu__Tree__default", "status": "unsupported"}
+{"t_wall": 1791258016.5765178, "kind": "probe", "cond": "reduce_scatter__4gpu__Tree__LL128", "status": "unsupported"}
+{"t_wall": 1791258019.2964227, "kind": "calibrate", "cond": "all_reduce__2gpu_nvlink__default__default", "n_sizes": 3}
+{"t_wall": 1791258021.9578798, "kind": "calibrate", "cond": "all_reduce__2gpu_nvlink__default__LL128", "n_sizes": 3}
+{"t_wall": 1791258024.6575115, "kind": "calibrate", "cond": "all_reduce__2gpu_nvlink__Ring__default", "n_sizes": 3}
+{"t_wall": 1791258027.3752801, "kind": "calibrate", "cond": "all_reduce__2gpu_nvlink__Ring__LL128", "n_sizes": 3}
+{"t_wall": 1791258030.0831752, "kind": "calibrate", "cond": "all_reduce__2gpu_nvlink__Tree__default", "n_sizes": 3}
+{"t_wall": 1791258032.764553, "kind": "calibrate", "cond": "all_reduce__2gpu_nvlink__Tree__LL128", "n_sizes": 3}
+{"t_wall": 1791258037.9510798, "kind": "calibrate", "cond": "all_reduce__4gpu__default__default", "n_sizes": 3}
+{"t_wall": 1791258043.063599, "kind": "calibrate", "cond": "all_reduce__4gpu__default__LL128", "n_sizes": 3}
+{"t_wall": 1791258048.120707, "kind": "calibrate", "cond": "all_reduce__4gpu__Ring__default", "n_sizes": 3}
+{"t_wall": 1791258053.202109, "kind": "calibrate", "cond": "all_reduce__4gpu__Ring__LL128", "n_sizes": 3}
+{"t_wall": 1791258058.291656, "kind": "calibrate", "cond": "all_reduce__4gpu__Tree__default", "n_sizes": 3}
+{"t_wall": 1791258063.4151785, "kind": "calibrate", "cond": "all_reduce__4gpu__Tree__LL128", "n_sizes": 3}
+{"t_wall": 1791258066.1404216, "kind": "calibrate", "cond": "all_gather__2gpu_nvlink__default__default", "n_sizes": 3}
+{"t_wall": 1791258068.8574862, "kind": "calibrate", "cond": "all_gather__2gpu_nvlink__default__LL128", "n_sizes": 3}
+{"t_wall": 1791258071.5668619, "kind": "calibrate", "cond": "all_gather__2gpu_nvlink__Ring__default", "n_sizes": 3}
+{"t_wall": 1791258074.252088, "kind": "calibrate", "cond": "all_gather__2gpu_nvlink__Ring__LL128", "n_sizes": 3}
+{"t_wall": 1791258074.2533138, "kind": "calibrate", "cond": "all_gather__2gpu_nvlink__Tree__default", "n_sizes": 0}
+{"t_wall": 1791258074.2540615, "kind": "calibrate", "cond": "all_gather__2gpu_nvlink__Tree__LL128", "n_sizes": 0}
+{"t_wall": 1791258079.3844898, "kind": "calibrate", "cond": "all_gather__4gpu__default__default", "n_sizes": 3}
+{"t_wall": 1791258084.441654, "kind": "calibrate", "cond": "all_gather__4gpu__default__LL128", "n_sizes": 3}
+{"t_wall": 1791258089.5651405, "kind": "calibrate", "cond": "all_gather__4gpu__Ring__default", "n_sizes": 3}
+{"t_wall": 1791258094.688092, "kind": "calibrate", "cond": "all_gather__4gpu__Ring__LL128", "n_sizes": 3}
+{"t_wall": 1791258094.6888938, "kind": "calibrate", "cond": "all_gather__4gpu__Tree__default", "n_sizes": 0}
+{"t_wall": 1791258094.6894429, "kind": "calibrate", "cond": "all_gather__4gpu__Tree__LL128", "n_sizes": 0}
+{"t_wall": 1791258097.4157975, "kind": "calibrate", "cond": "reduce_scatter__2gpu_nvlink__default__default", "n_sizes": 3}
+{"t_wall": 1791258100.131914, "kind": "calibrate", "cond": "reduce_scatter__2gpu_nvlink__default__LL128", "n_sizes": 3}
+{"t_wall": 1791258102.8554776, "kind": "calibrate", "cond": "reduce_scatter__2gpu_nvlink__Ring__default", "n_sizes": 3}
+{"t_wall": 1791258105.56384, "kind": "calibrate", "cond": "reduce_scatter__2gpu_nvlink__Ring__LL128", "n_sizes": 3}
+{"t_wall": 1791258105.5647895, "kind": "calibrate", "cond": "reduce_scatter__2gpu_nvlink__Tree__default", "n_sizes": 0}
+{"t_wall": 1791258105.5657866, "kind": "calibrate", "cond": "reduce_scatter__2gpu_nvlink__Tree__LL128", "n_sizes": 0}
+{"t_wall": 1791258110.724703, "kind": "calibrate", "cond": "reduce_scatter__4gpu__default__default", "n_sizes": 3}
+{"t_wall": 1791258115.8034172, "kind": "calibrate", "cond": "reduce_scatter__4gpu__default__LL128", "n_sizes": 3}
+{"t_wall": 1791258120.9497495, "kind": "calibrate", "cond": "reduce_scatter__4gpu__Ring__default", "n_sizes": 3}
+{"t_wall": 1791258126.0372143, "kind": "calibrate", "cond": "reduce_scatter__4gpu__Ring__LL128", "n_sizes": 3}
+{"t_wall": 1791258126.0409317, "kind": "calibrate", "cond": "reduce_scatter__4gpu__Tree__default", "n_sizes": 0}
+{"t_wall": 1791258126.0417073, "kind": "calibrate", "cond": "reduce_scatter__4gpu__Tree__LL128", "n_sizes": 0}
+{"t_wall": 1791258144.0687406, "kind": "idle", "tag": "t1-start", "status": "ok", "watts": {"4": 28.79, "5": 21.05, "6": 24.68, "7": 27.62}}
+{"t_wall": 1791258151.1590416, "kind": "launch", "trial": 1, "i": "2/108", "cond": "reduce_scatter__2gpu_nvlink__Ring__default", "size": 67108864, "status": "ok", "timed_s": 2.33, "mJ_per_op": 279.3581}
+{"t_wall": 1791258158.210179, "kind": "launch", "trial": 1, "i": "4/108", "cond": "all_gather__2gpu_nvlink__Ring__default", "size": 67108864, "status": "ok", "timed_s": 2.29, "mJ_per_op": 268.1099}
+{"t_wall": 1791258166.683986, "kind": "launch", "trial": 1, "i": "5/108", "cond": "all_reduce__4gpu__default__LL128", "size": 1048576, "status": "ok", "timed_s": 2.45, "mJ_per_op": 117.0217}
+{"t_wall": 1791258175.077909, "kind": "launch", "trial": 1, "i": "6/108", "cond": "reduce_scatter__4gpu__Ring__default", "size": 1048576, "status": "ok", "timed_s": 2.5, "mJ_per_op": 41.2172}
+{"t_wall": 1791258183.4171903, "kind": "launch", "trial": 1, "i": "7/108", "cond": "reduce_scatter__4gpu__Ring__LL128", "size": 67108864, "status": "ok", "timed_s": 2.42, "mJ_per_op": 3635.5963}
+{"t_wall": 1791258191.756466, "kind": "launch", "trial": 1, "i": "8/108", "cond": "reduce_scatter__4gpu__Ring__LL128", "size": 1048576, "status": "ok", "timed_s": 2.43, "mJ_per_op": 59.9273}
+{"t_wall": 1791258200.0995688, "kind": "launch", "trial": 1, "i": "9/108", "cond": "all_reduce__4gpu__Tree__LL128", "size": 1048576, "status": "ok", "timed_s": 2.46, "mJ_per_op": 81.7386}
+{"t_wall": 1791258207.1432636, "kind": "launch", "trial": 1, "i": "10/108", "cond": "all_reduce__2gpu_nvlink__Tree__default", "size": 67108864, "status": "ok", "timed_s": 2.4, "mJ_per_op": 431.8414}
+{"t_wall": 1791258214.148937, "kind": "launch", "trial": 1, "i": "11/108", "cond": "all_reduce__2gpu_nvlink__default__default", "size": 1048576, "status": "ok", "timed_s": 2.28, "mJ_per_op": 11.3326}
+{"t_wall": 1791258222.0173542, "kind": "launch", "trial": 1, "i": "14/108", "cond": "reduce_scatter__4gpu__Ring__LL128", "size": 4096, "status": "ok", "timed_s": 2.26, "mJ_per_op": 7.6649}
+{"t_wall": 1791258228.528121, "kind": "launch", "trial": 1, "i": "15/108", "cond": "all_gather__2gpu_nvlink__Ring__LL128", "size": 4096, "status": "ok", "timed_s": 2.2, "mJ_per_op": 2.2293}
+{"t_wall": 1791258236.3959534, "kind": "launch", "trial": 1, "i": "16/108", "cond": "all_reduce__4gpu__Ring__default", "size": 4096, "status": "ok", "timed_s": 2.19, "mJ_per_op": 4.6156}
+{"t_wall": 1791258242.9111257, "kind": "launch", "trial": 1, "i": "18/108", "cond": "all_reduce__2gpu_nvlink__Tree__LL128", "size": 4096, "status": "ok", "timed_s": 2.23, "mJ_per_op": 3.0435}
+{"t_wall": 1791258249.4485657, "kind": "launch", "trial": 1, "i": "19/108", "cond": "all_reduce__2gpu_nvlink__Tree__default", "size": 4096, "status": "ok", "timed_s": 2.24, "mJ_per_op": 1.6076}
+{"t_wall": 1791258257.4170725, "kind": "launch", "trial": 1, "i": "21/108", "cond": "reduce_scatter__4gpu__default__LL128", "size": 4096, "status": "ok", "timed_s": 2.25, "mJ_per_op": 7.5741}
+{"t_wall": 1791258264.445817, "kind": "launch", "trial": 1, "i": "22/108", "cond": "all_reduce__2gpu_nvlink__Ring__LL128", "size": 1048576, "status": "ok", "timed_s": 2.31, "mJ_per_op": 11.951}
+{"t_wall": 1791258271.5020657, "kind": "launch", "trial": 1, "i": "23/108", "cond": "all_gather__2gpu_nvlink__Ring__LL128", "size": 1048576, "status": "ok", "timed_s": 2.28, "mJ_per_op": 7.6319}
+{"t_wall": 1791258279.90736, "kind": "launch", "trial": 1, "i": "24/108", "cond": "all_reduce__4gpu__Ring__LL128", "size": 67108864, "status": "ok", "timed_s": 2.32, "mJ_per_op": 7175.7312}
+{"t_wall": 1791258286.9373968, "kind": "launch", "trial": 1, "i": "25/108", "cond": "all_reduce__2gpu_nvlink__Tree__default", "size": 1048576, "status": "ok", "timed_s": 2.28, "mJ_per_op": 12.6107}
+{"t_wall": 1791258293.4678936, "kind": "launch", "trial": 1, "i": "26/108", "cond": "reduce_scatter__2gpu_nvlink__Ring__LL128", "size": 4096, "status": "ok", "timed_s": 2.22, "mJ_per_op": 2.5585}
+{"t_wall": 1791258301.8680117, "kind": "launch", "trial": 1, "i": "27/108", "cond": "all_reduce__4gpu__Tree__LL128", "size": 67108864, "status": "ok", "timed_s": 2.45, "mJ_per_op": 4675.5985}
+{"t_wall": 1791258309.697852, "kind": "launch", "trial": 1, "i": "28/108", "cond": "all_gather__4gpu__default__LL128", "size": 1048576, "status": "ok", "timed_s": 2.2, "mJ_per_op": 60.336}
+{"t_wall": 1791258322.7156396, "kind": "launch", "trial": 1, "i": "29/108", "cond": "all_reduce__2gpu_nvlink__Ring__default", "size": 4096, "status": "ok", "timed_s": 2.52, "mJ_per_op": 1.2633}
+{"t_wall": 1791258329.747995, "kind": "launch", "trial": 1, "i": "33/108", "cond": "reduce_scatter__2gpu_nvlink__Ring__LL128", "size": 1048576, "status": "ok", "timed_s": 2.31, "mJ_per_op": 8.8178}
+{"t_wall": 1791258338.1894345, "kind": "launch", "trial": 1, "i": "34/108", "cond": "reduce_scatter__4gpu__default__LL128", "size": 1048576, "status": "ok", "timed_s": 2.32, "mJ_per_op": 59.6668}
+{"t_wall": 1791258346.0422316, "kind": "launch", "trial": 1, "i": "39/108", "cond": "all_reduce__4gpu__Ring__LL128", "size": 4096, "status": "ok", "timed_s": 2.24, "mJ_per_op": 11.1981}
+{"t_wall": 1791258354.4339852, "kind": "launch", "trial": 1, "i": "40/108", "cond": "all_reduce__4gpu__default__default", "size": 1048576, "status": "ok", "timed_s": 2.47, "mJ_per_op": 78.9236}
+{"t_wall": 1791258367.468184, "kind": "launch", "trial": 1, "i": "41/108", "cond": "all_gather__2gpu_nvlink__default__default", "size": 4096, "status": "ok", "timed_s": 2.51, "mJ_per_op": 1.1673}
+{"t_wall": 1791258375.8953838, "kind": "launch", "trial": 1, "i": "42/108", "cond": "all_reduce__4gpu__Tree__default", "size": 1048576, "status": "ok", "timed_s": 2.36, "mJ_per_op": 56.4986}
+{"t_wall": 1791258382.3885658, "kind": "launch", "trial": 1, "i": "44/108", "cond": "all_reduce__2gpu_nvlink__Ring__LL128", "size": 4096, "status": "ok", "timed_s": 2.25, "mJ_per_op": 2.9375}
+{"t_wall": 1791258389.390507, "kind": "launch", "trial": 1, "i": "45/108", "cond": "reduce_scatter__2gpu_nvlink__Ring__default", "size": 1048576, "status": "ok", "timed_s": 2.28, "mJ_per_op": 7.9344}
+{"t_wall": 1791258397.2477703, "kind": "launch", "trial": 1, "i": "46/108", "cond": "all_gather__4gpu__Ring__LL128", "size": 67108864, "status": "ok", "timed_s": 2.14, "mJ_per_op": 3622.1419}
+{"t_wall": 1791258405.5874245, "kind": "launch", "trial": 1, "i": "48/108", "cond": "all_gather__4gpu__Ring__default", "size": 67108864, "status": "ok", "timed_s": 2.46, "mJ_per_op": 2401.2892}
+{"t_wall": 1791258417.5746403, "kind": "launch", "trial": 1, "i": "49/108", "cond": "reduce_scatter__2gpu_nvlink__default__default", "size": 4096, "status": "ok", "timed_s": 2.51, "mJ_per_op": 1.1353}
+{"t_wall": 1791258425.5158856, "kind": "launch", "trial": 1, "i": "50/108", "cond": "all_gather__4gpu__Ring__LL128", "size": 4096, "status": "ok", "timed_s": 2.22, "mJ_per_op": 7.0179}
+{"t_wall": 1791258432.5688589, "kind": "launch", "trial": 1, "i": "51/108", "cond": "all_gather__2gpu_nvlink__default__default", "size": 67108864, "status": "ok", "timed_s": 2.29, "mJ_per_op": 271.7355}
+{"t_wall": 1791258444.5429575, "kind": "launch", "trial": 1, "i": "52/108", "cond": "reduce_scatter__2gpu_nvlink__Ring__default", "size": 4096, "status": "ok", "timed_s": 2.52, "mJ_per_op": 1.1337}
+{"t_wall": 1791258451.5503933, "kind": "launch", "trial": 1, "i": "53/108", "cond": "reduce_scatter__2gpu_nvlink__default__default", "size": 1048576, "status": "ok", "timed_s": 2.4, "mJ_per_op": 8.0005}
+{"t_wall": 1791258459.9985769, "kind": "launch", "trial": 1, "i": "54/108", "cond": "all_gather__4gpu__Ring__LL128", "size": 1048576, "status": "ok", "timed_s": 2.47, "mJ_per_op": 60.474}
+{"t_wall": 1791258467.9054794, "kind": "launch", "trial": 1, "i": "55/108", "cond": "all_reduce__4gpu__Tree__LL128", "size": 4096, "status": "ok", "timed_s": 2.26, "mJ_per_op": 8.4756}
+{"t_wall": 1791258476.252146, "kind": "launch", "trial": 1, "i": "56/108", "cond": "all_gather__4gpu__default__default", "size": 1048576, "status": "ok", "timed_s": 2.37, "mJ_per_op": 43.632}
+{"t_wall": 1791258483.252428, "kind": "launch", "trial": 1, "i": "57/108", "cond": "reduce_scatter__2gpu_nvlink__default__LL128", "size": 1048576, "status": "ok", "timed_s": 2.31, "mJ_per_op": 8.5549}
+{"t_wall": 1791258490.2539062, "kind": "launch", "trial": 1, "i": "58/108", "cond": "all_reduce__2gpu_nvlink__Tree__LL128", "size": 67108864, "status": "ok", "timed_s": 2.43, "mJ_per_op": 598.5693}
+{"t_wall": 1791258498.207352, "kind": "launch", "trial": 1, "i": "59/108", "cond": "all_gather__4gpu__default__default", "size": 4096, "status": "ok", "timed_s": 2.27, "mJ_per_op": 3.3516}
+{"t_wall": 1791258505.2348657, "kind": "launch", "trial": 1, "i": "60/108", "cond": "reduce_scatter__2gpu_nvlink__default__default", "size": 67108864, "status": "ok", "timed_s": 2.35, "mJ_per_op": 289.7223}
+{"t_wall": 1791258513.683371, "kind": "launch", "trial": 1, "i": "61/108", "cond": "reduce_scatter__4gpu__default__default", "size": 1048576, "status": "ok", "timed_s": 2.37, "mJ_per_op": 41.165}
+{"t_wall": 1791258520.7228901, "kind": "launch", "trial": 1, "i": "62/108", "cond": "reduce_scatter__2gpu_nvlink__Ring__LL128", "size": 67108864, "status": "ok", "timed_s": 2.31, "mJ_per_op": 332.7499}
+{"t_wall": 1791258529.1738749, "kind": "launch", "trial": 1, "i": "63/108", "cond": "all_gather__4gpu__default__LL128", "size": 67108864, "status": "ok", "timed_s": 2.44, "mJ_per_op": 3701.8537}
+{"t_wall": 1791258536.1778696, "kind": "launch", "trial": 1, "i": "66/108", "cond": "all_reduce__2gpu_nvlink__Ring__default", "size": 67108864, "status": "ok", "timed_s": 2.36, "mJ_per_op": 458.0225}
+{"t_wall": 1791258543.1647131, "kind": "launch", "trial": 1, "i": "67/108", "cond": "reduce_scatter__2gpu_nvlink__default__LL128", "size": 67108864, "status": "ok", "timed_s": 2.31, "mJ_per_op": 333.4102}
+{"t_wall": 1791258551.0708916, "kind": "launch", "trial": 1, "i": "68/108", "cond": "all_gather__4gpu__default__LL128", "size": 4096, "status": "ok", "timed_s": 2.22, "mJ_per_op": 6.9084}
+{"t_wall": 1791258558.0864844, "kind": "launch", "trial": 1, "i": "70/108", "cond": "all_reduce__2gpu_nvlink__Ring__default", "size": 1048576, "status": "ok", "timed_s": 2.28, "mJ_per_op": 11.5785}
+{"t_wall": 1791258566.446642, "kind": "launch", "trial": 1, "i": "71/108", "cond": "all_reduce__4gpu__Ring__default", "size": 67108864, "status": "ok", "timed_s": 2.47, "mJ_per_op": 4628.1016}
+{"t_wall": 1791258574.3055747, "kind": "launch", "trial": 1, "i": "72/108", "cond": "all_reduce__4gpu__default__LL128", "size": 4096, "status": "ok", "timed_s": 2.25, "mJ_per_op": 8.4149}
+{"t_wall": 1791258582.6734593, "kind": "launch", "trial": 1, "i": "73/108", "cond": "all_reduce__4gpu__Ring__default", "size": 1048576, "status": "ok", "timed_s": 2.38, "mJ_per_op": 78.1659}
+{"t_wall": 1791258590.5725634, "kind": "launch", "trial": 1, "i": "74/108", "cond": "all_reduce__4gpu__default__default", "size": 4096, "status": "ok", "timed_s": 2.22, "mJ_per_op": 4.6897}
+{"t_wall": 1791258598.927035, "kind": "launch", "trial": 1, "i": "75/108", "cond": "all_reduce__4gpu__Tree__default", "size": 4096, "status": "ok", "timed_s": 2.31, "mJ_per_op": 5.6178}
+{"t_wall": 1791258605.925049, "kind": "launch", "trial": 1, "i": "76/108", "cond": "all_reduce__2gpu_nvlink__Ring__LL128", "size": 67108864, "status": "ok", "timed_s": 2.38, "mJ_per_op": 526.1827}
+{"t_wall": 1791258614.249085, "kind": "launch", "trial": 1, "i": "77/108", "cond": "all_reduce__4gpu__Tree__default", "size": 67108864, "status": "ok", "timed_s": 2.42, "mJ_per_op": 3093.2474}
+{"t_wall": 1791258620.7696023, "kind": "launch", "trial": 1, "i": "78/108", "cond": "all_reduce__2gpu_nvlink__default__LL128", "size": 4096, "status": "ok", "timed_s": 2.24, "mJ_per_op": 3.0406}
+{"t_wall": 1791258638.7936795, "kind": "idle", "tag": "t1-mid79", "status": "ok", "watts": {"4": 29.01, "5": 20.87, "6": 25.35, "7": 27.6}}
+{"t_wall": 1791258645.353948, "kind": "launch", "trial": 1, "i": "80/108", "cond": "all_gather__2gpu_nvlink__default__LL128", "size": 67108864, "status": "ok", "timed_s": 2.08, "mJ_per_op": 305.711}
+{"t_wall": 1791258651.8421779, "kind": "launch", "trial": 1, "i": "81/108", "cond": "all_gather__2gpu_nvlink__Ring__default", "size": 1048576, "status": "ok", "timed_s": 2.17, "mJ_per_op": 8.3954}
+{"t_wall": 1791258660.2253091, "kind": "launch", "trial": 1, "i": "82/108", "cond": "all_reduce__4gpu__default__default", "size": 67108864, "status": "ok", "timed_s": 2.45, "mJ_per_op": 4578.1992}
+{"t_wall": 1791258668.5761483, "kind": "launch", "trial": 1, "i": "84/108", "cond": "all_gather__4gpu__Ring__default", "size": 1048576, "status": "ok", "timed_s": 2.29, "mJ_per_op": 43.1421}
+{"t_wall": 1791258681.1071763, "kind": "launch", "trial": 1, "i": "85/108", "cond": "all_reduce__2gpu_nvlink__default__default", "size": 4096, "status": "ok", "timed_s": 2.52, "mJ_per_op": 1.2683}
+{"t_wall": 1791258689.0030646, "kind": "launch", "trial": 1, "i": "86/108", "cond": "reduce_scatter__4gpu__default__LL128", "size": 67108864, "status": "ok", "timed_s": 2.15, "mJ_per_op": 3659.0833}
+{"t_wall": 1791258695.5157886, "kind": "launch", "trial": 1, "i": "87/108", "cond": "all_reduce__2gpu_nvlink__default__LL128", "size": 1048576, "status": "ok", "timed_s": 2.26, "mJ_per_op": 11.9274}
+{"t_wall": 1791258702.0641434, "kind": "launch", "trial": 1, "i": "88/108", "cond": "all_reduce__2gpu_nvlink__Tree__LL128", "size": 1048576, "status": "ok", "timed_s": 2.27, "mJ_per_op": 16.1491}
+{"t_wall": 1791258709.0619736, "kind": "launch", "trial": 1, "i": "89/108", "cond": "all_reduce__2gpu_nvlink__default__LL128", "size": 67108864, "status": "ok", "timed_s": 2.33, "mJ_per_op": 523.7901}
+{"t_wall": 1791258716.97436, "kind": "launch", "trial": 1, "i": "92/108", "cond": "all_gather__4gpu__Ring__default", "size": 4096, "status": "ok", "timed_s": 2.21, "mJ_per_op": 3.3436}
+{"t_wall": 1791258725.426765, "kind": "launch", "trial": 1, "i": "93/108", "cond": "reduce_scatter__4gpu__Ring__default", "size": 67108864, "status": "ok", "timed_s": 2.51, "mJ_per_op": 2395.9485}
+{"t_wall": 1791258737.4374785, "kind": "launch", "trial": 1, "i": "94/108", "cond": "all_gather__2gpu_nvlink__Ring__default", "size": 4096, "status": "ok", "timed_s": 2.51, "mJ_per_op": 1.1442}
+{"t_wall": 1791258743.9891312, "kind": "launch", "trial": 1, "i": "95/108", "cond": "reduce_scatter__2gpu_nvlink__default__LL128", "size": 4096, "status": "ok", "timed_s": 2.25, "mJ_per_op": 2.5479}
+{"t_wall": 1791258751.0060072, "kind": "launch", "trial": 1, "i": "96/108", "cond": "all_gather__2gpu_nvlink__default__LL128", "size": 1048576, "status": "ok", "timed_s": 2.28, "mJ_per_op": 7.7248}
+{"t_wall": 1791258759.40194, "kind": "launch", "trial": 1, "i": "98/108", "cond": "reduce_scatter__4gpu__default__default", "size": 67108864, "status": "ok", "timed_s": 2.5, "mJ_per_op": 2396.6984}
+{"t_wall": 1791258767.754371, "kind": "launch", "trial": 1, "i": "99/108", "cond": "all_reduce__4gpu__Ring__LL128", "size": 1048576, "status": "ok", "timed_s": 2.44, "mJ_per_op": 118.2763}
+{"t_wall": 1791258775.6966429, "kind": "launch", "trial": 1, "i": "100/108", "cond": "reduce_scatter__4gpu__default__default", "size": 4096, "status": "ok", "timed_s": 2.29, "mJ_per_op": 3.3283}
+{"t_wall": 1791258783.5297928, "kind": "launch", "trial": 1, "i": "101/108", "cond": "reduce_scatter__4gpu__Ring__default", "size": 4096, "status": "ok", "timed_s": 2.25, "mJ_per_op": 3.3045}
+{"t_wall": 1791258791.8873193, "kind": "launch", "trial": 1, "i": "102/108", "cond": "all_gather__4gpu__default__default", "size": 67108864, "status": "ok", "timed_s": 2.29, "mJ_per_op": 2401.6587}
+{"t_wall": 1791258798.916355, "kind": "launch", "trial": 1, "i": "103/108", "cond": "all_reduce__2gpu_nvlink__default__default", "size": 67108864, "status": "ok", "timed_s": 2.37, "mJ_per_op": 460.3476}
+{"t_wall": 1791258806.9262826, "kind": "launch", "trial": 1, "i": "105/108", "cond": "all_reduce__4gpu__default__LL128", "size": 67108864, "status": "ok", "timed_s": 2.27, "mJ_per_op": 7164.1226}
+{"t_wall": 1791258813.4946704, "kind": "launch", "trial": 1, "i": "106/108", "cond": "all_gather__2gpu_nvlink__default__default", "size": 1048576, "status": "ok", "timed_s": 2.21, "mJ_per_op": 8.5977}
+{"t_wall": 1791258820.0518718, "kind": "launch", "trial": 1, "i": "107/108", "cond": "all_gather__2gpu_nvlink__Ring__LL128", "size": 67108864, "status": "ok", "timed_s": 2.09, "mJ_per_op": 310.6985}
+{"t_wall": 1791258826.624562, "kind": "launch", "trial": 1, "i": "108/108", "cond": "all_gather__2gpu_nvlink__default__LL128", "size": 4096, "status": "ok", "timed_s": 2.2, "mJ_per_op": 2.3037}
+{"t_wall": 1791258845.6493602, "kind": "idle", "tag": "t1-end", "status": "ok", "watts": {"4": 28.91, "5": 21.1, "6": 24.7, "7": 27.42}}
+{"t_wall": 1791258861.6848133, "kind": "idle", "tag": "t2-start", "status": "ok", "watts": {"4": 28.78, "5": 20.84, "6": 24.45, "7": 27.03}}
+{"t_wall": 1791258868.7402477, "kind": "launch", "trial": 2, "i": "1/108", "cond": "all_reduce__2gpu_nvlink__Tree__default", "size": 67108864, "status": "ok", "timed_s": 2.4, "mJ_per_op": 433.3876}
+{"t_wall": 1791258875.2416573, "kind": "launch", "trial": 2, "i": "2/108", "cond": "all_reduce__2gpu_nvlink__Tree__LL128", "size": 1048576, "status": "ok", "timed_s": 2.26, "mJ_per_op": 16.1042}
+{"t_wall": 1791258883.703799, "kind": "launch", "trial": 2, "i": "3/108", "cond": "reduce_scatter__4gpu__Ring__default", "size": 67108864, "status": "ok", "timed_s": 2.52, "mJ_per_op": 2359.897}
+{"t_wall": 1791258891.623786, "kind": "launch", "trial": 2, "i": "4/108", "cond": "all_reduce__4gpu__default__LL128", "size": 67108864, "status": "ok", "timed_s": 2.27, "mJ_per_op": 7207.929}
+{"t_wall": 1791258898.150738, "kind": "launch", "trial": 2, "i": "5/108", "cond": "reduce_scatter__2gpu_nvlink__default__LL128", "size": 4096, "status": "ok", "timed_s": 2.23, "mJ_per_op": 2.5057}
+{"t_wall": 1791258906.5538247, "kind": "launch", "trial": 2, "i": "6/108", "cond": "reduce_scatter__4gpu__Ring__default", "size": 1048576, "status": "ok", "timed_s": 2.47, "mJ_per_op": 40.841}
+{"t_wall": 1791258914.8955657, "kind": "launch", "trial": 2, "i": "7/108", "cond": "all_gather__4gpu__Ring__default", "size": 67108864, "status": "ok", "timed_s": 2.46, "mJ_per_op": 2390.3032}
+{"t_wall": 1791258921.9086597, "kind": "launch", "trial": 2, "i": "10/108", "cond": "reduce_scatter__2gpu_nvlink__default__LL128", "size": 67108864, "status": "ok", "timed_s": 2.31, "mJ_per_op": 327.3476}
+{"t_wall": 1791258930.3005202, "kind": "launch", "trial": 2, "i": "11/108", "cond": "all_reduce__4gpu__default__default", "size": 67108864, "status": "ok", "timed_s": 2.47, "mJ_per_op": 4611.5273}
+{"t_wall": 1791258937.2726598, "kind": "launch", "trial": 2, "i": "13/108", "cond": "reduce_scatter__2gpu_nvlink__default__default", "size": 1048576, "status": "ok", "timed_s": 2.41, "mJ_per_op": 7.7351}
+{"t_wall": 1791258944.2648478, "kind": "launch", "trial": 2, "i": "14/108", "cond": "all_gather__2gpu_nvlink__Ring__default", "size": 67108864, "status": "ok", "timed_s": 2.29, "mJ_per_op": 269.3403}
+{"t_wall": 1791258952.660262, "kind": "launch", "trial": 2, "i": "15/108", "cond": "all_gather__4gpu__default__LL128", "size": 67108864, "status": "ok", "timed_s": 2.44, "mJ_per_op": 3669.8994}
+{"t_wall": 1791258959.6637325, "kind": "launch", "trial": 2, "i": "16/108", "cond": "reduce_scatter__2gpu_nvlink__Ring__LL128", "size": 67108864, "status": "ok", "timed_s": 2.3, "mJ_per_op": 327.0207}
+{"t_wall": 1791258966.1793666, "kind": "launch", "trial": 2, "i": "18/108", "cond": "all_gather__2gpu_nvlink__Ring__LL128", "size": 4096, "status": "ok", "timed_s": 2.21, "mJ_per_op": 2.2882}
+{"t_wall": 1791258979.1646502, "kind": "launch", "trial": 2, "i": "19/108", "cond": "all_gather__2gpu_nvlink__default__default", "size": 4096, "status": "ok", "timed_s": 2.53, "mJ_per_op": 1.1681}
+{"t_wall": 1791258987.1326017, "kind": "launch", "trial": 2, "i": "20/108", "cond": "all_gather__4gpu__Ring__default", "size": 1048576, "status": "ok", "timed_s": 2.3, "mJ_per_op": 42.7177}
+{"t_wall": 1791258993.666011, "kind": "launch", "trial": 2, "i": "21/108", "cond": "all_gather__2gpu_nvlink__default__default", "size": 1048576, "status": "ok", "timed_s": 2.21, "mJ_per_op": 8.4611}
+{"t_wall": 1791259000.1798792, "kind": "launch", "trial": 2, "i": "22/108", "cond": "all_gather__2gpu_nvlink__Ring__default", "size": 1048576, "status": "ok", "timed_s": 2.18, "mJ_per_op": 8.5251}
+{"t_wall": 1791259007.153371, "kind": "launch", "trial": 2, "i": "23/108", "cond": "all_gather__2gpu_nvlink__Ring__LL128", "size": 1048576, "status": "ok", "timed_s": 2.28, "mJ_per_op": 7.6165}
+{"t_wall": 1791259013.6699588, "kind": "launch", "trial": 2, "i": "24/108", "cond": "all_gather__2gpu_nvlink__Ring__LL128", "size": 67108864, "status": "ok", "timed_s": 2.09, "mJ_per_op": 310.1003}
+{"t_wall": 1791259022.0042217, "kind": "launch", "trial": 2, "i": "25/108", "cond": "all_gather__4gpu__default__default", "size": 67108864, "status": "ok", "timed_s": 2.29, "mJ_per_op": 2371.162}
+{"t_wall": 1791259028.494671, "kind": "launch", "trial": 2, "i": "26/108", "cond": "reduce_scatter__2gpu_nvlink__Ring__LL128", "size": 4096, "status": "ok", "timed_s": 2.22, "mJ_per_op": 2.5577}
+{"t_wall": 1791259035.503845, "kind": "launch", "trial": 2, "i": "27/108", "cond": "reduce_scatter__2gpu_nvlink__default__default", "size": 67108864, "status": "ok", "timed_s": 2.35, "mJ_per_op": 296.2551}
+{"t_wall": 1791259043.8662176, "kind": "launch", "trial": 2, "i": "29/108", "cond": "reduce_scatter__4gpu__default__default", "size": 1048576, "status": "ok", "timed_s": 2.37, "mJ_per_op": 40.9158}
+{"t_wall": 1791259052.225592, "kind": "launch", "trial": 2, "i": "30/108", "cond": "all_reduce__4gpu__Tree__LL128", "size": 1048576, "status": "ok", "timed_s": 2.45, "mJ_per_op": 82.2466}
+{"t_wall": 1791259060.6467218, "kind": "launch", "trial": 2, "i": "32/108", "cond": "reduce_scatter__4gpu__default__default", "size": 67108864, "status": "ok", "timed_s": 2.52, "mJ_per_op": 2396.9603}
+{"t_wall": 1791259067.6525571, "kind": "launch", "trial": 2, "i": "33/108", "cond": "all_reduce__2gpu_nvlink__Ring__default", "size": 1048576, "status": "ok", "timed_s": 2.28, "mJ_per_op": 11.3641}
+{"t_wall": 1791259079.6166887, "kind": "launch", "trial": 2, "i": "34/108", "cond": "all_gather__2gpu_nvlink__Ring__default", "size": 4096, "status": "ok", "timed_s": 2.52, "mJ_per_op": 1.1536}
+{"t_wall": 1791259092.5999358, "kind": "launch", "trial": 2, "i": "35/108", "cond": "all_reduce__2gpu_nvlink__Ring__default", "size": 4096, "status": "ok", "timed_s": 2.52, "mJ_per_op": 1.2753}
+{"t_wall": 1791259104.5687835, "kind": "launch", "trial": 2, "i": "36/108", "cond": "reduce_scatter__2gpu_nvlink__default__default", "size": 4096, "status": "ok", "timed_s": 2.52, "mJ_per_op": 1.1581}
+{"t_wall": 1791259112.9778647, "kind": "launch", "trial": 2, "i": "37/108", "cond": "reduce_scatter__4gpu__default__LL128", "size": 1048576, "status": "ok", "timed_s": 2.41, "mJ_per_op": 60.7153}
+{"t_wall": 1791259119.485263, "kind": "launch", "trial": 2, "i": "38/108", "cond": "all_reduce__2gpu_nvlink__default__LL128", "size": 1048576, "status": "ok", "timed_s": 2.27, "mJ_per_op": 11.9121}
+{"t_wall": 1791259127.8755982, "kind": "launch", "trial": 2, "i": "40/108", "cond": "all_reduce__4gpu__Tree__default", "size": 67108864, "status": "ok", "timed_s": 2.4, "mJ_per_op": 3059.362}
+{"t_wall": 1791259136.24141, "kind": "launch", "trial": 2, "i": "41/108", "cond": "all_reduce__4gpu__Ring__LL128", "size": 67108864, "status": "ok", "timed_s": 2.33, "mJ_per_op": 7244.8562}
+{"t_wall": 1791259144.6001868, "kind": "launch", "trial": 2, "i": "43/108", "cond": "all_reduce__4gpu__Tree__default", "size": 1048576, "status": "ok", "timed_s": 2.38, "mJ_per_op": 56.8697}
+{"t_wall": 1791259151.131629, "kind": "launch", "trial": 2, "i": "45/108", "cond": "all_reduce__2gpu_nvlink__Tree__LL128", "size": 4096, "status": "ok", "timed_s": 2.24, "mJ_per_op": 3.0341}
+{"t_wall": 1791259163.1070905, "kind": "launch", "trial": 2, "i": "47/108", "cond": "reduce_scatter__2gpu_nvlink__Ring__default", "size": 4096, "status": "ok", "timed_s": 2.51, "mJ_per_op": 1.1399}
+{"t_wall": 1791259169.6136558, "kind": "launch", "trial": 2, "i": "48/108", "cond": "all_gather__2gpu_nvlink__default__LL128", "size": 4096, "status": "ok", "timed_s": 2.19, "mJ_per_op": 2.2636}
+{"t_wall": 1791259177.565015, "kind": "launch", "trial": 2, "i": "49/108", "cond": "reduce_scatter__4gpu__default__LL128", "size": 67108864, "status": "ok", "timed_s": 2.16, "mJ_per_op": 3708.4653}
+{"t_wall": 1791259185.9225872, "kind": "launch", "trial": 2, "i": "50/108", "cond": "all_reduce__4gpu__Tree__LL128", "size": 67108864, "status": "ok", "timed_s": 2.47, "mJ_per_op": 4660.5682}
+{"t_wall": 1791259192.9569528, "kind": "launch", "trial": 2, "i": "51/108", "cond": "reduce_scatter__2gpu_nvlink__default__LL128", "size": 1048576, "status": "ok", "timed_s": 2.31, "mJ_per_op": 8.5732}
+{"t_wall": 1791259199.4938798, "kind": "launch", "trial": 2, "i": "53/108", "cond": "all_reduce__2gpu_nvlink__Ring__LL128", "size": 4096, "status": "ok", "timed_s": 2.23, "mJ_per_op": 2.9393}
+{"t_wall": 1791259207.3836408, "kind": "launch", "trial": 2, "i": "54/108", "cond": "reduce_scatter__4gpu__default__LL128", "size": 4096, "status": "ok", "timed_s": 2.25, "mJ_per_op": 7.5655}
+{"t_wall": 1791259215.7328215, "kind": "launch", "trial": 2, "i": "55/108", "cond": "all_reduce__4gpu__Ring__default", "size": 67108864, "status": "ok", "timed_s": 2.47, "mJ_per_op": 4634.457}
+{"t_wall": 1791259224.1397626, "kind": "launch", "trial": 2, "i": "56/108", "cond": "all_gather__4gpu__Ring__LL128", "size": 1048576, "status": "ok", "timed_s": 2.49, "mJ_per_op": 60.7842}
+{"t_wall": 1791259231.1777897, "kind": "launch", "trial": 2, "i": "58/108", "cond": "reduce_scatter__2gpu_nvlink__Ring__LL128", "size": 1048576, "status": "ok", "timed_s": 2.3, "mJ_per_op": 8.6019}
+{"t_wall": 1791259238.1947525, "kind": "launch", "trial": 2, "i": "59/108", "cond": "all_reduce__2gpu_nvlink__Ring__default", "size": 67108864, "status": "ok", "timed_s": 2.35, "mJ_per_op": 462.0931}
+{"t_wall": 1791259246.1432378, "kind": "launch", "trial": 2, "i": "61/108", "cond": "reduce_scatter__4gpu__default__default", "size": 4096, "status": "ok", "timed_s": 2.28, "mJ_per_op": 3.2962}
+{"t_wall": 1791259258.646904, "kind": "launch", "trial": 2, "i": "64/108", "cond": "all_reduce__2gpu_nvlink__default__default", "size": 4096, "status": "ok", "timed_s": 2.52, "mJ_per_op": 1.2505}
+{"t_wall": 1791259265.686308, "kind": "launch", "trial": 2, "i": "65/108", "cond": "reduce_scatter__2gpu_nvlink__Ring__default", "size": 1048576, "status": "ok", "timed_s": 2.29, "mJ_per_op": 7.9023}
+{"t_wall": 1791259273.5808246, "kind": "launch", "trial": 2, "i": "66/108", "cond": "all_reduce__4gpu__Ring__default", "size": 4096, "status": "ok", "timed_s": 2.19, "mJ_per_op": 4.5951}
+{"t_wall": 1791259280.120571, "kind": "launch", "trial": 2, "i": "67/108", "cond": "all_reduce__2gpu_nvlink__Tree__default", "size": 4096, "status": "ok", "timed_s": 2.25, "mJ_per_op": 1.5689}
+{"t_wall": 1791259288.5339093, "kind": "launch", "trial": 2, "i": "68/108", "cond": "all_reduce__4gpu__Tree__default", "size": 4096, "status": "ok", "timed_s": 2.3, "mJ_per_op": 5.4911}
+{"t_wall": 1791259296.364691, "kind": "launch", "trial": 2, "i": "71/108", "cond": "all_gather__4gpu__Ring__LL128", "size": 4096, "status": "ok", "timed_s": 2.23, "mJ_per_op": 6.9964}
+{"t_wall": 1791259304.225445, "kind": "launch", "trial": 2, "i": "72/108", "cond": "reduce_scatter__4gpu__Ring__default", "size": 4096, "status": "ok", "timed_s": 2.25, "mJ_per_op": 3.2726}
+{"t_wall": 1791259311.2574399, "kind": "launch", "trial": 2, "i": "74/108", "cond": "reduce_scatter__2gpu_nvlink__Ring__default", "size": 67108864, "status": "ok", "timed_s": 2.34, "mJ_per_op": 289.7158}
+{"t_wall": 1791259318.257717, "kind": "launch", "trial": 2, "i": "75/108", "cond": "all_reduce__2gpu_nvlink__default__LL128", "size": 67108864, "status": "ok", "timed_s": 2.33, "mJ_per_op": 520.5838}
+{"t_wall": 1791259326.6223202, "kind": "launch", "trial": 2, "i": "76/108", "cond": "reduce_scatter__4gpu__Ring__LL128", "size": 67108864, "status": "ok", "timed_s": 2.44, "mJ_per_op": 3719.2477}
+{"t_wall": 1791259334.5177212, "kind": "launch", "trial": 2, "i": "77/108", "cond": "reduce_scatter__4gpu__Ring__LL128", "size": 4096, "status": "ok", "timed_s": 2.25, "mJ_per_op": 7.5823}
+{"t_wall": 1791259342.9360037, "kind": "launch", "trial": 2, "i": "78/108", "cond": "all_reduce__4gpu__Ring__LL128", "size": 1048576, "status": "ok", "timed_s": 2.42, "mJ_per_op": 117.9987}
+{"t_wall": 1791259360.959659, "kind": "idle", "tag": "t2-mid79", "status": "ok", "watts": {"4": 29.36, "5": 21.04, "6": 25.17, "7": 27.69}}
+{"t_wall": 1791259368.003768, "kind": "launch", "trial": 2, "i": "80/108", "cond": "all_reduce__2gpu_nvlink__default__default", "size": 67108864, "status": "ok", "timed_s": 2.37, "mJ_per_op": 452.8584}
+{"t_wall": 1791259375.0422506, "kind": "launch", "trial": 2, "i": "81/108", "cond": "all_gather__2gpu_nvlink__default__default", "size": 67108864, "status": "ok", "timed_s": 2.29, "mJ_per_op": 270.2147}
+{"t_wall": 1791259382.0528312, "kind": "launch", "trial": 2, "i": "82/108", "cond": "all_gather__2gpu_nvlink__default__LL128", "size": 1048576, "status": "ok", "timed_s": 2.28, "mJ_per_op": 7.5512}
+{"t_wall": 1791259389.0570855, "kind": "launch", "trial": 2, "i": "84/108", "cond": "all_reduce__2gpu_nvlink__Tree__LL128", "size": 67108864, "status": "ok", "timed_s": 2.44, "mJ_per_op": 595.4959}
+{"t_wall": 1791259396.955913, "kind": "launch", "trial": 2, "i": "85/108", "cond": "all_gather__4gpu__default__LL128", "size": 4096, "status": "ok", "timed_s": 2.22, "mJ_per_op": 6.9869}
+{"t_wall": 1791259404.8511791, "kind": "launch", "trial": 2, "i": "86/108", "cond": "all_reduce__4gpu__Ring__LL128", "size": 4096, "status": "ok", "timed_s": 2.24, "mJ_per_op": 11.2579}
+{"t_wall": 1791259412.778388, "kind": "launch", "trial": 2, "i": "87/108", "cond": "all_reduce__4gpu__default__LL128", "size": 4096, "status": "ok", "timed_s": 2.26, "mJ_per_op": 8.4874}
+{"t_wall": 1791259421.1482077, "kind": "launch", "trial": 2, "i": "88/108", "cond": "all_gather__4gpu__default__default", "size": 1048576, "status": "ok", "timed_s": 2.35, "mJ_per_op": 43.5824}
+{"t_wall": 1791259427.7040825, "kind": "launch", "trial": 2, "i": "89/108", "cond": "all_reduce__2gpu_nvlink__Tree__default", "size": 1048576, "status": "ok", "timed_s": 2.27, "mJ_per_op": 12.5944}
+{"t_wall": 1791259435.618409, "kind": "launch", "trial": 2, "i": "90/108", "cond": "all_reduce__4gpu__Tree__LL128", "size": 4096, "status": "ok", "timed_s": 2.26, "mJ_per_op": 8.4217}
+{"t_wall": 1791259443.9847362, "kind": "launch", "trial": 2, "i": "91/108", "cond": "all_reduce__4gpu__Ring__default", "size": 1048576, "status": "ok", "timed_s": 2.39, "mJ_per_op": 77.9384}
+{"t_wall": 1791259450.5098424, "kind": "launch", "trial": 2, "i": "92/108", "cond": "all_reduce__2gpu_nvlink__default__LL128", "size": 4096, "status": "ok", "timed_s": 2.24, "mJ_per_op": 3.0047}
+{"t_wall": 1791259458.4195921, "kind": "launch", "trial": 2, "i": "94/108", "cond": "all_gather__4gpu__Ring__default", "size": 4096, "status": "ok", "timed_s": 2.21, "mJ_per_op": 3.2988}
+{"t_wall": 1791259466.2926073, "kind": "launch", "trial": 2, "i": "95/108", "cond": "all_gather__4gpu__Ring__LL128", "size": 67108864, "status": "ok", "timed_s": 2.13, "mJ_per_op": 3645.1176}
+{"t_wall": 1791259474.2067404, "kind": "launch", "trial": 2, "i": "96/108", "cond": "all_gather__4gpu__default__default", "size": 4096, "status": "ok", "timed_s": 2.27, "mJ_per_op": 3.2827}
+{"t_wall": 1791259481.2014332, "kind": "launch", "trial": 2, "i": "97/108", "cond": "all_reduce__2gpu_nvlink__Ring__LL128", "size": 1048576, "status": "ok", "timed_s": 2.3, "mJ_per_op": 11.954}
+{"t_wall": 1791259489.6893206, "kind": "launch", "trial": 2, "i": "98/108", "cond": "all_reduce__4gpu__default__default", "size": 1048576, "status": "ok", "timed_s": 2.47, "mJ_per_op": 79.2649}
+{"t_wall": 1791259497.5868545, "kind": "launch", "trial": 2, "i": "100/108", "cond": "all_gather__4gpu__default__LL128", "size": 1048576, "status": "ok", "timed_s": 2.24, "mJ_per_op": 61.0682}
+{"t_wall": 1791259504.5902352, "kind": "launch", "trial": 2, "i": "101/108", "cond": "all_reduce__2gpu_nvlink__Ring__LL128", "size": 67108864, "status": "ok", "timed_s": 2.37, "mJ_per_op": 528.5158}
+{"t_wall": 1791259511.097333, "kind": "launch", "trial": 2, "i": "102/108", "cond": "all_gather__2gpu_nvlink__default__LL128", "size": 67108864, "status": "ok", "timed_s": 2.09, "mJ_per_op": 309.338}
+{"t_wall": 1791259519.0165944, "kind": "launch", "trial": 2, "i": "103/108", "cond": "all_reduce__4gpu__default__default", "size": 4096, "status": "ok", "timed_s": 2.21, "mJ_per_op": 4.5879}
+{"t_wall": 1791259527.4289787, "kind": "launch", "trial": 2, "i": "104/108", "cond": "all_reduce__4gpu__default__LL128", "size": 1048576, "status": "ok", "timed_s": 2.43, "mJ_per_op": 116.914}
+{"t_wall": 1791259535.8433964, "kind": "launch", "trial": 2, "i": "105/108", "cond": "reduce_scatter__4gpu__Ring__LL128", "size": 1048576, "status": "ok", "timed_s": 2.48, "mJ_per_op": 61.0338}
+{"t_wall": 1791259542.9016428, "kind": "launch", "trial": 2, "i": "108/108", "cond": "all_reduce__2gpu_nvlink__default__default", "size": 1048576, "status": "ok", "timed_s": 2.29, "mJ_per_op": 11.4894}
+{"t_wall": 1791259561.9291751, "kind": "idle", "tag": "t2-end", "status": "ok", "watts": {"4": 29.08, "5": 20.86, "6": 25.37, "7": 27.7}}
+{"t_wall": 1791259563.337389, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__default__default", "status": "ok"}
+{"t_wall": 1791259564.7236035, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__default__LL128", "status": "ok"}
+{"t_wall": 1791259566.0905597, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__Ring__default", "status": "ok"}
+{"t_wall": 1791259567.4535012, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__Ring__LL128", "status": "ok"}
+{"t_wall": 1791259568.8122456, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__Tree__default", "status": "ok"}
+{"t_wall": 1791259570.2115355, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__Tree__LL128", "status": "ok"}
+{"t_wall": 1791259572.8521495, "kind": "probe", "cond": "all_reduce__4gpu__default__default", "status": "ok"}
+{"t_wall": 1791259575.4645777, "kind": "probe", "cond": "all_reduce__4gpu__default__LL128", "status": "ok"}
+{"t_wall": 1791259578.0338085, "kind": "probe", "cond": "all_reduce__4gpu__Ring__default", "status": "ok"}
+{"t_wall": 1791259580.5752437, "kind": "probe", "cond": "all_reduce__4gpu__Ring__LL128", "status": "ok"}
+{"t_wall": 1791259583.1073415, "kind": "probe", "cond": "all_reduce__4gpu__Tree__default", "status": "ok"}
+{"t_wall": 1791259585.6765373, "kind": "probe", "cond": "all_reduce__4gpu__Tree__LL128", "status": "ok"}
+{"t_wall": 1791259587.0117164, "kind": "probe", "cond": "all_gather__2gpu_nvlink__default__default", "status": "ok"}
+{"t_wall": 1791259588.351486, "kind": "probe", "cond": "all_gather__2gpu_nvlink__default__LL128", "status": "ok"}
+{"t_wall": 1791259589.6820068, "kind": "probe", "cond": "all_gather__2gpu_nvlink__Ring__default", "status": "ok"}
+{"t_wall": 1791259591.0384693, "kind": "probe", "cond": "all_gather__2gpu_nvlink__Ring__LL128", "status": "ok"}
+{"t_wall": 1791259596.9893277, "kind": "probe", "cond": "all_gather__2gpu_nvlink__Tree__default", "status": "unsupported"}
+{"t_wall": 1791259602.9967692, "kind": "probe", "cond": "all_gather__2gpu_nvlink__Tree__LL128", "status": "unsupported"}
+{"t_wall": 1791259605.6041317, "kind": "probe", "cond": "all_gather__4gpu__default__default", "status": "ok"}
+{"t_wall": 1791259608.2016842, "kind": "probe", "cond": "all_gather__4gpu__default__LL128", "status": "ok"}
+{"t_wall": 1791259610.7885575, "kind": "probe", "cond": "all_gather__4gpu__Ring__default", "status": "ok"}
+{"t_wall": 1791259613.3278599, "kind": "probe", "cond": "all_gather__4gpu__Ring__LL128", "status": "ok"}
+{"t_wall": 1791259622.8175337, "kind": "probe", "cond": "all_gather__4gpu__Tree__default", "status": "unsupported"}
+{"t_wall": 1791259632.193334, "kind": "probe", "cond": "all_gather__4gpu__Tree__LL128", "status": "unsupported"}
+{"t_wall": 1791259633.5476117, "kind": "probe", "cond": "reduce_scatter__2gpu_nvlink__default__default", "status": "ok"}
+{"t_wall": 1791259634.8710487, "kind": "probe", "cond": "reduce_scatter__2gpu_nvlink__default__LL128", "status": "ok"}
+{"t_wall": 1791259636.2080743, "kind": "probe", "cond": "reduce_scatter__2gpu_nvlink__Ring__default", "status": "ok"}
+{"t_wall": 1791259637.5308583, "kind": "probe", "cond": "reduce_scatter__2gpu_nvlink__Ring__LL128", "status": "ok"}
+{"t_wall": 1791259643.522027, "kind": "probe", "cond": "reduce_scatter__2gpu_nvlink__Tree__default", "status": "unsupported"}
+{"t_wall": 1791259649.5034547, "kind": "probe", "cond": "reduce_scatter__2gpu_nvlink__Tree__LL128", "status": "unsupported"}
+{"t_wall": 1791259652.0860028, "kind": "probe", "cond": "reduce_scatter__4gpu__default__default", "status": "ok"}
+{"t_wall": 1791259654.6148245, "kind": "probe", "cond": "reduce_scatter__4gpu__default__LL128", "status": "ok"}
+{"t_wall": 1791259657.1783478, "kind": "probe", "cond": "reduce_scatter__4gpu__Ring__default", "status": "ok"}
+{"t_wall": 1791259659.7513351, "kind": "probe", "cond": "reduce_scatter__4gpu__Ring__LL128", "status": "ok"}
+{"t_wall": 1791259669.1411555, "kind": "probe", "cond": "reduce_scatter__4gpu__Tree__default", "status": "unsupported"}
+{"t_wall": 1791259678.5731082, "kind": "probe", "cond": "reduce_scatter__4gpu__Tree__LL128", "status": "unsupported"}
+{"t_wall": 1791259678.5739505, "kind": "metadata", "tag": "end"}
+{"t_wall": 1791259684.9853153, "kind": "finished", "run_dir": "/path/to/nccl-energy-frontier/data/raw/smoke"}
