@@ -36,7 +36,7 @@ def label(algo: str, proto: str) -> str:
 
 
 def load_records(run_dir: Path) -> list[dict]:
-    lines = [ln for ln in (Path(run_dir) / "launches.jsonl").read_text(encoding="utf-8").splitlines() if ln.strip()]
+    lines = [ln for ln in (Path(run_dir) / "launches.jsonl").read_text().splitlines() if ln.strip()]
     out = []
     for i, line in enumerate(lines):
         try:
@@ -362,5 +362,5 @@ def analyze_run(run_dir: Path, out_dir: Path, n_boot: int = 10000, seed: int = 1
     q["min_trials_for_ranking"] = min_trials
     q["seed"] = seed
     q["source_run"] = str(run_dir)
-    (out_dir / "qc.json").write_text(json.dumps(q, indent=1, default=str), encoding="utf-8")
+    (out_dir / "qc.json").write_text(json.dumps(q, indent=1, default=str))
     print(f"wrote {out_dir}: {len(reg)} regions, {len(excl)} excluded, {len(summ)} summary rows, {len(opt)} cells")

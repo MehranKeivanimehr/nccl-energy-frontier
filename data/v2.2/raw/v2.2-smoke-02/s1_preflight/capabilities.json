@@ -1,0 +1,201 @@
+{
+ "utc": "2026-10-09T19:12:42Z",
+ "driver": "580.178.04",
+ "nvml": "13.580.178.04",
+ "gpus": [
+  {
+   "index": 0,
+   "alias": "A6000-70baeda9",
+   "name": "NVIDIA RTX A6000",
+   "compute_capability": [
+    8,
+    6
+   ],
+   "pci": "00000000:01:00.0",
+   "energy_counter": null,
+   "energy_counter_detail": "not checked (outside --gpus)",
+   "power_usage": true,
+   "power_instant_field": null,
+   "enforced_limit_mw": 300000,
+   "nvlinks_active": 4,
+   "processes": 1,
+   "mode": null,
+   "torch_supports_arch": true
+  },
+  {
+   "index": 1,
+   "alias": "A6000-5ddfa67e",
+   "name": "NVIDIA RTX A6000",
+   "compute_capability": [
+    8,
+    6
+   ],
+   "pci": "00000000:23:00.0",
+   "energy_counter": null,
+   "energy_counter_detail": "not checked (outside --gpus)",
+   "power_usage": true,
+   "power_instant_field": null,
+   "enforced_limit_mw": 300000,
+   "nvlinks_active": 4,
+   "processes": 0,
+   "mode": null,
+   "torch_supports_arch": true
+  },
+  {
+   "index": 2,
+   "alias": "A6000-6165bcc6",
+   "name": "NVIDIA RTX A6000",
+   "compute_capability": [
+    8,
+    6
+   ],
+   "pci": "00000000:41:00.0",
+   "energy_counter": null,
+   "energy_counter_detail": "not checked (outside --gpus)",
+   "power_usage": true,
+   "power_instant_field": null,
+   "enforced_limit_mw": 300000,
+   "nvlinks_active": 4,
+   "processes": 0,
+   "mode": null,
+   "torch_supports_arch": true
+  },
+  {
+   "index": 3,
+   "alias": "A6000-055fbaad",
+   "name": "NVIDIA RTX A6000",
+   "compute_capability": [
+    8,
+    6
+   ],
+   "pci": "00000000:61:00.0",
+   "energy_counter": null,
+   "energy_counter_detail": "not checked (outside --gpus)",
+   "power_usage": true,
+   "power_instant_field": null,
+   "enforced_limit_mw": 300000,
+   "nvlinks_active": 4,
+   "processes": 0,
+   "mode": null,
+   "torch_supports_arch": true
+  },
+  {
+   "index": 4,
+   "alias": "A6000-b10caa4a",
+   "name": "NVIDIA RTX A6000",
+   "compute_capability": [
+    8,
+    6
+   ],
+   "pci": "00000000:81:00.0",
+   "energy_counter": true,
+   "energy_counter_detail": "ok",
+   "power_usage": true,
+   "power_instant_field": true,
+   "enforced_limit_mw": 300000,
+   "nvlinks_active": 4,
+   "processes": 0,
+   "commit_probe": {
+    "reads": 1115,
+    "changes": 15,
+    "median_period_ms": 99.9781895,
+    "p10_ms": 99.5271297,
+    "p90_ms": 100.6014723
+   },
+   "mode": "COUNTER_ALIGNED",
+   "torch_supports_arch": true
+  },
+  {
+   "index": 5,
+   "alias": "A6000-f5f81ac3",
+   "name": "NVIDIA RTX A6000",
+   "compute_capability": [
+    8,
+    6
+   ],
+   "pci": "00000000:A1:00.0",
+   "energy_counter": true,
+   "energy_counter_detail": "ok",
+   "power_usage": true,
+   "power_instant_field": true,
+   "enforced_limit_mw": 300000,
+   "nvlinks_active": 4,
+   "processes": 0,
+   "commit_probe": {
+    "reads": 1054,
+    "changes": 15,
+    "median_period_ms": 99.99911,
+    "p10_ms": 99.0105231,
+    "p90_ms": 100.5944626
+   },
+   "mode": "COUNTER_ALIGNED",
+   "torch_supports_arch": true
+  },
+  {
+   "index": 6,
+   "alias": "A6000-cf04a46e",
+   "name": "NVIDIA RTX A6000",
+   "compute_capability": [
+    8,
+    6
+   ],
+   "pci": "00000000:C1:00.0",
+   "energy_counter": null,
+   "energy_counter_detail": "not checked (outside --gpus)",
+   "power_usage": true,
+   "power_instant_field": null,
+   "enforced_limit_mw": 300000,
+   "nvlinks_active": 4,
+   "processes": 0,
+   "mode": null,
+   "torch_supports_arch": true
+  },
+  {
+   "index": 7,
+   "alias": "A6000-8f2812cc",
+   "name": "NVIDIA RTX A6000",
+   "compute_capability": [
+    8,
+    6
+   ],
+   "pci": "00000000:E1:00.0",
+   "energy_counter": null,
+   "energy_counter_detail": "not checked (outside --gpus)",
+   "power_usage": true,
+   "power_instant_field": null,
+   "enforced_limit_mw": 300000,
+   "nvlinks_active": 4,
+   "processes": 0,
+   "mode": null,
+   "torch_supports_arch": true
+  }
+ ],
+ "topo_m": "\t\u001b[4mGPU0\tGPU1\tGPU2\tGPU3\tGPU4\tGPU5\tGPU6\tGPU7\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNV4\tNODE\tNODE\tSYS\tSYS\tSYS\tSYS\t0-63,128-191\t0\t\tN/A\nGPU1\tNV4\t X \tNODE\tNODE\tSYS\tSYS\tSYS\tSYS\t0-63,128-191\t0\t\tN/A\nGPU2\tNODE\tNODE\t X \tNV4\tSYS\tSYS\tSYS\tSYS\t0-63,128-191\t0\t\tN/A\nGPU3\tNODE\tNODE\tNV4\t X \tSYS\tSYS\tSYS\tSYS\t0-63,128-191\t0\t\tN/A\nGPU4\tSYS\tSYS\tSYS\tSYS\t X \tNV4\tNODE\tNODE\t64-127,192-255\t1\t\tN/A\nGPU5\tSYS\tSYS\tSYS\tSYS\tNV4\t X \tNODE\tNODE\t64-127,192-255\t1\t\tN/A\nGPU6\tSYS\tSYS\tSYS\tSYS\tNODE\tNODE\t X \tNV4\t64-127,192-255\t1\t\tN/A\nGPU7\tSYS\tSYS\tSYS\tSYS\tNODE\tNODE\tNV4\t X \t64-127,192-255\t1\t\tN/A\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n",
+ "topo_p2p_r": " \t\u001b[4mGPU0\tGPU1\tGPU2\tGPU3\tGPU4\tGPU5\tGPU6\tGPU7\t\u001b[0m\n GPU0\tX\tOK\tOK\tOK\tOK\tOK\tOK\tOK\t\n GPU1\tOK\tX\tOK\tOK\tOK\tOK\tOK\tOK\t\n GPU2\tOK\tOK\tX\tOK\tOK\tOK\tOK\tOK\t\n GPU3\tOK\tOK\tOK\tX\tOK\tOK\tOK\tOK\t\n GPU4\tOK\tOK\tOK\tOK\tX\tOK\tOK\tOK\t\n GPU5\tOK\tOK\tOK\tOK\tOK\tX\tOK\tOK\t\n GPU6\tOK\tOK\tOK\tOK\tOK\tOK\tX\tOK\t\n GPU7\tOK\tOK\tOK\tOK\tOK\tOK\tOK\tX\t\n\nLegend:\n\n  X    = Self\n  OK   = Status Ok\n  CNS  = Chipset not supported\n  GNS  = GPU not supported\n  TNS  = Topology not supported\n  NS   = Not supported\n  U    = Unknown\n",
+ "homogeneous_groups": {
+  "NVIDIA RTX A6000|cc(8, 6)": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ]
+ },
+ "torch": {
+  "version": "2.9.1+cu128",
+  "cuda": "12.8",
+  "arch_list": [
+   "sm_70",
+   "sm_75",
+   "sm_80",
+   "sm_86",
+   "sm_90",
+   "sm_100",
+   "sm_120"
+  ],
+  "nccl": "2.27.5"
+ }
+}

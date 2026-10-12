@@ -1,0 +1,340 @@
+{
+ "note": "gate 3a stopped after S2 (watchdog false positive); S3/S4 not run",
+ "checks": [
+  {
+   "check": "S2 block complete",
+   "result": "FAIL",
+   "evidence": {
+    "status": "STOPPED",
+    "stop_reason": "stop condition at P2_NVL__all_gather__auto__2097152: SAFETY_STOP ['WATCHDOG:FOREIGN_PROCESS:GPU5:[218029]']",
+    "final_status_counts": {
+     "OK": 2,
+     "SAFETY_STOP": 1
+    },
+    "health_events": []
+   }
+  },
+  {
+   "check": "S2 three units, one attempt each, no retries",
+   "result": "PASS",
+   "evidence": [
+    "P2_NVL__all_gather__Ring-Simple__2097152",
+    "P2_NVL__all_gather__Ring-LL128__2097152",
+    "P2_NVL__all_gather__auto__2097152"
+   ]
+  },
+  {
+   "check": "S2 Ring/Simple: region record complete (C0/C1/Cpost, read brackets, edges, phase, commit, loop end)",
+   "result": "PASS",
+   "evidence": {
+    "missing": [],
+    "rc_ok": true,
+    "n_edges": [
+     4,
+     4
+    ],
+    "T_region_s": 2.4955562765000003,
+    "flags": []
+   }
+  },
+  {
+   "check": "S2 Ring/Simple: v2.2 QC OK, fail-closed fields present",
+   "result": "PASS",
+   "evidence": {
+    "qc_status": "OK",
+    "qc_reasons": [],
+    "qc_method": "v2.2-fail-closed",
+    "telemetry_problems": []
+   }
+  },
+  {
+   "check": "S2 Ring/Simple: execution evidence on both ranks, expected algorithm/protocol",
+   "result": "PASS",
+   "evidence": {
+    "ranks": [
+     0,
+     1
+    ],
+    "evidence": "VERIFIED",
+    "reasons": [],
+    "executed(algo,proto,nCh,nWarps)": [
+     [
+      "RING",
+      "SIMPLE",
+      4,
+      17
+     ]
+    ],
+    "per_rank_n": {
+     "0": 51624,
+     "1": 51624
+    },
+    "profiler_flags": []
+   }
+  },
+  {
+   "check": "S2 Ring/Simple: sampler telemetry for both GPUs, no gaps",
+   "result": "PASS",
+   "evidence": {
+    "4": {
+     "n": 50,
+     "max_dt": 0.05021487899648491,
+     "temp_max_c": 31.0,
+     "power_mean_w": 114.82557999999997,
+     "inst_over_counter": 0.9895760717617845
+    },
+    "5": {
+     "n": 50,
+     "max_dt": 0.05021487899648491,
+     "temp_max_c": 31.0,
+     "power_mean_w": 111.9902,
+     "inst_over_counter": 0.9814196078619312
+    }
+   }
+  },
+  {
+   "check": "S2 Ring/Simple: owned process exited normally and was reaped",
+   "result": "PASS",
+   "evidence": {
+    "rc": 0,
+    "cleanup": {
+     "errors": [],
+     "sigterm": false,
+     "sigkill": false,
+     "survivors": [],
+     "tracked": 1,
+     "ok": true
+    }
+   }
+  },
+  {
+   "check": "S2 Ring/LL128: region record complete (C0/C1/Cpost, read brackets, edges, phase, commit, loop end)",
+   "result": "PASS",
+   "evidence": {
+    "missing": [],
+    "rc_ok": true,
+    "n_edges": [
+     4,
+     4
+    ],
+    "T_region_s": 2.481246129,
+    "flags": []
+   }
+  },
+  {
+   "check": "S2 Ring/LL128: v2.2 QC OK, fail-closed fields present",
+   "result": "PASS",
+   "evidence": {
+    "qc_status": "OK",
+    "qc_reasons": [],
+    "qc_method": "v2.2-fail-closed",
+    "telemetry_problems": []
+   }
+  },
+  {
+   "check": "S2 Ring/LL128: execution evidence on both ranks, expected algorithm/protocol",
+   "result": "PASS",
+   "evidence": {
+    "ranks": [
+     0,
+     1
+    ],
+    "evidence": "VERIFIED",
+    "reasons": [],
+    "executed(algo,proto,nCh,nWarps)": [
+     [
+      "RING",
+      "LL128",
+      4,
+      20
+     ]
+    ],
+    "per_rank_n": {
+     "0": 53078,
+     "1": 53078
+    },
+    "profiler_flags": []
+   }
+  },
+  {
+   "check": "S2 Ring/LL128: sampler telemetry for both GPUs, no gaps",
+   "result": "PASS",
+   "evidence": {
+    "4": {
+     "n": 49,
+     "max_dt": 0.05868633098725695,
+     "temp_max_c": 32.0,
+     "power_mean_w": 120.35242857142858,
+     "inst_over_counter": 0.9783357791569265
+    },
+    "5": {
+     "n": 49,
+     "max_dt": 0.05868633098725695,
+     "temp_max_c": 33.0,
+     "power_mean_w": 118.79297959183673,
+     "inst_over_counter": 0.9645220439191992
+    }
+   }
+  },
+  {
+   "check": "S2 Ring/LL128: owned process exited normally and was reaped",
+   "result": "PASS",
+   "evidence": {
+    "rc": 0,
+    "cleanup": {
+     "errors": [],
+     "sigterm": false,
+     "sigkill": false,
+     "survivors": [],
+     "tracked": 1,
+     "ok": true
+    }
+   }
+  },
+  {
+   "check": "S2 auto: region record complete (C0/C1/Cpost, read brackets, edges, phase, commit, loop end)",
+   "result": "PASS",
+   "evidence": {
+    "missing": [],
+    "rc_ok": true,
+    "n_edges": [
+     4,
+     4
+    ],
+    "T_region_s": 2.4911598645,
+    "flags": []
+   }
+  },
+  {
+   "check": "S2 auto: v2.2 QC OK, fail-closed fields present",
+   "result": "FAIL",
+   "evidence": {
+    "qc_status": "SAFETY_STOP",
+    "qc_reasons": [
+     "WATCHDOG:FOREIGN_PROCESS:GPU5:[218029]"
+    ],
+    "qc_method": "v2.2-fail-closed",
+    "telemetry_problems": []
+   }
+  },
+  {
+   "check": "S2 auto: execution evidence on both ranks, expected algorithm/protocol",
+   "result": "PASS",
+   "evidence": {
+    "ranks": [
+     0,
+     1
+    ],
+    "evidence": "VERIFIED",
+    "reasons": [],
+    "executed(algo,proto,nCh,nWarps)": [
+     [
+      "RING",
+      "SIMPLE",
+      4,
+      17
+     ]
+    ],
+    "per_rank_n": {
+     "0": 51628,
+     "1": 51628
+    },
+    "profiler_flags": []
+   }
+  },
+  {
+   "check": "S2 auto: sampler telemetry for both GPUs, no gaps",
+   "result": "PASS",
+   "evidence": {
+    "4": {
+     "n": 49,
+     "max_dt": 0.050052279009833,
+     "temp_max_c": 33.0,
+     "power_mean_w": 117.4314081632653,
+     "inst_over_counter": 0.9774141562013325
+    },
+    "5": {
+     "n": 49,
+     "max_dt": 0.050052279009833,
+     "temp_max_c": 33.0,
+     "power_mean_w": 114.36665306122448,
+     "inst_over_counter": 0.9674490408613882
+    }
+   }
+  },
+  {
+   "check": "S2 auto: owned process exited normally and was reaped",
+   "result": "FAIL",
+   "evidence": {
+    "rc": 0,
+    "cleanup": {
+     "errors": [],
+     "sigterm": false,
+     "sigkill": false,
+     "survivors": [],
+     "tracked": 1,
+     "ok": true
+    }
+   }
+  },
+  {
+   "check": "S2 identical-execution control: auto and forced Ring/Simple executed the same algorithm/protocol/channels/warps",
+   "result": "PASS",
+   "evidence": {
+    "Ring/Simple": [
+     [
+      "RING",
+      "SIMPLE",
+      4,
+      17
+     ]
+    ],
+    "Ring/LL128": [
+     [
+      "RING",
+      "LL128",
+      4,
+      20
+     ]
+    ],
+    "auto": [
+     [
+      "RING",
+      "SIMPLE",
+      4,
+      17
+     ]
+    ]
+   }
+  },
+  {
+   "check": "S2 controller NVML audit: no cumulative-counter read inside any measured region",
+   "result": "PASS",
+   "evidence": {
+    "audit_calls_total": 20638,
+    "counter_calls_total": 4,
+    "counter_calls_inside_regions": 0,
+    "calls_inside_regions_by_thread": {
+     "nccle-sampler": 6158
+    },
+    "calls_inside_regions_by_function": {
+     "nvmlDeviceGetPowerUsage": 594,
+     "nvmlDeviceGetTemperature": 594,
+     "nvmlDeviceGetClockInfo": 1188,
+     "nvmlDeviceGetUtilizationRates": 594,
+     "nvmlDeviceGetPerformanceState": 594,
+     "nvmlDeviceGetCurrentClocksEventReasons": 594,
+     "nvmlDeviceGetEnforcedPowerLimit": 594,
+     "nvmlDeviceGetMemoryInfo": 594,
+     "nvmlDeviceGetFieldValues": 596,
+     "nvmlDeviceGetComputeRunningProcesses": 36,
+     "nvmlDeviceGetComputeRunningProcesses_v3": 36,
+     "nvmlStructToFriendlyObject": 36,
+     "nvmlFriendlyObject": 36,
+     "nvmlDeviceGetGraphicsRunningProcesses": 36,
+     "nvmlDeviceGetGraphicsRunningProcesses_v3": 36
+    }
+   }
+  }
+ ]
+}

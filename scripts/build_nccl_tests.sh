@@ -16,6 +16,6 @@ if [ ! -d nccl-tests/.git ]; then
 fi
 git -C nccl-tests fetch -q origin
 git -C nccl-tests checkout -q "$NCCL_TESTS_COMMIT"
-make -C nccl-tests -j16 CUDA_HOME="$CUDA_HOME" NCCL_HOME="$PWD/nccl_home" \
+make -C nccl-tests -j"${BUILD_JOBS:-2}" CUDA_HOME="$CUDA_HOME" NCCL_HOME="$PWD/nccl_home" \
      NVCC_GENCODE="$NVCC_GENCODE" BUILDDIR="$PWD/nccl-tests/build" src.build
 ls -1 nccl-tests/build/*_perf

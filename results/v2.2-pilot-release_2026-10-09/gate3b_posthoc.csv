@@ -1,0 +1,23 @@
+label,contrast,version,n,estimate_pct,ci_lo_pct,ci_hi_pct
+POST-HOC EXPLORATORY,D1_counter_ln_Jop_2.5_over_40 A,raw,6,1.7981,-0.2175,3.8544
+POST-HOC EXPLORATORY,D1_counter_ln_Jop_2.5_over_40 A,temp_adjusted,6,0.7732,0.2368,1.3124
+POST-HOC EXPLORATORY,D1_counter_ln_Jop_2.5_over_40 B,raw,6,0.2466,-1.2565,1.7726
+POST-HOC EXPLORATORY,D1_counter_ln_Jop_2.5_over_40 B,temp_adjusted,6,0.4898,0.0611,0.9204
+POST-HOC EXPLORATORY,D1_counter_ln_Jop_2.5_over_40 C,raw,5,0.6632,-0.9015,2.2526
+POST-HOC EXPLORATORY,D1_counter_ln_Jop_2.5_over_40 C,temp_adjusted,5,0.5163,-0.1351,1.1719
+POST-HOC EXPLORATORY,D3_counter_B_over_A 2.5,raw,6,-0.1074,-0.7173,0.5062
+POST-HOC EXPLORATORY,D3_counter_B_over_A 2.5,temp_adjusted,6,-0.1986,-0.8706,0.4779
+POST-HOC EXPLORATORY,D3_counter_B_over_A 10.0,raw,5,1.2600,-1.0757,3.6509
+POST-HOC EXPLORATORY,D3_counter_B_over_A 10.0,temp_adjusted,5,0.2641,-0.2204,0.7510
+POST-HOC EXPLORATORY,D3_counter_B_over_A 20.0,raw,6,-2.4353,-4.8021,-0.0095
+POST-HOC EXPLORATORY,D3_counter_B_over_A 20.0,temp_adjusted,6,-0.1747,-0.5958,0.2483
+POST-HOC EXPLORATORY,D3_counter_B_over_A 40.0,raw,6,1.4386,-0.8284,3.7574
+POST-HOC EXPLORATORY,D3_counter_B_over_A 40.0,temp_adjusted,6,0.0828,-0.2938,0.4608
+POST-HOC EXPLORATORY,D4_counter_C_over_A 2.5,raw,6,0.6350,-0.3445,1.6241
+POST-HOC EXPLORATORY,D4_counter_C_over_A 2.5,temp_adjusted,6,0.8075,0.2497,1.3685
+POST-HOC EXPLORATORY,D4_counter_C_over_A 10.0,raw,6,1.6224,-2.1664,5.5579
+POST-HOC EXPLORATORY,D4_counter_C_over_A 10.0,temp_adjusted,6,1.2230,1.0176,1.4289
+POST-HOC EXPLORATORY,D4_counter_C_over_A 20.0,raw,6,0.5609,-0.8583,2.0004
+POST-HOC EXPLORATORY,D4_counter_C_over_A 20.0,temp_adjusted,6,0.8553,0.4818,1.2301
+POST-HOC EXPLORATORY,D4_counter_C_over_A 40.0,raw,5,2.0242,-1.9574,6.1675
+POST-HOC EXPLORATORY,D4_counter_C_over_A 40.0,temp_adjusted,5,1.1722,0.8551,1.4902

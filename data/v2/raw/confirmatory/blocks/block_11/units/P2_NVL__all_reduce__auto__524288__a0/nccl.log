@@ -1,0 +1,56 @@
+<host>:128952:128952 [0] NCCL INFO cudaDriverVersion 13000
+<host>:128952:128952 [0] NCCL INFO NCCL version 2.27.5+cuda12.9
+<host>:128952:128968 [1] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+<host>:128952:128968 [1] NCCL INFO NET/IB : No device found.
+<host>:128952:128968 [1] NCCL INFO NET/IB : Using [RO]; OOB enp226s0f0:<ip><0>
+<host>:128952:128968 [1] NCCL INFO NET/Socket : Using [0]enp226s0f0:<ip><0>
+<host>:128952:128968 [1] NCCL INFO Initialized NET plugin Socket
+<host>:128952:128968 [1] NCCL INFO Assigned NET plugin Socket to comm
+<host>:128952:128968 [1] NCCL INFO Using network Socket
+<host>:128952:128967 [0] NCCL INFO Assigned NET plugin Socket to comm
+<host>:128952:128967 [0] NCCL INFO Using network Socket
+<host>:128952:128968 [1] NCCL INFO ncclCommInitRankConfig comm 0x5d4356fbfa50 rank 1 nranks 2 cudaDev 1 nvmlDev 5 busId a1000 commId 0x276df900c61026ad - Init START
+<host>:128952:128967 [0] NCCL INFO ncclCommInitRankConfig comm 0x5d4356eaf650 rank 0 nranks 2 cudaDev 0 nvmlDev 4 busId 81000 commId 0x276df900c61026ad - Init START
+<host>:128952:128968 [1] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+<host>:128952:128968 [1] NCCL INFO Setting affinity for GPU 5 to 64-127,192-255
+<host>:128952:128967 [0] NCCL INFO Setting affinity for GPU 4 to 64-127,192-255
+<host>:128952:128968 [1] NCCL INFO comm 0x5d4356fbfa50 rank 1 nRanks 2 nNodes 1 localRanks 2 localRank 1 MNNVL 0
+<host>:128952:128968 [1] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1 [2] -1/-1/-1->1->0 [3] 0/-1/-1->1->-1
+<host>:128952:128968 [1] NCCL INFO P2P Chunksize set to 524288
+<host>:128952:128967 [0] NCCL INFO comm 0x5d4356eaf650 rank 0 nRanks 2 nNodes 1 localRanks 2 localRank 0 MNNVL 0
+<host>:128952:128967 [0] NCCL INFO Channel 00/04 : 0 1
+<host>:128952:128967 [0] NCCL INFO Channel 01/04 : 0 1
+<host>:128952:128967 [0] NCCL INFO Channel 02/04 : 0 1
+<host>:128952:128967 [0] NCCL INFO Channel 03/04 : 0 1
+<host>:128952:128967 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1 [2] 1/-1/-1->0->-1 [3] -1/-1/-1->0->1
+<host>:128952:128967 [0] NCCL INFO P2P Chunksize set to 524288
+<host>:128952:128968 [1] NCCL INFO PROFILER/Plugin: Plugin name set by env to <REPO>/native/nccl_profiler_algo/build/libnccl-profiler-nccle.so
+<host>:128952:128968 [1] NCCL INFO PROFILER/Plugin: loaded nccle-algo-v1
+<host>:128952:128967 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 1
+<host>:128952:128971 [0] NCCL INFO [Proxy Service] Device 0 CPU core 212
+<host>:128952:128970 [1] NCCL INFO [Proxy Service] Device 1 CPU core 248
+<host>:128952:128972 [1] NCCL INFO [Proxy Service UDS] Device 1 CPU core 110
+<host>:128952:128973 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 198
+<host>:128952:128968 [1] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+<host>:128952:128968 [1] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 4 p2p channels per peer
+<host>:128952:128967 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+<host>:128952:128967 [0] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 4 p2p channels per peer
+<host>:128952:128967 [0] NCCL INFO CC Off, workFifoBytes 1048576
+<host>:128952:128968 [1] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+<host>:128952:128968 [1] NCCL INFO ncclCommInitRankConfig comm 0x5d4356fbfa50 rank 1 nranks 2 cudaDev 1 nvmlDev 5 busId a1000 commId 0x276df900c61026ad - Init COMPLETE
+<host>:128952:128968 [1] NCCL INFO Init timings - ncclCommInitRankConfig: rank 1 nranks 2 total 0.33 (kernels 0.20, alloc 0.11, bootstrap 0.00, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.01, rest 0.00)
+<host>:128952:128967 [0] NCCL INFO ncclCommInitRankConfig comm 0x5d4356eaf650 rank 0 nranks 2 cudaDev 0 nvmlDev 4 busId 81000 commId 0x276df900c61026ad - Init COMPLETE
+<host>:128952:128967 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 2 total 0.33 (kernels 0.20, alloc 0.11, bootstrap 0.00, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.01, rest 0.00)
+<host>:128952:128975 [1] NCCL INFO Channel 00/0 : 1[5] -> 0[4] via P2P/direct pointer
+<host>:128952:128975 [1] NCCL INFO Channel 01/0 : 1[5] -> 0[4] via P2P/direct pointer
+<host>:128952:128976 [0] NCCL INFO Channel 00/0 : 0[4] -> 1[5] via P2P/direct pointer
+<host>:128952:128975 [1] NCCL INFO Channel 02/0 : 1[5] -> 0[4] via P2P/direct pointer
+<host>:128952:128975 [1] NCCL INFO Channel 03/0 : 1[5] -> 0[4] via P2P/direct pointer
+<host>:128952:128976 [0] NCCL INFO Channel 01/0 : 0[4] -> 1[5] via P2P/direct pointer
+<host>:128952:128976 [0] NCCL INFO Channel 02/0 : 0[4] -> 1[5] via P2P/direct pointer
+<host>:128952:128976 [0] NCCL INFO Channel 03/0 : 0[4] -> 1[5] via P2P/direct pointer
+<host>:128952:128975 [1] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+<host>:128952:128976 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+<host>:128952:128952 [0] NCCL INFO comm 0x5d4356eaf650 rank 0 nranks 2 cudaDev 0 busId 81000 - Destroy COMPLETE
+<host>:128952:128952 [1] NCCL INFO comm 0x5d4356fbfa50 rank 1 nranks 2 cudaDev 1 busId a1000 - Destroy COMPLETE
+<host>:128952:128952 [1] NCCL INFO PROFILER/Plugin: Closing profiler plugin nccle-algo-v1

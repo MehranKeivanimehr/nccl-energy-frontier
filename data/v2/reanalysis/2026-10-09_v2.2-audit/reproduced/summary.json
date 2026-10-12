@@ -1,0 +1,228 @@
+{
+ "blocks": [
+  {
+   "block": 1,
+   "status": "COMPLETE",
+   "stop_reason": null,
+   "utc_start": "2026-10-09T01:20:19Z",
+   "utc_end": "2026-10-09T01:30:57Z",
+   "n_units": 82,
+   "final_status_counts": {
+    "OK": 82
+   },
+   "evidence_counts": {
+    "VERIFIED": 82,
+    "UNVERIFIED": 0
+   },
+   "health_events": []
+  },
+  {
+   "block": 2,
+   "status": "COMPLETE",
+   "stop_reason": null,
+   "utc_start": "2026-10-09T01:30:59Z",
+   "utc_end": "2026-10-09T01:41:35Z",
+   "n_units": 82,
+   "final_status_counts": {
+    "OK": 82
+   },
+   "evidence_counts": {
+    "VERIFIED": 82,
+    "UNVERIFIED": 0
+   },
+   "health_events": []
+  },
+  {
+   "block": 3,
+   "status": "COMPLETE",
+   "stop_reason": null,
+   "utc_start": "2026-10-09T01:41:36Z",
+   "utc_end": "2026-10-09T01:52:16Z",
+   "n_units": 82,
+   "final_status_counts": {
+    "OK": 82
+   },
+   "evidence_counts": {
+    "VERIFIED": 82,
+    "UNVERIFIED": 0
+   },
+   "health_events": []
+  },
+  {
+   "block": 4,
+   "status": "COMPLETE",
+   "stop_reason": null,
+   "utc_start": "2026-10-09T01:52:17Z",
+   "utc_end": "2026-10-09T02:02:52Z",
+   "n_units": 82,
+   "final_status_counts": {
+    "OK": 82
+   },
+   "evidence_counts": {
+    "VERIFIED": 82,
+    "UNVERIFIED": 0
+   },
+   "health_events": []
+  },
+  {
+   "block": 5,
+   "status": "COMPLETE",
+   "stop_reason": null,
+   "utc_start": "2026-10-09T02:02:53Z",
+   "utc_end": "2026-10-09T02:13:29Z",
+   "n_units": 82,
+   "final_status_counts": {
+    "OK": 82
+   },
+   "evidence_counts": {
+    "VERIFIED": 82,
+    "UNVERIFIED": 0
+   },
+   "health_events": []
+  },
+  {
+   "block": 6,
+   "status": "COMPLETE",
+   "stop_reason": null,
+   "utc_start": "2026-10-09T02:13:31Z",
+   "utc_end": "2026-10-09T02:24:10Z",
+   "n_units": 82,
+   "final_status_counts": {
+    "OK": 82
+   },
+   "evidence_counts": {
+    "VERIFIED": 82,
+    "UNVERIFIED": 0
+   },
+   "health_events": []
+  },
+  {
+   "block": 7,
+   "status": "COMPLETE",
+   "stop_reason": null,
+   "utc_start": "2026-10-09T02:24:11Z",
+   "utc_end": "2026-10-09T02:34:47Z",
+   "n_units": 82,
+   "final_status_counts": {
+    "OK": 82
+   },
+   "evidence_counts": {
+    "VERIFIED": 82,
+    "UNVERIFIED": 0
+   },
+   "health_events": []
+  },
+  {
+   "block": 8,
+   "status": "COMPLETE",
+   "stop_reason": null,
+   "utc_start": "2026-10-09T02:34:49Z",
+   "utc_end": "2026-10-09T02:45:24Z",
+   "n_units": 82,
+   "final_status_counts": {
+    "OK": 82
+   },
+   "evidence_counts": {
+    "VERIFIED": 82,
+    "UNVERIFIED": 0
+   },
+   "health_events": []
+  },
+  {
+   "block": 9,
+   "status": "COMPLETE",
+   "stop_reason": null,
+   "utc_start": "2026-10-09T02:45:25Z",
+   "utc_end": "2026-10-09T02:56:02Z",
+   "n_units": 82,
+   "final_status_counts": {
+    "OK": 82
+   },
+   "evidence_counts": {
+    "VERIFIED": 82,
+    "UNVERIFIED": 0
+   },
+   "health_events": []
+  },
+  {
+   "block": 10,
+   "status": "COMPLETE",
+   "stop_reason": null,
+   "utc_start": "2026-10-09T02:56:04Z",
+   "utc_end": "2026-10-09T03:06:40Z",
+   "n_units": 82,
+   "final_status_counts": {
+    "OK": 82
+   },
+   "evidence_counts": {
+    "VERIFIED": 82,
+    "UNVERIFIED": 0
+   },
+   "health_events": []
+  },
+  {
+   "block": 11,
+   "status": "COMPLETE",
+   "stop_reason": null,
+   "utc_start": "2026-10-09T03:06:41Z",
+   "utc_end": "2026-10-09T03:17:18Z",
+   "n_units": 82,
+   "final_status_counts": {
+    "OK": 82
+   },
+   "evidence_counts": {
+    "VERIFIED": 82,
+    "UNVERIFIED": 0
+   },
+   "health_events": []
+  },
+  {
+   "block": 12,
+   "status": "COMPLETE",
+   "stop_reason": null,
+   "utc_start": "2026-10-09T03:17:20Z",
+   "utc_end": "2026-10-09T03:27:57Z",
+   "n_units": 82,
+   "final_status_counts": {
+    "OK": 82
+   },
+   "evidence_counts": {
+    "VERIFIED": 82,
+    "UNVERIFIED": 0
+   },
+   "health_events": []
+  }
+ ],
+ "units_planned": 984,
+ "units_run": 984,
+ "final_status": {
+  "OK": 984
+ },
+ "not_run": {},
+ "evidence": {
+  "VERIFIED": 984
+ },
+ "attempts": 984,
+ "retried_units": 0,
+ "inst_over_counter": {
+  "n": 984,
+  "median": 0.9799369361517014,
+  "p05": 0.9408605024460603,
+  "p95": 0.9913515789273617,
+  "min": 0.9231283690212071,
+  "max": 0.9956374785998875
+ },
+ "T_region_s": {
+  "min": 2.7896087595,
+  "median": 3.0102888265,
+  "max": 6.118212021000001
+ },
+ "temp_max_c": 47.0,
+ "clk_gr_mean_range": [
+  1905.875,
+  1946.25
+ ],
+ "negative_idle_adjusted": 0,
+ "region_flags": [],
+ "qc_reasons": []
+}

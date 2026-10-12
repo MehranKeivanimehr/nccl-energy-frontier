@@ -1,0 +1,14 @@
+{
+ "n_pairs": 468,
+ "per_block_fraction_slope_logE": 0.0036567516420379993,
+ "ci": [
+  -0.007233550074370222,
+  0.01454705335844622
+ ],
+ "per_degC_slope_logE": 0.0036991801332982594,
+ "ci_temp": [
+  0.0019140517815320482,
+  0.005484308485064471
+ ],
+ "note": "slopes are on ln(energy ratio); position is the difference in execution position as a fraction of 82 units"
+}

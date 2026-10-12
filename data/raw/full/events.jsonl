@@ -1,4 +1,4 @@
-{"t_wall": 1791259742.5448477, "kind": "start", "run_dir": "/path/to/nccl-energy-frontier/data/raw/full", "phases": ["probe", "calibrate", "trials", "probe_end"], "gpu_sets": {"2gpu_nvlink": {"status": "ok"}, "4gpu": {"status": "ok"}, "8gpu": {"status": "foreign_process", "foreign": {"1": [{"pid": 2287837, "kind": "compute", "used_mem_bytes": 38489030656}]}}}, "config_sha256": "e598ccaa2219e8330af387522cb82504aa6c773837f732a7be9af8b4444fbb42"}
+{"t_wall": 1791259742.5448477, "kind": "start", "run_dir": "<REPO>/data/raw/full", "phases": ["probe", "calibrate", "trials", "probe_end"], "gpu_sets": {"2gpu_nvlink": {"status": "ok"}, "4gpu": {"status": "ok"}, "8gpu": {"status": "foreign_process", "foreign": {"1": [{"pid": 2287837, "kind": "compute", "used_mem_bytes": 38489030656}]}}}, "config_sha256": "e598ccaa2219e8330af387522cb82504aa6c773837f732a7be9af8b4444fbb42"}
 {"t_wall": 1791259742.5459328, "kind": "metadata", "tag": "start"}
 {"t_wall": 1791259750.8094633, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__default__default", "status": "ok"}
 {"t_wall": 1791259752.6646755, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__default__Simple", "status": "ok"}

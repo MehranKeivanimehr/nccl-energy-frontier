@@ -1,0 +1,159 @@
+{
+ "status": "COMPLETE",
+ "campaign": "v2.2-measval-01",
+ "mode": "MEASUREMENT_VALIDATION",
+ "block": 2,
+ "seed": "v2.2-measval-01-20261009-2",
+ "utc_start": "2026-10-09T19:36:41Z",
+ "config_sha256": "5bbb4271f086536aa41dd023a0512a639b343d9de0c0f89b9a0588c8737fa562",
+ "frozen_sha256": "536b704b814aede945af45e066732faada0d0496517890f8279f96cb755b61eb",
+ "git": {
+  "head": "f4735b1e61528142c3f87a3fb4d443a8f019f855",
+  "dirty": true,
+  "diff_sha256": null,
+  "untracked": [
+   "data/v2.2/raw/v2.2-measval-01/blocks/block_01/attempts.jsonl",
+   "data/v2.2/raw/v2.2-measval-01/blocks/block_01/block_summary.json",
+   "data/v2.2/raw/v2.2-measval-01/blocks/block_01/idle_post/idle.json",
+   "data/v2.2/raw/v2.2-measval-01/blocks/block_01/idle_post/telemetry.csv.gz",
+   "data/v2.2/raw/v2.2-measval-01/blocks/block_01/idle_pre/idle.json",
+   "data/v2.2/raw/v2.2-measval-01/blocks/block_01/idle_pre/telemetry.csv.gz",
+   "data/v2.2/raw/v2.2-measval-01/blocks/block_01/order_planned.json",
+   "data/v2.2/raw/v2.2-measval-01/blocks/block_01/preflight_post.json",
+   "data/v2.2/raw/v2.2-measval-01/blocks/block_01/preflight_pre.json"
+  ]
+ },
+ "versions": {
+  "driver": "580.178.04",
+  "nvml": "13.580.178.04",
+  "cuda_driver": 13000,
+  "nccl_lib_sha256": "1d9c10322efacde695cf640db1f29fc1586c929f1087f0e1202d2d5e70fb7168",
+  "nccl_tests_commit": "afd59abab774a6a4b492eb344bd0c845a0b7bb4d",
+  "patch_sha256": "293527e3ab71ece12ff42088b84f47763ba48e62f08999edbfa4ff04bad2e0b8",
+  "plugin_sha256": "0b96c10d120f461c876958dc98ad686aa97316f2c51d08248b19ea2703b2817b",
+  "binary_sha256": {
+   "all_reduce": "a079f6771a45b02b2a53cbf48d07d2ef588c99907856febf4ee03afe690cd46f",
+   "all_gather": "a404b32f427510e00719d1efd5d5278df825be14b2718aadbd175c7a92f127bf",
+   "reduce_scatter": "4f2ac29a67f779bb846399e46dfa891d83fbbac3c6b0b2fd405e1a658c0a39a4"
+  }
+ },
+ "n_units": 12,
+ "idle_pre": {
+  "utc": "2026-10-09T19:37:23Z",
+  "reached_p8": true,
+  "p8_wait_s": 8.679999154992402e-06,
+  "settle_s": 10,
+  "duration_s": 30.011754806997487,
+  "energy_source": "counter",
+  "sampler": {
+   "errors": 0,
+   "truncated": false
+  },
+  "per_gpu": {
+   "0000:81:00.0": {
+    "gpu": 4,
+    "alias": "A6000-b10caa4a",
+    "counter_W": 28.409368445233525,
+    "delta_mJ": 852615,
+    "counter_status": "READ",
+    "sampled_mean_W": 28.540615000000003,
+    "sampled_inst_W": 28.540524244718924,
+    "temp_mean_c": 32.836666666666666,
+    "pstates": [
+     8
+    ],
+    "n_samples": 600
+   },
+   "0000:a1:00.0": {
+    "gpu": 5,
+    "alias": "A6000-f5f81ac3",
+    "counter_W": 20.982678422161904,
+    "delta_mJ": 629727,
+    "counter_status": "READ",
+    "sampled_mean_W": 21.011286666666667,
+    "sampled_inst_W": 21.00978256932742,
+    "temp_mean_c": 30.84,
+    "pstates": [
+     8
+    ],
+    "n_samples": 600
+   }
+  }
+ },
+ "idle_post": {
+  "utc": "2026-10-09T19:42:23Z",
+  "reached_p8": true,
+  "p8_wait_s": 5.000668933993438,
+  "settle_s": 10,
+  "duration_s": 30.011921764991712,
+  "energy_source": "counter",
+  "sampler": {
+   "errors": 0,
+   "truncated": false
+  },
+  "per_gpu": {
+   "0000:81:00.0": {
+    "gpu": 4,
+    "alias": "A6000-b10caa4a",
+    "counter_W": 28.952094664379782,
+    "delta_mJ": 868908,
+    "counter_status": "READ",
+    "sampled_mean_W": 29.078849999999996,
+    "sampled_inst_W": 29.064090327903923,
+    "temp_mean_c": 38.21666666666667,
+    "pstates": [
+     8
+    ],
+    "n_samples": 600
+   },
+   "0000:a1:00.0": {
+    "gpu": 5,
+    "alias": "A6000-f5f81ac3",
+    "counter_W": 20.98985879454141,
+    "delta_mJ": 629946,
+    "counter_status": "READ",
+    "sampled_mean_W": 21.063905000000002,
+    "sampled_inst_W": 21.06251164365258,
+    "temp_mean_c": 35.49166666666667,
+    "pstates": [
+     8
+    ],
+    "n_samples": 600
+   }
+  }
+ },
+ "throttle_counter_delta_ns": {
+  "4": {
+   "sw_power_cap": 85593430048,
+   "sync_boost": 0,
+   "sw_thermal": 84558486784,
+   "hw_thermal": 0,
+   "hw_power_brake": 0
+  },
+  "5": {
+   "sw_power_cap": 85672706400,
+   "sync_boost": 0,
+   "sw_thermal": 0,
+   "hw_thermal": 0,
+   "hw_power_brake": 0
+  }
+ },
+ "health_events": [],
+ "utc_end": "2026-10-09T19:42:24Z",
+ "xid": {
+  "status": "ok",
+  "per_gpu": {
+   "4": "registered",
+   "5": "registered"
+  }
+ },
+ "n_attempts": 12,
+ "final_status_counts": {
+  "MEASUREMENT_INVALID": 1,
+  "OK": 11
+ },
+ "evidence_counts": {
+  "VERIFIED": 12,
+  "UNVERIFIED": 0
+ }
+}

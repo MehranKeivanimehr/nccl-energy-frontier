@@ -1,0 +1,177 @@
+{
+ "n_units": 984,
+ "n_gpu_regions": 2784,
+ "relative_to_unit_region_energy": {
+  "A_read_timestamps": {
+   "A1_start_read": {
+    "median": 0.00016790767973893763,
+    "p95": 0.00035061170814701484,
+    "max": 0.0005559080305141624,
+    "n": 984
+   },
+   "A2_end_read_via_tail": {
+    "median": 0.00011456494803604047,
+    "p95": 0.00016489909420222518,
+    "max": 0.00020755505905995297,
+    "n": 984
+   },
+   "A_total": {
+    "median": 0.0002811333366434485,
+    "p95": 0.00046573502144562593,
+    "max": 0.0007011710272022024,
+    "n": 984
+   }
+  },
+  "B_counter_update_and_phase": {
+   "B1_phase_bracket": {
+    "median": 0.00028675820174665077,
+    "p95": 0.00031864843540370006,
+    "max": 0.00034030593717537984,
+    "n": 984
+   },
+   "B2_period_drift_at_dP_0.002ms": {
+    "median": 1.6252738235678303e-05,
+    "p95": 1.7796390097991653e-05,
+    "max": 1.8755219686576252e-05,
+    "n": 984
+   },
+   "B3_commit_semantics": "NOT_IDENTIFIABLE_FROM_THESE_DATA"
+  },
+  "C_tail_model": {
+   "C1_correction_magnitude": {
+    "median": 0.013369127165109282,
+    "p95": 0.01962156944497627,
+    "max": 0.02408211822464131,
+    "n": 984
+   },
+   "C2_one_sided_bound_if_tail_at_region_power": {
+    "median": 0.004125252590194962,
+    "p95": 0.012300016711516539,
+    "max": 0.013867657075506301,
+    "n": 984
+   }
+  },
+  "D_quantization": {
+   "median": 9.186184242394138e-06,
+   "p95": 1.14962462753889e-05,
+   "max": 1.3005348317943123e-05,
+   "n": 984
+  },
+  "E_sensor_accuracy": "NOT_CHARACTERIZED (no external reference; NVML gives no accuracy figure for this board's energy counter that was verified here)",
+  "previously_reported_0.10pct_bound": "= A1 + A2 + B1 worst case (max over units 0.10 %); it bounds only boundary timing and phase, not total measurement accuracy"
+ },
+ "B2_drift": {
+  "drift_ms": {
+   "median": 0.064,
+   "p95": 0.09,
+   "max": 0.13,
+   "n": 2784
+  },
+  "margin_left_ms_min": 7.938831,
+  "periods_since_probe": {
+   "median": 32.0,
+   "p95": 45.0,
+   "max": 65.0,
+   "n": 2784
+  },
+  "projection_40s_region": {
+   "periods": 402,
+   "drift_ms": 0.804,
+   "note": "within the 8 ms end-read margin if dP <= 0.002 ms holds at idle-with-context, which is not independently established"
+  }
+ },
+ "period_evidence": {
+  "probe_edges_confirmatory": {
+   "median": 99.95299324999999,
+   "p95": 100.4947517,
+   "max": 105.9345835,
+   "n": 8158,
+   "unit": "ms per period, from consecutive probe-edge midpoints (each edge bracketed to about 2 ms, so this resolves the period only to about +-1 ms)"
+  },
+  "phase4_load_counter_updates": [
+   {
+    "median_update_ms": 99.99989599964465,
+    "p10_update_ms": 99.99782180020702,
+    "p90_update_ms": 100.00205899996217,
+    "n_reads": 400,
+    "n_changes": 40
+   },
+   {
+    "median_update_ms": 99.99988900017343,
+    "p10_update_ms": 99.99799269935465,
+    "p90_update_ms": 100.0020460003725,
+    "n_reads": 400,
+    "n_changes": 39
+   },
+   {
+    "median_update_ms": 99.99986399998306,
+    "p10_update_ms": 99.99769000060041,
+    "p90_update_ms": 100.00137999813887,
+    "n_reads": 400,
+    "n_changes": 40
+   }
+  ],
+  "phase4_idle_counter": [
+   {
+    "median_update_ms": 101.26380400106427,
+    "p10_update_ms": 93.54983520097448,
+    "p90_update_ms": 101.53100580064347,
+    "n_reads": 511,
+    "n_changes": 40
+   }
+  ],
+  "interpretation": "Under load the update interval was 100.000 ms (p10-p90 99.998-100.002, 3 runs). At P8 idle one run gave median 101.3 ms, p10-p90 93.5-101.5 ms; that run did not resolve the idle period (read spacing not recorded at that precision). The Phase 4 report's '100.00 ms idle and under load' overstated the idle evidence. The post-loop tail and the post window are at idle-with-context power, where only the probe edges (bracket-limited) are available."
+ },
+ "rq2_ag2m_components": {
+  "tail_fraction": {
+   "auto": {
+    "median": 0.016563207926562323,
+    "p95": 0.017814830371276513,
+    "max": 0.01820786688749547,
+    "n": 12
+   },
+   "LL128": {
+    "median": 0.0136067481431714,
+    "p95": 0.01638287202921722,
+    "max": 0.01717679617472192,
+    "n": 12
+   }
+  },
+  "timing_bound_fraction": {
+   "auto": {
+    "median": 0.0005171658807023245,
+    "p95": 0.0005636858810609405,
+    "max": 0.0005850762460788984,
+    "n": 12
+   },
+   "LL128": {
+    "median": 0.00047713141557111007,
+    "p95": 0.0005261176120771146,
+    "max": 0.0005393673822965395,
+    "n": 12
+   }
+  },
+  "tail_model_bound_fraction": {
+   "auto": {
+    "median": 0.009402235758304407,
+    "p95": 0.009995275418137023,
+    "max": 0.010223411073034473,
+    "n": 12
+   },
+   "LL128": {
+    "median": 0.007935254572860578,
+    "p95": 0.01028806823403446,
+    "max": 0.010747052571444723,
+    "n": 12
+   }
+  },
+  "paired_tail_fraction_difference_LL128_minus_auto": {
+   "median": -0.0024562193469450794,
+   "p95": -5.0987383464514155e-05,
+   "max": -3.020950904253361e-05,
+   "n": 12
+  },
+  "note": "Compare these per-arm fractions with the counter-based LL128/auto penalty (rq2_estimators.csv). Sensor accuracy is not included anywhere above."
+ },
+ "frozen_and_first_reanalysis_unchanged": true
+}

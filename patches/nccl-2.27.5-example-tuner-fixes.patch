@@ -1,0 +1,35 @@
+--- plugin.orig.c	2026-10-08 23:33:10.089338000 -0400
++++ plugin.c	2026-10-08 23:36:19.847033702 -0400
+@@ -330,8 +330,12 @@
+   TunerContext* ctx = (TunerContext*)context;
+   if (!ctx) return ncclInternalError;
+ 
+-  // Default channels
+-  *nChannels = 1;
++  // nccl-energy-frontier fix 1: the upstream example sets *nChannels = 1 on every call, which forces one channel on
++  // every collective (matched or not). NCCL treats 0 as "keep NCCL's own channel count" (src/enqueue.cc getAlgoInfo).
++  *nChannels = 0;
++  // nccl-energy-frontier fix 2: NCCL passes a contiguous float[NCCL_NUM_ALGORITHMS][NCCL_NUM_PROTOCOLS] array cast to
++  // float** (src/enqueue.cc). Indexing it as float** dereferences cost values as pointers; NCCL itself casts it back.
++  float (*table)[NCCL_NUM_PROTOCOLS] = (float (*)[NCCL_NUM_PROTOCOLS])collCostTable;
+ 
+   if (ctx->logFunction) {
+     ctx->logFunction(NCCL_LOG_TRACE, NCCL_TUNING, __FILE__, __LINE__,
+@@ -367,14 +371,14 @@
+ 
+       // Check bounds
+       if (config->algorithm < numAlgo && config->protocol < numProto) {
+-        if (collCostTable[config->algorithm][config->protocol] != NCCL_ALGO_PROTO_IGNORE) {
++        if (table[config->algorithm][config->protocol] != NCCL_ALGO_PROTO_IGNORE) {
+           if (ctx->logFunction) {
+             ctx->logFunction(NCCL_LOG_TRACE, NCCL_TUNING, __FILE__, __LINE__,
+                              "TUNER/ExamplePlugin: Setting cost table[%s][%s] (%p) = 0.0 (was %.1f)",
+                              algorithmToString(config->algorithm), protocolToString(config->protocol),
+-                             &collCostTable[config->algorithm][config->protocol], collCostTable[config->algorithm][config->protocol]);
++                             &table[config->algorithm][config->protocol], table[config->algorithm][config->protocol]);
+           }
+-          collCostTable[config->algorithm][config->protocol] = 0.0; // Set low cost to prefer this configuration
++          table[config->algorithm][config->protocol] = 0.0; // Set low cost to prefer this configuration
+ 
+           // Only override channels if not set to -1 (keep default)
+           if (config->nChannels != -1) {

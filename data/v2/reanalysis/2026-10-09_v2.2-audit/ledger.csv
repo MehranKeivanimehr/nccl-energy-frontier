@@ -1,0 +1,5 @@
+item,frozen,new,kind,explanation
+RQ1 cells with >= 5 % saving,25 (rq1.csv saving_meaningful; point estimate),21 threshold-supported (rq1_threshold.csv),NEW_SEPARATELY_IDENTIFIED_ANALYSIS,"Pre-registered 'meaningful' = confirmed and point estimate <= 0.95 (unchanged, 25). Separate analysis: one-sided test of H0 ratio >= 0.95, Holm over 39 cells, alpha 0.025 (same count with the Bonferroni bound)."
+RQ2 AllGather 2 MiB tradeoff,DIFFER (counter estimator; rq2.csv),"counter 1.0123 [1.0028, 1.0218]; instant 1.0048 [0.9905, 1.0194]; PowerUsage-lag 1.0092 (Holm p 0.069); idle-adjusted 1.0214",WORDING_AND_SENSITIVITY,Verdict depends on the estimator: not an estimator-robust physical tradeoff.
+order/temperature CIs,iid OLS (order_temperature.json),clustered + two-way + wild bootstrap (order_temperature.json),REANALYSIS,Same point estimates; intervals now block-/cell-aware. See fits.
+tuner files,"nccl_tuner_*.conf (range rules, no scope header)",phase89_v22/nccl_tuner_*.conf (one rule per measured size + #@scope header),CODE_CHANGE,"range rules covered unmeasured sizes; v2.2 exports measured sizes only, for the guarded plugin"

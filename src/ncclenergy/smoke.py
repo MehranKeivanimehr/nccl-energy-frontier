@@ -21,12 +21,12 @@ from .orchestrate import conditions, sizes_from_config
 def smoke_check(run_dir: Path, out_dir: Path) -> bool:
     run_dir, out_dir = Path(run_dir), Path(out_dir)
     analyze_run(run_dir, out_dir, n_boot=2000)
-    cfg = yaml.safe_load((run_dir / "config.yaml").read_text(encoding="utf-8"))
+    cfg = yaml.safe_load((run_dir / "config.yaml").read_text())
     recs = load_records(run_dir)
     sel = pd.read_csv(out_dir / "selection.csv")
     reg = pd.read_csv(out_dir / "regions.csv")
     launches = pd.read_csv(out_dir / "launches.csv")
-    q = json.loads((out_dir / "qc.json").read_text(encoding="utf-8"))
+    q = json.loads((out_dir / "qc.json").read_text())
     lines, ok_all = [], True
 
     def check(name, passed, detail):
@@ -36,7 +36,7 @@ def smoke_check(run_dir: Path, out_dir: Path) -> bool:
         lines.append(f"- **{tag}** {name}: {detail}")
 
     # 1 accounting: every planned unit has exactly one final record
-    status = json.loads((run_dir / "gpu_set_status.json").read_text(encoding="utf-8"))
+    status = json.loads((run_dir / "gpu_set_status.json").read_text())
     active = {k for k, v in status.items() if v["status"] == "ok"}
     conds = [c for c in conditions(cfg) if c["gpu_set"] in active]
     planned = len(conds) * len(sizes_from_config(cfg)) * cfg["trials"]
@@ -79,7 +79,7 @@ def smoke_check(run_dir: Path, out_dir: Path) -> bool:
         if r.get("dir") is None:
             continue
         n += 1
-        rows = parse_stdout((run_dir / r["dir"] / "stdout.txt").read_text(encoding="utf-8"))["rows"]
+        rows = parse_stdout((run_dir / r["dir"] / "stdout.txt").read_text())["rows"]
         mism += rows != r["rows"]
     check("stdout re-parse identical to recorded rows", mism == 0, f"{n} launches re-parsed, {mism} mismatches")
 
@@ -140,6 +140,6 @@ def smoke_check(run_dir: Path, out_dir: Path) -> bool:
 
     report = ["# Smoke-test report", "", f"Run directory: `{run_dir}`", "",
               f"Overall: **{'PASS' if ok_all else 'FAIL'}**", ""] + lines + [""]
-    (out_dir / "SMOKE_REPORT.md").write_text("\n".join(report), encoding="utf-8")
+    (out_dir / "SMOKE_REPORT.md").write_text("\n".join(report))
     print("\n".join(report))
     return ok_all

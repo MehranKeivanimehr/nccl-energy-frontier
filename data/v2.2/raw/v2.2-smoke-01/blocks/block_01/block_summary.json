@@ -1,0 +1,112 @@
+{
+ "status": "STOPPED",
+ "campaign": "v2.2-smoke-01",
+ "mode": "SMOKE",
+ "block": 1,
+ "seed": "v2.2-smoke-01-20261009-1",
+ "utc_start": "2026-10-09T19:03:06Z",
+ "config_sha256": "02d145a43db80f98f317a630119748d3ab6972e9a4d574e8dc843a71ba07f1d7",
+ "frozen_sha256": "6dde8944bc3da6e21141a3a4fd13c41db6daaccb97705ce07bd43785b8508feb",
+ "git": {
+  "head": "c5b5a80fa6b25cd58a5f1aee345ef5bd294c5e79",
+  "dirty": true,
+  "diff_sha256": null,
+  "untracked": [
+   "data/v2.2/raw/v2.2-smoke-01/s1_preflight/capabilities.json",
+   "data/v2.2/raw/v2.2-smoke-01/s1_preflight/capabilities.log",
+   "data/v2.2/raw/v2.2-smoke-01/s1_preflight/preflight.json"
+  ]
+ },
+ "versions": {
+  "driver": "580.178.04",
+  "nvml": "13.580.178.04",
+  "cuda_driver": 13000,
+  "nccl_lib_sha256": "1d9c10322efacde695cf640db1f29fc1586c929f1087f0e1202d2d5e70fb7168",
+  "nccl_tests_commit": "afd59abab774a6a4b492eb344bd0c845a0b7bb4d",
+  "patch_sha256": "293527e3ab71ece12ff42088b84f47763ba48e62f08999edbfa4ff04bad2e0b8",
+  "plugin_sha256": "0b96c10d120f461c876958dc98ad686aa97316f2c51d08248b19ea2703b2817b",
+  "binary_sha256": {
+   "all_reduce": "a079f6771a45b02b2a53cbf48d07d2ef588c99907856febf4ee03afe690cd46f",
+   "all_gather": "a404b32f427510e00719d1efd5d5278df825be14b2718aadbd175c7a92f127bf",
+   "reduce_scatter": "4f2ac29a67f779bb846399e46dfa891d83fbbac3c6b0b2fd405e1a658c0a39a4"
+  }
+ },
+ "n_units": 3,
+ "idle_pre": {
+  "utc": "2026-10-09T19:03:48Z",
+  "reached_p8": true,
+  "p8_wait_s": 1.5989993698894978e-05,
+  "settle_s": 10,
+  "duration_s": 30.01132956800575,
+  "energy_source": "counter",
+  "sampler": {
+   "errors": 0,
+   "truncated": false
+  },
+  "per_gpu": {
+   "0000:81:00.0": {
+    "gpu": 4,
+    "alias": "A6000-b10caa4a",
+    "counter_W": 28.157932759529988,
+    "delta_mJ": 845057,
+    "counter_status": "READ",
+    "sampled_mean_W": 28.242161666666664,
+    "sampled_inst_W": 28.242395169693662,
+    "temp_mean_c": 26.0,
+    "pstates": [
+     8
+    ],
+    "n_samples": 600
+   },
+   "0000:a1:00.0": {
+    "gpu": 5,
+    "alias": "A6000-f5f81ac3",
+    "counter_W": 20.639605406231276,
+    "delta_mJ": 619422,
+    "counter_status": "READ",
+    "sampled_mean_W": 20.722913333333334,
+    "sampled_inst_W": 20.72440205012714,
+    "temp_mean_c": 26.0,
+    "pstates": [
+     8
+    ],
+    "n_samples": 600
+   }
+  }
+ },
+ "stop_reason": "stop condition at P2_NVL__all_gather__auto__2097152: SAFETY_STOP ['WATCHDOG:FOREIGN_PROCESS:GPU5:[218029]']",
+ "throttle_counter_delta_ns": {
+  "4": {
+   "sw_power_cap": 42180742880,
+   "sync_boost": 0,
+   "sw_thermal": 42117049152,
+   "hw_thermal": 0,
+   "hw_power_brake": 0
+  },
+  "5": {
+   "sw_power_cap": 42340188224,
+   "sync_boost": 0,
+   "sw_thermal": 0,
+   "hw_thermal": 0,
+   "hw_power_brake": 0
+  }
+ },
+ "health_events": [],
+ "utc_end": "2026-10-09T19:04:05Z",
+ "xid": {
+  "status": "ok",
+  "per_gpu": {
+   "4": "registered",
+   "5": "registered"
+  }
+ },
+ "n_attempts": 3,
+ "final_status_counts": {
+  "OK": 2,
+  "SAFETY_STOP": 1
+ },
+ "evidence_counts": {
+  "VERIFIED": 3,
+  "UNVERIFIED": 0
+ }
+}

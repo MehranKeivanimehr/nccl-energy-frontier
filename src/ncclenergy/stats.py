@@ -1,7 +1,9 @@
-"""Descriptive bootstrap statistics over trial-block values.
+"""Bootstrap statistics.
 
-The three completed blocks are resampled at the block level. Their sequential
-execution does not guarantee independent errors, so intervals are descriptive.
+Resampling uses trial-level values, not individual CUDA iterations. The retained
+pilot has three sequential trial blocks on one shared host; their independence
+is not established. Percentile intervals from these three values are descriptive,
+not calibrated confidence statements (see docs/limitations.md).
 """
 
 from __future__ import annotations

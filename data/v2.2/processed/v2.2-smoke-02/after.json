@@ -1,0 +1,18 @@
+{
+ "utc": "2026-10-09T19:16:12Z",
+ "processes_on_4_5": [],
+ "gpus_4_5": [
+  {
+   "index": "4",
+   "pstate": "P8",
+   "mem": "5 MiB",
+   "temp": "28"
+  },
+  {
+   "index": "5",
+   "pstate": "P8",
+   "mem": "5 MiB",
+   "temp": "28"
+  }
+ ]
+}

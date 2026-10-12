@@ -7,8 +7,7 @@ AllReduce/AllGather/ReduceScatter × {2 GPUs (4,5, NVLink pair), 4 GPUs (4–7)}
 show that parsing and energy measurement work. Generated report:
 [`data/processed/smoke/SMOKE_REPORT.md`](../data/processed/smoke/SMOKE_REPORT.md).
 
-`bash scripts/run_smoke.sh` launches a new GPU smoke experiment. It is not
-needed to inspect or regenerate the checked-in analysis.
+Reproduce: `bash scripts/run_smoke.sh`.
 
 ## Checks and outcomes
 
@@ -44,17 +43,18 @@ needed to inspect or regenerate the checked-in analysis.
   region is ≈0.8 % longer than `(n+w)·t_op` because it contains the first
   call of the process; its energy per operation nevertheless differs from the
   in-place region by only +0.06 % (median).
-* **The two NVML-derived estimates are numerically consistent.** The energy
-  counter and the integral of sampled `nvmlDeviceGetPowerUsage` agree to within
-  ≈1 % at the median after shifting the integration window by 0.5 s. They are
-  not independent sensors. Without the shift, the integral under-reads by up
-  to 14 % in individual regions, which is why the counter is primary. The
-  figure below shows one launch.
+* **Two independent NVML paths agree.** The energy counter and the integral of
+  the sampled `nvmlDeviceGetPowerUsage` agree to within ≈1 % (median) once the
+  ≈1 s averaging lag of `PowerUsage` is accounted for. Without the shift the
+  integral under-reads by up to 14 % in individual regions, which is why the
+  counter is the primary measurement. The figure below shows one launch: the
+  sampled power is still ramping during the first ~1.3 s of the first region,
+  while the counter-based region averages are flat.
 
 ![example trace](../figures/smoke/method_example_trace.png)
 
-All smoke and full-run configurations set `NCCL_RUNTIME_CONNECT=0` so channel
-connection occurs during communicator initialization rather than inside the
-measured collective regions. The repository does not retain the earlier
-comparison used to choose that setting, so no numerical claim about that
-comparison is made here.
+* **Pilot finding that changed the configuration.** Before the smoke run, a
+  pilot 4-GPU launch with NCCL's default lazy connection showed 257 ms of extra
+  time in the first (out-of-place) region (SHM connection set-up inside the
+  first collective). Setting `NCCL_RUNTIME_CONNECT=0` reduced this to
+  16–20 ms; all runs use that setting.

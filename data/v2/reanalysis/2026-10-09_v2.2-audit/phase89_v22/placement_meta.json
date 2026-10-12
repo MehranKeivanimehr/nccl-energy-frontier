@@ -1,0 +1,71 @@
+{
+ "P2_NVL": {
+  "gpu_model": "NVIDIA RTX A6000",
+  "driver_version": "580.178.04",
+  "cuda_driver_version": 13000,
+  "nccl_version": "2.27.5+cuda12.9",
+  "nccl_version_code": 22705,
+  "nranks": 2,
+  "nnodes": 1,
+  "fingerprint": "e65ef2bdbf86ae93",
+  "env": "",
+  "pci_bus_ids": "00000000:81:00.0,00000000:A1:00.0",
+  "dtype": "float32",
+  "in_place": 0,
+  "ops_by_coll": {
+   "all_reduce": "sum",
+   "reduce_scatter": "sum"
+  },
+  "missing": [],
+  "conflicts": {},
+  "n_units": 336,
+  "n_logs_read": 336,
+  "source": "<REPO>/data/v2/raw/confirmatory"
+ },
+ "P2_PCI_SHM": {
+  "gpu_model": "NVIDIA RTX A6000",
+  "driver_version": "580.178.04",
+  "cuda_driver_version": 13000,
+  "nccl_version": "2.27.5+cuda12.9",
+  "nccl_version_code": 22705,
+  "nranks": 2,
+  "nnodes": 1,
+  "fingerprint": "87e520891a0ad9c6",
+  "env": "NCCL_P2P_DISABLE=1",
+  "pci_bus_ids": "00000000:A1:00.0,00000000:C1:00.0",
+  "dtype": "float32",
+  "in_place": 0,
+  "ops_by_coll": {
+   "all_reduce": "sum",
+   "reduce_scatter": "sum"
+  },
+  "missing": [],
+  "conflicts": {},
+  "n_units": 240,
+  "n_logs_read": 240,
+  "source": "<REPO>/data/v2/raw/confirmatory"
+ },
+ "P4_MIX": {
+  "gpu_model": "NVIDIA RTX A6000",
+  "driver_version": "580.178.04",
+  "cuda_driver_version": 13000,
+  "nccl_version": "2.27.5+cuda12.9",
+  "nccl_version_code": 22705,
+  "nranks": 4,
+  "nnodes": 1,
+  "fingerprint": "fa52c4ded4a09d4b",
+  "env": "",
+  "pci_bus_ids": "00000000:81:00.0,00000000:A1:00.0,00000000:C1:00.0,00000000:E1:00.0",
+  "dtype": "float32",
+  "in_place": 0,
+  "ops_by_coll": {
+   "all_reduce": "sum",
+   "reduce_scatter": "sum"
+  },
+  "missing": [],
+  "conflicts": {},
+  "n_units": 408,
+  "n_logs_read": 408,
+  "source": "<REPO>/data/v2/raw/confirmatory"
+ }
+}

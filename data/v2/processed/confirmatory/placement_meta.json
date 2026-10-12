@@ -1,0 +1,26 @@
+{
+ "P2_NVL": {
+  "fingerprint": "e65ef2bdbf86ae93",
+  "env": "",
+  "nranks": 2,
+  "nnodes": 1,
+  "nccl_version": "2.27.5",
+  "cuda_version": "12.4-toolkit/13.0-driver"
+ },
+ "P2_PCI_SHM": {
+  "fingerprint": "87e520891a0ad9c6",
+  "env": "NCCL_P2P_DISABLE=1",
+  "nranks": 2,
+  "nnodes": 1,
+  "nccl_version": "2.27.5",
+  "cuda_version": "12.4-toolkit/13.0-driver"
+ },
+ "P4_MIX": {
+  "fingerprint": "fa52c4ded4a09d4b",
+  "env": "",
+  "nranks": 4,
+  "nnodes": 1,
+  "nccl_version": "2.27.5",
+  "cuda_version": "12.4-toolkit/13.0-driver"
+ }
+}

@@ -1,0 +1,143 @@
+{
+ "lobo_summary_identical": true,
+ "lobo_rows_identical": true,
+ "robustness_identical": true,
+ "tuner_files": {
+  "nccl_tuner_P2_NVL.conf": {
+   "frozen_rules": [
+    "allgather,524288,524288,ring,ll,-1,1,2,-1,-1",
+    "allgather,1048576,1048576,ring,ll128,-1,1,2,-1,-1",
+    "allreduce,524288,524288,ring,ll,-1,1,2,-1,-1",
+    "allreduce,8388608,536870912,tree,simple,-1,1,2,-1,-1",
+    "reducescatter,524288,1048576,ring,ll,-1,1,2,-1,-1"
+   ],
+   "v22_rules": [
+    "allgather,524288,524288,ring,ll,-1,1,2,-1,-1",
+    "allgather,1048576,1048576,ring,ll128,-1,1,2,-1,-1",
+    "allreduce,524288,524288,ring,ll,-1,1,2,-1,-1",
+    "allreduce,8388608,8388608,tree,simple,-1,1,2,-1,-1",
+    "allreduce,16777216,16777216,tree,simple,-1,1,2,-1,-1",
+    "allreduce,33554432,33554432,tree,simple,-1,1,2,-1,-1",
+    "allreduce,67108864,67108864,tree,simple,-1,1,2,-1,-1",
+    "allreduce,134217728,134217728,tree,simple,-1,1,2,-1,-1",
+    "allreduce,268435456,268435456,tree,simple,-1,1,2,-1,-1",
+    "allreduce,536870912,536870912,tree,simple,-1,1,2,-1,-1",
+    "reducescatter,524288,524288,ring,ll,-1,1,2,-1,-1",
+    "reducescatter,1048576,1048576,ring,ll,-1,1,2,-1,-1"
+   ]
+  },
+  "nccl_tuner_P2_NVL_latency.conf": {
+   "frozen_rules": [
+    "allgather,524288,524288,ring,ll,-1,1,2,-1,-1",
+    "allgather,1048576,2097152,ring,ll128,-1,1,2,-1,-1",
+    "allreduce,524288,524288,ring,ll,-1,1,2,-1,-1",
+    "allreduce,8388608,1073741824,tree,simple,-1,1,2,-1,-1",
+    "reducescatter,524288,1048576,ring,ll,-1,1,2,-1,-1"
+   ],
+   "v22_rules": [
+    "allgather,524288,524288,ring,ll,-1,1,2,-1,-1",
+    "allgather,1048576,1048576,ring,ll128,-1,1,2,-1,-1",
+    "allgather,2097152,2097152,ring,ll128,-1,1,2,-1,-1",
+    "allreduce,524288,524288,ring,ll,-1,1,2,-1,-1",
+    "allreduce,8388608,8388608,tree,simple,-1,1,2,-1,-1",
+    "allreduce,16777216,16777216,tree,simple,-1,1,2,-1,-1",
+    "allreduce,33554432,33554432,tree,simple,-1,1,2,-1,-1",
+    "allreduce,67108864,67108864,tree,simple,-1,1,2,-1,-1",
+    "allreduce,134217728,134217728,tree,simple,-1,1,2,-1,-1",
+    "allreduce,268435456,268435456,tree,simple,-1,1,2,-1,-1",
+    "allreduce,536870912,536870912,tree,simple,-1,1,2,-1,-1",
+    "allreduce,1073741824,1073741824,tree,simple,-1,1,2,-1,-1",
+    "reducescatter,524288,524288,ring,ll,-1,1,2,-1,-1",
+    "reducescatter,1048576,1048576,ring,ll,-1,1,2,-1,-1"
+   ]
+  },
+  "nccl_tuner_P2_PCI_SHM.conf": {
+   "frozen_rules": [
+    "allgather,262144,262144,ring,simple,-1,1,2,-1,-1",
+    "allreduce,131072,2097152,tree,simple,-1,1,2,-1,-1",
+    "allreduce,16777216,16777216,tree,simple,-1,1,2,-1,-1",
+    "reducescatter,262144,262144,ring,simple,-1,1,2,-1,-1"
+   ],
+   "v22_rules": [
+    "allgather,262144,262144,ring,simple,-1,1,2,-1,-1",
+    "allreduce,131072,131072,tree,simple,-1,1,2,-1,-1",
+    "allreduce,262144,262144,tree,simple,-1,1,2,-1,-1",
+    "allreduce,524288,524288,tree,simple,-1,1,2,-1,-1",
+    "allreduce,1048576,1048576,tree,simple,-1,1,2,-1,-1",
+    "allreduce,2097152,2097152,tree,simple,-1,1,2,-1,-1",
+    "allreduce,16777216,16777216,tree,simple,-1,1,2,-1,-1",
+    "reducescatter,262144,262144,ring,simple,-1,1,2,-1,-1"
+   ]
+  },
+  "nccl_tuner_P2_PCI_SHM_latency.conf": {
+   "frozen_rules": [
+    "allgather,262144,262144,ring,simple,-1,1,2,-1,-1",
+    "allreduce,131072,2097152,tree,simple,-1,1,2,-1,-1",
+    "reducescatter,262144,262144,ring,simple,-1,1,2,-1,-1"
+   ],
+   "v22_rules": [
+    "allgather,262144,262144,ring,simple,-1,1,2,-1,-1",
+    "allreduce,131072,131072,tree,simple,-1,1,2,-1,-1",
+    "allreduce,262144,262144,tree,simple,-1,1,2,-1,-1",
+    "allreduce,524288,524288,tree,simple,-1,1,2,-1,-1",
+    "allreduce,1048576,1048576,tree,simple,-1,1,2,-1,-1",
+    "allreduce,2097152,2097152,tree,simple,-1,1,2,-1,-1",
+    "reducescatter,262144,262144,ring,simple,-1,1,2,-1,-1"
+   ]
+  },
+  "nccl_tuner_P4_MIX.conf": {
+   "frozen_rules": [
+    "allgather,262144,524288,ring,simple,-1,1,4,-1,-1",
+    "allreduce,65536,131072,tree,ll,-1,1,4,-1,-1",
+    "allreduce,262144,67108864,tree,simple,-1,1,4,-1,-1",
+    "reducescatter,131072,524288,ring,simple,-1,1,4,-1,-1"
+   ],
+   "v22_rules": [
+    "allgather,262144,262144,ring,simple,-1,1,4,-1,-1",
+    "allgather,524288,524288,ring,simple,-1,1,4,-1,-1",
+    "allreduce,65536,65536,tree,ll,-1,1,4,-1,-1",
+    "allreduce,131072,131072,tree,ll,-1,1,4,-1,-1",
+    "allreduce,262144,262144,tree,simple,-1,1,4,-1,-1",
+    "allreduce,524288,524288,tree,simple,-1,1,4,-1,-1",
+    "allreduce,1048576,1048576,tree,simple,-1,1,4,-1,-1",
+    "allreduce,2097152,2097152,tree,simple,-1,1,4,-1,-1",
+    "allreduce,4194304,4194304,tree,simple,-1,1,4,-1,-1",
+    "allreduce,8388608,8388608,tree,simple,-1,1,4,-1,-1",
+    "allreduce,16777216,16777216,tree,simple,-1,1,4,-1,-1",
+    "allreduce,33554432,33554432,tree,simple,-1,1,4,-1,-1",
+    "allreduce,67108864,67108864,tree,simple,-1,1,4,-1,-1",
+    "reducescatter,131072,131072,ring,simple,-1,1,4,-1,-1",
+    "reducescatter,262144,262144,ring,simple,-1,1,4,-1,-1",
+    "reducescatter,524288,524288,ring,simple,-1,1,4,-1,-1"
+   ]
+  },
+  "nccl_tuner_P4_MIX_latency.conf": {
+   "frozen_rules": [
+    "allgather,262144,524288,ring,simple,-1,1,4,-1,-1",
+    "allreduce,1024,1024,tree,ll,-1,1,4,-1,-1",
+    "allreduce,65536,131072,tree,ll,-1,1,4,-1,-1",
+    "allreduce,262144,67108864,tree,simple,-1,1,4,-1,-1",
+    "reducescatter,131072,524288,ring,simple,-1,1,4,-1,-1"
+   ],
+   "v22_rules": [
+    "allgather,262144,262144,ring,simple,-1,1,4,-1,-1",
+    "allgather,524288,524288,ring,simple,-1,1,4,-1,-1",
+    "allreduce,1024,1024,tree,ll,-1,1,4,-1,-1",
+    "allreduce,65536,65536,tree,ll,-1,1,4,-1,-1",
+    "allreduce,131072,131072,tree,ll,-1,1,4,-1,-1",
+    "allreduce,262144,262144,tree,simple,-1,1,4,-1,-1",
+    "allreduce,524288,524288,tree,simple,-1,1,4,-1,-1",
+    "allreduce,1048576,1048576,tree,simple,-1,1,4,-1,-1",
+    "allreduce,2097152,2097152,tree,simple,-1,1,4,-1,-1",
+    "allreduce,4194304,4194304,tree,simple,-1,1,4,-1,-1",
+    "allreduce,8388608,8388608,tree,simple,-1,1,4,-1,-1",
+    "allreduce,16777216,16777216,tree,simple,-1,1,4,-1,-1",
+    "allreduce,33554432,33554432,tree,simple,-1,1,4,-1,-1",
+    "allreduce,67108864,67108864,tree,simple,-1,1,4,-1,-1",
+    "reducescatter,131072,131072,ring,simple,-1,1,4,-1,-1",
+    "reducescatter,262144,262144,ring,simple,-1,1,4,-1,-1",
+    "reducescatter,524288,524288,ring,simple,-1,1,4,-1,-1"
+   ]
+  }
+ }
+}

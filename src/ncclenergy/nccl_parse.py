@@ -9,7 +9,7 @@ from __future__ import annotations
 import bisect
 import re
 
-# nccl-tests stdout
+# ---------------------------------------------------------------- nccl-tests stdout
 
 RE_VERSION = re.compile(r"^# nccl-tests version (\S+) \((\w+)\) nccl-headers=(\d+) nccl-library=(\d+)")
 RE_PARAMS = re.compile(
@@ -109,7 +109,7 @@ def assign_events(offsets: list[dict], chunk_ends: list[int]) -> list[dict]:
     return out
 
 
-# NCCL debug log
+# ---------------------------------------------------------------- NCCL debug log
 
 RE_NCCL_VERSION = re.compile(r"NCCL INFO NCCL version (\S+)")
 RE_DRIVER = re.compile(r"NCCL INFO cudaDriverVersion (\d+)")

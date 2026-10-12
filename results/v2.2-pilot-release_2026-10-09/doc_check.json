@@ -1,0 +1,18 @@
+{
+ "documents": {
+  "README.md": {
+   "n_required": 17,
+   "n_found": 17
+  },
+  "docs/release/claims.md": {
+   "n_required": 29,
+   "n_found": 29
+  },
+  "docs/v2/v22_audit/gate3b_measval_report.md": {
+   "n_required": 45,
+   "n_found": 45
+  }
+ },
+ "missing": [],
+ "pass": true
+}

@@ -1,126 +1,270 @@
 # Methodology
 
-This document describes the implemented measurement and analysis pipeline. Known validity limits are listed in [limitations.md](limitations.md).
+> Pilot (methodology v1) document, superseded by methodology v2.
+>
+> **v2.2 pilot release (2026-10-09).** The current claim status, limitations and reproduction instructions are in
+> [`release/claims.md`](release/claims.md), [`release/limitations.md`](release/limitations.md) and
+> [`release/reproduction.md`](release/reproduction.md). This document is kept as the record of its stage.
 
-## Experimental question and comparison unit
 
-The study asks whether NCCL configurations that minimize collective latency also minimize participating-GPU board energy on the measured server.
+This document describes how every number in this repository is produced. The
+code paths named here are in `src/ncclenergy/`. Limitations are collected in
+[limitations.md](limitations.md).
 
-An analysis cell is one collective × GPU set × message size × buffer placement. Within a cell, requested configurations combine algorithm `{auto, Ring, Tree}` and protocol `{auto, Simple, LL, LL128}`. `auto` means the corresponding NCCL environment variable is unset.
+## 1. Question and unit of analysis
 
-One timed nccl-tests process measures both an out-of-place and an in-place region. A region contains `w` warmup operations followed by `n` timed operations. The nccl-tests latency row describes the `n` timed operations; region energy covers and is divided by all `n + w` operations.
+**Question.** On a single multi-GPU server, do the NCCL configurations that
+minimize collective latency also minimize the energy of the collective?
 
-## System and topology
+**Unit of analysis (a "cell").** One collective (AllReduce, AllGather,
+ReduceScatter) × one GPU set × one message size × one buffer placement
+(out-of-place or in-place). Within a cell we compare **requested
+configurations**: NCCL algorithm ∈ {auto, Ring, Tree} × protocol ∈ {auto,
+Simple, LL, LL128}. "auto" means the corresponding environment variable is
+*unset* and NCCL's tuner chooses.
 
-The recorded environment used eight NVIDIA RTX A6000 GPUs, driver 550.144.03, CUDA driver API 12.4, NCCL 2.27.5, nccl-tests 2.21.1, and two AMD EPYC 7713 CPUs. System metadata was captured before and after each run. Public copies have machine names, user paths, and device serial identifiers redacted; measurement values and topology fields are unchanged.
+## 2. System under test
 
-The completed measurements used:
+Captured automatically at the start and end of every run in
+`data/raw/<run>/metadata_{start,end}/` (raw command output plus a parsed
+`machine.json`): `nvidia-smi`, `nvidia-smi topo -m`, `nvidia-smi -q`,
+`nvidia-smi nvlink -s`, `nvcc --version`, `lscpu`, `numactl -H`, `uname -a`,
+hostname, `/etc/os-release`, git commit and dirty state of this repository,
+nccl-tests commit, NCCL library version (via `ncclGetVersion`) and SHA-256,
+SHA-256 of every nccl-tests binary, PyTorch version and its NCCL version,
+`pip list`, per-GPU NVML data (name, UUID, serial, PCI bus id, VBIOS, power
+limits, max clocks, persistence/compute/ECC mode, NVLink state and peers,
+energy-counter support, processes present).
 
-- `2gpu_nvlink`: GPUs `[4,5]`, one NVLink-connected pair;
-- `4gpu`: GPUs `[4,5,6,7]`, two NVLink pairs connected across pairs through a host/PCIe path.
+For the reported runs: 8× NVIDIA RTX A6000 (GA102, 48 GB, 300 W board limit),
+driver 550.144.03 (CUDA 12.4 driver API), 2× AMD EPYC 7713, Ubuntu 24.04,
+kernel 6.11. GPUs are bridged in NVLink pairs (0–1, 2–3, 4–5, 6–7, `NV4`);
+all other GPU pairs communicate over PCIe (`NODE` within a socket, `SYS`
+across sockets).
 
-The planned 8-GPU set was skipped because a target GPU was occupied at run start. No 8-GPU measurements exist. The 2-GPU and 4-GPU conditions differ in topology as well as GPU count.
+## 3. Benchmark
 
-## nccl-tests invocation
+* **nccl-tests** v2.21.1, commit `afd59ab`, built by
+  `scripts/build_nccl_tests.sh` for `sm_86` with CUDA 12.4 `nvcc`, linked
+  against **NCCL 2.27.5** from the `nvidia-nccl-cu12` wheel (the NCCL that
+  PyTorch 2.9.1+cu128 loads). nccl-tests is used unmodified.
+* One process, one host thread per GPU (`-t N -g 1`), `float` data, `sum`
+  reduction, message sizes from the YAML (`-b S -e S`: one size per process
+  for timed launches).
+* GPUs are selected by UUID (`CUDA_VISIBLE_DEVICES=<uuids>`,
+  `CUDA_DEVICE_ORDER=PCI_BUS_ID`); the NCCL log's `nvmlDev` field is parsed to
+  confirm the mapping.
+* Processes on GPUs 4–7 are bound to their NUMA node
+  (`numactl --cpunodebind=1 --membind=1`).
+* `NCCL_RUNTIME_CONNECT=0`: channels are connected during communicator init.
+  With NCCL's default lazy connection the first out-of-place region of a 4-GPU
+  launch absorbed ~257 ms of SHM connection set-up in a pilot launch (see §10);
+  with `NCCL_RUNTIME_CONNECT=0` the residual first-region overhead was 16–20 ms.
+* All other `NCCL_*` variables from the caller's environment are removed so
+  that only the configuration under test is set.
 
-nccl-tests was built for `sm_86` at commit `afd59ab` and linked against NCCL 2.27.5. Timed launches use one process with one host thread per GPU (`-t N -g 1`), `float` data, sum reduction, and one message size per process. GPUs are selected by UUID and `CUDA_DEVICE_ORDER=PCI_BUS_ID`; GPUs 4–7 are bound to NUMA node 1.
+## 4. Verifying the configuration NCCL actually ran ("probe" pass)
 
-`NCCL_RUNTIME_CONNECT=0` connects channels during communicator initialization so that connection setup is kept outside the measured collective regions. Other inherited `NCCL_*` variables are removed before a launch.
+Requested and executed configurations are not assumed to coincide. Before the
+timed sweep (`probe`) and again after it (`probe_end`), every condition is run
+once over the whole size range with
 
-## Requested and observed NCCL configuration
-
-Before the timed sweep, each requested condition was run with NCCL TUNING logging and data checking. The parser records the algorithm, protocol, and channel range selected for each size, checks whether forced settings were honored, and records nccl-tests `#wrong` counts. Unsupported requests are retained as explicit `not_run_probe_unsupported` final records and are not timed. NCCL 2.27.5 rejected Tree for AllGather and ReduceScatter in this matrix.
-
-The timed processes did not emit TUNING logs. Their effective configuration is therefore inferred by joining each timed condition to the initial probe result. A closing probe was planned but did not run. The smoke-test probe was repeated successfully, but that does not verify selection stability during the full sweep.
-
-## Calibration, regions, and retries
-
-Calibration estimates latency for every supported condition and size. The timed iteration count is then
-
-```text
-n = max(min_iters, ceil(target_region_s / estimated_latency_s))
-w = max(min_warmup_iters, ceil(warmup_s / estimated_latency_s))
+```
+NCCL_DEBUG=INFO NCCL_DEBUG_SUBSYS=INIT,ENV,GRAPH,TUNING  <coll>_perf -n 1 -w 0 -c 1 ...
 ```
 
-The process runs under unbuffered stdout. nccl-tests constructs each result row with separate writes: a preamble before the out-of-place benchmark, the out-of-place result, and the in-place result. The orchestrator reads stdout and takes a monotonic `time.perf_counter()` timestamp plus an energy-counter snapshot when each chunk arrives.
+In the initial TUNING-enabled probe, NCCL 2.27.5 records selections of the form
+`AllReduce: 1048576 Bytes -> Algo RING proto SIMPLE channel{Lo..Hi}={0..7}`.
+Timed v1 processes did not record per-process TUNING selection. The initial
+probe was used to infer their effective algorithm/protocol; the closing probe
+was not obtained. These logs do not verify every timed invocation.
+For AllGather/ReduceScatter the byte count is per rank; the parser maps it via
+the element count nccl-tests reports. From the probe we record, per size:
 
-```text
-out-of-place region = preamble boundary -> out-of-place result boundary
-in-place region     = out-of-place result boundary -> in-place result boundary
-```
+* the algorithm, protocol and channel range NCCL selected (`selection.csv`);
+* `forced_honoured`: whether a forced algorithm/protocol is what ran;
+* `#wrong` from nccl-tests' data check for out-of-place and in-place;
+* whether the request was rejected. NCCL rejects e.g. `NCCL_ALGO=Tree` for
+  AllGather with `NCCL WARN Error : no algorithm/protocol available for
+  function AllGather ... NCCL_ALGO was set to Tree.` and nccl-tests aborts.
+  Such a size is recorded as `unsupported` with NCCL's own message, and the
+  probe continues with the next size in a new process, so every size gets its
+  own verdict.
 
-A final region is accepted only when `n × reported_latency >= 2.0 s` for both placements and other validity checks pass. A short or failed launch may be retried once. The full run retained 406 nonfinal short attempts; only final attempts enter the processed tables. Because a retry immediately follows an initial attempt, retry heating or state carryover remains a possible bias.
+Sizes that are unsupported, failed, or returned wrong data are **not timed**;
+each such unit still gets an explicit record (`not_run_probe_<status>`) in
+every trial. The selection from `probe` and `probe_end` is compared
+(`selection_stable`). *In the reported sweep `probe_end` was not run (the
+sweep was stopped early, §9); selection stability was verified only in the
+smoke run (108/108 identical).*
 
-## Energy and telemetry
+Because a probe executes one operation per size with per-call logging, its
+timings are not used.
 
-### Cumulative counter
+## 5. Calibration
 
-The primary measurement calls `nvmlDeviceGetTotalEnergyConsumption` for every participating GPU at each region boundary. The API returns cumulative millijoules since driver load. For GPU `g`:
+For each supported condition, two short sweeps (`-c 0`) estimate the latency
+per size: sizes ≤ 1 MiB with 200 iterations (20 warm-up), larger sizes with
+5 iterations (1 warm-up). From the estimate *t̂* the timed launch uses
 
-```text
-E_g [J] = (counter_end_g [mJ] - counter_start_g [mJ]) / 1000
-E_region [J] = sum_g E_g
-E_raw/op [J] = E_region / (n + w)
-```
+* `n = max(5, ceil(target_region_s / t̂))` timed iterations, and
+* `w = max(1, ceil(warmup_s / t̂))` warm-up iterations.
 
-All GPUs in the active set, and only those GPUs, are included. Counter support was observed on all measured RTX A6000 devices in this environment. The implementation rejects regions with missing boundaries or missing counter values. It does not check for counter decreases or nonpositive deltas and does not attempt wraparound correction; every region in the full processed dataset has positive counter energy.
+## 6. Timed launches and measurement regions
 
-The reads are synchronous with receipt of stdout chunks, not with direct CUDA events. Pipe delivery, parsing, and the serial per-GPU NVML reads can shift the boundary relative to GPU execution. Region durations of roughly 2.1–3.8 s reduce the relative effect but do not remove it.
+Each timed launch runs one condition at one size. nccl-tests prints a result
+row with three `printf` calls: the preamble (size, count, type, op, root)
+just before the out-of-place benchmark, the out-of-place result after it, and
+the in-place result after the in-place benchmark. The process runs under
+`stdbuf -o0` (unbuffered stdout) and the orchestrator reads the pipe in a
+dedicated loop. Each arriving chunk is time-stamped (`time.perf_counter`) and
+the NVML energy counter of every participating GPU is read immediately.
+Measurement regions are therefore:
 
-### Sampled power
+| region | starts when this text arrives | ends when this text arrives | contains |
+|---|---|---|---|
+| out-of-place | row preamble | out-of-place result | `w` warm-up + `n` timed ops |
+| in-place | out-of-place result | in-place result | `w` warm-up + `n` timed ops |
 
-A background thread requests, for each participating GPU, power, utilization, temperature, graphics clock, memory clock, and performance state every 50 ms using the same monotonic clock. GPU process lists are sampled every second. Actual cadence statistics are saved in `qc.json`; for the full run the median interval was 0.0500 s and the maximum was 0.1528 s.
+Timed launches use `-c 0` so that no data check runs inside a region.
 
-Power is integrated with linear interpolation at the region boundaries and trapezoidal integration between samples:
+**Region length.** The requirement is that every measured region lasts ≥ 2 s.
+We enforce the stricter condition that the *timed iterations alone*
+(`n × t_op`) last ≥ `min_region_s` = 2.0 s in both regions. If a launch falls
+short (calibration error), it is repeated once with `n` scaled to the target;
+the short attempt is kept in `launches.jsonl` with `final: false`.
+Launches that fail (non-zero exit, timeout, unparsable output, missing region
+boundary) are also retried once and the failed attempt is kept.
 
-```text
-E_integrated [J] = sum_g integral(power_g(t) [W] dt [s])
-```
+**Per-operation quantities.**
 
-A second cross-check shifts the integration window by +0.5 s to account empirically for lag in the power reading. Sampled-power integration is not the reported primary energy. In the full data, shifted-window integrated energy divided by counter energy had median 0.9926 over 6,767 covered regions; the unshifted ratio had median 0.9787 over 7,056 regions.
+* Latency `t_op`: the time nccl-tests reports for the region (host wall clock
+  over the `n` timed iterations, averaged over ranks).
+* Energy per operation: `E_op = E_region / (n + w)`, where `E_region` is the
+  sum over participating GPUs of the counter difference across the region.
+  Warm-up operations are the same operation as the timed ones and lie inside
+  the region, so they are counted. QC compares `region_duration / (n + w)`
+  with `t_op` (`wall_vs_reported` flag at > 10 % difference).
 
-### Idle subtraction
+## 7. Energy measurement
 
-At trial boundaries and periodically during a trial, the implementation waits for every participating GPU to report P8, waits an additional five seconds, and measures a ten-second idle window. Per-trial, per-GPU idle power is the median of that trial's valid idle windows.
+**Primary: NVML energy counter.** `nvmlDeviceGetTotalEnergyConsumption`
+(mJ since driver load) is supported on all eight GPUs. It is read **only at
+region boundaries** (one read per GPU per stdout chunk, ≤ 4 chunks per
+launch during the run). On this driver/GPU we had observed in earlier,
+unrelated work on the same machine that frequent energy-counter reads — and
+reads of `NVML_FI_DEV_POWER_INSTANT` — reduce the counter's reported energy;
+the sampler therefore never calls either API, and the boundary reads are
+too infrequent for that effect to matter beyond about one internal
+accumulation window per region (see limitations).
 
-```text
-E_idle [J] = region_duration_s * sum_g P_idle,g [W]
-E_idle_subtracted/op [J] = (E_region - E_idle) / (n + w)
-```
+**Secondary: sampled power.** A background thread (`nvml_sampler.py`)
+samples every 50 ms, per participating GPU:
 
-Negative idle-subtracted values are retained and flagged rather than clipped. None occurred in the full processed regions. This baseline is a P8 board-idle reference, not a measurement of communication-only dynamic energy.
-
-## Timing and derived metrics
-
-Latency is read directly from nccl-tests, which synchronizes its repeated collective loop and reports average time per operation. The orchestrator does not independently replace this timer. Setup and communicator initialization occur before the first parsed row boundary, although the out-of-place region can include first-call work after that boundary.
-
-For message size `S` from the nccl-tests `size` column and reported time `t_op`:
-
-| metric | implemented definition |
+| field | NVML call |
 |---|---|
-| latency | `t_op` in µs, from nccl-tests |
-| algorithm bandwidth | nccl-tests `S / t_op` |
-| bus bandwidth | nccl-tests collective-specific scaling of algorithm bandwidth |
-| raw energy per op | `E_region / (n + w)` |
-| idle-subtracted energy per op | `(E_region - T × sum(P_idle,g)) / (n + w)` |
-| J/byte | `E_op / S` |
-| GB/J | `S / E_op / 1e9` |
-| energy-delay product | `E_op × t_op × 1e-6` in J·s |
+| timestamp | `time.perf_counter()` (same clock as region boundaries) |
+| power (W) | `nvmlDeviceGetPowerUsage` |
+| GPU utilization, memory utilization (%) | `nvmlDeviceGetUtilizationRates` |
+| temperature (°C) | `nvmlDeviceGetTemperature(GPU)` |
+| graphics clock, memory clock (MHz) | `nvmlDeviceGetClockInfo(GRAPHICS / MEM)` |
+| P-state | `nvmlDeviceGetPerformanceState` |
+| query time | wall time of the calls above |
 
-`S` is the nccl-tests message buffer size, not physical bytes crossing each link or aggregate fabric traffic. J/byte and GB/J must therefore be read as message-normalized metrics.
+and every 1 s the list of processes on each GPU. The 50 ms period was chosen
+from measurements on this machine: a full sample costs ≈2–2.6 ms of NVML time
+per GPU, and `nvmlDeviceGetPowerUsage` on this GPU is a ~1 s average whose
+value changes every ~100 ms under load (every ~1 s at idle), so sampling
+faster adds no information. Trapezoidal integration of the sampled power over
+each region is stored next to the counter value (`energy_integrated_j`), and
+also with the window shifted by +0.5 s to compensate for the averaging lag
+(`energy_integrated_lag05_j`). These integrals are a cross-check only; the
+counter is the primary measurement (the integral of a 1-s moving average
+smears energy across neighbouring regions).
 
-## Trial blocks and statistics
+**Idle power.** At the start and end of each trial and after every
+`every_n_launches` timed launches, with no process on any GPU of the active
+sets, the orchestrator waits until every GPU reports P-state P8, waits 5 s
+more, then measures 10 s with the counter (two reads) and the sampler.
+Idle power per GPU and trial is the median of that trial's idle windows.
 
-Five trial blocks were configured and three completed sequentially over about 7.4 hours of timed launches. Every supported unit starts a fresh process. Unit order is independently shuffled within each block with a deterministic seed. Randomization spreads order effects but does not make sequential blocks statistically independent of shared-host load, thermal history, or time drift.
+## 8. Derived metrics
 
-Processed metrics are first reduced to one value per trial, condition, size, and placement. Reported means and percentile bootstrap intervals resample these three trial-level values, not individual nccl-tests iterations. With only three blocks, the intervals and `P(best)` values are descriptive and should not be interpreted as publication-quality uncertainty estimates.
+For a region with `n + w` operations, duration `T`, counter energy `E`
+(summed over the `G` participating GPUs), idle power `P_idle,g`, message size
+`S` bytes (the nccl-tests `size` column: the full buffer of the collective):
 
-An optimum is the requested configuration with the lowest three-trial mean among configurations with at least three valid trials. Effective disagreement is counted only when the initial probe indicates different algorithm/protocol/channel selections. Pareto fronts are based on mean latency and mean energy.
+| metric | definition |
+|---|---|
+| latency | `t_op` (µs), nccl-tests |
+| algorithm bandwidth | `algbw = S / t_op` (nccl-tests) |
+| bus bandwidth | `busbw` (nccl-tests: `algbw × 2(G−1)/G` for AllReduce, `× (G−1)/G` for AllGather/ReduceScatter) |
+| raw energy per op | `E_op = E / (n + w)` |
+| idle-subtracted energy per op | `E_dyn = (E − Σ_g P_idle,g · T) / (n + w)` |
+| energy per byte | `E_op / S` and `E_dyn / S` (J/B) |
+| GB per joule | `S / E_op / 1e9` and `S / E_dyn / 1e9` |
+| energy-delay product | `EDP = E_op × t_op` (J·s), also `E_dyn × t_op` |
 
-## Interference checks
+## 9. Trials, ordering, interference control
 
-Before each launch, the active GPUs must have no foreign compute process. During a launch, processes on active GPUs are sampled and flagged. Host load and jobs on nonparticipating GPUs are recorded but not controlled. CPU, memory, filesystem, scheduler, and other shared-host interference therefore remain possible, especially for the 4-GPU host-mediated path.
+* **Trials.** 5 repeated trial blocks were configured. Independence across
+  the sequential blocks on this shared host is not established. **The reported sweep
+  completed 3**: it was stopped with SIGTERM right after trial 3's closing
+  idle measurement, at the operator's request to release the shared GPUs
+  (logged in `data/raw/full/events.jsonl`; no trial-4 launch was started;
+  `order_trial4.json` was written before the stop and is unused). Statistics
+  rank only configurations with ≥ 3 valid trials. In each trial, every
+  (collective, GPU set, algorithm, protocol, size) unit is launched once as a
+  fresh process; the unit order is shuffled with `random.Random(f"{seed}-trial-{k}")`
+  and saved to `order_trial{k}.json` before the trial runs.
+* **Competing processes.** Before each launch, NVML process lists of the
+  target GPUs must be empty (the orchestrator itself never opens a CUDA
+  context); otherwise the launch waits (polling every 30 s, up to 30 min), is
+  deferred to the end of the trial, and is finally recorded as
+  `skipped_foreign_process`. During a launch the sampler records processes on
+  the target GPUs once per second; any process other than the benchmark marks
+  the region `foreign_process_during`, and such regions are excluded from the
+  statistics (listed in `exclusions.csv`). Processes on non-target GPUs and the
+  host load average are recorded per launch. A GPU set with a process on any
+  of its GPUs at the start of a run is skipped as a whole and the reason is
+  stored in `gpu_set_status.json`.
+* **No silent drops.** Every planned unit has exactly one final record in
+  `launches.jsonl`, whatever its status; the smoke check verifies this.
+  stdout, stderr, the NCCL log, the stdout chunk timeline with counter reads,
+  and the power trace of every launch are kept under
+  `data/raw/<run>/launches/<launch_id>__a<attempt>/`.
 
-## Public data boundary
+## 10. Statistics
 
-The public tree retains processed tables, generated figures, run-level configuration/order/event records, sanitized machine metadata, and representative sanitized parser fixtures. Per-launch raw artifacts and `launches.jsonl` are omitted because they contain private host/network identifiers and create tens of thousands of small files. See [data/raw/README.md](../data/raw/README.md). A public checkout can regenerate reports and figures from processed tables, but cannot rerun raw-to-processed analysis without the private raw archive.
+* Per condition, metrics are averaged over trials; 95 % intervals are
+  percentile bootstrap intervals of the mean over trials (10 000 resamples,
+  fixed seed).
+* **Optimal configuration** per cell and objective (latency, raw energy,
+  idle-subtracted energy, EDP): the requested configuration with the lowest
+  trial mean, among configurations with ≥ 3 valid trials. `P(best)` is the
+  fraction of bootstrap resamples (each configuration's trials resampled
+  independently) in which it has the lowest mean.
+* **Disagreement.** Latency- and energy-optimal configurations "disagree" in a
+  cell if NCCL ran a different algorithm/protocol/channel range for them
+  (from the probe). Requested labels can differ while the executed
+  configuration is the same (e.g. `auto/auto` and `Ring/LL` both run
+  `RING/LL` for small AllReduce); those pairs are counted as agreeing, and
+  such duplicate pairs act as a built-in noise check.
+* **Energy penalty of the latency-optimal choice:**
+  `mean E(lat-opt) / mean E(energy-opt) − 1`, with a bootstrap interval; a
+  disagreement is called *resolved* when that interval excludes 0. The
+  matching latency penalty of the energy-optimal choice is also reported.
+* **Pareto front**: configurations whose (mean latency, mean energy) is not
+  dominated within the cell.
+
+## 11. Validation (smoke test)
+
+`configs/smoke.yaml` (3 sizes, 2 GPU sets, 3 algorithms × 2 protocols,
+2 trials) exercises every code path. `python -m ncclenergy smoke-check`
+writes `data/processed/smoke/SMOKE_REPORT.md`; the full sweep was started
+only after it passed. The checks and the values obtained are listed in
+[smoke_test.md](smoke_test.md).
+
+## 12. Reproduction
+
+See the *Reproduce* section of the [README](../README.md).

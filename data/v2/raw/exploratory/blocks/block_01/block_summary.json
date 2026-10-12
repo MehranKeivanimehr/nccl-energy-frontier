@@ -1,0 +1,239 @@
+{
+ "status": "COMPLETE",
+ "campaign": "exploratory",
+ "mode": "EXPLORATORY",
+ "block": 1,
+ "seed": "exploratory-20261008-1",
+ "utc_start": "2026-10-08T22:22:24Z",
+ "config_sha256": "365d18af385ba9c372e436740dadfbe4ccab7368b3265ba4202618dd349107c8",
+ "frozen_sha256": "ea235d079dcb8d461d7ad8bcdb4da2cf6e64647a6dd75e97ecfae43d91e1346c",
+ "git": {
+  "head": "360ed6b4c9ce89650750cd341fd9b4d18dd64243",
+  "dirty": true,
+  "diff_sha256": null,
+  "untracked": [
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL128__1024_1048576/nccl.log",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL128__1024_1048576/prof/prof_31120_r0_9ad07927e93c6ef8.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL128__1024_1048576/prof/prof_31120_r1_9ad07927e93c6ef8.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL128__1024_1048576/region.jsonl",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL128__1024_1048576/stderr.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL128__1024_1048576/stdout.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL128__2097152_1073741824/nccl.log",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL128__2097152_1073741824/prof/prof_31160_r0_68687462d2aa0419.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL128__2097152_1073741824/prof/prof_31160_r1_68687462d2aa0419.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL128__2097152_1073741824/region.jsonl",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL128__2097152_1073741824/stderr.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL128__2097152_1073741824/stdout.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL__1024_1048576/nccl.log",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL__1024_1048576/prof/prof_31037_r0_ef7f80a7d27b325e.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL__1024_1048576/prof/prof_31037_r1_ef7f80a7d27b325e.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL__1024_1048576/region.jsonl",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL__1024_1048576/stderr.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL__1024_1048576/stdout.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL__2097152_1073741824/nccl.log",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL__2097152_1073741824/prof/prof_31075_r0_b7539d22357d6988.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL__2097152_1073741824/prof/prof_31075_r1_b7539d22357d6988.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL__2097152_1073741824/region.jsonl",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL__2097152_1073741824/stderr.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-LL__2097152_1073741824/stdout.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-Simple__1024_1048576/nccl.log",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-Simple__1024_1048576/prof/prof_30987_r0_eb389eceeb4bb8a1.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-Simple__1024_1048576/prof/prof_30987_r1_eb389eceeb4bb8a1.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-Simple__1024_1048576/region.jsonl",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-Simple__1024_1048576/stderr.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-Simple__1024_1048576/stdout.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-Simple__2097152_1073741824/nccl.log",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-Simple__2097152_1073741824/prof/prof_31012_r0_c8792de4ea7db614.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-Simple__2097152_1073741824/prof/prof_31012_r1_c8792de4ea7db614.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-Simple__2097152_1073741824/region.jsonl",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-Simple__2097152_1073741824/stderr.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__Ring-Simple__2097152_1073741824/stdout.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__auto__1024_1048576/nccl.log",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__auto__1024_1048576/prof/prof_30856_r0_382d40aa29a694b9.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__auto__1024_1048576/prof/prof_30856_r1_382d40aa29a694b9.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__auto__1024_1048576/region.jsonl",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__auto__1024_1048576/stderr.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__auto__1024_1048576/stdout.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__auto__2097152_1073741824/nccl.log",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__auto__2097152_1073741824/prof/prof_30962_r0_5c966fdf8e665a69.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__auto__2097152_1073741824/prof/prof_30962_r1_5c966fdf8e665a69.json",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__auto__2097152_1073741824/region.jsonl",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__auto__2097152_1073741824/stderr.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_gather__auto__2097152_1073741824/stdout.txt",
+   "data/v2/raw/setup/calibration/P2_NVL__all_reduce__Ring-LL128__1024_1048576/nccl.log",
+   "data/v2/raw/setup/calibration/P2_NVL__all_reduce__Ring-LL128__1024_1048576/prof/prof_31379_r0_70328a9ad606215a.json"
+  ]
+ },
+ "versions": {
+  "driver": "580.178.04",
+  "nvml": "13.580.178.04",
+  "cuda_driver": 13000,
+  "nccl_lib_sha256": "1d9c10322efacde695cf640db1f29fc1586c929f1087f0e1202d2d5e70fb7168",
+  "nccl_tests_commit": "afd59abab774a6a4b492eb344bd0c845a0b7bb4d",
+  "patch_sha256": "293527e3ab71ece12ff42088b84f47763ba48e62f08999edbfa4ff04bad2e0b8",
+  "plugin_sha256": "0b96c10d120f461c876958dc98ad686aa97316f2c51d08248b19ea2703b2817b",
+  "binary_sha256": {
+   "all_reduce": "a079f6771a45b02b2a53cbf48d07d2ef588c99907856febf4ee03afe690cd46f",
+   "all_gather": "a404b32f427510e00719d1efd5d5278df825be14b2718aadbd175c7a92f127bf",
+   "reduce_scatter": "4f2ac29a67f779bb846399e46dfa891d83fbbac3c6b0b2fd405e1a658c0a39a4"
+  }
+ },
+ "n_units": 1323,
+ "idle_pre": {
+  "utc": "2026-10-08T22:23:05Z",
+  "reached_p8": true,
+  "p8_wait_s": 1.1049996828660369e-05,
+  "settle_s": 10,
+  "duration_s": 30.02466769899911,
+  "per_gpu": {
+   "0000:81:00.0": {
+    "gpu": 4,
+    "alias": "A6000-b10caa4a",
+    "counter_W": 27.906020755990944,
+    "delta_mJ": 837869,
+    "sampled_mean_W": 27.96921630615641,
+    "temp_mean_c": 27.0,
+    "pstates": [
+     8
+    ]
+   },
+   "0000:a1:00.0": {
+    "gpu": 5,
+    "alias": "A6000-f5f81ac3",
+    "counter_W": 20.92905761021787,
+    "delta_mJ": 628388,
+    "sampled_mean_W": 20.953484193011647,
+    "temp_mean_c": 26.0,
+    "pstates": [
+     8
+    ]
+   },
+   "0000:c1:00.0": {
+    "gpu": 6,
+    "alias": "A6000-cf04a46e",
+    "counter_W": 26.060738051934674,
+    "delta_mJ": 782465,
+    "sampled_mean_W": 26.106399334442596,
+    "temp_mean_c": 27.0,
+    "pstates": [
+     8
+    ]
+   },
+   "0000:e1:00.0": {
+    "gpu": 7,
+    "alias": "A6000-8f2812cc",
+    "counter_W": 20.51010209916589,
+    "delta_mJ": 615809,
+    "sampled_mean_W": 20.524662229617306,
+    "temp_mean_c": 27.0,
+    "pstates": [
+     8
+    ]
+   }
+  }
+ },
+ "idle_post": {
+  "utc": "2026-10-08T23:49:26Z",
+  "reached_p8": true,
+  "p8_wait_s": 3.000421754004492,
+  "settle_s": 10,
+  "duration_s": 30.024021122000704,
+  "per_gpu": {
+   "0000:81:00.0": {
+    "gpu": 4,
+    "alias": "A6000-b10caa4a",
+    "counter_W": 28.683632898490732,
+    "delta_mJ": 861198,
+    "sampled_mean_W": 28.778686666666673,
+    "temp_mean_c": 34.06333333333333,
+    "pstates": [
+     8
+    ]
+   },
+   "0000:a1:00.0": {
+    "gpu": 5,
+    "alias": "A6000-f5f81ac3",
+    "counter_W": 20.940499523539643,
+    "delta_mJ": 628718,
+    "sampled_mean_W": 20.965566666666668,
+    "temp_mean_c": 33.38666666666666,
+    "pstates": [
+     8
+    ]
+   },
+   "0000:c1:00.0": {
+    "gpu": 6,
+    "alias": "A6000-cf04a46e",
+    "counter_W": 26.682934865541934,
+    "delta_mJ": 801129,
+    "sampled_mean_W": 26.74673,
+    "temp_mean_c": 34.67333333333333,
+    "pstates": [
+     8
+    ]
+   },
+   "0000:e1:00.0": {
+    "gpu": 7,
+    "alias": "A6000-8f2812cc",
+    "counter_W": 21.098339806849577,
+    "delta_mJ": 633457,
+    "sampled_mean_W": 21.207743333333333,
+    "temp_mean_c": 32.443333333333335,
+    "pstates": [
+     8
+    ]
+   }
+  }
+ },
+ "throttle_counter_delta_ns": {
+  "4": {
+   "sw_power_cap": 1246654503040,
+   "sync_boost": 0,
+   "sw_thermal": 830049124928,
+   "hw_thermal": 0,
+   "hw_power_brake": 0
+  },
+  "5": {
+   "sw_power_cap": 89349114048,
+   "sync_boost": 0,
+   "sw_thermal": 0,
+   "hw_thermal": 0,
+   "hw_power_brake": 0
+  },
+  "6": {
+   "sw_power_cap": 1497330901472,
+   "sync_boost": 0,
+   "sw_thermal": 898153494656,
+   "hw_thermal": 0,
+   "hw_power_brake": 0
+  },
+  "7": {
+   "sw_power_cap": 1606413550080,
+   "sync_boost": 0,
+   "sw_thermal": 0,
+   "hw_thermal": 0,
+   "hw_power_brake": 0
+  }
+ },
+ "health_events": [],
+ "utc_end": "2026-10-08T23:49:26Z",
+ "xid": {
+  "status": "ok",
+  "per_gpu": {
+   "4": "registered",
+   "5": "registered",
+   "6": "registered",
+   "7": "registered"
+  }
+ },
+ "n_attempts": 1323,
+ "final_status_counts": {
+  "NOT_RUN_NOT_ENABLED_BY_NCCL": 546,
+  "OK": 770,
+  "QC_SHORT": 7
+ },
+ "evidence_counts": {
+  "VERIFIED": 777,
+  "UNVERIFIED": 0
+ }
+}

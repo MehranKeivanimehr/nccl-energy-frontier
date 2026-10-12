@@ -15,8 +15,9 @@ nccl_tests:
   datatype: float
   op: sum
   extra_env:
-    # Connect channels during communicator initialization so connection setup
-    # remains outside the measured collective regions.
+    # Connect all NCCL channels during communicator init instead of lazily at
+    # the first collective. With lazy connect (NCCL default) the first
+    # out-of-place region absorbed up to ~257 ms of SHM setup on 4 GPUs.
     NCCL_RUNTIME_CONNECT: "0"
 
 collectives: [all_reduce, all_gather, reduce_scatter]

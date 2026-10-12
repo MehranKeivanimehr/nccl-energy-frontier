@@ -1,0 +1,9 @@
+0 NVIDIA RTX A6000 (8, 6) None  
+1 NVIDIA RTX A6000 (8, 6) None  
+2 NVIDIA RTX A6000 (8, 6) None  
+3 NVIDIA RTX A6000 (8, 6) None  
+4 NVIDIA RTX A6000 (8, 6) COUNTER_ALIGNED instant {'reads': 1136, 'changes': 15, 'median_period_ms': 99.9231015, 'p10_ms': 99.2581607, 'p90_ms': 100.555538}
+5 NVIDIA RTX A6000 (8, 6) COUNTER_ALIGNED instant {'reads': 1123, 'changes': 15, 'median_period_ms': 100.0290955, 'p10_ms': 99.311464, 'p90_ms': 100.6422216}
+6 NVIDIA RTX A6000 (8, 6) None  
+7 NVIDIA RTX A6000 (8, 6) None  
+homogeneous groups: {'NVIDIA RTX A6000|cc(8, 6)': [0, 1, 2, 3, 4, 5, 6, 7]}

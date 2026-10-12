@@ -1,0 +1,10 @@
+{
+ "estimators": {
+  "counter": "Commit-aligned NVML cumulative counter (patch v2.1) minus the idle tail, per collective (units.csv J_per_coll).",
+  "integrated_instant": "Trapezoidal integral of NVML_FI_DEV_POWER_INSTANT sampled at 50 ms over the region, summed over GPUs, per collective (unit telemetry energy_int_inst_J / R).",
+  "lag_adjusted_powerusage": "Trapezoidal integral of nvmlDeviceGetPowerUsage (about 1 s average) shifted by the configured lag 0.75 s, summed over GPUs, per collective (energy_int_lag_J / R).",
+  "idle_adjusted_counter": "Counter estimator minus block idle power x region duration per GPU (units.csv J_idle_adj_per_coll)."
+ },
+ "test": "paired over blocks; ln(E_lat_opt/E_en_opt); one-sided t for penalty > 0; Holm over the 2 RQ2 cells within an estimator; TOST +-3 % (90 % CI)",
+ "caveat": "The four estimators share the board's power sensor and its averaging; agreement among them is not an independent physical calibration."
+}

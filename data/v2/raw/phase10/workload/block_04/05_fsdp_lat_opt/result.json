@@ -1,0 +1,86 @@
+{
+ "mode": "fsdp",
+ "policy": "lat_opt",
+ "world": 4,
+ "hidden": 4096,
+ "layers": 8,
+ "batch": 128,
+ "steps": 100,
+ "warmup": 10,
+ "bucket_mb": 25,
+ "step_time_s": 0.12255162239074707,
+ "host_step_time_s": 0.12255417525993835,
+ "throughput_samples_s": 4177.831268259548,
+ "energy_J": 7326.496295488382,
+ "energy_per_step_J": 73.26496295488383,
+ "meter": {
+  "t_start_ns": {
+   "4": 54537710185454,
+   "5": 54537713987017,
+   "6": 54537715396640,
+   "7": 54537716768493
+  },
+  "t_end_ns": 54549972957448,
+  "per_gpu": {
+   "4": {
+    "aligned_J": 1887.285,
+    "p_ctx_W": 90.66501587959634,
+    "tail_s": 0.06221959,
+    "energy_J": 1881.643859884628,
+    "duration_s": 12.262771994,
+    "bracket_ms": 2.100922
+   },
+   "5": {
+    "aligned_J": 1731.395,
+    "p_ctx_W": 92.57064671121854,
+    "tail_s": 0.088783128,
+    "energy_J": 1723.1762884239952,
+    "duration_s": 12.258970431,
+    "bracket_ms": 2.070573
+   },
+   "6": {
+    "aligned_J": 1874.319,
+    "p_ctx_W": 104.85948187364906,
+    "tail_s": 0.008009619,
+    "energy_J": 1873.4791155016546,
+    "duration_s": 12.257560808,
+    "bracket_ms": 2.096662
+   },
+   "7": {
+    "aligned_J": 1851.532,
+    "p_ctx_W": 101.71522230173386,
+    "tail_s": 0.032787308,
+    "energy_J": 1848.1970316781044,
+    "duration_s": 12.256188955,
+    "bracket_ms": 2.057842
+   }
+  },
+  "energy_J": 7326.496295488382
+ },
+ "probe": {
+  "phase_ns": {
+   "4": 54536535177038,
+   "5": 54537061740576,
+   "6": 54537080967067,
+   "7": 54537605744756
+  },
+  "bracket_ns": {
+   "4": 2100922,
+   "5": 2070573,
+   "6": 2096662,
+   "7": 2057842
+  }
+ },
+ "torch": "2.9.1+cu128",
+ "nccl": "2.27.5",
+ "env": {
+  "CUDA_VISIBLE_DEVICES": "A6000-b10caa4a,A6000-f5f81ac3,A6000-cf04a46e,A6000-8f2812cc",
+  "NCCL_DEBUG": "INFO",
+  "NCCL_DEBUG_SUBSYS": "INIT,ENV",
+  "NCCL_DEBUG_FILE": "<REPO>/data/v2/raw/phase10/workload/block_04/05_fsdp_lat_opt/nccl.%h.%p.log",
+  "NCCL_PROFILER_PLUGIN": "<REPO>/native/nccl_profiler_algo/build/libnccl-profiler-nccle.so",
+  "NCCLE_PROFILER_DIR": "<REPO>/data/v2/raw/phase10/workload/block_04/05_fsdp_lat_opt/prof",
+  "NCCL_TUNER_PLUGIN": "<REPO>/native/nccl_tuner_example/build/libnccl-tuner-example.so",
+  "NCCL_TUNER_CONFIG_FILE": "<REPO>/data/v2/processed/confirmatory/nccl_tuner_P4_MIX_latency.conf"
+ }
+}

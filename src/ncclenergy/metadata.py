@@ -148,7 +148,7 @@ def collect(out_dir: Path, repo_root: Path, cfg: dict) -> dict:
     for fname, cmd in COMMANDS.items():
         cmd = [c.format(**subst) for c in cmd]
         rc, txt = _run(cmd, repo_root)
-        (out_dir / fname).write_text(txt, encoding="utf-8")
+        (out_dir / fname).write_text(txt)
         rcs[fname] = rc
 
     N.nvmlInit()
@@ -172,14 +172,14 @@ def collect(out_dir: Path, repo_root: Path, cfg: dict) -> dict:
         "nccl_library_sha256": sha256(lib_dir / "libnccl.so.2"),
         "nccl_tests_binaries_sha256": {p.name: sha256(p) for p in sorted(build.glob("*_perf"))},
         "torch": torch_versions(sys.executable),
-        "git_head": (out_dir / "git-head.txt").read_text(encoding="utf-8").strip() or None,
-        "git_dirty": bool((out_dir / "git-status.txt").read_text(encoding="utf-8").strip()),
-        "nccl_tests_commit": (out_dir / "nccl-tests-git.txt").read_text(encoding="utf-8").strip(),
+        "git_head": (out_dir / "git-head.txt").read_text().strip() or None,
+        "git_dirty": bool((out_dir / "git-status.txt").read_text().strip()),
+        "nccl_tests_commit": (out_dir / "nccl-tests-git.txt").read_text().strip(),
         "load_average": os.getloadavg(),
         "env": {k: v for k, v in os.environ.items()
                 if k.startswith(("CUDA", "NCCL", "LD_LIBRARY_PATH", "OMP_"))},
         "gpus": [_nvml_gpu(i) for i in range(ngpu)],
         "command_return_codes": rcs,
     }
-    (out_dir / "machine.json").write_text(json.dumps(meta, indent=2, default=str), encoding="utf-8")
+    (out_dir / "machine.json").write_text(json.dumps(meta, indent=2, default=str))
     return meta

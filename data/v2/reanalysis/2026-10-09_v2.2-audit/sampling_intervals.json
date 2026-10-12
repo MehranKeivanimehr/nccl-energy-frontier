@@ -1,0 +1,16 @@
+{
+ "measurement_window": {
+  "n_gpu_regions": 2784,
+  "median_max_interval_s": 0.05002618199796416,
+  "p99_s": 0.05020573552304995,
+  "max_s": 0.05050518299685791
+ },
+ "complete_trace": {
+  "n_gpu_traces": 2784,
+  "median_max_interval_s": 0.1133994999981951,
+  "p99_s": 0.15708958000279383,
+  "max_s": 0.1625999999960186,
+  "n_traces_max_interval_gt_0.15s": 236
+ },
+ "note": "measurement_window = samples inside [region start, loop end] per GPU (what the energy integrals use); complete_trace = the whole sampler trace of the unit, including the launch and teardown."
+}

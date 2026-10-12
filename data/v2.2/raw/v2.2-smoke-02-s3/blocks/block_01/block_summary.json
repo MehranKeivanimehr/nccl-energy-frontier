@@ -1,0 +1,121 @@
+{
+ "status": "STOPPED",
+ "campaign": "v2.2-smoke-02-s3",
+ "mode": "SMOKE",
+ "block": 1,
+ "seed": "v2.2-smoke-02-s3-20261009-1",
+ "utc_start": "2026-10-09T19:14:48Z",
+ "config_sha256": "0f4540b74e25c68d6c769c5ec0e891303c7ff1c0fee1be64d1d942e01424e961",
+ "frozen_sha256": "ea12ff01a0791dac4d19c478fe4f94ddf862a03acc1172e4f15e7f7cb484921f",
+ "git": {
+  "head": "6a3bea7f44ac3447d4c82f8fdac7ea0d6c4ac0fc",
+  "dirty": true,
+  "diff_sha256": null,
+  "untracked": [
+   "data/v2.2/raw/v2.2-smoke-02/blocks/block_01/attempts.jsonl",
+   "data/v2.2/raw/v2.2-smoke-02/blocks/block_01/block_summary.json",
+   "data/v2.2/raw/v2.2-smoke-02/blocks/block_01/idle_post/idle.json",
+   "data/v2.2/raw/v2.2-smoke-02/blocks/block_01/idle_post/telemetry.csv.gz",
+   "data/v2.2/raw/v2.2-smoke-02/blocks/block_01/idle_pre/idle.json",
+   "data/v2.2/raw/v2.2-smoke-02/blocks/block_01/idle_pre/telemetry.csv.gz",
+   "data/v2.2/raw/v2.2-smoke-02/blocks/block_01/order_planned.json",
+   "data/v2.2/raw/v2.2-smoke-02/blocks/block_01/preflight_post.json",
+   "data/v2.2/raw/v2.2-smoke-02/blocks/block_01/preflight_pre.json",
+   "data/v2.2/raw/v2.2-smoke-02/nvml_audit/audit_s2.220583.jsonl",
+   "data/v2.2/raw/v2.2-smoke-02/s1_preflight/capabilities.json",
+   "data/v2.2/raw/v2.2-smoke-02/s1_preflight/capabilities.log",
+   "data/v2.2/raw/v2.2-smoke-02/s1_preflight/preflight.json"
+  ]
+ },
+ "versions": {
+  "driver": "580.178.04",
+  "nvml": "13.580.178.04",
+  "cuda_driver": 13000,
+  "nccl_lib_sha256": "1d9c10322efacde695cf640db1f29fc1586c929f1087f0e1202d2d5e70fb7168",
+  "nccl_tests_commit": "afd59abab774a6a4b492eb344bd0c845a0b7bb4d",
+  "patch_sha256": "293527e3ab71ece12ff42088b84f47763ba48e62f08999edbfa4ff04bad2e0b8",
+  "plugin_sha256": "0b96c10d120f461c876958dc98ad686aa97316f2c51d08248b19ea2703b2817b",
+  "binary_sha256": {
+   "all_reduce": "a079f6771a45b02b2a53cbf48d07d2ef588c99907856febf4ee03afe690cd46f",
+   "all_gather": "a404b32f427510e00719d1efd5d5278df825be14b2718aadbd175c7a92f127bf",
+   "reduce_scatter": "4f2ac29a67f779bb846399e46dfa891d83fbbac3c6b0b2fd405e1a658c0a39a4"
+  }
+ },
+ "n_units": 1,
+ "idle_pre": {
+  "utc": "2026-10-09T19:15:05Z",
+  "reached_p8": true,
+  "p8_wait_s": 7.609996828250587e-06,
+  "settle_s": 5,
+  "duration_s": 10.011358571005985,
+  "energy_source": "counter",
+  "sampler": {
+   "errors": 0,
+   "truncated": false
+  },
+  "per_gpu": {
+   "0000:81:00.0": {
+    "gpu": 4,
+    "alias": "A6000-b10caa4a",
+    "counter_W": 27.788136647676335,
+    "delta_mJ": 278197,
+    "counter_status": "READ",
+    "sampled_mean_W": 28.05848499999999,
+    "sampled_inst_W": 28.0543893451027,
+    "temp_mean_c": 27.0,
+    "pstates": [
+     8
+    ],
+    "n_samples": 200
+   },
+   "0000:a1:00.0": {
+    "gpu": 5,
+    "alias": "A6000-f5f81ac3",
+    "counter_W": 20.677912845868462,
+    "delta_mJ": 207014,
+    "counter_status": "READ",
+    "sampled_mean_W": 20.709600000000002,
+    "sampled_inst_W": 20.704610423329132,
+    "temp_mean_c": 27.0,
+    "pstates": [
+     8
+    ],
+    "n_samples": 200
+   }
+  }
+ },
+ "stop_reason": "stop condition at P2_NVL__all_gather__auto__2097152: SAFETY_STOP ['WATCHDOG:WALL_TIME_EXCEEDED']",
+ "throttle_counter_delta_ns": {
+  "4": {
+   "sw_power_cap": 17588747392,
+   "sync_boost": 0,
+   "sw_thermal": 17528686944,
+   "hw_thermal": 0,
+   "hw_power_brake": 0
+  },
+  "5": {
+   "sw_power_cap": 17788266400,
+   "sync_boost": 0,
+   "sw_thermal": 0,
+   "hw_thermal": 0,
+   "hw_power_brake": 0
+  }
+ },
+ "health_events": [],
+ "utc_end": "2026-10-09T19:15:12Z",
+ "xid": {
+  "status": "ok",
+  "per_gpu": {
+   "4": "registered",
+   "5": "registered"
+  }
+ },
+ "n_attempts": 1,
+ "final_status_counts": {
+  "SAFETY_STOP": 1
+ },
+ "evidence_counts": {
+  "VERIFIED": 0,
+  "UNVERIFIED": 1
+ }
+}

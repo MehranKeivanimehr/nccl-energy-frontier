@@ -1,0 +1,42 @@
+{
+ "utc": "2026-10-09T19:53:51Z",
+ "reached_p8": true,
+ "p8_wait_s": 4.000489879006636,
+ "settle_s": 10,
+ "duration_s": 30.011996945002466,
+ "energy_source": "counter",
+ "sampler": {
+  "errors": 0,
+  "truncated": false
+ },
+ "per_gpu": {
+  "0000:81:00.0": {
+   "gpu": 4,
+   "alias": "A6000-b10caa4a",
+   "counter_W": 29.438427626760088,
+   "delta_mJ": 883506,
+   "counter_status": "READ",
+   "sampled_mean_W": 29.511486666666666,
+   "sampled_inst_W": 29.506168864354397,
+   "temp_mean_c": 38.4,
+   "pstates": [
+    8
+   ],
+   "n_samples": 600
+  },
+  "0000:a1:00.0": {
+   "gpu": 5,
+   "alias": "A6000-f5f81ac3",
+   "counter_W": 20.795317324058484,
+   "delta_mJ": 624109,
+   "counter_status": "READ",
+   "sampled_mean_W": 20.860868333333336,
+   "sampled_inst_W": 20.858650474398676,
+   "temp_mean_c": 35.708333333333336,
+   "pstates": [
+    8
+   ],
+   "n_samples": 600
+  }
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "mode": "ddp",
+ "policy": "auto",
+ "world": 4,
+ "hidden": 4096,
+ "layers": 8,
+ "batch": 2048,
+ "steps": 100,
+ "warmup": 10,
+ "bucket_mb": 25,
+ "step_time_s": 0.12064946174621582,
+ "host_step_time_s": 0.12065250458996161,
+ "throughput_samples_s": 67899.18397838972,
+ "energy_J": 12432.79077490501,
+ "energy_per_step_J": 124.3279077490501,
+ "meter": {
+  "t_start_ns": {
+   "4": 54437641986790,
+   "5": 54437646942553,
+   "6": 54437648355736,
+   "7": 54437649723589
+  },
+  "t_end_ns": 54449715735712,
+  "per_gpu": {
+   "4": {
+    "aligned_J": 3120.548,
+    "p_ctx_W": 92.53713148359526,
+    "tail_s": 0.050162955,
+    "energy_J": 3115.906064037559,
+    "duration_s": 12.073748922,
+    "bracket_ms": 2.009702
+   },
+   "5": {
+    "aligned_J": 3082.32,
+    "p_ctx_W": 93.24840535248478,
+    "tail_s": 0.077489334,
+    "energy_J": 3075.094243172674,
+    "duration_s": 12.068793159,
+    "bracket_ms": 2.102612
+   },
+   "6": {
+    "aligned_J": 3120.302,
+    "p_ctx_W": 104.46772122331285,
+    "tail_s": 0.096745655,
+    "energy_J": 3110.1952018838933,
+    "duration_s": 12.067379976,
+    "bracket_ms": 2.074942
+   },
+   "7": {
+    "aligned_J": 3133.773,
+    "p_ctx_W": 101.44004164657764,
+    "tail_s": 0.021468191,
+    "energy_J": 3131.5952658108836,
+    "duration_s": 12.066012123,
+    "bracket_ms": 2.060762
+   }
+  },
+  "energy_J": 12432.79077490501
+ },
+ "probe": {
+  "phase_ns": {
+   "4": 54436565898667,
+   "5": 54436693225046,
+   "6": 54437312481367,
+   "7": 54437437203903
+  },
+  "bracket_ns": {
+   "4": 2009702,
+   "5": 2102612,
+   "6": 2074942,
+   "7": 2060762
+  }
+ },
+ "torch": "2.9.1+cu128",
+ "nccl": "2.27.5",
+ "env": {
+  "CUDA_VISIBLE_DEVICES": "A6000-b10caa4a,A6000-f5f81ac3,A6000-cf04a46e,A6000-8f2812cc",
+  "NCCL_DEBUG": "INFO",
+  "NCCL_DEBUG_SUBSYS": "INIT,ENV",
+  "NCCL_DEBUG_FILE": "<REPO>/data/v2/raw/phase10/workload/block_04/00_ddpb2048_auto/nccl.%h.%p.log",
+  "NCCL_PROFILER_PLUGIN": "<REPO>/native/nccl_profiler_algo/build/libnccl-profiler-nccle.so",
+  "NCCLE_PROFILER_DIR": "<REPO>/data/v2/raw/phase10/workload/block_04/00_ddpb2048_auto/prof"
+ }
+}

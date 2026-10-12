@@ -1,0 +1,239 @@
+{
+ "status": "COMPLETE",
+ "campaign": "exploratory",
+ "mode": "EXPLORATORY",
+ "block": 2,
+ "seed": "exploratory-20261008-2",
+ "utc_start": "2026-10-08T23:49:46Z",
+ "config_sha256": "365d18af385ba9c372e436740dadfbe4ccab7368b3265ba4202618dd349107c8",
+ "frozen_sha256": "ea235d079dcb8d461d7ad8bcdb4da2cf6e64647a6dd75e97ecfae43d91e1346c",
+ "git": {
+  "head": "5f3e7173097757371561d1795b484c62e7dd2f46",
+  "dirty": true,
+  "diff_sha256": null,
+  "untracked": [
+   "data/v2/raw/exploratory/blocks/block_01/attempts.jsonl",
+   "data/v2/raw/exploratory/blocks/block_01/block_summary.json",
+   "data/v2/raw/exploratory/blocks/block_01/deviations.jsonl",
+   "data/v2/raw/exploratory/blocks/block_01/idle_post/idle.json",
+   "data/v2/raw/exploratory/blocks/block_01/idle_post/telemetry.csv.gz",
+   "data/v2/raw/exploratory/blocks/block_01/idle_pre/idle.json",
+   "data/v2/raw/exploratory/blocks/block_01/idle_pre/telemetry.csv.gz",
+   "data/v2/raw/exploratory/blocks/block_01/order_planned.json",
+   "data/v2/raw/exploratory/blocks/block_01/preflight_post.json",
+   "data/v2/raw/exploratory/blocks/block_01/preflight_pre.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1024__a0/nccl.log",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1024__a0/prof/prof_53677_r0_f969d533f4840ad1.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1024__a0/prof/prof_53677_r1_f969d533f4840ad1.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1024__a0/region.jsonl",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1024__a0/stderr.txt",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1024__a0/stdout.txt",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1024__a0/telemetry.csv.gz",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1024__a0/unit.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1048576__a0/nccl.log",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1048576__a0/prof/prof_56750_r0_e5296c3df2d48596.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1048576__a0/prof/prof_56750_r1_e5296c3df2d48596.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1048576__a0/region.jsonl",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1048576__a0/stderr.txt",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1048576__a0/stdout.txt",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1048576__a0/telemetry.csv.gz",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1048576__a0/unit.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1073741824__a0/nccl.log",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1073741824__a0/prof/prof_40310_r0_3594c74080a8c00d.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1073741824__a0/prof/prof_40310_r1_3594c74080a8c00d.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1073741824__a0/region.jsonl",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1073741824__a0/stderr.txt",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1073741824__a0/stdout.txt",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1073741824__a0/telemetry.csv.gz",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__1073741824__a0/unit.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__131072__a0/nccl.log",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__131072__a0/prof/prof_63842_r0_e45d60ea2d2a68d6.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__131072__a0/prof/prof_63842_r1_e45d60ea2d2a68d6.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__131072__a0/region.jsonl",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__131072__a0/stderr.txt",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__131072__a0/stdout.txt",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__131072__a0/telemetry.csv.gz",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__131072__a0/unit.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__134217728__a0/nccl.log",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__134217728__a0/prof/prof_61585_r0_e15a1a907f8d609a.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__134217728__a0/prof/prof_61585_r1_e15a1a907f8d609a.json",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__134217728__a0/region.jsonl",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__134217728__a0/stderr.txt",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__134217728__a0/stdout.txt",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__134217728__a0/telemetry.csv.gz",
+   "data/v2/raw/exploratory/blocks/block_01/units/P2_NVL__all_gather__Ring-LL128__134217728__a0/unit.json"
+  ]
+ },
+ "versions": {
+  "driver": "580.178.04",
+  "nvml": "13.580.178.04",
+  "cuda_driver": 13000,
+  "nccl_lib_sha256": "1d9c10322efacde695cf640db1f29fc1586c929f1087f0e1202d2d5e70fb7168",
+  "nccl_tests_commit": "afd59abab774a6a4b492eb344bd0c845a0b7bb4d",
+  "patch_sha256": "293527e3ab71ece12ff42088b84f47763ba48e62f08999edbfa4ff04bad2e0b8",
+  "plugin_sha256": "0b96c10d120f461c876958dc98ad686aa97316f2c51d08248b19ea2703b2817b",
+  "binary_sha256": {
+   "all_reduce": "a079f6771a45b02b2a53cbf48d07d2ef588c99907856febf4ee03afe690cd46f",
+   "all_gather": "a404b32f427510e00719d1efd5d5278df825be14b2718aadbd175c7a92f127bf",
+   "reduce_scatter": "4f2ac29a67f779bb846399e46dfa891d83fbbac3c6b0b2fd405e1a658c0a39a4"
+  }
+ },
+ "n_units": 1323,
+ "idle_pre": {
+  "utc": "2026-10-08T23:50:27Z",
+  "reached_p8": true,
+  "p8_wait_s": 9.958996088244021e-06,
+  "settle_s": 10,
+  "duration_s": 30.02281520899851,
+  "per_gpu": {
+   "0000:81:00.0": {
+    "gpu": 4,
+    "alias": "A6000-b10caa4a",
+    "counter_W": 28.341945752807508,
+    "delta_mJ": 850905,
+    "sampled_mean_W": 28.416040000000006,
+    "temp_mean_c": 30.123333333333335,
+    "pstates": [
+     8
+    ]
+   },
+   "0000:a1:00.0": {
+    "gpu": 5,
+    "alias": "A6000-f5f81ac3",
+    "counter_W": 20.847145600536713,
+    "delta_mJ": 625890,
+    "sampled_mean_W": 20.916525,
+    "temp_mean_c": 29.11,
+    "pstates": [
+     8
+    ]
+   },
+   "0000:c1:00.0": {
+    "gpu": 6,
+    "alias": "A6000-cf04a46e",
+    "counter_W": 26.359320220004065,
+    "delta_mJ": 791381,
+    "sampled_mean_W": 26.387876666666664,
+    "temp_mean_c": 30.405,
+    "pstates": [
+     8
+    ]
+   },
+   "0000:e1:00.0": {
+    "gpu": 7,
+    "alias": "A6000-8f2812cc",
+    "counter_W": 20.654825194878374,
+    "delta_mJ": 620116,
+    "sampled_mean_W": 20.811746666666668,
+    "temp_mean_c": 29.34,
+    "pstates": [
+     8
+    ]
+   }
+  }
+ },
+ "idle_post": {
+  "utc": "2026-10-09T01:18:22Z",
+  "reached_p8": true,
+  "p8_wait_s": 3.0007101660012268,
+  "settle_s": 10,
+  "duration_s": 30.023994584997126,
+  "per_gpu": {
+   "0000:81:00.0": {
+    "gpu": 4,
+    "alias": "A6000-b10caa4a",
+    "counter_W": 28.504468237136205,
+    "delta_mJ": 855818,
+    "sampled_mean_W": 28.580558333333332,
+    "temp_mean_c": 33.15,
+    "pstates": [
+     8
+    ]
+   },
+   "0000:a1:00.0": {
+    "gpu": 5,
+    "alias": "A6000-f5f81ac3",
+    "counter_W": 21.081871641300143,
+    "delta_mJ": 632962,
+    "sampled_mean_W": 21.113755,
+    "temp_mean_c": 34.471666666666664,
+    "pstates": [
+     8
+    ]
+   },
+   "0000:c1:00.0": {
+    "gpu": 6,
+    "alias": "A6000-cf04a46e",
+    "counter_W": 26.674864922877372,
+    "delta_mJ": 800886,
+    "sampled_mean_W": 26.787323333333333,
+    "temp_mean_c": 32.876666666666665,
+    "pstates": [
+     8
+    ]
+   },
+   "0000:e1:00.0": {
+    "gpu": 7,
+    "alias": "A6000-8f2812cc",
+    "counter_W": 20.64805195208036,
+    "delta_mJ": 619937,
+    "sampled_mean_W": 20.755555,
+    "temp_mean_c": 28.488333333333333,
+    "pstates": [
+     8
+    ]
+   }
+  }
+ },
+ "throttle_counter_delta_ns": {
+  "4": {
+   "sw_power_cap": 1267251031296,
+   "sync_boost": 0,
+   "sw_thermal": 820630037408,
+   "hw_thermal": 0,
+   "hw_power_brake": 0
+  },
+  "5": {
+   "sw_power_cap": 90543899392,
+   "sync_boost": 0,
+   "sw_thermal": 0,
+   "hw_thermal": 0,
+   "hw_power_brake": 0
+  },
+  "6": {
+   "sw_power_cap": 1504033851648,
+   "sync_boost": 0,
+   "sw_thermal": 858799810944,
+   "hw_thermal": 0,
+   "hw_power_brake": 0
+  },
+  "7": {
+   "sw_power_cap": 1643535415040,
+   "sync_boost": 0,
+   "sw_thermal": 0,
+   "hw_thermal": 0,
+   "hw_power_brake": 0
+  }
+ },
+ "health_events": [],
+ "utc_end": "2026-10-09T01:18:22Z",
+ "xid": {
+  "status": "ok",
+  "per_gpu": {
+   "4": "registered",
+   "5": "registered",
+   "6": "registered",
+   "7": "registered"
+  }
+ },
+ "n_attempts": 1323,
+ "final_status_counts": {
+  "NOT_RUN_NOT_ENABLED_BY_NCCL": 546,
+  "OK": 773,
+  "QC_SHORT": 4
+ },
+ "evidence_counts": {
+  "VERIFIED": 777,
+  "UNVERIFIED": 0
+ }
+}

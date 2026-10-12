@@ -52,7 +52,7 @@ HAS_OP = {"all_reduce": True, "all_gather": False, "reduce_scatter": True}
 _CHILD: subprocess.Popen | None = None
 
 
-# Configuration and experiment plan
+# ---------------------------------------------------------------- config / plan
 
 def load_config(path: Path) -> tuple[dict, str]:
     raw = Path(path).read_bytes()
@@ -83,7 +83,7 @@ def conditions(cfg: dict) -> list[dict]:
     return out
 
 
-# Run-directory helpers
+# ---------------------------------------------------------------- run directory helpers
 
 class RunLog:
     def __init__(self, run_dir: Path):
@@ -107,7 +107,7 @@ class RunLog:
         if not self.launches.exists():
             return set()
         ids = set()
-        for line in self.launches.read_text(encoding="utf-8").splitlines():
+        for line in self.launches.read_text().splitlines():
             try:
                 r = json.loads(line)
             except json.JSONDecodeError:
@@ -120,7 +120,7 @@ class RunLog:
         if not self.launches.exists():
             return []
         out = []
-        for line in self.launches.read_text(encoding="utf-8").splitlines():
+        for line in self.launches.read_text().splitlines():
             try:
                 r = json.loads(line)
             except json.JSONDecodeError:
@@ -140,7 +140,7 @@ def _json_default(o):
     return str(o)
 
 
-# Single nccl-tests launch
+# ---------------------------------------------------------------- single nccl-tests launch
 
 def fresh_dir(d: Path) -> Path:
     """Return d, or d with a numeric suffix if d already holds files from an earlier attempt."""
@@ -188,6 +188,7 @@ def nccl_args(cfg: dict, cond: dict, minb: int, maxb: int, n: int, w: int, check
 def run_launch(cfg: dict, cond: dict, uuids: list[str], out_dir: Path, args: list[str], debug_subsys: str,
                timeout_s: float, sample: bool) -> dict:
     """Run one nccl-tests process; record stdout chunks with energy-counter reads."""
+    raise SystemExit("Historical v1 GPU collection disabled; use retained data for analysis.")
     global _CHILD
     out_dir.mkdir(parents=True, exist_ok=True)
     log_path = out_dir / "nccl.log"
@@ -242,10 +243,10 @@ def run_launch(cfg: dict, cond: dict, uuids: list[str], out_dir: Path, args: lis
         sampler.stop()
         sampler.write_csv_gz(out_dir / "power.csv.gz")
     stdout_text = buf.decode(errors="replace")
-    (out_dir / "stdout.txt").write_text(stdout_text, encoding="utf-8")
-    (out_dir / "chunks.json").write_text(json.dumps(chunks), encoding="utf-8")
-    stderr_text = (out_dir / "stderr.txt").read_text(encoding="utf-8", errors="replace")
-    log_text = log_path.read_text(encoding="utf-8", errors="replace") if log_path.exists() else ""
+    (out_dir / "stdout.txt").write_text(stdout_text)
+    (out_dir / "chunks.json").write_text(json.dumps(chunks))
+    stderr_text = (out_dir / "stderr.txt").read_text(errors="replace")
+    log_text = log_path.read_text(errors="replace") if log_path.exists() else ""
     res = {
         "cmd": cmd, "env_nccl": {k: v for k, v in env.items() if k.startswith(("NCCL_", "CUDA_"))},
         "pid": proc.pid, "rc": rc, "end_reason": end_reason, "t_wall_start": t_start_wall,
@@ -308,10 +309,11 @@ def compute_regions(stdout_text: str, chunks: list, sampler: NvmlSampler, gpus: 
     return out
 
 
-# Experiment phases
+# ---------------------------------------------------------------- phases
 
 class Orchestrator:
     def __init__(self, config_path: Path, run_name: str | None = None):
+        raise SystemExit("Historical v1 GPU collection disabled; allocation/watchdog contract is not implemented.")
         self.cfg, self.cfg_hash = load_config(config_path)
         self.config_path = Path(config_path)
         name = run_name or self.cfg["name"]
@@ -543,8 +545,7 @@ class Orchestrator:
         rng.shuffle(units)
         order_path = self.run_dir / f"order_trial{k}.json"
         if not order_path.exists():
-            order_path.write_text(json.dumps([f"{cond_id(u['cond'])}__{u['size']}" for u in units], indent=0),
-                                  encoding="utf-8")
+            order_path.write_text(json.dumps([f"{cond_id(u['cond'])}__{u['size']}" for u in units], indent=0))
         self.idle(f"t{k}-start", all_gpus)
         every = self.cfg["idle"].get("every_n_launches", 0)
         n_since_idle = 0
@@ -613,7 +614,7 @@ class Orchestrator:
                    "ranks": res["nccl"]["ranks"], "init_total_s": res["nccl"]["init_total_s"],
                    "other_gpu_processes": {str(g): v for g, v in others.items() if v},
                    "load_avg": os.getloadavg(), "foreign_wait_s": waited}
-            (d / "result.json").write_text(json.dumps(rec, indent=1, default=_json_default), encoding="utf-8")
+            (d / "result.json").write_text(json.dumps(rec, indent=1, default=_json_default))
             self.log.append(self.log.launches, rec)
             if final:
                 self._done.add(lid)
@@ -640,10 +641,10 @@ class Orchestrator:
         signal.signal(signal.SIGINT, _terminate)
         status_path = self.run_dir / "gpu_set_status.json"
         if status_path.exists():  # resumed run: keep the matrix decided at the first start
-            set_status = json.loads(status_path.read_text(encoding="utf-8"))
+            set_status = json.loads(status_path.read_text())
         else:
             set_status = self.gpu_set_status()
-            status_path.write_text(json.dumps(set_status, indent=1, default=str), encoding="utf-8")
+            status_path.write_text(json.dumps(set_status, indent=1, default=str))
         self.active_sets = {k for k, v in set_status.items() if v["status"] == "ok"}
         self.log.event("start", run_dir=str(self.run_dir), phases=phases, gpu_sets=set_status,
                        config_sha256=self.cfg_hash)

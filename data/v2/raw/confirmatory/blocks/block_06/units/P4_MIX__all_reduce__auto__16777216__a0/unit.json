@@ -1,0 +1,336 @@
+{
+ "unit_id": "P4_MIX__all_reduce__auto__16777216",
+ "attempt": 0,
+ "parent_attempt": null,
+ "campaign": "confirmatory",
+ "mode": "CONFIRMATORY",
+ "block": 6,
+ "seed": "confirmatory-20261009-6",
+ "planned_pos": 81,
+ "exec_pos": 82,
+ "placement": {
+  "id": "P4_MIX",
+  "gpus": [
+   4,
+   5,
+   6,
+   7
+  ],
+  "env": {},
+  "pci": [
+   "00000000:81:00.0",
+   "00000000:A1:00.0",
+   "00000000:C1:00.0",
+   "00000000:E1:00.0"
+  ],
+  "aliases": [
+   "A6000-b10caa4a",
+   "A6000-f5f81ac3",
+   "A6000-cf04a46e",
+   "A6000-8f2812cc"
+  ],
+  "cuda_visible_devices_rank_to_alias": {
+   "0": "A6000-b10caa4a",
+   "1": "A6000-f5f81ac3",
+   "2": "A6000-cf04a46e",
+   "3": "A6000-8f2812cc"
+  },
+  "fingerprint": {
+   "gpus": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "category": "MIXED_NVLINK_PCIE",
+   "canonical": "n=4;links=0-1:NV4,0-2:NODE,0-3:NODE,1-2:NODE,1-3:NODE,2-3:NV4;numa=1,1,1,1;nvlinks=4,4,4,4",
+   "fingerprint": "fa52c4ded4a09d4b",
+   "concrete_fingerprint": "605fdb94dd41874d",
+   "nccl_version": "2.27.5"
+  }
+ },
+ "coll": "all_reduce",
+ "requested": "auto",
+ "size_bytes": 16777216,
+ "dir": "data/v2/raw/confirmatory/blocks/block_06/units/P4_MIX__all_reduce__auto__16777216__a0",
+ "R": 714,
+ "w": 48,
+ "t_gpu_cal_s": 0.0042020441923464,
+ "proc": {
+  "pid": 114346,
+  "rc": 0,
+  "timed_out": false,
+  "utc_start": "2026-10-09T02:23:18Z",
+  "mono_start": 48526.40533997,
+  "mono_end": 48533.344575711,
+  "wall_s": 6.939236181002343
+ },
+ "region": {
+  "coll": "AllReduce",
+  "size_bytes": 16777216,
+  "count": 4194304,
+  "in_place": 0,
+  "R": 714,
+  "warmup_iters": 48,
+  "per_gpu": [
+   {
+    "rank": 0,
+    "pci": "0000:81:00.0",
+    "nvml_index": 4,
+    "delta_J": 353.27105977989174,
+    "duration_s": 3.0229956230000004,
+    "tail_s": 0.09599732400000001,
+    "p_ctx_W": 90.94982918594943,
+    "aligned_delta_J": 362.002,
+    "tail_J": 8.730940220108245,
+    "t_start_ns": 48529105570184.0,
+    "t_end_ns": 48532128565807,
+    "p_avg_W": 116.86125414541883,
+    "event_ms": 3021.284424,
+    "read_start_us": 1435.008,
+    "read_end_us": 1628.146,
+    "flags": []
+   },
+   {
+    "rank": 1,
+    "pci": "0000:a1:00.0",
+    "nvml_index": 5,
+    "delta_J": 332.0603615595329,
+    "duration_s": 3.0226229565000002,
+    "tail_s": 0.029696609000000002,
+    "p_ctx_W": 80.56941587058284,
+    "aligned_delta_J": 334.453,
+    "tail_J": 2.3926384404670937,
+    "t_start_ns": 48529105942180.5,
+    "t_end_ns": 48532128565137,
+    "p_avg_W": 109.85834698484427,
+    "event_ms": 3021.427734,
+    "read_start_us": 2176.801,
+    "read_end_us": 1573.737,
+    "flags": []
+   },
+   {
+    "rank": 2,
+    "pci": "0000:c1:00.0",
+    "nvml_index": 6,
+    "delta_J": 343.03808413228825,
+    "duration_s": 3.022970384,
+    "tail_s": 0.066967862,
+    "p_ctx_W": 86.95089993632709,
+    "aligned_delta_J": 348.861,
+    "tail_J": 5.822915867711762,
+    "t_start_ns": 48529105593543.0,
+    "t_end_ns": 48532128563927,
+    "p_avg_W": 113.47715675546236,
+    "event_ms": 3021.405273,
+    "read_start_us": 1423.308,
+    "read_end_us": 1611.836,
+    "flags": []
+   },
+   {
+    "rank": 3,
+    "pci": "0000:e1:00.0",
+    "nvml_index": 7,
+    "delta_J": 324.20501400778966,
+    "duration_s": 3.023123747,
+    "tail_s": 0.087415172,
+    "p_ctx_W": 81.78198164742324,
+    "aligned_delta_J": 331.354,
+    "tail_J": 7.148985992210346,
+    "t_start_ns": 48529105438070.0,
+    "t_end_ns": 48532128561817,
+    "p_avg_W": 107.24172780869947,
+    "event_ms": 3021.391846,
+    "read_start_us": 1203.0,
+    "read_end_us": 1603.717,
+    "flags": []
+   }
+  ],
+  "flags": [],
+  "T_region_s": 3.0231277370000003,
+  "t_gpu_s": 0.0042316915042016805,
+  "t_host_s": 0.004231645002,
+  "E_raw_J": 1352.5745194795027,
+  "J_per_coll": 1.8943620721001437
+ },
+ "region_flags": [],
+ "stdout_rows": [
+  {
+   "size_bytes": 16777216,
+   "count": 4194304,
+   "time_us": 4231.65,
+   "wrong": 0
+  }
+ ],
+ "evidence": {
+  "status": "VERIFIED",
+  "reasons": [],
+  "actual": [
+   {
+    "algo": "RING",
+    "proto": "SIMPLE",
+    "nChannels": 8
+   }
+  ],
+  "actual_key": "RING/SIMPLE/8",
+  "per_rank_n": {
+   "0": 763,
+   "1": 763,
+   "2": 763,
+   "3": 763
+  },
+  "n_matches_expected": true
+ },
+ "energy_source": "counter",
+ "sampled_energy_J": 1308.9954474986275,
+ "profiler_flags": [],
+ "telemetry": {
+  "4": {
+   "n_samples": 60,
+   "gaps": {
+    "n": 60,
+    "median_dt": 0.050000096001895145,
+    "max_dt": 0.05002572599914856,
+    "n_gaps": 0,
+    "nonmonotonic": 0
+   },
+   "energy_int_J": 328.1944900936683,
+   "energy_int_lag_J": 342.45856501139616,
+   "energy_int_inst_J": 336.96038531299314,
+   "temp_mean_c": 41.13333333333333,
+   "temp_max_c": 42.0,
+   "clk_gr_mean": 1920.0,
+   "clk_gr_min": 1920.0,
+   "clk_gr_max": 1920.0,
+   "clk_mem_mean": 7601.0,
+   "util_gpu_mean": 100.0,
+   "pstates": [
+    2
+   ],
+   "clock_events_or": 0,
+   "enforced_limit_mw": [
+    300000
+   ],
+   "power_mean_w": 108.79401666666666,
+   "counter_J": 353.27105977989174,
+   "int_over_counter": 0.9290160657319408,
+   "int_lag_over_counter": 0.9693932053895601
+  },
+  "5": {
+   "n_samples": 60,
+   "gaps": {
+    "n": 60,
+    "median_dt": 0.050000096001895145,
+    "max_dt": 0.05002572599914856,
+    "n_gaps": 0,
+    "nonmonotonic": 0
+   },
+   "energy_int_J": 310.00614832674813,
+   "energy_int_lag_J": 321.7658158973146,
+   "energy_int_inst_J": 320.3446607914847,
+   "temp_mean_c": 41.516666666666666,
+   "temp_max_c": 42.0,
+   "clk_gr_mean": 1905.0,
+   "clk_gr_min": 1905.0,
+   "clk_gr_max": 1905.0,
+   "clk_mem_mean": 7601.0,
+   "util_gpu_mean": 95.05,
+   "pstates": [
+    2
+   ],
+   "clock_events_or": 0,
+   "enforced_limit_mw": [
+    300000
+   ],
+   "power_mean_w": 102.71704999999999,
+   "counter_J": 332.0603615595329,
+   "int_over_counter": 0.9335837221606144,
+   "int_lag_over_counter": 0.968997968881713
+  },
+  "6": {
+   "n_samples": 60,
+   "gaps": {
+    "n": 60,
+    "median_dt": 0.050000096001895145,
+    "max_dt": 0.05002572599914856,
+    "n_gaps": 0,
+    "nonmonotonic": 0
+   },
+   "energy_int_J": 323.09920827304506,
+   "energy_int_lag_J": 337.2671326679122,
+   "energy_int_inst_J": 334.6590116028765,
+   "temp_mean_c": 40.81666666666667,
+   "temp_max_c": 41.0,
+   "clk_gr_mean": 1918.0,
+   "clk_gr_min": 1800.0,
+   "clk_gr_max": 1920.0,
+   "clk_mem_mean": 7601.0,
+   "util_gpu_mean": 100.0,
+   "pstates": [
+    2
+   ],
+   "clock_events_or": 0,
+   "enforced_limit_mw": [
+    300000
+   ],
+   "power_mean_w": 107.10573333333336,
+   "counter_J": 343.03808413228825,
+   "int_over_counter": 0.9418756202837408,
+   "int_lag_over_counter": 0.983176936523029
+  },
+  "7": {
+   "n_samples": 60,
+   "gaps": {
+    "n": 60,
+    "median_dt": 0.050000096001895145,
+    "max_dt": 0.05002572599914856,
+    "n_gaps": 0,
+    "nonmonotonic": 0
+   },
+   "energy_int_J": 305.8824333201232,
+   "energy_int_lag_J": 319.06443229847355,
+   "energy_int_inst_J": 317.0313897912732,
+   "temp_mean_c": 37.13333333333333,
+   "temp_max_c": 38.0,
+   "clk_gr_mean": 1935.0,
+   "clk_gr_min": 1935.0,
+   "clk_gr_max": 1935.0,
+   "clk_mem_mean": 7601.0,
+   "util_gpu_mean": 100.0,
+   "pstates": [
+    2
+   ],
+   "clock_events_or": 0,
+   "enforced_limit_mw": [
+    300000
+   ],
+   "power_mean_w": 101.40308333333333,
+   "counter_J": 324.20501400778966,
+   "int_over_counter": 0.94348458569112,
+   "int_lag_over_counter": 0.9841440400758497
+  }
+ },
+ "sampler": {
+  "overruns": 1,
+  "errors": 0,
+  "truncated": false,
+  "n": 596
+ },
+ "foreign_pids": [],
+ "error_hits": [],
+ "qc_status": "OK",
+ "qc_reasons": [],
+ "retryable": false,
+ "stop_block": false,
+ "nccl_env": {
+  "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+  "CUDA_VISIBLE_DEVICES": "A6000-b10caa4a,A6000-f5f81ac3,A6000-cf04a46e,A6000-8f2812cc",
+  "NCCLE_REGION_FILE": "<REPO>/data/v2/raw/confirmatory/blocks/block_06/units/P4_MIX__all_reduce__auto__16777216__a0/region.jsonl",
+  "NCCLE_PLACEMENT": "oop",
+  "NCCL_DEBUG": "INFO",
+  "NCCL_DEBUG_SUBSYS": "INIT,ENV",
+  "NCCL_DEBUG_FILE": "<REPO>/data/v2/raw/confirmatory/blocks/block_06/units/P4_MIX__all_reduce__auto__16777216__a0/nccl.log",
+  "NCCL_PROFILER_PLUGIN": "<REPO>/native/nccl_profiler_algo/build/libnccl-profiler-nccle.so",
+  "NCCLE_PROFILER_DIR": "<REPO>/data/v2/raw/confirmatory/blocks/block_06/units/P4_MIX__all_reduce__auto__16777216__a0/prof"
+ }
+}

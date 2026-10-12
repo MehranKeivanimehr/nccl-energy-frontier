@@ -1,0 +1,20 @@
+# Methodology v2 - Phase 4 smoke block: smallest subset that exercises every path.
+campaign: smoke
+mode: SMOKE
+seed: 20261008
+output_root: data/v2/raw
+allocation: [4, 5, 6, 7]
+placements:
+  - {id: P2_NVL, gpus: [4, 5]}
+  - {id: P4_MIX, gpus: [4, 5, 6, 7]}
+collectives: [all_reduce, all_gather]
+sizes: {list: [4096, 1048576, 67108864]}
+configs: [auto, Ring/LL, Tree/Simple, Ring/LL128]
+sampler_period_s: 0.05
+T_min_s: 2.0
+T_star_s: 2.5
+power_lag_s: 0.75     # PowerUsage averaging lag (Phase 4); cross-check only
+stop: {temp_c: 80, disk_floor_gb: 20, mem_used_mib_max: 16}
+timeouts: {min_s: 120, factor: 10}
+idle: {duration_s: 30, settle_s: 10, p8_timeout_s: 300}
+max_blocks: 2

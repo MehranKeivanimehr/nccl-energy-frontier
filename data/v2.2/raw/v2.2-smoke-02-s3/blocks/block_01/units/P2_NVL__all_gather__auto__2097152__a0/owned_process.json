@@ -1,0 +1,21 @@
+{
+ "pid": 221045,
+ "rc": -15,
+ "timed_out": false,
+ "stop_reason": "WATCHDOG:WALL_TIME_EXCEEDED",
+ "exception": null,
+ "cleanup": {
+  "errors": [],
+  "sigterm": true,
+  "sigkill": false,
+  "survivors": [],
+  "tracked": 1,
+  "ok": true
+ },
+ "wall_s": 6.170106565987226,
+ "subreaper": true,
+ "signals_during_cleanup": [],
+ "watchdog_trip": "WALL_TIME_EXCEEDED",
+ "watchdog_trip_mono": 109239.81387255,
+ "written_utc": "2026-10-09T19:15:11Z"
+}

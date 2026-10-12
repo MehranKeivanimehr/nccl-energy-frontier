@@ -168,8 +168,7 @@ def pareto_fig(summ: pd.DataFrame, par: pd.DataFrame, gs: str, energy_metric: st
     fig.suptitle(f"5 · Latency–energy Pareto fronts · {gs} · "
                  f"{'idle-subtracted' if 'dyn' in energy_metric else 'raw'} GPU energy",
                  x=0.01, ha="left", y=1.04, fontsize=11, color=INK)
-    fig.text(0.01, -0.01, "Points: trial-block means per requested configuration (out-of-place); bars: descriptive "
-             "95% bootstrap "
+    fig.text(0.01, -0.01, "Points: trial means per requested configuration (out-of-place); bars: 95% bootstrap "
              "intervals; black rings joined by a line: Pareto front of the means (both axes minimized); a single ring "
              "means one configuration is fastest and least energy at once.",
              fontsize=7.5, color=INK2, ha="left", va="top")
@@ -289,8 +288,7 @@ def disagreement_heatmap(opt: pd.DataFrame, path: Path, placement="oop"):
                  "choosing for latency", x=0.01, ha="left", fontsize=10, color=INK)
     fig.text(0.01, -0.02, "'=' gray: both optima run the same algorithm/protocol/channels (agree). Blue: they differ; "
              "shade = mean energy of the latency-optimal configuration relative to the energy-optimal one.\n"
-             "• = descriptive 95% bootstrap interval of that penalty excludes 0.  '–' white: fewer than two "
-             "configurations with "
+             "• = 95% bootstrap interval of that penalty excludes 0.  '–' white: fewer than two configurations with "
              "enough valid trials.", fontsize=7.5, color=INK2, ha="left", va="top")
     fig.savefig(path, dpi=160, bbox_inches="tight")
     plt.close(fig)
@@ -300,7 +298,7 @@ def example_trace(run_dir: Path, launch_dir: str, path: Path):
     """Power trace of one timed launch with the measured regions overlaid."""
     d = Path(run_dir) / launch_dir
     pw = pd.read_csv(d / "power.csv.gz")
-    res = json.loads((d / "result.json").read_text(encoding="utf-8"))
+    res = json.loads((d / "result.json").read_text())
     t0 = pw.t_mono.min()
     fig, ax = plt.subplots(figsize=(7.5, 3.0))
     gpu_colors = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100"]  # reference palette slots 1-4
@@ -342,7 +340,7 @@ def plot_all(processed: Path, out: Path):
     summ = pd.read_csv(processed / "summary.csv")
     opt = pd.read_csv(processed / "optima.csv")
     par = pd.read_csv(processed / "pareto.csv")
-    note = "Lines: mean of trial blocks (out-of-place); bands: descriptive 95% bootstrap interval."
+    note = "Lines: mean of trials (out-of-place); bands: 95% bootstrap interval of the mean over trials."
     size_lines(summ, "t_op_us", "latency per op (µs)", "1 · Latency per collective vs message size",
                out / "fig1_latency_vs_size.png", note=note)
     size_lines(summ, "e_op_j", "energy per op (J)", "2a · GPU energy per collective vs message size (raw)",
@@ -357,7 +355,7 @@ def plot_all(processed: Path, out: Path):
                out / "fig3b_gb_per_j_dyn_vs_size.png", note=note)
     size_lines(summ, "edp_js", "energy × delay (J·s)", "4 · Energy-delay product per collective vs message size",
                out / "fig4_edp_vs_size.png", note=note)
-    # Supplementary power and ratios relative to NCCL's default.
+    # supplementary: power per GPU, and latency / energy relative to NCCL's default
     pw = summ.assign(p_gpu=summ.p_avg_w / summ.n_gpus, p_gpu_lo=summ.p_avg_w_lo / summ.n_gpus,
                      p_gpu_hi=summ.p_avg_w_hi / summ.n_gpus)
     size_lines(pw, "p_gpu", "average power per GPU (W)", "S1 · Average board power per GPU during the collective",

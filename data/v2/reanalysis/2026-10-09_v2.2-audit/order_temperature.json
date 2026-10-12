@@ -1,0 +1,104 @@
+{
+ "n_pairs": 468,
+ "n_blocks": 12,
+ "n_cells": 39,
+ "coef": {
+  "per_block_position": 0.003656751642037302,
+  "per_degC": 0.0036991801332983023
+ },
+ "fits": {
+  "iid_published": {
+   "se": [
+    0.005541947290474999,
+    0.0009084309590169682
+   ],
+   "t_df": 466,
+   "note": "as published (phase89.order_temperature): iid errors, df n-k; ignores the 39 within-cell centrings",
+   "ci_position": [
+    -0.00723355007437093,
+    0.014547053358445533
+   ],
+   "ci_degC": [
+    0.0019140517815320896,
+    0.005484308485064515
+   ]
+  },
+  "iid_df_corrected": {
+   "se": [
+    0.005789504711802296,
+    0.0009490103463479598
+   ],
+   "t_df": 427,
+   "note": "iid errors, df reduced by the 39 cell means removed by centring",
+   "ci_position": [
+    -0.0077227234742863835,
+    0.015036226758360987
+   ],
+   "ci_degC": [
+    0.0018338669227596959,
+    0.005564493343836909
+   ]
+  },
+  "cluster_block_CR1": {
+   "se": [
+    0.003588539931624764,
+    0.0006902991531413222
+   ],
+   "t_df": 11,
+   "note": "cluster-robust by block (CR1), t with G-1 = 11 df",
+   "ci_position": [
+    -0.004241571493833883,
+    0.011555074777908486
+   ],
+   "ci_degC": [
+    0.002179841941216425,
+    0.0052185183253801795
+   ]
+  },
+  "cluster_cell_CR1": {
+   "se": [
+    0.005236295347238566,
+    0.000870399860267424
+   ],
+   "t_df": 38,
+   "note": "cluster-robust by cell (CR1), t with G-1 = 38 df",
+   "ci_position": [
+    -0.006943574102904389,
+    0.014257077386978992
+   ],
+   "ci_degC": [
+    0.0019371477353259151,
+    0.00546121253127069
+   ]
+  },
+  "twoway_block_cell_CGM": {
+   "se": [
+    0.004448435665463597,
+    0.0008763484654143466
+   ],
+   "t_df": 11,
+   "note": "Cameron-Gelbach-Miller two-way (block, cell); non-PSD part clipped; t with min(G)-1 = 11 df",
+   "ci_position": [
+    -0.006134189243231792,
+    0.013447692527306395
+   ],
+   "ci_degC": [
+    0.00177035016585986,
+    0.005628010100736745
+   ]
+  }
+ },
+ "wild_cluster_restricted_bootstrap_block": {
+  "per_block_position": {
+   "t_observed": 1.0201009776666312,
+   "p_two_sided": 0.35302734375,
+   "n_sign_vectors": 4096
+  },
+  "per_degC": {
+   "t_observed": 5.364554000669166,
+   "p_two_sided": 0.0029296875,
+   "n_sign_vectors": 4096
+  }
+ },
+ "limitations": "12 blocks and 39 cells are few clusters. CR1 with G-1 df can still be anti-conservative with 12 clusters; the wild cluster bootstrap (exact enumeration of the 4,096 sign vectors) is the more reliable p-value. Blocks ran back to back in one ~2 h session on one host: they are within-session replicates, not independent days or hosts. Position and temperature are partly confounded within a block."
+}

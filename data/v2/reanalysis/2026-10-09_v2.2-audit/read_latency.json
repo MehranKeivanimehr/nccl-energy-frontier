@@ -1,0 +1,40 @@
+{
+ "n_gpu_regions": 2784,
+ "n_units": 984,
+ "read_start_ms": {
+  "median": 1.3746535,
+  "p95": 3.932382000000001,
+  "max": 7.540037
+ },
+ "read_end_ms": {
+  "median": 1.5494115000000002,
+  "p95": 1.6327265,
+  "max": 1.940924
+ },
+ "bracket_ms": {
+  "median": 2.3485294999999997,
+  "p95": 2.42904,
+  "max": 2.554328
+ },
+ "tail_correction_magnitude_rel_to_region": {
+  "median": 0.013369127165109282,
+  "p95": 0.01962156944497627,
+  "max": 0.02408211822464131
+ },
+ "tail_correction_relative_uncertainty_from_end_read": {
+  "median": 0.008498720228239016,
+  "p95": 0.008960461698929499,
+  "max": 0.01066700474133677
+ },
+ "boundary_uncertainty_J_per_unit_worstcase": {
+  "median": 0.4223040121681161,
+  "p95": 0.9641406579382454,
+  "max": 1.312756334236659
+ },
+ "boundary_uncertainty_rel_to_region_energy": {
+  "median": 0.0005722039536379341,
+  "p95": 0.0007713823227648971,
+  "max": 0.0010085552895476204
+ },
+ "method": "Half-widths: the counter-reset instant may lie anywhere inside a read call (start and end reads), and the commit time inside the phase bracket. Worst-case sum over the GPUs of a unit. This is the interpretation supported by the local Phase 4 experiments, not an NVML guarantee; sensor error and the averaging of the counter itself are not included."
+}

@@ -1,0 +1,21 @@
+{
+ "pid": 221259,
+ "rc": -15,
+ "timed_out": false,
+ "stop_reason": "CONTROLLER:ControllerSignal:controller received SIGTERM",
+ "exception": "ControllerSignal('controller received SIGTERM')",
+ "cleanup": {
+  "errors": [],
+  "sigterm": true,
+  "sigkill": false,
+  "survivors": [],
+  "tracked": 1,
+  "ok": true
+ },
+ "wall_s": 5.516100649998407,
+ "subreaper": true,
+ "signals_during_cleanup": [],
+ "watchdog_trip": null,
+ "watchdog_trip_mono": null,
+ "written_utc": "2026-10-09T19:15:53Z"
+}

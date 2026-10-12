@@ -1,0 +1,35 @@
+{
+ "gate3b": {
+  "raw_attempts": 72,
+  "raw_qc_ok": 70,
+  "raw_not_ok": 2,
+  "processed_rows": 72,
+  "processed_accepted": 70,
+  "decisions_n_processes": 72,
+  "decisions_n_accepted": 70,
+  "decisions_exclusions": 2,
+  "raw_retries": 0,
+  "consistent": true
+ },
+ "v2_confirmatory": {
+  "raw_attempt_records": 984,
+  "raw_units": 984,
+  "raw_units_ok": 984,
+  "processed_units": 984,
+  "consistent": true
+ },
+ "gate3a_counter_reads_strict_window": {
+  "audit_calls": 33342,
+  "counter_calls": 8,
+  "region_windows": 6,
+  "counter_calls_inside": 0,
+  "consistent": true
+ },
+ "phase10_meter_plausibility_posthoc": {
+  "runs": 50,
+  "gpu_readings": 200,
+  "implausible": [],
+  "note": "v2.1 meter recorded no QC flags; checked post hoc with the v2.2 tail rules",
+  "consistent": true
+ }
+}

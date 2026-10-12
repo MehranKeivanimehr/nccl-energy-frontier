@@ -15,7 +15,7 @@ FIX = Path(__file__).parent / "fixtures"
 
 
 def test_stdout_rows_and_header():
-    out = parse_stdout((FIX / "all_gather_2gpu_stdout.txt").read_text(encoding="utf-8"))
+    out = parse_stdout((FIX / "all_gather_2gpu_stdout.txt").read_text())
     assert out["version"]["nccl_tests"] == "2.21.1"
     assert out["version"]["nccl_library"] == 22705
     assert out["params"]["nthread"] == 2 and out["params"]["iters"] == 3
@@ -29,13 +29,13 @@ def test_stdout_rows_and_header():
 
 
 def test_probe_rows_have_wrong_counts():
-    out = parse_stdout((FIX / "stdout_probe_allreduce_4gpu_default.txt").read_text(encoding="utf-8"))
+    out = parse_stdout((FIX / "stdout_probe_allreduce_4gpu_default.txt").read_text())
     assert out["params"]["validation"] == 1
     assert all(r["oop_wrong"] == 0 and r["ip_wrong"] == 0 for r in out["rows"])
 
 
 def test_region_offsets_point_at_token_ends():
-    text = (FIX / "all_gather_2gpu_stdout.txt").read_text(encoding="utf-8")
+    text = (FIX / "all_gather_2gpu_stdout.txt").read_text()
     offs = region_offsets(text)
     assert len(offs) == 2
     data = text.encode()
@@ -50,7 +50,7 @@ def test_region_offsets_point_at_token_ends():
 
 
 def test_nccl_log_tuning_and_transports():
-    log = parse_nccl_log((FIX / "nccl_probe_allreduce_4gpu_default.log").read_text(encoding="utf-8"))
+    log = parse_nccl_log((FIX / "nccl_probe_allreduce_4gpu_default.log").read_text())
     assert log["nccl_version"] == "2.27.5+cuda12.9"
     assert log["env"]["NCCL_RUNTIME_CONNECT"] == "0."
     assert [r["nvml_dev"] for r in log["ranks"]] == [4, 5, 6, 7]
@@ -62,8 +62,8 @@ def test_nccl_log_tuning_and_transports():
 
 
 def test_unsupported_detection():
-    log = parse_nccl_log((FIX / "nccl_unsupported_allgather_tree.log").read_text(encoding="utf-8"))
-    out = parse_stdout((FIX / "stdout_unsupported_allgather_tree.txt").read_text(encoding="utf-8"))
+    log = parse_nccl_log((FIX / "nccl_unsupported_allgather_tree.log").read_text())
+    out = parse_stdout((FIX / "stdout_unsupported_allgather_tree.txt").read_text())
     reason = unsupported_reason(log, out, "")
     assert reason and "no algorithm/protocol available for function AllGather" in reason
     assert log["env"]["NCCL_ALGO"] == "Tree"

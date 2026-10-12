@@ -1,0 +1,8 @@
+# GPU measurement dependencies (runner, probes, Phase 10 workload). Includes the analysis set.
+# Pinned to the environment used for the reported runs; do not upgrade an existing environment for this.
+-r requirements-analysis.txt
+nvidia-ml-py==13.610.43
+# PyTorch 2.9.1 (Linux wheel built against CUDA 12.8) bundles NCCL 2.27.5 (nvidia-nccl-cu12), which is also the
+# NCCL that nccl-tests is built and run against (scripts/build_nccl_tests.sh). Required for Phase 10 only.
+torch==2.9.1
+nvidia-nccl-cu12==2.27.5

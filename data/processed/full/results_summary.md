@@ -2,8 +2,6 @@
 
 Source: `data/processed/full`
 
-Bootstrap intervals and optimum labels are descriptive, not confirmatory.
-
 ## Coverage
 
 - final units: 4536 — status counts: {'ok': 3528, 'not_run_probe_unsupported': 1008}
@@ -22,7 +20,7 @@ Bootstrap intervals and optimum labels are descriptive, not confirmatory.
 
 ## Latency-optimal vs energy-optimal (out-of-place)
 
-| collective · GPUs | cells | disagree (raw E) | interval excludes 0 (raw E) | max penalty (raw E) | disagree (idle-sub. E) | interval excludes 0 (idle-sub. E) | max penalty (idle-sub. E) | disagree (EDP) |
+| collective · GPUs | cells | disagree (raw E) | resolved (raw E) | max penalty (raw E) | disagree (idle-sub. E) | resolved (idle-sub. E) | max penalty (idle-sub. E) | disagree (EDP) |
 |---|---|---|---|---|---|---|---|---|
 | AllReduce · 2gpu_nvlink | 21 | 2 | 1 | +3.3 % | 2 | 1 | +4.5 % | 2 |
 | AllGather · 2gpu_nvlink | 21 | 1 | 1 | +2.3 % | 1 | 1 | +3.7 % | 0 |
@@ -32,7 +30,7 @@ Bootstrap intervals and optimum labels are descriptive, not confirmatory.
 | ReduceScatter · 4gpu | 21 | 0 | 0 | +0.0 % | 0 | 0 | +0.0 % | 0 |
 | **total** | 126 | 3 | 2 | | 3 | 2 | | 2 |
 
-## Candidate disagreements whose descriptive interval excludes 0
+## Resolved disagreements (energy-penalty interval excludes 0)
 
 | objective | cell | latency-optimal (ran) | P(best) | energy-optimal (ran) | P(best) | energy penalty of latency-optimal [95% CI] | latency penalty of energy-optimal [95% CI] |
 |---|---|---|---|---|---|---|---|

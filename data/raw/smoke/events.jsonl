@@ -1,4 +1,4 @@
-{"t_wall": 1791257893.1067219, "kind": "start", "run_dir": "/path/to/nccl-energy-frontier/data/raw/smoke", "phases": ["probe", "calibrate", "trials", "probe_end"], "gpu_sets": {"2gpu_nvlink": {"status": "ok"}, "4gpu": {"status": "ok"}}, "config_sha256": "35198d45113630b5b270b1a890ff89c20c174afed7d58608da9c3a70e7a85898"}
+{"t_wall": 1791257893.1067219, "kind": "start", "run_dir": "<REPO>/data/raw/smoke", "phases": ["probe", "calibrate", "trials", "probe_end"], "gpu_sets": {"2gpu_nvlink": {"status": "ok"}, "4gpu": {"status": "ok"}}, "config_sha256": "35198d45113630b5b270b1a890ff89c20c174afed7d58608da9c3a70e7a85898"}
 {"t_wall": 1791257893.1078484, "kind": "metadata", "tag": "start"}
 {"t_wall": 1791257901.0716164, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__default__default", "status": "ok"}
 {"t_wall": 1791257902.4184983, "kind": "probe", "cond": "all_reduce__2gpu_nvlink__default__LL128", "status": "ok"}
@@ -283,4 +283,4 @@
 {"t_wall": 1791259669.1411555, "kind": "probe", "cond": "reduce_scatter__4gpu__Tree__default", "status": "unsupported"}
 {"t_wall": 1791259678.5731082, "kind": "probe", "cond": "reduce_scatter__4gpu__Tree__LL128", "status": "unsupported"}
 {"t_wall": 1791259678.5739505, "kind": "metadata", "tag": "end"}
-{"t_wall": 1791259684.9853153, "kind": "finished", "run_dir": "/path/to/nccl-energy-frontier/data/raw/smoke"}
+{"t_wall": 1791259684.9853153, "kind": "finished", "run_dir": "<REPO>/data/raw/smoke"}

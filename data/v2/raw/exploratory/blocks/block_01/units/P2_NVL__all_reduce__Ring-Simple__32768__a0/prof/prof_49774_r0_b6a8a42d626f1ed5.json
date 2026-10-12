@@ -1,0 +1,1 @@
+{"schema":"nccle-profiler-v1","plugin":"nccle-algo-v1","pid":49774,"rank":0,"nranks":2,"nNodes":1,"commHash":"b6a8a42d626f1ed5","groups":96631,"overflow":0,"colls":[{"func":"AllReduce","algo":"RING","proto":"SIMPLE","nChannels":1,"nWarps":17,"count":8192,"datatype":"ncclFloat32","n":96631,"seq_first":0,"seq_last":96630}]}

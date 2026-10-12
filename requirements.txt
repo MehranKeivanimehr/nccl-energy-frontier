@@ -1,3 +1,5 @@
+# Pilot (methodology v1) environment. For methodology v2 / v2.2 use requirements-analysis.txt (analysis only:
+# no PyTorch, no NVML) or requirements-gpu.txt (measurements; includes the analysis set). v2 analysis needs scipy.
 # Python 3.11. Versions are the ones used for the reported runs.
 numpy==1.26.1
 pandas==2.3.3

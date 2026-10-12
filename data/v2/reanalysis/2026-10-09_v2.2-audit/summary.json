@@ -1,0 +1,473 @@
+{
+ "A_reproduction": {
+  "rq1.csv": {
+   "byte_identical": true,
+   "numerically_identical": true
+  },
+  "rq2.csv": {
+   "byte_identical": true,
+   "numerically_identical": true
+  },
+  "units.csv": {
+   "byte_identical": true,
+   "numerically_identical": true
+  }
+ },
+ "B_threshold": {
+  "preregistered_meaningful_point_estimate": 25,
+  "threshold_supported_holm": 21,
+  "threshold_supported_bonferroni_bound": 21,
+  "point_but_not_threshold": [
+   {
+    "placement": "P2_NVL",
+    "coll": "all_reduce",
+    "size_bytes": 33554432,
+    "E_ratio": 0.9490261120643358,
+    "E_ratio_upper_bonf": 0.9583995857099022
+   },
+   {
+    "placement": "P2_PCI_SHM",
+    "coll": "all_gather",
+    "size_bytes": 262144,
+    "E_ratio": 0.938455545546622,
+    "E_ratio_upper_bonf": 0.984482735568045
+   },
+   {
+    "placement": "P4_MIX",
+    "coll": "all_reduce",
+    "size_bytes": 65536,
+    "E_ratio": 0.9206591961771521,
+    "E_ratio_upper_bonf": 0.986922435402258
+   },
+   {
+    "placement": "P4_MIX",
+    "coll": "reduce_scatter",
+    "size_bytes": 131072,
+    "E_ratio": 0.9353654700372601,
+    "E_ratio_upper_bonf": 0.9918483565453984
+   }
+  ]
+ },
+ "C_rq2_estimators": {
+  "ag2m": [
+   {
+    "estimator": "counter",
+    "ratio_lat_over_en": 1.0122559770040553,
+    "ci95": [
+     1.0028382921213785,
+     1.0217621036517168
+    ],
+    "p_penalty_holm_2cells": 0.015286018788163602
+   },
+   {
+    "estimator": "integrated_instant",
+    "ratio_lat_over_en": 1.004839639907487,
+    "ci95": [
+     0.9905176447186221,
+     1.019368718278851
+    ],
+    "p_penalty_holm_2cells": 0.4746694671021232
+   },
+   {
+    "estimator": "lag_adjusted_powerusage",
+    "ratio_lat_over_en": 1.0091506095980671,
+    "ci95": [
+     0.9991774109817488,
+     1.0192233547909466
+    ],
+    "p_penalty_holm_2cells": 0.06857872088156647
+   },
+   {
+    "estimator": "idle_adjusted_counter",
+    "ratio_lat_over_en": 1.0214054537186112,
+    "ci95": [
+     1.0101547715568366,
+     1.0327814412817653
+    ],
+    "p_penalty_holm_2cells": 0.0014639007077208444
+   }
+  ],
+  "ar1g": [
+   {
+    "estimator": "counter",
+    "ratio_lat_over_en": 1.0015048060235994,
+    "ci90": [
+     0.9956246474188267,
+     1.0074196928417676
+    ],
+    "tost_3pct_p": 1.7143253484147523e-06
+   },
+   {
+    "estimator": "integrated_instant",
+    "ratio_lat_over_en": 0.9939824859499969,
+    "ci90": [
+     0.9753854366863598,
+     1.012934113238183
+    ],
+    "tost_3pct_p": 0.02348486520697035
+   },
+   {
+    "estimator": "lag_adjusted_powerusage",
+    "ratio_lat_over_en": 0.9993174278876067,
+    "ci90": [
+     0.9929342988772634,
+     1.0057415911698135
+    ],
+    "tost_3pct_p": 2.9266617151968433e-06
+   },
+   {
+    "estimator": "idle_adjusted_counter",
+    "ratio_lat_over_en": 1.0048363708220014,
+    "ci90": [
+     0.9980237414062757,
+     1.011695504060863
+    ],
+    "tost_3pct_p": 2.126418918493581e-05
+   }
+  ]
+ },
+ "D_order_temperature": {
+  "n_pairs": 468,
+  "n_blocks": 12,
+  "n_cells": 39,
+  "coef": {
+   "per_block_position": 0.003656751642037302,
+   "per_degC": 0.0036991801332983023
+  },
+  "fits": {
+   "iid_published": {
+    "se": [
+     0.005541947290474999,
+     0.0009084309590169682
+    ],
+    "t_df": 466,
+    "note": "as published (phase89.order_temperature): iid errors, df n-k; ignores the 39 within-cell centrings",
+    "ci_position": [
+     -0.00723355007437093,
+     0.014547053358445533
+    ],
+    "ci_degC": [
+     0.0019140517815320896,
+     0.005484308485064515
+    ]
+   },
+   "iid_df_corrected": {
+    "se": [
+     0.005789504711802296,
+     0.0009490103463479598
+    ],
+    "t_df": 427,
+    "note": "iid errors, df reduced by the 39 cell means removed by centring",
+    "ci_position": [
+     -0.0077227234742863835,
+     0.015036226758360987
+    ],
+    "ci_degC": [
+     0.0018338669227596959,
+     0.005564493343836909
+    ]
+   },
+   "cluster_block_CR1": {
+    "se": [
+     0.003588539931624764,
+     0.0006902991531413222
+    ],
+    "t_df": 11,
+    "note": "cluster-robust by block (CR1), t with G-1 = 11 df",
+    "ci_position": [
+     -0.004241571493833883,
+     0.011555074777908486
+    ],
+    "ci_degC": [
+     0.002179841941216425,
+     0.0052185183253801795
+    ]
+   },
+   "cluster_cell_CR1": {
+    "se": [
+     0.005236295347238566,
+     0.000870399860267424
+    ],
+    "t_df": 38,
+    "note": "cluster-robust by cell (CR1), t with G-1 = 38 df",
+    "ci_position": [
+     -0.006943574102904389,
+     0.014257077386978992
+    ],
+    "ci_degC": [
+     0.0019371477353259151,
+     0.00546121253127069
+    ]
+   },
+   "twoway_block_cell_CGM": {
+    "se": [
+     0.004448435665463597,
+     0.0008763484654143466
+    ],
+    "t_df": 11,
+    "note": "Cameron-Gelbach-Miller two-way (block, cell); non-PSD part clipped; t with min(G)-1 = 11 df",
+    "ci_position": [
+     -0.006134189243231792,
+     0.013447692527306395
+    ],
+    "ci_degC": [
+     0.00177035016585986,
+     0.005628010100736745
+    ]
+   }
+  },
+  "wild_cluster_restricted_bootstrap_block": {
+   "per_block_position": {
+    "t_observed": 1.0201009776666312,
+    "p_two_sided": 0.35302734375,
+    "n_sign_vectors": 4096
+   },
+   "per_degC": {
+    "t_observed": 5.364554000669166,
+    "p_two_sided": 0.0029296875,
+    "n_sign_vectors": 4096
+   }
+  },
+  "limitations": "12 blocks and 39 cells are few clusters. CR1 with G-1 df can still be anti-conservative with 12 clusters; the wild cluster bootstrap (exact enumeration of the 4,096 sign vectors) is the more reliable p-value. Blocks ran back to back in one ~2 h session on one host: they are within-session replicates, not independent days or hosts. Position and temperature are partly confounded within a block."
+ },
+ "E_read_latency": {
+  "n_gpu_regions": 2784,
+  "n_units": 984,
+  "read_start_ms": {
+   "median": 1.3746535,
+   "p95": 3.932382000000001,
+   "max": 7.540037
+  },
+  "read_end_ms": {
+   "median": 1.5494115000000002,
+   "p95": 1.6327265,
+   "max": 1.940924
+  },
+  "bracket_ms": {
+   "median": 2.3485294999999997,
+   "p95": 2.42904,
+   "max": 2.554328
+  },
+  "tail_correction_magnitude_rel_to_region": {
+   "median": 0.013369127165109282,
+   "p95": 0.01962156944497627,
+   "max": 0.02408211822464131
+  },
+  "tail_correction_relative_uncertainty_from_end_read": {
+   "median": 0.008498720228239016,
+   "p95": 0.008960461698929499,
+   "max": 0.01066700474133677
+  },
+  "boundary_uncertainty_J_per_unit_worstcase": {
+   "median": 0.4223040121681161,
+   "p95": 0.9641406579382454,
+   "max": 1.312756334236659
+  },
+  "boundary_uncertainty_rel_to_region_energy": {
+   "median": 0.0005722039536379341,
+   "p95": 0.0007713823227648971,
+   "max": 0.0010085552895476204
+  },
+  "method": "Half-widths: the counter-reset instant may lie anywhere inside a read call (start and end reads), and the commit time inside the phase bracket. Worst-case sum over the GPUs of a unit. This is the interpretation supported by the local Phase 4 experiments, not an NVML guarantee; sensor error and the averaging of the counter itself are not included."
+ },
+ "F_sampling": {
+  "measurement_window": {
+   "n_gpu_regions": 2784,
+   "median_max_interval_s": 0.05002618199796416,
+   "p99_s": 0.05020573552304995,
+   "max_s": 0.05050518299685791
+  },
+  "complete_trace": {
+   "n_gpu_traces": 2784,
+   "median_max_interval_s": 0.1133994999981951,
+   "p99_s": 0.15708958000279383,
+   "max_s": 0.1625999999960186,
+   "n_traces_max_interval_gt_0.15s": 236
+  },
+  "note": "measurement_window = samples inside [region start, loop end] per GPU (what the energy integrals use); complete_trace = the whole sampler trace of the unit, including the launch and teardown."
+ },
+ "G_qc_reclassification": {
+  "exploratory": {
+   "v21_accepted_ok_verified": 1542,
+   "v22_accepted_ok": 1542,
+   "only_v21": [],
+   "only_v22": [],
+   "v22_status_counts": {
+    "OK": 1542,
+    "QC_SHORT": 11,
+    "EXCLUDED_DEVIATION": 1
+   }
+  },
+  "confirmatory": {
+   "v21_accepted_ok_verified": 984,
+   "v22_accepted_ok": 984,
+   "only_v21": [],
+   "only_v22": [],
+   "v22_status_counts": {
+    "OK": 984
+   }
+  }
+ },
+ "H_recommender": {
+  "lobo_summary_identical": true,
+  "lobo_rows_identical": true,
+  "robustness_identical": true,
+  "tuner_files": {
+   "nccl_tuner_P2_NVL.conf": {
+    "frozen_rules": [
+     "allgather,524288,524288,ring,ll,-1,1,2,-1,-1",
+     "allgather,1048576,1048576,ring,ll128,-1,1,2,-1,-1",
+     "allreduce,524288,524288,ring,ll,-1,1,2,-1,-1",
+     "allreduce,8388608,536870912,tree,simple,-1,1,2,-1,-1",
+     "reducescatter,524288,1048576,ring,ll,-1,1,2,-1,-1"
+    ],
+    "v22_rules": [
+     "allgather,524288,524288,ring,ll,-1,1,2,-1,-1",
+     "allgather,1048576,1048576,ring,ll128,-1,1,2,-1,-1",
+     "allreduce,524288,524288,ring,ll,-1,1,2,-1,-1",
+     "allreduce,8388608,8388608,tree,simple,-1,1,2,-1,-1",
+     "allreduce,16777216,16777216,tree,simple,-1,1,2,-1,-1",
+     "allreduce,33554432,33554432,tree,simple,-1,1,2,-1,-1",
+     "allreduce,67108864,67108864,tree,simple,-1,1,2,-1,-1",
+     "allreduce,134217728,134217728,tree,simple,-1,1,2,-1,-1",
+     "allreduce,268435456,268435456,tree,simple,-1,1,2,-1,-1",
+     "allreduce,536870912,536870912,tree,simple,-1,1,2,-1,-1",
+     "reducescatter,524288,524288,ring,ll,-1,1,2,-1,-1",
+     "reducescatter,1048576,1048576,ring,ll,-1,1,2,-1,-1"
+    ]
+   },
+   "nccl_tuner_P2_NVL_latency.conf": {
+    "frozen_rules": [
+     "allgather,524288,524288,ring,ll,-1,1,2,-1,-1",
+     "allgather,1048576,2097152,ring,ll128,-1,1,2,-1,-1",
+     "allreduce,524288,524288,ring,ll,-1,1,2,-1,-1",
+     "allreduce,8388608,1073741824,tree,simple,-1,1,2,-1,-1",
+     "reducescatter,524288,1048576,ring,ll,-1,1,2,-1,-1"
+    ],
+    "v22_rules": [
+     "allgather,524288,524288,ring,ll,-1,1,2,-1,-1",
+     "allgather,1048576,1048576,ring,ll128,-1,1,2,-1,-1",
+     "allgather,2097152,2097152,ring,ll128,-1,1,2,-1,-1",
+     "allreduce,524288,524288,ring,ll,-1,1,2,-1,-1",
+     "allreduce,8388608,8388608,tree,simple,-1,1,2,-1,-1",
+     "allreduce,16777216,16777216,tree,simple,-1,1,2,-1,-1",
+     "allreduce,33554432,33554432,tree,simple,-1,1,2,-1,-1",
+     "allreduce,67108864,67108864,tree,simple,-1,1,2,-1,-1",
+     "allreduce,134217728,134217728,tree,simple,-1,1,2,-1,-1",
+     "allreduce,268435456,268435456,tree,simple,-1,1,2,-1,-1",
+     "allreduce,536870912,536870912,tree,simple,-1,1,2,-1,-1",
+     "allreduce,1073741824,1073741824,tree,simple,-1,1,2,-1,-1",
+     "reducescatter,524288,524288,ring,ll,-1,1,2,-1,-1",
+     "reducescatter,1048576,1048576,ring,ll,-1,1,2,-1,-1"
+    ]
+   },
+   "nccl_tuner_P2_PCI_SHM.conf": {
+    "frozen_rules": [
+     "allgather,262144,262144,ring,simple,-1,1,2,-1,-1",
+     "allreduce,131072,2097152,tree,simple,-1,1,2,-1,-1",
+     "allreduce,16777216,16777216,tree,simple,-1,1,2,-1,-1",
+     "reducescatter,262144,262144,ring,simple,-1,1,2,-1,-1"
+    ],
+    "v22_rules": [
+     "allgather,262144,262144,ring,simple,-1,1,2,-1,-1",
+     "allreduce,131072,131072,tree,simple,-1,1,2,-1,-1",
+     "allreduce,262144,262144,tree,simple,-1,1,2,-1,-1",
+     "allreduce,524288,524288,tree,simple,-1,1,2,-1,-1",
+     "allreduce,1048576,1048576,tree,simple,-1,1,2,-1,-1",
+     "allreduce,2097152,2097152,tree,simple,-1,1,2,-1,-1",
+     "allreduce,16777216,16777216,tree,simple,-1,1,2,-1,-1",
+     "reducescatter,262144,262144,ring,simple,-1,1,2,-1,-1"
+    ]
+   },
+   "nccl_tuner_P2_PCI_SHM_latency.conf": {
+    "frozen_rules": [
+     "allgather,262144,262144,ring,simple,-1,1,2,-1,-1",
+     "allreduce,131072,2097152,tree,simple,-1,1,2,-1,-1",
+     "reducescatter,262144,262144,ring,simple,-1,1,2,-1,-1"
+    ],
+    "v22_rules": [
+     "allgather,262144,262144,ring,simple,-1,1,2,-1,-1",
+     "allreduce,131072,131072,tree,simple,-1,1,2,-1,-1",
+     "allreduce,262144,262144,tree,simple,-1,1,2,-1,-1",
+     "allreduce,524288,524288,tree,simple,-1,1,2,-1,-1",
+     "allreduce,1048576,1048576,tree,simple,-1,1,2,-1,-1",
+     "allreduce,2097152,2097152,tree,simple,-1,1,2,-1,-1",
+     "reducescatter,262144,262144,ring,simple,-1,1,2,-1,-1"
+    ]
+   },
+   "nccl_tuner_P4_MIX.conf": {
+    "frozen_rules": [
+     "allgather,262144,524288,ring,simple,-1,1,4,-1,-1",
+     "allreduce,65536,131072,tree,ll,-1,1,4,-1,-1",
+     "allreduce,262144,67108864,tree,simple,-1,1,4,-1,-1",
+     "reducescatter,131072,524288,ring,simple,-1,1,4,-1,-1"
+    ],
+    "v22_rules": [
+     "allgather,262144,262144,ring,simple,-1,1,4,-1,-1",
+     "allgather,524288,524288,ring,simple,-1,1,4,-1,-1",
+     "allreduce,65536,65536,tree,ll,-1,1,4,-1,-1",
+     "allreduce,131072,131072,tree,ll,-1,1,4,-1,-1",
+     "allreduce,262144,262144,tree,simple,-1,1,4,-1,-1",
+     "allreduce,524288,524288,tree,simple,-1,1,4,-1,-1",
+     "allreduce,1048576,1048576,tree,simple,-1,1,4,-1,-1",
+     "allreduce,2097152,2097152,tree,simple,-1,1,4,-1,-1",
+     "allreduce,4194304,4194304,tree,simple,-1,1,4,-1,-1",
+     "allreduce,8388608,8388608,tree,simple,-1,1,4,-1,-1",
+     "allreduce,16777216,16777216,tree,simple,-1,1,4,-1,-1",
+     "allreduce,33554432,33554432,tree,simple,-1,1,4,-1,-1",
+     "allreduce,67108864,67108864,tree,simple,-1,1,4,-1,-1",
+     "reducescatter,131072,131072,ring,simple,-1,1,4,-1,-1",
+     "reducescatter,262144,262144,ring,simple,-1,1,4,-1,-1",
+     "reducescatter,524288,524288,ring,simple,-1,1,4,-1,-1"
+    ]
+   },
+   "nccl_tuner_P4_MIX_latency.conf": {
+    "frozen_rules": [
+     "allgather,262144,524288,ring,simple,-1,1,4,-1,-1",
+     "allreduce,1024,1024,tree,ll,-1,1,4,-1,-1",
+     "allreduce,65536,131072,tree,ll,-1,1,4,-1,-1",
+     "allreduce,262144,67108864,tree,simple,-1,1,4,-1,-1",
+     "reducescatter,131072,524288,ring,simple,-1,1,4,-1,-1"
+    ],
+    "v22_rules": [
+     "allgather,262144,262144,ring,simple,-1,1,4,-1,-1",
+     "allgather,524288,524288,ring,simple,-1,1,4,-1,-1",
+     "allreduce,1024,1024,tree,ll,-1,1,4,-1,-1",
+     "allreduce,65536,65536,tree,ll,-1,1,4,-1,-1",
+     "allreduce,131072,131072,tree,ll,-1,1,4,-1,-1",
+     "allreduce,262144,262144,tree,simple,-1,1,4,-1,-1",
+     "allreduce,524288,524288,tree,simple,-1,1,4,-1,-1",
+     "allreduce,1048576,1048576,tree,simple,-1,1,4,-1,-1",
+     "allreduce,2097152,2097152,tree,simple,-1,1,4,-1,-1",
+     "allreduce,4194304,4194304,tree,simple,-1,1,4,-1,-1",
+     "allreduce,8388608,8388608,tree,simple,-1,1,4,-1,-1",
+     "allreduce,16777216,16777216,tree,simple,-1,1,4,-1,-1",
+     "allreduce,33554432,33554432,tree,simple,-1,1,4,-1,-1",
+     "allreduce,67108864,67108864,tree,simple,-1,1,4,-1,-1",
+     "reducescatter,131072,131072,ring,simple,-1,1,4,-1,-1",
+     "reducescatter,262144,262144,ring,simple,-1,1,4,-1,-1",
+     "reducescatter,524288,524288,ring,simple,-1,1,4,-1,-1"
+    ]
+   }
+  }
+ },
+ "I_phase10": {
+  "unchanged_sections": {
+   "execution_large_collectives": true,
+   "contrasts": true,
+   "arms": true,
+   "sync_energy_share": true,
+   "tuner_overhead": true
+  },
+  "all_rank_execution": {
+   "runs": 50,
+   "consistent": 50,
+   "inconsistent": {}
+  },
+  "numerics": [
+   "NOT_RECORDED"
+  ]
+ },
+ "frozen_outputs_unchanged": true,
+ "frozen_files_hashed": 36
+}

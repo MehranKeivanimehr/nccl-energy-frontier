@@ -1,0 +1,22 @@
+{
+ "exploratory": {
+  "v21_accepted_ok_verified": 1542,
+  "v22_accepted_ok": 1542,
+  "only_v21": [],
+  "only_v22": [],
+  "v22_status_counts": {
+   "OK": 1542,
+   "QC_SHORT": 11,
+   "EXCLUDED_DEVIATION": 1
+  }
+ },
+ "confirmatory": {
+  "v21_accepted_ok_verified": 984,
+  "v22_accepted_ok": 984,
+  "only_v21": [],
+  "only_v22": [],
+  "v22_status_counts": {
+   "OK": 984
+  }
+ }
+}

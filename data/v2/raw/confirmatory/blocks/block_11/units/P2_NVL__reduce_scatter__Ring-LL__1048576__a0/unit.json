@@ -1,0 +1,228 @@
+{
+ "unit_id": "P2_NVL__reduce_scatter__Ring-LL__1048576",
+ "attempt": 0,
+ "parent_attempt": null,
+ "campaign": "confirmatory",
+ "mode": "CONFIRMATORY",
+ "block": 11,
+ "seed": "confirmatory-20261009-11",
+ "planned_pos": 16,
+ "exec_pos": 17,
+ "placement": {
+  "id": "P2_NVL",
+  "gpus": [
+   4,
+   5
+  ],
+  "env": {},
+  "pci": [
+   "00000000:81:00.0",
+   "00000000:A1:00.0"
+  ],
+  "aliases": [
+   "A6000-b10caa4a",
+   "A6000-f5f81ac3"
+  ],
+  "cuda_visible_devices_rank_to_alias": {
+   "0": "A6000-b10caa4a",
+   "1": "A6000-f5f81ac3"
+  },
+  "fingerprint": {
+   "gpus": [
+    4,
+    5
+   ],
+   "category": "NVLINK_ALL",
+   "canonical": "n=2;links=0-1:NV4;numa=1,1;nvlinks=4,4",
+   "fingerprint": "e65ef2bdbf86ae93",
+   "concrete_fingerprint": "6e1fd39a649bf9d2",
+   "nccl_version": "2.27.5"
+  }
+ },
+ "coll": "reduce_scatter",
+ "requested": "Ring/LL",
+ "size_bytes": 1048576,
+ "dir": "data/v2/raw/confirmatory/blocks/block_11/units/P2_NVL__reduce_scatter__Ring-LL__1048576__a0",
+ "R": 89243,
+ "w": 5950,
+ "t_gpu_cal_s": 3.361634664920618e-05,
+ "proc": {
+  "pid": 128585,
+  "rc": 0,
+  "timed_out": false,
+  "utc_start": "2026-10-09T03:09:16Z",
+  "mono_start": 51285.151514433,
+  "mono_end": 51290.488391363,
+  "wall_s": 5.336877370005823
+ },
+ "region": {
+  "coll": "ReduceScatter",
+  "size_bytes": 1048576,
+  "count": 131072,
+  "in_place": 0,
+  "R": 89243,
+  "warmup_iters": 5950,
+  "per_gpu": [
+   {
+    "rank": 0,
+    "pci": "0000:81:00.0",
+    "nvml_index": 4,
+    "delta_J": 376.91036230908014,
+    "duration_s": 3.005582387,
+    "tail_s": 0.09275061200000001,
+    "p_ctx_W": 90.30277547839646,
+    "aligned_delta_J": 385.286,
+    "tail_J": 8.375637690919865,
+    "t_start_ns": 51286759021377.0,
+    "t_end_ns": 51289764603764,
+    "p_avg_W": 125.40343726371462,
+    "event_ms": 3004.682129,
+    "read_start_us": 1130.69,
+    "read_end_us": 1497.637,
+    "flags": []
+   },
+   {
+    "rank": 1,
+    "pci": "0000:a1:00.0",
+    "nvml_index": 5,
+    "delta_J": 344.8716788911443,
+    "duration_s": 3.005450643,
+    "tail_s": 0.023477201000000003,
+    "p_ctx_W": 80.38952807260627,
+    "aligned_delta_J": 346.759,
+    "tail_J": 1.8873211088557202,
+    "t_start_ns": 51286759147381.0,
+    "t_end_ns": 51289764598024,
+    "p_avg_W": 114.74874148886308,
+    "event_ms": 3004.689453,
+    "read_start_us": 1391.418,
+    "read_end_us": 1538.027,
+    "flags": []
+   }
+  ],
+  "flags": [],
+  "T_region_s": 3.005582387,
+  "t_gpu_s": 3.366862894568762e-05,
+  "t_host_s": 3.366880023e-05,
+  "E_raw_J": 721.7820412002245,
+  "J_per_coll": 0.00808782807839522
+ },
+ "region_flags": [],
+ "stdout_rows": [
+  {
+   "size_bytes": 1048576,
+   "count": 131072,
+   "time_us": 33.67,
+   "wrong": 0
+  }
+ ],
+ "evidence": {
+  "status": "VERIFIED",
+  "reasons": [],
+  "actual": [
+   {
+    "algo": "RING",
+    "proto": "LL",
+    "nChannels": 4
+   }
+  ],
+  "actual_key": "RING/LL/4",
+  "per_rank_n": {
+   "0": 95194,
+   "1": 95194
+  },
+  "n_matches_expected": true
+ },
+ "energy_source": "counter",
+ "sampled_energy_J": 692.9659544740518,
+ "profiler_flags": [],
+ "telemetry": {
+  "4": {
+   "n_samples": 60,
+   "gaps": {
+    "n": 60,
+    "median_dt": 0.05000054700212786,
+    "max_dt": 0.050020107002637815,
+    "n_gaps": 0,
+    "nonmonotonic": 0
+   },
+   "energy_int_J": 352.477715220722,
+   "energy_int_lag_J": 368.97092154652097,
+   "energy_int_inst_J": 365.15700644288665,
+   "temp_mean_c": 39.833333333333336,
+   "temp_max_c": 40.0,
+   "clk_gr_mean": 1935.0,
+   "clk_gr_min": 1935.0,
+   "clk_gr_max": 1935.0,
+   "clk_mem_mean": 7601.0,
+   "util_gpu_mean": 98.0,
+   "pstates": [
+    2
+   ],
+   "clock_events_or": 0,
+   "enforced_limit_mw": [
+    300000
+   ],
+   "power_mean_w": 117.50766666666665,
+   "counter_J": 376.91036230908014,
+   "int_over_counter": 0.935176504729996,
+   "int_lag_over_counter": 0.9789354670062147
+  },
+  "5": {
+   "n_samples": 60,
+   "gaps": {
+    "n": 60,
+    "median_dt": 0.05000054700212786,
+    "max_dt": 0.050020107002637815,
+    "n_gaps": 0,
+    "nonmonotonic": 0
+   },
+   "energy_int_J": 317.54785687077566,
+   "energy_int_lag_J": 332.88927197442956,
+   "energy_int_inst_J": 327.8089480311652,
+   "temp_mean_c": 39.81666666666667,
+   "temp_max_c": 40.0,
+   "clk_gr_mean": 1903.25,
+   "clk_gr_min": 1800.0,
+   "clk_gr_max": 1905.0,
+   "clk_mem_mean": 7601.0,
+   "util_gpu_mean": 99.0,
+   "pstates": [
+    2
+   ],
+   "clock_events_or": 0,
+   "enforced_limit_mw": [
+    300000
+   ],
+   "power_mean_w": 105.92665000000001,
+   "counter_J": 344.8716788911443,
+   "int_over_counter": 0.9207710470508274,
+   "int_lag_over_counter": 0.9652554626832757
+  }
+ },
+ "sampler": {
+  "overruns": 1,
+  "errors": 0,
+  "truncated": false,
+  "n": 238
+ },
+ "foreign_pids": [],
+ "error_hits": [],
+ "qc_status": "OK",
+ "qc_reasons": [],
+ "retryable": false,
+ "stop_block": false,
+ "nccl_env": {
+  "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+  "CUDA_VISIBLE_DEVICES": "A6000-b10caa4a,A6000-f5f81ac3",
+  "NCCLE_REGION_FILE": "<REPO>/data/v2/raw/confirmatory/blocks/block_11/units/P2_NVL__reduce_scatter__Ring-LL__1048576__a0/region.jsonl",
+  "NCCLE_PLACEMENT": "oop",
+  "NCCL_DEBUG": "INFO",
+  "NCCL_DEBUG_SUBSYS": "INIT,ENV",
+  "NCCL_DEBUG_FILE": "<REPO>/data/v2/raw/confirmatory/blocks/block_11/units/P2_NVL__reduce_scatter__Ring-LL__1048576__a0/nccl.log",
+  "NCCL_PROFILER_PLUGIN": "<REPO>/native/nccl_profiler_algo/build/libnccl-profiler-nccle.so",
+  "NCCLE_PROFILER_DIR": "<REPO>/data/v2/raw/confirmatory/blocks/block_11/units/P2_NVL__reduce_scatter__Ring-LL__1048576__a0/prof",
+  "NCCL_ALGO": "Ring",
+  "NCCL_PROTO": "LL"
+ }
+}

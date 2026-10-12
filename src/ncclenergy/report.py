@@ -52,7 +52,7 @@ def build(processed: Path) -> dict:
     sel = pd.read_csv(p / "selection.csv")
     launches = pd.read_csv(p / "launches.csv")
     reg = pd.read_csv(p / "regions.csv")
-    q = json.loads((p / "qc.json").read_text(encoding="utf-8"))
+    q = json.loads((p / "qc.json").read_text())
     out: dict = {"qc": q}
 
     # coverage
@@ -161,7 +161,7 @@ def build(processed: Path) -> dict:
         "cells_auto_within_1pct_latency": int((pen_t <= 0.01).sum()),
     }
 
-    # Compare the disagreement label between buffer placements.
+    # in-place vs out-of-place robustness of the disagreement call
     oi = opt[opt.lat_opt.notna()].pivot_table(index=["coll", "gpu_set", "size_bytes"], columns="placement",
                                               values="disagree_en_effective", aggfunc="first")
     if {"oop", "ip"} <= set(oi.columns):
@@ -174,9 +174,8 @@ def build(processed: Path) -> dict:
 def write_report(processed: Path) -> None:
     p = Path(processed)
     r = build(p)
-    (p / "results_summary.json").write_text(json.dumps(r, indent=1, default=str), encoding="utf-8")
-    L = ["# Results summary (generated)", "", f"Source: `{p.as_posix()}`", "",
-         "Bootstrap intervals and optimum labels are descriptive, not confirmatory.", ""]
+    (p / "results_summary.json").write_text(json.dumps(r, indent=1, default=str))
+    L = ["# Results summary (generated)", "", f"Source: `{p}`", ""]
     c = r["coverage"]
     L += ["## Coverage", "",
           f"- final units: {c['final_units']} — status counts: {c['status_counts']}",
@@ -189,8 +188,8 @@ def write_report(processed: Path) -> None:
     for a in sorted(r["auto_selection"], key=lambda x: (SET_ORDER.get(x["gpu_set"], 9), COLL_ORDER[x["coll"]])):
         L.append(f"- {COLL_TITLE[a['coll']]} · {a['gpu_set']}: " + "; ".join(a["ranges"]))
     L += ["", "## Latency-optimal vs energy-optimal (out-of-place)", "",
-          "| collective · GPUs | cells | disagree (raw E) | interval excludes 0 (raw E) | max penalty (raw E) | "
-          "disagree (idle-sub. E) | interval excludes 0 (idle-sub. E) | max penalty (idle-sub. E) | disagree (EDP) |",
+          "| collective · GPUs | cells | disagree (raw E) | resolved (raw E) | max penalty (raw E) | "
+          "disagree (idle-sub. E) | resolved (idle-sub. E) | max penalty (idle-sub. E) | disagree (EDP) |",
           "|---|---|---|---|---|---|---|---|---|"]
     for d in sorted(r["disagreement_by_group"], key=lambda x: (SET_ORDER.get(x["gpu_set"], 9), COLL_ORDER[x["coll"]])):
         L.append(f"| {COLL_TITLE[d['coll']]} · {d['gpu_set']} | {d['cells']} | {d['en_disagree']} | "
@@ -200,7 +199,7 @@ def write_report(processed: Path) -> None:
     if t:
         L.append(f"| **total** | {t['cells']} | {t['en_disagree']} | {t['en_resolved']} | | {t['dyn_disagree']} | "
                  f"{t['dyn_resolved']} | | {t['edp_disagree']} |")
-    L += ["", "## Candidate disagreements whose descriptive interval excludes 0", "",
+    L += ["", "## Resolved disagreements (energy-penalty interval excludes 0)", "",
           "| objective | cell | latency-optimal (ran) | P(best) | energy-optimal (ran) | P(best) | "
           "energy penalty of latency-optimal [95% CI] | latency penalty of energy-optimal [95% CI] |",
           "|---|---|---|---|---|---|---|---|"]
@@ -233,5 +232,5 @@ def write_report(processed: Path) -> None:
         pa = r["placement_agreement_en"]
         L += [f"- out-of-place vs in-place: same raw-energy disagreement call in {pa['same_disagreement_call']} of "
               f"{pa['cells']} cells", ""]
-    (p / "results_summary.md").write_text("\n".join(L), encoding="utf-8")
-    print(f"report written to {p / 'results_summary.md'}")
+    (p / "results_summary.md").write_text("\n".join(L))
+    print("\n".join(L))

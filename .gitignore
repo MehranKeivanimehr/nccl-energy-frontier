@@ -1,18 +1,17 @@
+# Release export: rules of the original .gitignore that matched exported evidence files were removed so the
+# evidence is tracked. Removed rules:
+#   data/raw/*/launches.jsonl
+#   third_party/nccl-src/
+#   data/v2/raw/**/nccl*.log
+#   data/v2/raw/**/stdout.txt
+#   data/v2/raw/**/stderr.txt
+#   data/v2/raw/exploratory/blocks/*/units/
+#   data/v2/raw/confirmatory/blocks/*/units/
+#   data/v2/raw/phase10/workload*/block_*/*/
+#   data/v2.2/raw/*/blocks/*/units/
+
 __pycache__/
 *.pyc
-.venv/
-venv/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-build/
-dist/
-*.egg-info/
-.idea/
-.vscode/
-.DS_Store
-Thumbs.db
 logs/
 
 # built from source by scripts/build_nccl_tests.sh
@@ -20,13 +19,37 @@ third_party/nccl-tests/
 third_party/nccl_home/
 third_party/build.log
 
-# Per-launch artifacts contain private host/network identifiers and create
-# tens of thousands of small files. Public data coverage is documented in
-# data/raw/README.md.
+# Raw per-launch artifacts (stdout/stderr/NCCL logs/power traces) are large and
+# contain the host name and private network addresses printed by NCCL.
+# They are kept on disk and archived separately (scripts/archive_raw.sh);
+# the run-level metadata, config, plan and event log stay in git.
 data/raw/*/launches/
 data/raw/*/probe/
 data/raw/*/probe_end/
 data/raw/*/calibrate/
-data/raw/*/launches.jsonl
 data/raw/*.tar.gz
-data/raw/*.tar.gz.sha256
+
+# methodology-v2 native builds and patched nccl-tests checkout
+native/*/build/
+third_party/nccl-tests-v2/
+third_party/build_v2.log
+*.local.json
+
+# methodology-v2 per-process logs and nccl-tests stdout contain the host name and private network addresses
+# (NCCL INFO "NET/Socket : Using ..."). Kept on disk; listed with SHA-256 in provenance/. (Phase 4 validation logs
+# committed before this rule remain in local history; see docs/v2/final_report.md.)
+
+# methodology-v2 per-process directories (same policy as the pilot): kept on disk, every file listed with SHA-256 in
+# provenance/v2_raw_sha256_*.txt. Block-level metadata (attempts, summaries, plans, preflight, idle, deviations),
+# setup tables and phase-10 run tables stay in git.
+data/v2/raw/smoke/blocks/*/units/
+data/v2/raw/setup/probe/*/
+data/v2/raw/setup/calibration/*/
+data/v2/raw/phase10/verify_tuner*/*__*/
+data/v2/raw/phase10/tuner_diag/*/
+data/v2/raw/phase10/tuner_overhead/rep*/
+
+# methodology v2.2 raw data: same policy as v2 (per-process directories and NCCL logs on disk only)
+data/v2.2/raw/**/nccl*.log
+data/v2.2/raw/**/stdout.txt
+data/v2.2/raw/**/stderr.txt

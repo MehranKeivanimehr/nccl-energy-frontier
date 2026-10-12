@@ -1,4 +1,13 @@
-"""Command-line interface for experiment capture and offline analysis."""
+"""Command-line entry point: python -m ncclenergy <command> ...
+
+Commands
+  metadata   capture machine/software metadata into a directory
+  run        execute (or resume) an experiment described by a YAML config
+  analyze    raw run directory -> processed CSV tables
+  plot       processed tables -> figures
+  report     processed tables -> results_summary.md/json (numbers quoted in the README)
+  smoke-check  validation report for a smoke-test run
+"""
 
 from __future__ import annotations
 
@@ -8,7 +17,7 @@ from pathlib import Path
 PHASES = ["probe", "calibrate", "trials", "probe_end"]
 
 
-def main(argv: list[str] | None = None) -> None:
+def main(argv=None):
     ap = argparse.ArgumentParser(prog="ncclenergy")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
@@ -45,12 +54,8 @@ def main(argv: list[str] | None = None) -> None:
         cfg, _ = load_config(args.config)
         collect(args.out, REPO, cfg)
     elif args.cmd == "run":
-        from .orchestrate import Orchestrator
-        phases = [x for x in args.phases.split(",") if x]
-        bad = set(phases) - set(PHASES)
-        if bad:
-            raise SystemExit(f"unknown phases {bad}; valid: {PHASES}")
-        Orchestrator(args.config, args.run_name).run(phases)
+        raise SystemExit("Historical v1 GPU collection is disabled: this launcher lacks the current allocation "
+                         "and watchdog contract. Use retained data for analysis, not new v1 runs.")
     elif args.cmd == "analyze":
         from .analyze import analyze_run
         analyze_run(args.run, args.out, n_boot=args.n_boot, seed=args.seed)

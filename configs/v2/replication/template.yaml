@@ -1,0 +1,22 @@
+# Replication campaign template (copy per homogeneous GPU group; fill every <...>).
+campaign: <cluster>_<group>_exploratory      # e.g. c2_1080ti_exploratory
+mode: EXPLORATORY
+seed: <integer>
+output_root: data/v2_replication/<cluster>
+energy_source: <counter|sampled>             # from capabilities.py: COUNTER_ALIGNED -> counter, else sampled
+allocation: [<idle GPU ids you are allowed to use>]   # max 6
+placements:                                  # from caps.json topo_m; ids are free text
+  - {id: <P2_...>, gpus: [<a>, <b>]}
+  - {id: <P4_...>, gpus: [<a>, <b>, <c>, <d>]}
+  # - {id: <P2_..._SHM>, gpus: [<a>, <b>], env: {NCCL_P2P_DISABLE: "1"}}   # only if default P2P hangs
+collectives: [all_reduce, all_gather, reduce_scatter]
+sizes: {min: 1024, max: <largest size that fits: 3 x size + 2 GiB <= free memory>, factor: 2}
+configs: [auto, Ring/Simple, Ring/LL, Ring/LL128, Tree/Simple, Tree/LL, Tree/LL128]   # filtered by NCCL's table
+sampler_period_s: 0.05
+T_min_s: <2.0 counter | 4.0 sampled>
+T_star_s: <2.5 counter | 5.0 sampled>
+power_lag_s: <measured PowerUsage lag>
+stop: {temp_c: <slowdown threshold - 15>, disk_floor_gb: 20, mem_used_mib_max: 16}
+timeouts: {min_s: 120, factor: 10}
+idle: {duration_s: 30, settle_s: 10, p8_timeout_s: 300}
+max_blocks: <n>

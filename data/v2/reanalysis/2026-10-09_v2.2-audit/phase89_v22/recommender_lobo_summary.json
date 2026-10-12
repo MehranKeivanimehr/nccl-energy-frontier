@@ -1,0 +1,17 @@
+{
+ "rows": 492,
+ "heldout_blocks": 12,
+ "status_counts": {
+  "RECOMMEND": 436,
+  "FALLBACK": 56
+ },
+ "regret_median": 0.0,
+ "regret_p90": 0.0,
+ "regret_max": 0.033747543203841435,
+ "auto_regret_median": 0.11510205988523714,
+ "measured_saving_vs_auto_median": 0.10321970444613299,
+ "slo_violation_rate": 0.0020325203252032522,
+ "recommended_rows": 436,
+ "recommended_measured_saving_median": 0.15198636596270132,
+ "recommended_predicted_minus_measured_E_ratio_median": -7.22262341442681e-05
+}

@@ -1,5 +1,5 @@
-# Planned full sweep: 3 collectives x {2, 4, 8} GPUs x 1 KiB..1 GiB x
-# 3 algorithms x 4 protocols, with 5 randomized trial blocks.
+# Full sweep: 3 collectives x {2, 4, 8} GPUs x 1 KiB..1 GiB x 3 algorithms x 4 protocols,
+# 5 independent trials in randomized order.
 name: full
 seed: 20261006
 trials: 5
@@ -13,8 +13,9 @@ nccl_tests:
   datatype: float
   op: sum
   extra_env:
-    # Connect channels during communicator initialization so connection setup
-    # remains outside the measured collective regions.
+    # Connect all NCCL channels during communicator init instead of lazily at
+    # the first collective. With lazy connect (NCCL default) the first
+    # out-of-place region absorbed up to ~257 ms of SHM setup on 4 GPUs.
     NCCL_RUNTIME_CONNECT: "0"
 
 collectives: [all_reduce, all_gather, reduce_scatter]

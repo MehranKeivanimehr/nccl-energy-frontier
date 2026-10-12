@@ -1,0 +1,88 @@
+{
+ "blocks": [
+  {
+   "block": 1,
+   "status": "COMPLETE",
+   "stop_reason": null,
+   "utc_start": "2026-10-08T22:22:24Z",
+   "utc_end": "2026-10-08T23:49:26Z",
+   "n_units": 1323,
+   "final_status_counts": {
+    "NOT_RUN_NOT_ENABLED_BY_NCCL": 546,
+    "OK": 770,
+    "QC_SHORT": 7
+   },
+   "evidence_counts": {
+    "VERIFIED": 777,
+    "UNVERIFIED": 0
+   },
+   "health_events": []
+  },
+  {
+   "block": 2,
+   "status": "COMPLETE",
+   "stop_reason": null,
+   "utc_start": "2026-10-08T23:49:46Z",
+   "utc_end": "2026-10-09T01:18:22Z",
+   "n_units": 1323,
+   "final_status_counts": {
+    "NOT_RUN_NOT_ENABLED_BY_NCCL": 546,
+    "OK": 773,
+    "QC_SHORT": 4
+   },
+   "evidence_counts": {
+    "VERIFIED": 777,
+    "UNVERIFIED": 0
+   },
+   "health_events": []
+  }
+ ],
+ "units_planned": 2646,
+ "units_run": 1554,
+ "final_status": {
+  "OK": 1542,
+  "QC_SHORT": 11,
+  "EXCLUDED_DEVIATION": 1
+ },
+ "not_run": {
+  "NOT_RUN_NOT_ENABLED_BY_NCCL": 1092
+ },
+ "evidence": {
+  "VERIFIED": 1554
+ },
+ "attempts": 2646,
+ "retried_units": 0,
+ "inst_over_counter": {
+  "n": 1542,
+  "median": 0.9847790719319537,
+  "p05": 0.9359059296640623,
+  "p95": 0.9952798272756029,
+  "min": 0.9112940446446277,
+  "max": 1.0001173687360883
+ },
+ "T_region_s": {
+  "min": 2.0338555675000003,
+  "median": 2.5322551865000005,
+  "max": 10.383356662
+ },
+ "temp_max_c": 46.0,
+ "clk_gr_mean_range": [
+  1902.3529411764707,
+  1950.0
+ ],
+ "negative_idle_adjusted": 0,
+ "region_flags": [],
+ "qc_reasons": [],
+ "rq1_cells": 39,
+ "rq1_sd_dE": {
+  "n": 39,
+  "median": 0.010503368563093928,
+  "p80": 0.02637962923049363,
+  "max": 0.44512597205732435
+ },
+ "block_count_rule": {
+  "n": 8,
+  "frac_ok": 0.8205128205128205,
+  "cells": 39
+ }
+}
