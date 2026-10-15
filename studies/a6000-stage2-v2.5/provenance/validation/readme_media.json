@@ -1,0 +1,37 @@
+{
+  "scope": "Presentation refresh after 8ac44d45; no GPU work or new inferential results",
+  "public_guard_tests": {"passed": 18, "failed": 0},
+  "presentation_tests": {"passed": 12, "failed": 0},
+  "independent_statistical_check": {"contrasts": 55, "numeric_differences": 0, "tolerance": 1e-10},
+  "preservation": {
+    "baseline": "8ac44d456344202f77a5329cc3f96327187461a8",
+    "protected_root_manifest_files_byte_identical": 14764,
+    "protected_study_manifest_files_byte_identical": 1432,
+    "historical_gifs_unchanged": true,
+    "scientific_data_code_protocol_outputs_changed": false
+  },
+  "media": {
+    "new_gifs": 2,
+    "frames_per_gif": 6,
+    "static_posters": 2,
+    "overview_graphics": 1,
+    "source_value_ledgers": 1,
+    "byte_identical_regenerated_files": 6,
+    "all_12_frames_visually_inspected": true
+  },
+  "documentation": {
+    "local_links_checked": 132,
+    "preview_widths_px": [1200, 390],
+    "horizontal_overflows": 0,
+    "missing_preview_images": 0,
+    "preview_kind": "Offline Markdown rendering, not a claim to reproduce GitHub CSS exactly"
+  },
+  "full_raw_replay_in_this_refresh": {
+    "status": "NOT_COMPLETED_LOCAL_DEPENDENCIES",
+    "native_windows": "Original frozen imports require the Linux pwd module",
+    "existing_wsl": "The existing Linux analysis environment lacks scipy",
+    "prior_release_replay": "public_replay.json",
+    "interpretation": "Prior replay evidence is retained, not relabelled as a newly successful full replay. Numeric source bytes and retained results are unchanged."
+  },
+  "not_claimed": ["all archival tests pass", "new physical-energy calibration", "global latency/energy optimum separation"]
+}

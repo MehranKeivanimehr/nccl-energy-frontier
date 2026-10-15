@@ -1,4 +1,4 @@
-# nccl-energy-frontier
+# NCCL Energy Frontier
 
 **How much GPU-board energy does an NCCL collective cost, and does NCCL's automatic
 choice of algorithm and protocol leave energy on the table?**
@@ -7,7 +7,6 @@ choice of algorithm and protocol leave energy on the table?**
 ![measured: 2-4 RTX A6000 GPUs](https://img.shields.io/badge/measured-2%E2%80%934%20RTX%20A6000-76B900)
 ![NCCL 2.27.5](https://img.shields.io/badge/NCCL-2.27.5-76B900)
 ![python 3.11](https://img.shields.io/badge/python-3.11-3776AB)
-![CPU validation 2026-10-11](https://img.shields.io/badge/CPU%20validation%202026--10--11-124%2F124%20tests%20%C2%B7%2014%2F14%20repro%20steps-2ea44f)
 ![license MIT](https://img.shields.io/badge/license-MIT-blue)
 
 A **pilot characterization study** of latency and GPU-board energy for NCCL
@@ -21,40 +20,23 @@ latency–energy tradeoff.
 Energy values are NVML-reported estimates of participating-GPU board energy.
 No external physical-energy reference or absolute error bound was established.
 
-<p align="center">
-  <img src="docs/media/rq1_cells.gif" width="640"
-       alt="Animation: for each of the 39 pre-registered cells, the board-energy ratio of the selected pick versus NCCL automatic appears with its 95 % CI, ending at 36 of 39 confirmed savings">
-  <br>
-  <sub><b>v2 confirmatory, replayed cell by cell.</b> Each row is one pre-registered cell: the dot is the
-  board-energy ratio of the selected pick ÷ NCCL automatic (95 % CI over 12 within-session blocks), the
-  diamond is the latency ratio. Left of the black line = less than automatic. Generated from
-  <code>data/v2/processed/confirmatory/rq1.csv</code> by <code>scripts/make_readme_media.py</code>.</sub>
-</p>
+![A6000 study overview: 3 smoke launches, 23 calibration launches and 72 held-out launches; 70 primary estimates, one NVLink pair, no global-optimum claim](studies/a6000-stage2-v2.5/media/study_overview.png)
 
-> [!NOTE]
-> **Release status: v2.2 pilot release (2026-10-09, branch `ext/v2.2-audit`).**
-> * The experimental scope is frozen. No further GPU campaign belongs to this
->   release.
-> * The current claim status is in [`docs/release/claims.md`](docs/release/claims.md).
-> * The final review report is in
->   [`docs/release/final_review_report.md`](docs/release/final_review_report.md).
+[Latest study](studies/a6000-stage2-v2.5/README.md) ·
+[Results and limits](studies/a6000-stage2-v2.5/docs/results.md) ·
+[Measurement method](studies/a6000-stage2-v2.5/docs/methodology.md) ·
+[Persian educational guide](docs/teaching/NCCL_Energy_Frontier_FA.pdf) ·
+[Reproduce](#reproduce)
 
-> [!IMPORTANT]
-> **Release-candidate corrections (2026-10-11).** This content was rebuilt from a
-> sanitized export, not from the private Git history, and no new experiment was
-> run. Historical data, protocols, pre-registration and frozen numerical outputs
-> are unchanged. Current claim limits and literature support are in
-> [`docs/release/scientific_resolution.md`](docs/release/scientific_resolution.md);
-> presentation/code corrections are listed in
-> [`docs/release/corrections_2026-10-11.md`](docs/release/corrections_2026-10-11.md).
-
-## Completed A6000 measurement characterization (2026-10-14)
+## Latest extension: A6000 measurement characterization
 
 The [Stage 2 study](studies/a6000-stage2-v2.5/README.md) adds 3 smoke launches,
 23 calibration launches and 72 accepted held-out launches on the same NVLink
 pair, GPUs 4 and 5. The primary estimator is available for 70 of the 72
 held-out launches. These are new, separately reported campaigns; they do not
-replace or pool with the older results below.
+replace or pool with the older results below. [Stage 2 (2026/10),
+[execution](studies/a6000-stage2-v2.5/prep/heldout_final/execution.tsv),
+[unit estimates](studies/a6000-stage2-v2.5/prep/heldout_final/units.tsv)]
 
 For AllGather 2 MiB, LL128 versus automatic at 40 s used **+1.6454%**
 NVML-reported board energy (descriptive 95% CI **[+1.0047%, +2.2901%]**).
@@ -63,6 +45,31 @@ approximately ±0.5% mean-ratio equivalence margin. The precision target was
 missed, every aggregate adequacy scope remains unmet/unestablished, and
 global latency-versus-energy optima remain unresolved. The three sessions
 ran on one host during the same evening, not independent days or machines.
+[Stage 2 (2026/10), [results](studies/a6000-stage2-v2.5/docs/results.md),
+[contrasts](studies/a6000-stage2-v2.5/prep/heldout_final/contrasts.tsv)]
+
+![Held-out energy comparisons: session means and descriptive 95% intervals; B/A at 20 s fails thermal comparability, B/A at 40 s lacks precision, and C/A misses the precision target](studies/a6000-stage2-v2.5/media/heldout_comparisons.gif)
+
+*New-study animation. A is automatic, B is Ring/Simple, C is Ring/LL128;
+A and B both executed Ring/Simple with four channels. The animation highlights
+retained comparisons; it does not add observations or update an inference.
+[Static alternative](studies/a6000-stage2-v2.5/media/heldout_comparisons.png) ·
+[Values and source hashes](studies/a6000-stage2-v2.5/media/media_values.json).*
+
+### Why measurement duration matters
+
+Sampled-power and counter estimators show different short-region effects.
+That is observed estimator disagreement, not proof of its physical cause.
+The sampled result remains a sensitivity analysis, not a replacement primary.
+[Stage 2 (2026/10), [duration results](studies/a6000-stage2-v2.5/docs/results.md#outcomes-that-remain-unresolved)]
+
+![Duration sensitivity: all three arms and four estimators, with three-session descriptive 95% intervals; sampled power differs most at 2.5 s, mechanism unresolved](studies/a6000-stage2-v2.5/media/estimator_duration.gif)
+
+*New-study sensitivity animation. Only emphasis changes; all estimates use
+three session means, and all plotted durations are retained observations.
+The estimators share NVML infrastructure, not independent physical references.
+[Static alternative](studies/a6000-stage2-v2.5/media/estimator_duration.png) ·
+[Media methods and limitations](studies/a6000-stage2-v2.5/docs/media.md).*
 
 Read the [results and limitations](studies/a6000-stage2-v2.5/docs/results.md),
 [method and evidence](studies/a6000-stage2-v2.5/docs/methodology.md), or the
@@ -70,11 +77,37 @@ Read the [results and limitations](studies/a6000-stage2-v2.5/docs/results.md),
 This closes the bounded A6000 pilot; no Ti/Titan replication was performed
 or is required for this release.
 
-The older release banners above describe historical versions. Their private
-branch name `ext/v2.2-audit` is not the public branch
-`extension-pilot-reviewed` from which this addition was prepared.
+## Project stages: separate evidence, one repository
 
-## At a glance
+| Stage | What it contributes | Start here |
+|---|---|---|
+| Original pilot | Three of five planned trials; historical latency/energy characterization | [Pilot record](docs/pilot_v1/README_pilot_v1.md) |
+| First extension | Selected configurations versus automatic, synthetic-workload observations, earlier measurement-validation limits | [Historical claim table](docs/release/claims.md) |
+| **Latest A6000 extension** | Smoke, calibration and three held-out sessions; measurement sensitivity and a selected protocol comparison | [Current study](studies/a6000-stage2-v2.5/README.md) |
+
+The sections below preserve the first extension's results. Their GIFs are
+historical, not visualizations of the new held-out campaign. A selected
+configuration comparison is not a search for the global latency or energy
+optimum. [Release (2026/10), [claim boundaries](docs/release/claims.md),
+[Stage 2 boundaries](studies/a6000-stage2-v2.5/docs/claims.md)]
+
+<details>
+<summary>Earlier release status and corrections</summary>
+
+The earlier v2.2 pilot release used the private branch name `ext/v2.2-audit`;
+the public first-extension branch is `extension-pilot-reviewed`. Its
+[final review](docs/release/final_review_report.md),
+[scientific resolutions](docs/release/scientific_resolution.md) and
+[2026-10-11 correction ledger](docs/release/corrections_2026-10-11.md) remain
+historical records. The later A6000 study is a separate evidence category,
+not a retroactive change to that campaign or its frozen decisions.
+
+</details>
+
+<details>
+<summary><b>Historical first-extension results, GIFs and claim scoreboard</b></summary>
+
+## First extension: historical results at a glance
 
 | | |
 |---|---|
@@ -85,7 +118,7 @@ branch name `ext/v2.2-audit` is not the public branch
 | ⚖️ **Open question** | Do latency and energy optima differ? **Unresolved**: the measurement-validation precision gate was not met |
 | 🚫 **Not claimed** | Global optimum, real-model training benefit, whole-system energy, absolute sensor accuracy |
 
-## Main findings
+## First extension: findings and limitations
 
 The category tags refer to the [evidence categories](#evidence-categories-never-pooled) below.
 
@@ -104,6 +137,18 @@ The category tags refer to the [evidence categories](#evidence-categories-never-
   best configuration overall was not established.
 * The 12 blocks ran back to back in one session. They are within-session
   replicates, not independent days or hosts.
+
+<details>
+<summary>Historical first-extension animation: 39 selected-pick comparisons</summary>
+
+![Historical first-extension animation, not the new held-out campaign: energy and latency ratios across 39 pre-registered cells](docs/media/rq1_cells.gif)
+
+*Unchanged historical GIF: pick/automatic energy ratios with 95% intervals
+over 12 within-session blocks; diamonds show latency ratios. Source:
+[`data/v2/processed/confirmatory/rq1.csv`](data/v2/processed/confirmatory/rq1.csv).
+Generated by `scripts/make_readme_media.py`, not the new-study renderer.*
+
+</details>
 
 <details>
 <summary>📊 <b>Show the per-block view and where automatic leaves energy on the table</b></summary>
@@ -229,7 +274,7 @@ Neither changes any decision above.
 
 </details>
 
-## Claim scoreboard
+## Historical first-extension claim scoreboard
 
 Full wording, numbers and sources: [`docs/release/claims.md`](docs/release/claims.md).
 
@@ -243,6 +288,8 @@ Full wording, numbers and sources: [`docs/release/claims.md`](docs/release/claim
 | 🧪 **exploratory (post hoc)** | H1 temperature association · H2 unexplained counter/sample gap · H3 temperature-adjusted ratio |
 | ⚫ **superseded** | P1, P2 historical pilot |
 
+</details>
+
 ## Evidence categories (never pooled)
 
 ```mermaid
@@ -252,10 +299,12 @@ flowchart LR
     C --> W["2 · Phase 10<br/>synthetic workload"]
     G["3 · v2.2 Gate 3b<br/>measurement validation"]
     H["4 · Post-hoc<br/>exploratory"]:::explore
+    S["5 · A6000 Stage 2<br/>72 held-out launches<br/>70 primary estimates"]
     C --> R1(["pick vs auto<br/>supported"]):::ok
     W --> R2(["workload ratios<br/>descriptive only"]):::desc
     C --> R3(["latency vs energy optimum<br/>unresolved"]):::open
     G -- "D4 not sufficient" --> R3
+    S -- "aggregate adequacy not met" --> R3
     H -. "changes no claim" .-> R3
     P1 -. "superseded" .-> X(["historical record"]):::old
     classDef ok fill:#d8f3e3,stroke:#2ea44f
@@ -271,7 +320,8 @@ flowchart LR
 | 2 | **v2 exploratory and confirmatory** (2026-10-08/09): driver 580, commit-aligned counter region, 2 exploratory and 12 pre-registered confirmatory blocks, Phase 10 workload | `v2.1` | `data/v2/raw/`, `data/v2/processed/`, `figures/v2/` | [`docs/v2/`](docs/v2/), with Stage 2 corrections |
 | 3 | **v2.2 measurement validation** (gate 3b, 2026-10-09): 6 blocks on GPUs 4,5, pre-specified D1–D4 | `v2.2-fail-closed`, `v2.2-aligned-meter-logged` | `data/v2.2/` | [`gate3b_measval_report.md`](docs/v2/v22_audit/gate3b_measval_report.md) §1–4 |
 | 4 | **Post-hoc exploratory analysis**: reanalysis of the v2 data (Stage 2) and of the gate 3b data | — | `data/v2/reanalysis/`, `data/v2.2/processed/*/posthoc_temperature.json` | [`stage2_report.md`](docs/v2/v22_audit/stage2_report.md), gate 3b report §5 |
-| 5 | **Future experiments**: not run, not needed for this release | — | — | [`docs/release/limitations.md`](docs/release/limitations.md) §6 |
+| 5 | **A6000 Stage 2**: 3 smoke, 23 calibration, 72 held-out launches; primary available for 70; three same-evening sessions | `v2.5-stage2-region` | [`studies/a6000-stage2-v2.5/code/data/stage2/`](studies/a6000-stage2-v2.5/code/data/stage2/) | [Current results](studies/a6000-stage2-v2.5/docs/results.md), [protocol](studies/a6000-stage2-v2.5/protocol/STAGE2_HELDOUT1_PROTOCOL.md) |
+| 6 | **Future experiments**: not run, not needed for this release | — | — | [`docs/release/limitations.md`](docs/release/limitations.md) §6 |
 
 > [!WARNING]
 > **What "energy" means here**:
@@ -354,7 +404,19 @@ python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.
 python tests/run_tests.py
 ```
 
-**README animations** (presentation only; reads retained processed tables, writes `docs/media/`):
+**New-study README media** (CPU only, no new statistics; writes a fresh directory):
+
+```bash
+python studies/a6000-stage2-v2.5/scripts/make_readme_media.py
+python -m unittest discover -s studies/a6000-stage2-v2.5/tests -p 'test_readme_media.py' -v
+```
+
+GIF rendering requires Pillow, already a Matplotlib dependency. The generator
+refuses to overwrite an existing output directory. The animation changes only
+visual emphasis; numerical values, intervals and verdicts come from the
+retained analysis. See the [media source notes](studies/a6000-stage2-v2.5/docs/media.md).
+
+**Historical README animations** (presentation only; writes `docs/media/`):
 
 ```bash
 python scripts/make_readme_media.py
@@ -381,6 +443,8 @@ python scripts/make_readme_media.py
 
 | document | content |
 |---|---|
+| [A6000 Stage 2 results](studies/a6000-stage2-v2.5/docs/results.md) | new-study outcomes, missing estimates, thermal and precision limitations |
+| [A6000 media provenance](studies/a6000-stage2-v2.5/docs/media.md) | new GIFs, static alternatives, sources and reproduction |
 | [`docs/release/claims.md`](docs/release/claims.md) | claim-status table with key numbers and sources |
 | [`docs/release/methodology.md`](docs/release/methodology.md) | methods by evidence category |
 | [`docs/release/limitations.md`](docs/release/limitations.md) | limitations, untested code paths, future experiments |
@@ -403,6 +467,8 @@ configs/                 campaign configs, frozen schedules, frozen analysis cod
 data/, figures/          raw evidence (per-process directories on disk, see data inventory) and outputs
 results/                 versioned release tables and figures
 docs/media/              README animations (scripts/make_readme_media.py)
+studies/a6000-stage2-v2.5/ new A6000 study: data, code, protocols, analysis, figures and media
+docs/teaching/           Persian educational guide (PDF and editable source)
 tests/                   CPU test suite (python tests/run_tests.py)
 docs/                    reports (pilot_v1, v2, v2.2 audit, release)
 ```

@@ -1,4 +1,4 @@
-# Reproduction — v2.2 pilot release
+# Reproduction — historical pilot and A6000 Stage 2
 
 ## Completed A6000 Stage 2 addition
 
@@ -25,6 +25,18 @@ Their historical full suite had one stale draft-identity test; this release
 does not change that frozen test after seeing the data. Native CPU tests
 additionally require GCC/G++ and Make. New public-export tests are separate
 from hardware validation; absent compiler tests must not be called passed.
+
+The current-study README media have their own CPU-only renderer and tests:
+
+```bash
+python studies/a6000-stage2-v2.5/scripts/make_readme_media.py
+python -m unittest discover -s studies/a6000-stage2-v2.5/tests -p 'test_readme_media.py' -v
+```
+
+Rendering requires Pillow (a Matplotlib dependency) and writes to a fresh
+`reproduced/stage2-readme-media/` directory by default. No data are acquired
+and no interval or decision is refitted. See [media sources and scope](../../studies/a6000-stage2-v2.5/docs/media.md).
+The older `scripts/make_readme_media.py` generates only historical GIFs.
 
 There are two separate paths:
 * **§1–2, analysis only**: CPU, no GPU access, no NVML, no administrator
@@ -67,7 +79,12 @@ sanitized export.
 python tests/run_tests.py
 ```
 
-Expected: all tests pass (`N/N passed, 0 failed`).
+The historical expectation was an all-green suite on its complete original
+environment. This public package does not claim that result on every local
+installation: missing compiler/private-fixture prerequisites and a frozen
+stale test are disclosed in the [release validation report](a6000_stage2_release_notes.md#local-verification).
+The public replay and its separate guard tests are the supported checks of
+the retained public data; neither validates a new GPU acquisition path.
 
 **Re-run every published analysis** into a new directory and compare each
 output file with the committed one:
