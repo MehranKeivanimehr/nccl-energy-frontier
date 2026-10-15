@@ -1,0 +1,13 @@
+{
+  "provenance_status": "PUBLIC_DERIVATIVE_REPLAY",
+  "comparison": {
+    "numeric_fields_checked": 1918,
+    "max_absolute_difference": 4.3990500261589793e-13,
+    "relative_tolerance": 1e-11,
+    "absolute_tolerance": 1e-11,
+    "scientific_decisions_and_missingness": "UNCHANGED",
+    "identical_positive_infinite_readiness_diagnostics": [
+      "q3_readiness/tried/0/q90_time_to_full_gate_s"
+    ]
+  }
+}

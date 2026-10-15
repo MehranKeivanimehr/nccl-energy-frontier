@@ -1,0 +1,92 @@
+{
+ "frozen_utc": "2026-10-09T19:29:13Z",
+ "method": "v2.2",
+ "campaign": "v2.2-measval-01",
+ "entries_sha256": "536b704b814aede945af45e066732faada0d0496517890f8279f96cb755b61eb",
+ "entries": {
+  "P2_NVL__all_gather__auto__2097152__T2.5s": {
+   "R": 47802,
+   "w": 3825,
+   "t_gpu_cal_s": 5.229958726908331e-05,
+   "target_region_s": 2.5,
+   "source": "median t_gpu of 12 accepted historical units"
+  },
+  "P2_NVL__all_gather__auto__2097152__T10s": {
+   "R": 191207,
+   "w": 3825,
+   "t_gpu_cal_s": 5.229958726908331e-05,
+   "target_region_s": 10.0,
+   "source": "median t_gpu of 12 accepted historical units"
+  },
+  "P2_NVL__all_gather__auto__2097152__T20s": {
+   "R": 382413,
+   "w": 3825,
+   "t_gpu_cal_s": 5.229958726908331e-05,
+   "target_region_s": 20.0,
+   "source": "median t_gpu of 12 accepted historical units"
+  },
+  "P2_NVL__all_gather__auto__2097152__T40s": {
+   "R": 764825,
+   "w": 3825,
+   "t_gpu_cal_s": 5.229958726908331e-05,
+   "target_region_s": 40.0,
+   "source": "median t_gpu of 12 accepted historical units"
+  },
+  "P2_NVL__all_gather__Ring-LL128__2097152__T2.5s": {
+   "R": 49145,
+   "w": 3932,
+   "t_gpu_cal_s": 5.087066746836944e-05,
+   "target_region_s": 2.5,
+   "source": "median t_gpu of 12 accepted historical units"
+  },
+  "P2_NVL__all_gather__Ring-LL128__2097152__T10s": {
+   "R": 196577,
+   "w": 3932,
+   "t_gpu_cal_s": 5.087066746836944e-05,
+   "target_region_s": 10.0,
+   "source": "median t_gpu of 12 accepted historical units"
+  },
+  "P2_NVL__all_gather__Ring-LL128__2097152__T20s": {
+   "R": 393154,
+   "w": 3932,
+   "t_gpu_cal_s": 5.087066746836944e-05,
+   "target_region_s": 20.0,
+   "source": "median t_gpu of 12 accepted historical units"
+  },
+  "P2_NVL__all_gather__Ring-LL128__2097152__T40s": {
+   "R": 786308,
+   "w": 3932,
+   "t_gpu_cal_s": 5.087066746836944e-05,
+   "target_region_s": 40.0,
+   "source": "median t_gpu of 12 accepted historical units"
+  },
+  "P2_NVL__all_gather__Ring-Simple__2097152__T2.5s": {
+   "R": 47799,
+   "w": 3824,
+   "t_gpu_cal_s": 5.230343513580975e-05,
+   "target_region_s": 2.5,
+   "source": "median t_gpu of 2 accepted historical units"
+  },
+  "P2_NVL__all_gather__Ring-Simple__2097152__T10s": {
+   "R": 191193,
+   "w": 3824,
+   "t_gpu_cal_s": 5.230343513580975e-05,
+   "target_region_s": 10.0,
+   "source": "median t_gpu of 2 accepted historical units"
+  },
+  "P2_NVL__all_gather__Ring-Simple__2097152__T20s": {
+   "R": 382385,
+   "w": 3824,
+   "t_gpu_cal_s": 5.230343513580975e-05,
+   "target_region_s": 20.0,
+   "source": "median t_gpu of 2 accepted historical units"
+  },
+  "P2_NVL__all_gather__Ring-Simple__2097152__T40s": {
+   "R": 764769,
+   "w": 3824,
+   "t_gpu_cal_s": 5.230343513580975e-05,
+   "target_region_s": 40.0,
+   "source": "median t_gpu of 2 accepted historical units"
+  }
+ }
+}

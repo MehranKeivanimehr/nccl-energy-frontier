@@ -1,0 +1,262 @@
+# held-out session 2 FINAL config (2026-10-14): heldout_s2_DRAFT.yaml + allocation, window, scope_expected, readiness_rules, freeze_record. Units and counts unchanged.
+implementation_id: stage2-cg1-2026-10-12
+method_id: v2.5-stage2-region
+output_root: data/stage2
+energy_source: counter
+max_attempts: 1
+collective: all_gather
+size_bytes: 2097152
+counts:
+  A:
+    w: 95604
+    R:
+      '2.5': 47802
+      '10': 191207
+      '20': 382413
+      '40': 764825
+  B:
+    w: 95597
+    R:
+      '2.5': 47799
+      '10': 191193
+      '20': 382385
+      '40': 764769
+  C:
+    w: 98289
+    R:
+      '2.5': 49145
+      '10': 196577
+      '20': 393154
+      '40': 786308
+power_lag_s: 0.75
+sampler_period_s: 0.05
+allocation:
+- 4
+- 5
+placements:
+- id: P2_NVL
+  gpus:
+  - 4
+  - 5
+allocation_confirmation:
+  confirmed_by: user
+  gpus:
+  - 4
+  - 5
+  window_start_utc: '2026-10-14T01:38:31+00:00'
+  window_end_utc: '2026-10-14T03:38:31+00:00'
+  user_authorization_sha256: 835ff01301f9d3aaef1fc44c5f8889e4e1b08daf136f0d781693437a9717d900
+  scope_read_sha256: f4e24f2a28791ef287888a326da8b611691a4745cc5560317b666910db1fdf9e
+  note: user permission for GPUs 4,5 if idle ('if they are idle we can use them'); read-only idle and scope check passed;
+    fixed absolute deadline; not a scheduler reservation
+scope_expected:
+  gpu_name: NVIDIA RTX A6000
+  driver: 580.178.04
+  link: NV4
+  uuids:
+  - A6000-b10caa4a
+  - A6000-f5f81ac3
+  numa:
+    '4': 1
+    '5': 1
+  power_limit_mw:
+  - 300000
+  - 300000
+  max_clk_gr_mhz:
+  - 2100
+  - 2100
+freeze_record: ../protocol/FREEZE_H_S2.json
+campaign: v2.5-heldout
+mode: STAGE2_HELDOUT
+session: 2
+total_power_samples: false
+readiness_rules:
+  t_launch_c: 26
+  bands:
+    '4':
+      t_region_c:
+      - 28.0
+      - 31.2
+      clk_mhz:
+      - 1950.0
+      - 1980.0
+      pstates:
+      - 2
+    '5':
+      t_region_c:
+      - 29.0
+      - 32.0
+      clk_mhz:
+      - 1920.0
+      - 1950.0
+      pstates:
+      - 2
+units:
+- launch_id: s2-b1-p01
+  arm: C
+  length_s: 10.0
+  pause_ns: 56895966
+  block: 1
+  pos: 1
+  triple: 1
+- launch_id: s2-b1-p02
+  arm: A
+  length_s: 10.0
+  pause_ns: 27833682
+  block: 1
+  pos: 2
+  triple: 1
+- launch_id: s2-b1-p03
+  arm: B
+  length_s: 20.0
+  pause_ns: 86392302
+  block: 1
+  pos: 3
+  triple: 1
+- launch_id: s2-b1-p04
+  arm: A
+  length_s: 20.0
+  pause_ns: 74394227
+  block: 1
+  pos: 4
+  triple: 2
+- launch_id: s2-b1-p05
+  arm: C
+  length_s: 40.0
+  pause_ns: 25869432
+  block: 1
+  pos: 5
+  triple: 2
+- launch_id: s2-b1-p06
+  arm: B
+  length_s: 40.0
+  pause_ns: 83581482
+  block: 1
+  pos: 6
+  triple: 2
+- launch_id: s2-b1-p07
+  arm: B
+  length_s: 10.0
+  pause_ns: 25117275
+  block: 1
+  pos: 7
+  triple: 3
+- launch_id: s2-b1-p08
+  arm: A
+  length_s: 2.5
+  pause_ns: 90377591
+  block: 1
+  pos: 8
+  triple: 3
+- launch_id: s2-b1-p09
+  arm: C
+  length_s: 2.5
+  pause_ns: 62398187
+  block: 1
+  pos: 9
+  triple: 3
+- launch_id: s2-b1-p10
+  arm: C
+  length_s: 20.0
+  pause_ns: 19702740
+  block: 1
+  pos: 10
+  triple: 4
+- launch_id: s2-b1-p11
+  arm: B
+  length_s: 2.5
+  pause_ns: 55701998
+  block: 1
+  pos: 11
+  triple: 4
+- launch_id: s2-b1-p12
+  arm: A
+  length_s: 40.0
+  pause_ns: 77813995
+  block: 1
+  pos: 12
+  triple: 4
+- launch_id: s2-b2-p01
+  arm: B
+  length_s: 40.0
+  pause_ns: 20588127
+  block: 2
+  pos: 1
+  triple: 1
+- launch_id: s2-b2-p02
+  arm: C
+  length_s: 20.0
+  pause_ns: 64391782
+  block: 2
+  pos: 2
+  triple: 1
+- launch_id: s2-b2-p03
+  arm: A
+  length_s: 20.0
+  pause_ns: 74120190
+  block: 2
+  pos: 3
+  triple: 1
+- launch_id: s2-b2-p04
+  arm: A
+  length_s: 2.5
+  pause_ns: 89007498
+  block: 2
+  pos: 4
+  triple: 2
+- launch_id: s2-b2-p05
+  arm: B
+  length_s: 20.0
+  pause_ns: 27011368
+  block: 2
+  pos: 5
+  triple: 2
+- launch_id: s2-b2-p06
+  arm: C
+  length_s: 10.0
+  pause_ns: 33074039
+  block: 2
+  pos: 6
+  triple: 2
+- launch_id: s2-b2-p07
+  arm: C
+  length_s: 2.5
+  pause_ns: 73771680
+  block: 2
+  pos: 7
+  triple: 3
+- launch_id: s2-b2-p08
+  arm: B
+  length_s: 2.5
+  pause_ns: 26787185
+  block: 2
+  pos: 8
+  triple: 3
+- launch_id: s2-b2-p09
+  arm: A
+  length_s: 40.0
+  pause_ns: 17213271
+  block: 2
+  pos: 9
+  triple: 3
+- launch_id: s2-b2-p10
+  arm: B
+  length_s: 10.0
+  pause_ns: 10582033
+  block: 2
+  pos: 10
+  triple: 4
+- launch_id: s2-b2-p11
+  arm: A
+  length_s: 10.0
+  pause_ns: 19020152
+  block: 2
+  pos: 11
+  triple: 4
+- launch_id: s2-b2-p12
+  arm: C
+  length_s: 40.0
+  pause_ns: 98820296
+  block: 2
+  pos: 12
+  triple: 4

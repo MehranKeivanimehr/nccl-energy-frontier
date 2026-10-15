@@ -1,0 +1,177 @@
+[
+  {
+    "session": 1,
+    "utc_start": "2026-10-14T00:42:51+00:00",
+    "utc_end": "2026-10-14T01:26:03+00:00",
+    "duration_min": 43.2,
+    "n_attempts": 24,
+    "n_accepted": 24,
+    "baseline_counter_W": {
+      "start": {
+        "4": 28.423640573186507,
+        "5": 21.329446097918982
+      },
+      "end": {
+        "4": 28.45759534023927,
+        "5": 21.466744171068147
+      }
+    },
+    "scope": {
+      "gpu_name": "NVIDIA RTX A6000",
+      "driver": "580.178.04",
+      "link": "NV4",
+      "uuids": [
+        "A6000-b10caa4a",
+        "A6000-f5f81ac3"
+      ],
+      "numa": {
+        "4": 1,
+        "5": 1
+      },
+      "power_limit_mw": [
+        300000,
+        300000
+      ],
+      "max_clk_gr_mhz": [
+        2100,
+        2100
+      ]
+    },
+    "xid": {
+      "status": "ok",
+      "per_gpu": {
+        "4": "registered",
+        "5": "registered"
+      }
+    },
+    "postflight": {
+      "owned_processes_left_on_gpus": [],
+      "allocation_problems": []
+    },
+    "authorization": [
+      "The targeted review of heldout-1 r1 is complete. The previous production-provenance gap is closed. Proceed to the already planned session-1 gate; no additional CPU redesign, smoke run, calibration rerun, or matrix expansion is requested.",
+      "Allocation confirmation:",
+      "Two idle gpus like 6 and 7 or 4 and 5.",
+      "Execution window:",
+      "Start: Now",
+      "End: As much as required. Max 120 minutes",
+      "Do not launch while either field is missing or remains a placeholder.",
+      "Once the genuine allocation and window are confirmed:",
+      "* Create the session-1 config and Freeze-H as new files.",
+      "* Verify all bindings, the same physical GPU pair, and the live environment using the unchanged gates.",
+      "* Run exactly the existing 24 session-1 launches once. No retries, replacements, dose, M4d, threshold changes, or extra conditions.",
+      "* Preserve every attempt, rejection, partial file, and stop reason.",
+      "* Use only our allocated GPUs and owned processes. No administrator actions or global clock, power, or driver changes.",
+      "Keep the accepted scope reductions and all Q1/adequacy limitations unchanged. Use default production trust anchors.",
+      "After session 1, deliver one evidence packet with its manifest, authorization, actual config/Freeze-H, raw records, telemetry, baselines, execution/QC and cleanup records. Then wait for fresh authorization for session 2. Do not adjust the study based on interim outcomes; final inferential analysis follows the three planned sessions.",
+      "No commit, push, publication, training campaign, or Pascal campaign."
+    ]
+  },
+  {
+    "session": 2,
+    "utc_start": "2026-10-14T01:39:12+00:00",
+    "utc_end": "2026-10-14T02:20:25+00:00",
+    "duration_min": 41.21666666666667,
+    "n_attempts": 24,
+    "n_accepted": 24,
+    "baseline_counter_W": {
+      "start": {
+        "4": 28.348686931689983,
+        "5": 21.186345470871405
+      },
+      "end": {
+        "4": 28.28917828167513,
+        "5": 21.346552436171212
+      }
+    },
+    "scope": {
+      "gpu_name": "NVIDIA RTX A6000",
+      "driver": "580.178.04",
+      "link": "NV4",
+      "uuids": [
+        "A6000-b10caa4a",
+        "A6000-f5f81ac3"
+      ],
+      "numa": {
+        "4": 1,
+        "5": 1
+      },
+      "power_limit_mw": [
+        300000,
+        300000
+      ],
+      "max_clk_gr_mhz": [
+        2100,
+        2100
+      ]
+    },
+    "xid": {
+      "status": "ok",
+      "per_gpu": {
+        "4": "registered",
+        "5": "registered"
+      }
+    },
+    "postflight": {
+      "owned_processes_left_on_gpus": [],
+      "allocation_problems": []
+    },
+    "authorization": [
+      "if they are idle we can use them",
+      "Window question answer: \"Now, 120 min (Recommended)\" - Start when your answer arrives; fixed end at start + 120 min, same as session 1. I recheck that GPUs 4 and 5 are idle and refuse to launch if they are not."
+    ]
+  },
+  {
+    "session": 3,
+    "utc_start": "2026-10-14T02:28:30+00:00",
+    "utc_end": "2026-10-14T03:10:35+00:00",
+    "duration_min": 42.083333333333336,
+    "n_attempts": 24,
+    "n_accepted": 24,
+    "baseline_counter_W": {
+      "start": {
+        "4": 28.333725407476567,
+        "5": 21.22325724962697
+      },
+      "end": {
+        "4": 27.957634403948912,
+        "5": 21.283414056188438
+      }
+    },
+    "scope": {
+      "gpu_name": "NVIDIA RTX A6000",
+      "driver": "580.178.04",
+      "link": "NV4",
+      "uuids": [
+        "A6000-b10caa4a",
+        "A6000-f5f81ac3"
+      ],
+      "numa": {
+        "4": 1,
+        "5": 1
+      },
+      "power_limit_mw": [
+        300000,
+        300000
+      ],
+      "max_clk_gr_mhz": [
+        2100,
+        2100
+      ]
+    },
+    "xid": {
+      "status": "ok",
+      "per_gpu": {
+        "4": "registered",
+        "5": "registered"
+      }
+    },
+    "postflight": {
+      "owned_processes_left_on_gpus": [],
+      "allocation_problems": []
+    },
+    "authorization": [
+      "Go ahead with session 3 and do all the rest."
+    ]
+  }
+]

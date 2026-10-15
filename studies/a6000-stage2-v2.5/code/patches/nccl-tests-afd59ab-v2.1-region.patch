@@ -1,0 +1,238 @@
+diff --git a/src/common.cu b/src/common.cu
+index fa08c42..d770055 100644
+--- a/src/common.cu
++++ b/src/common.cu
+@@ -20,6 +20,95 @@
+ #include "util.h"
+ #include "../verifiable/verifiable.h"
+ 
++// ===== nccl-energy-frontier methodology-v2 region instrumentation (begin) =====
++// Enabled only when NCCLE_REGION_FILE is set. For each benchmarked size and
++// placement it reads the NVML cumulative energy counter of every participating
++// GPU at two synchronized boundaries that enclose exactly the timed
++// collectives (warm-up excluded), records CUDA events around the timed loop,
++// and appends one JSON record per region to NCCLE_REGION_FILE.
++#include <dlfcn.h>
++#include <time.h>
++#include <unistd.h>
++#define NCCLE_MAX_GPUS 64
++typedef void* nccleNvmlDevice_t;
++struct NccleNvml {
++  int loaded = 0, initRc = -1;
++  int (*init)(void) = nullptr;
++  int (*byPci)(const char*, nccleNvmlDevice_t*) = nullptr;
++  int (*energy)(nccleNvmlDevice_t, unsigned long long*) = nullptr;
++  int (*index)(nccleNvmlDevice_t, unsigned int*) = nullptr;
++};
++struct NccleGpu {
++  int set; int cudaDev; char pci[32]; unsigned int nvmlIndex; nccleNvmlDevice_t h; int hRc;
++  unsigned long long e0, e1; int rc0, rc1;
++  long long t0a, t0b, t1a, t1b;  // CLOCK_MONOTONIC ns before/after the start and end reads
++  float eventMs; int eventRc;
++  // v2.1: commit-aligned end read
++  int nEdges; long long edgeLo[4], edgeHi[4];     // brackets (ns) that contain a counter commit
++  long long phaseNs, bracketNs;                   // chosen commit phase (midpoint of narrowest bracket)
++  long long tLoopEndNs, tCommitNs;                // loop end (after sync) and predicted commit used for the end read
++  unsigned long long ePost; int rcPost; long long tPostA, tPostB;  // one more window to measure idle-tail power
++};
++static NccleNvml nccleNvml;
++static std::once_flag nccleOnce;
++static NccleGpu nccleGpu[NCCLE_MAX_GPUS];
++static long long nccleNowNs() { struct timespec ts; clock_gettime(CLOCK_MONOTONIC, &ts); return (long long)ts.tv_sec*1000000000LL + ts.tv_nsec; }
++static void nccleLoad() {
++  void* lib = dlopen("libnvidia-ml.so.1", RTLD_NOW | RTLD_LOCAL);
++  if (!lib) return;
++  nccleNvml.init = (int(*)(void))dlsym(lib, "nvmlInit_v2");
++  nccleNvml.byPci = (int(*)(const char*, nccleNvmlDevice_t*))dlsym(lib, "nvmlDeviceGetHandleByPciBusId_v2");
++  nccleNvml.energy = (int(*)(nccleNvmlDevice_t, unsigned long long*))dlsym(lib, "nvmlDeviceGetTotalEnergyConsumption");
++  nccleNvml.index = (int(*)(nccleNvmlDevice_t, unsigned int*))dlsym(lib, "nvmlDeviceGetIndex");
++  if (nccleNvml.init && nccleNvml.byPci && nccleNvml.energy && nccleNvml.index) {
++    nccleNvml.initRc = nccleNvml.init();
++    nccleNvml.loaded = (nccleNvml.initRc == 0);
++  }
++}
++static const char* nccleRegionFile() { return getenv("NCCLE_REGION_FILE"); }
++static void nccleBindGpu(int gidx, int cudaDev) {
++  NccleGpu& G = nccleGpu[gidx];
++  if (G.set) return;
++  G.cudaDev = cudaDev; G.hRc = -1; G.nvmlIndex = 0xffffffffu;
++  if (cudaDeviceGetPCIBusId(G.pci, sizeof(G.pci), cudaDev) != cudaSuccess) strcpy(G.pci, "unknown");
++  if (nccleNvml.loaded) {
++    G.hRc = nccleNvml.byPci(G.pci, &G.h);
++    if (G.hRc == 0) nccleNvml.index(G.h, &G.nvmlIndex);
++  }
++  G.set = 1;
++}
++static void nccleRead(NccleGpu& G, unsigned long long* e, int* rc, long long* ta, long long* tb) {
++  *ta = nccleNowNs();
++  if (G.hRc == 0) *rc = nccleNvml.energy(G.h, e); else { *rc = (G.hRc == 0 ? -1 : 1000 + G.hRc); *e = 0; }
++  *tb = nccleNowNs();
++}
++static long long nccleSleepUntil(long long tNs) {
++  long long now = nccleNowNs();
++  if (tNs > now) { struct timespec ts; ts.tv_sec = (tNs - now) / 1000000000LL; ts.tv_nsec = (tNs - now) % 1000000000LL; nanosleep(&ts, nullptr); }
++  return nccleNowNs();
++}
++static long long ncclePeriodNs() { const char* e = getenv("NCCLE_COMMIT_PERIOD_MS"); return (long long)((e ? atof(e) : 100.0) * 1e6); }
++// Poll the counter (GPU idle, outside the region) to bracket counter commits.
++static void nccleProbePhase(NccleGpu& G) {
++  G.nEdges = 0; G.phaseNs = -1; G.bracketNs = -1;
++  if (G.hRc != 0) return;
++  unsigned long long v, prev = 0; long long ta, tb, prevTa = 0; int rc;
++  long long tStop = nccleNowNs() + 4 * ncclePeriodNs();
++  bool first = true;
++  while (nccleNowNs() < tStop && G.nEdges < 4) {
++    ta = nccleNowNs(); rc = nccleNvml.energy(G.h, &v); tb = nccleNowNs();
++    if (rc != 0) return;
++    if (!first && v != prev) { G.edgeLo[G.nEdges] = prevTa; G.edgeHi[G.nEdges] = tb; G.nEdges++; }
++    first = false; prev = v; prevTa = ta;
++  }
++  for (int k = 0; k < G.nEdges; k++) {
++    long long w = G.edgeHi[k] - G.edgeLo[k];
++    if (G.bracketNs < 0 || w < G.bracketNs) { G.bracketNs = w; G.phaseNs = (G.edgeLo[k] + G.edgeHi[k]) / 2; }
++  }
++}
++
++// ===== nccl-energy-frontier methodology-v2 region instrumentation (end) =====
++
+ #if defined(NCCL_OS_LINUX)
+ #pragma weak ncclCommWindowRegister
+ #pragma weak ncclCommWindowDeregister
+@@ -732,6 +821,34 @@ testResult_t BenchTime(struct threadArgs* args, ncclDataType_t type, ncclRedOp_t
+ 
+   Barrier(args);
+ 
++  // ---- NCCLE region start (warm-up is complete and excluded) ----
++  const int nccle = nccleRegionFile() != nullptr;
++  std::vector<cudaEvent_t> nccleEvS(args->nGpus), nccleEvE(args->nGpus);
++  if (nccle) {
++    if (cudaGraphLaunches >= 1 || blocking_coll != 0 || per_iter_timing || args->nProcs != 1 ||
++        args->nThreads * args->nGpus > NCCLE_MAX_GPUS) {
++      fprintf(stderr, "NCCLE: region instrumentation requires -G 0 -z 0 -I 0, a single process and <= %d GPUs\n", NCCLE_MAX_GPUS);
++      return testInternalError;
++    }
++    std::call_once(nccleOnce, nccleLoad);
++    for (int i = 0; i < args->nGpus; i++) nccleBindGpu(args->thread*args->nGpus + i, args->gpus[i]);
++    TESTCHECK(testStreamSynchronize(args->nGpus, args->streams, args->comms));
++    Barrier(args);
++    for (int i = 0; i < args->nGpus; i++) nccleProbePhase(nccleGpu[args->thread*args->nGpus + i]);
++    Barrier(args);
++    for (int i = 0; i < args->nGpus; i++) {
++      NccleGpu& G = nccleGpu[args->thread*args->nGpus + i];
++      nccleRead(G, &G.e0, &G.rc0, &G.t0a, &G.t0b);
++    }
++    Barrier(args);
++    for (int i = 0; i < args->nGpus; i++) {
++      CUDACHECK(cudaSetDevice(args->gpus[i]));
++      CUDACHECK(cudaEventCreate(&nccleEvS[i]));
++      CUDACHECK(cudaEventCreate(&nccleEvE[i]));
++      CUDACHECK(cudaEventRecord(nccleEvS[i], args->streams[i]));
++    }
++  }
++
+ #if CUDART_VERSION >= 11030
+   std::vector<cudaGraph_t> graphs(args->nGpus);
+   std::vector<cudaGraphExec_t> graphExec(args->nGpus);
+@@ -792,12 +909,51 @@ testResult_t BenchTime(struct threadArgs* args, ncclDataType_t type, ncclRedOp_t
+   }
+ #endif
+ 
++  if (nccle) {
++    for (int i = 0; i < args->nGpus; i++) {
++      CUDACHECK(cudaSetDevice(args->gpus[i]));
++      CUDACHECK(cudaEventRecord(nccleEvE[i], args->streams[i]));
++    }
++  }
+   double cputimeSec = blocking_coll == 3 ? collOnlySec : tim.elapsed();
+   cputimeSec /= iters*agg_iters;
+   TESTCHECK(completeColl(args));
+ 
+   // Exclude per-iteration result processing from the reported time.
+   double deltaSec = (blocking_coll == 3 ? collOnlySec : tim.elapsed())/(iters*agg_iters);
++
++  // ---- NCCLE region end (all timed collectives complete on every GPU) ----
++  if (nccle) {
++    TESTCHECK(testStreamSynchronize(args->nGpus, args->streams, args->comms));
++    Barrier(args);
++    {
++      const long long P = ncclePeriodNs(), guard = 2000000LL, margin = 8000000LL;
++      for (int i = 0; i < args->nGpus; i++) {
++        NccleGpu& G = nccleGpu[args->thread*args->nGpus + i];
++        G.tLoopEndNs = nccleNowNs();
++        if (G.phaseNs >= 0) {
++          // first predicted commit strictly after the loop end (+guard); the end read follows it by `margin`
++          long long k = (G.tLoopEndNs + guard - G.phaseNs + P - 1) / P;
++          G.tCommitNs = G.phaseNs + k * P;
++        } else {
++          G.tCommitNs = -1;  // phase unknown: wait two full periods (flagged offline, no tail correction)
++        }
++        nccleSleepUntil(G.tCommitNs >= 0 ? G.tCommitNs + margin : G.tLoopEndNs + 2 * P);
++        nccleRead(G, &G.e1, &G.rc1, &G.t1a, &G.t1b);
++        // one more commit: energy from the end read to the next commit, at idle-with-context power
++        if (G.tCommitNs >= 0) nccleSleepUntil(G.tCommitNs + P + margin); else nccleSleepUntil(G.t1b + P + margin);
++        nccleRead(G, &G.ePost, &G.rcPost, &G.tPostA, &G.tPostB);
++      }
++    }
++    Barrier(args);
++    for (int i = 0; i < args->nGpus; i++) {
++      NccleGpu& G = nccleGpu[args->thread*args->nGpus + i];
++      CUDACHECK(cudaSetDevice(args->gpus[i]));
++      G.eventRc = (int)cudaEventElapsedTime(&G.eventMs, nccleEvS[i], nccleEvE[i]);
++      CUDACHECK(cudaEventDestroy(nccleEvS[i]));
++      CUDACHECK(cudaEventDestroy(nccleEvE[i]));
++    }
++  }
+   if (cudaGraphLaunches >= 1) deltaSec = deltaSec/cudaGraphLaunches;
+ 
+   if (record) {
+@@ -825,6 +981,35 @@ testResult_t BenchTime(struct threadArgs* args, ncclDataType_t type, ncclRedOp_t
+ 
+   Barrier(args);
+ 
++  if (nccle && is_main_thread) {
++    FILE* f = fopen(nccleRegionFile(), "a");
++    if (f == nullptr) { fprintf(stderr, "NCCLE: cannot open region file\n"); return testInternalError; }
++    int nTot = args->nThreads * args->nGpus;
++    fprintf(f, "{\"schema\":\"nccle-region-v2\",\"commit_period_ns\":%lld,", ncclePeriodNs()); fprintf(f, "\"coll\":\"%s\",\"size_bytes\":%zu,\"count\":%zu,"
++               "\"type\":\"%s\",\"op\":%d,\"in_place\":%d,\"warmup_iters\":%d,\"iters\":%d,\"agg_iters\":%d,"
++               "\"graph_launches\":%d,\"R\":%lld,\"nranks\":%d,\"host_sec_per_coll\":%.9e,\"pid\":%d,"
++               "\"nvml_loaded\":%d,\"nvml_init_rc\":%d,\"gpus\":[",
++            args->collTest->name, std::max(args->sendBytes, args->expectedBytes), count, test_typenames[type], (int)op,
++            in_place, warmup_iters, iters, agg_iters, cudaGraphLaunches, (long long)iters*agg_iters, nTot, deltaSec,
++            (int)getpid(), nccleNvml.loaded, nccleNvml.initRc);
++    for (int g = 0; g < nTot; g++) {
++      NccleGpu& G = nccleGpu[g];
++      fprintf(f, "%s{\"rank\":%d,\"cuda_dev\":%d,\"pci\":\"%s\",\"nvml_index\":%u,\"handle_rc\":%d,"
++                 "\"e_start_mJ\":%llu,\"e_end_mJ\":%llu,\"rc_start\":%d,\"rc_end\":%d,"
++                 "\"t_start_a_ns\":%lld,\"t_start_b_ns\":%lld,\"t_end_a_ns\":%lld,\"t_end_b_ns\":%lld,"
++                 "\"event_ms\":%.6f,\"event_rc\":%d,\"n_edges\":%d,\"phase_ns\":%lld,\"bracket_ns\":%lld,"
++                 "\"t_loop_end_ns\":%lld,\"t_commit_ns\":%lld,\"e_post_mJ\":%llu,\"rc_post\":%d,"
++                 "\"t_post_a_ns\":%lld,\"t_post_b_ns\":%lld,\"edges\":[",
++              g ? "," : "", g, G.cudaDev, G.pci, G.nvmlIndex, G.hRc, G.e0, G.e1, G.rc0, G.rc1,
++              G.t0a, G.t0b, G.t1a, G.t1b, (double)G.eventMs, G.eventRc, G.nEdges, G.phaseNs, G.bracketNs,
++              G.tLoopEndNs, G.tCommitNs, G.ePost, G.rcPost, G.tPostA, G.tPostB);
++      for (int k = 0; k < G.nEdges; k++) fprintf(f, "%s[%lld,%lld]", k ? "," : "", G.edgeLo[k], G.edgeHi[k]);
++      fprintf(f, "]}");
++    }
++    fprintf(f, "]}\n");
++    fflush(f); fsync(fileno(f)); fclose(f);
++  }
++
+   int64_t wrongElts = 0;
+   static thread_local int rep = 0;
+   rep++;
+@@ -955,8 +1140,12 @@ testResult_t TimeTest(struct threadArgs* args, ncclDataType_t type, const char*
+     for (size_t size = args->minbytes; size<=args->maxbytes; size = ((args->stepfactor > 1) ? size*args->stepfactor : size+args->stepbytes)) {
+       setupArgs(size, type, args);
+       writeBenchmarkLinePreamble(max(args->sendBytes, args->expectedBytes), args->nbytes / wordSize(type), typeName, opName, root);
+-      TESTCHECK(BenchTime(args, type, op, root, 0));
+-      TESTCHECK(BenchTime(args, type, op, root, 1));
++      {
++        const char* pl = getenv("NCCLE_PLACEMENT");  // "oop", "ip" or unset (both)
++        int doOop = !(pl && strcmp(pl, "ip") == 0), doIp = !(pl && strcmp(pl, "oop") == 0);
++        if (doOop) { TESTCHECK(BenchTime(args, type, op, root, 0)); } else { writeBenchMarkLineNullBody(); }
++        if (doIp) { TESTCHECK(BenchTime(args, type, op, root, 1)); } else { writeBenchMarkLineNullBody(); }
++      }
+       writeBenchmarkLineTerminator(iters, "");
+     }
+   } while (--repeat);

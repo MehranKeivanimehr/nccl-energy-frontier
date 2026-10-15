@@ -1,0 +1,20 @@
+# Claim boundaries
+
+Local files support local observations. External references define APIs and explain measurement/statistical principles; they do not certify this dataset's numerical effects. The table separates reproduced measurements from claims not established by them. [Stage 2 (2026/10), [results](results.md), [source scope](sources.md)]
+
+| Claim | Status and necessary qualification | Evidence |
+|---|---|---|
+| 72 held-out launches completed and were accepted | Supported; primary available for 70, not 72 | [execution.tsv](../prep/heldout_final/execution.tsv), [units.tsv](../prep/heldout_final/units.tsv) |
+| A and B executed the same NCCL configuration | Supported for these runs: Ring/Simple/4 channels | [execution.tsv](../prep/heldout_final/execution.tsv), per-rank profiler records under [sessions](../code/data/stage2/v2.5-heldout) |
+| Identical execution agrees to approximately ±0.5% at 10 s | Supported only for the conditional mean ratio under the session model; unadjusted per-contrast TOST | [contrasts.tsv](../prep/heldout_final/contrasts.tsv), [decision code](../code/src/ncclenergy/v2/stage2_decisions.py) |
+| LL128 used more energy than automatic at 40 s | Supported as +1.6454% NVML-reported J/op in one selected 2 MiB AllGather comparison; target precision missed | [contrasts.tsv](../prep/heldout_final/contrasts.tsv), [analysis](../prep/heldout_final/heldout_analysis.json) |
+| The method has established sub-percent physical accuracy | Not established; systematic bounds unknown and no external meter | [adequacy.tsv](../prep/heldout_final/adequacy.tsv), [systematic components](../code/src/ncclenergy/v2/stage2_decisions.py) |
+| A counter read physically resets or discards accumulated energy | Mechanism not established; read-dose dependence in reported energy is the observation | [calibration analysis](../prep/calib1/run/calibration_analysis.json), [NVML definition](https://docs.nvidia.com/deploy/nvml-api/latest/api/group__nvmlDeviceQueries.html) |
+| Integrated power is ground truth | Not established; it is a labelled sensitivity with unresolved length dependence | [contrasts.tsv](../prep/heldout_final/contrasts.tsv), [energy code](../code/src/ncclenergy/v2/stage2_calibration.py) |
+| Energy and latency global optima differ | Not established; H-D4 is one selected comparison, not an exhaustive confirmed optimum search | [endpoint scope](../code/src/ncclenergy/v2/stage2_heldout.py), [held-out protocol](../protocol/STAGE2_HELDOUT1_PROTOCOL.md) |
+| Historical synthetic training savings prove equivalent real training | Not established; this stage contains no training and does not recover missing cross-policy training numerics | [stage scope](../protocol/STAGE2_HELDOUT1_PROTOCOL.md), [historical workload](../../../src/ncclenergy/v2/workload.py) |
+| Three sessions demonstrate independence or generalize across hosts | Not established; same pair, same host, same evening | [session summaries](../code/data/stage2/v2.5-heldout), [statistics](../code/src/ncclenergy/v2/stage2_decisions.py) |
+| Idle checks prove administrative allocation or host exclusivity | Not established; preserved records distinguish user authorization, interpretation and monitored availability | [publication policy](publication_status.md), [config authorization notes](../code/configs/stage2/heldout_s1.yaml) |
+| Every inconclusive result has been resolved | False; H-D1/H-D2, H-D3(20/40), target H-D4 precision and aggregate adequacy remain unresolved or unmet | [contrasts.tsv](../prep/heldout_final/contrasts.tsv), [adequacy.tsv](../prep/heldout_final/adequacy.tsv) |
+
+**Answer to the original research question:** the repository provides pilot evidence about tested configurations and candidate regions; it does not establish that the latency-optimal and energy-optimal NCCL configurations differ. Measurement reproducibility, a detected pairwise difference, physical energy accuracy and global optimality are separate questions. [Project evidence (2026/10), [historical claims](../../../docs/release/claims.md), [Stage 2 scope](../code/src/ncclenergy/v2/stage2_heldout.py)]

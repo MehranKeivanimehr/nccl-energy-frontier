@@ -1,0 +1,5119 @@
+[
+  {
+    "launch_id": "s1-b1-p01",
+    "session": 1,
+    "block": 1,
+    "arm": "C",
+    "length_s": 10.0,
+    "R": 196577,
+    "w": 98289,
+    "E": {
+      "raw_counter": 2690.0910000000003,
+      "nominal_period": 2684.3549263928626,
+      "primary": 2684.3446141407903,
+      "sampled_instant": 2645.1735876493885
+    },
+    "J": {
+      "raw_counter": 0.013684668094436279,
+      "nominal_period": 0.013655488314466405,
+      "primary": 0.013655435855368585,
+      "sampled_instant": 0.013456170292808357
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1358.44,
+        "period_ms": 99.85804864999999,
+        "period_feasible_ms": [
+          98.99672933333333,
+          100.61691833333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.03397056,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 34.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.396,
+        "power_max": 138.242,
+        "temp_precomputed": 30.6
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1331.651,
+        "period_ms": 99.8142046,
+        "period_feasible_ms": [
+          99.02685600000001,
+          100.57817533333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.036614056,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 34.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.631,
+        "power_max": 134.338,
+        "temp_precomputed": 31.6
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.050198800978751e-05,
+    "T_region_s": 9.928305628,
+    "host_load_1min": 33.345703125
+  },
+  {
+    "launch_id": "s1-b1-p02",
+    "session": 1,
+    "block": 1,
+    "arm": "A",
+    "length_s": 40.0,
+    "R": 764825,
+    "w": 95604,
+    "E": {
+      "raw_counter": 10340.276999999998,
+      "nominal_period": 10338.767152149216,
+      "primary": 10338.76526613369,
+      "sampled_instant": 10304.84320693922
+    },
+    "J": {
+      "raw_counter": 0.013519794724283331,
+      "nominal_period": 0.013517820615368504,
+      "primary": 0.013517818149424628,
+      "sampled_instant": 0.013473465442342
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5245.364,
+        "period_ms": 99.95822754999998,
+        "period_feasible_ms": [
+          99.186325,
+          100.75728066666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.008891847,
+        "n_samples": 792,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1965.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 91.61,
+        "power_max": 133.796,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5094.913,
+        "period_ms": 99.8233162,
+        "period_feasible_ms": [
+          99.03089266666666,
+          100.61586866666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.011257156,
+        "n_samples": 792,
+        "temp_min": 31.0,
+        "temp_max": 37.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.607,
+        "power_max": 130.142,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.178222959500539e-05,
+    "T_region_s": 39.608229217,
+    "host_load_1min": 35.5126953125
+  },
+  {
+    "launch_id": "s1-b1-p03",
+    "session": 1,
+    "block": 1,
+    "arm": "B",
+    "length_s": 20.0,
+    "R": 382385,
+    "w": 95597,
+    "E": {
+      "raw_counter": 5166.716,
+      "nominal_period": 5153.405695449072,
+      "primary": 5153.400340716105,
+      "sampled_instant": 5133.6845715032905
+    },
+    "J": {
+      "raw_counter": 0.013511816624606092,
+      "nominal_period": 0.013477007977428694,
+      "primary": 0.013476993973916617,
+      "sampled_instant": 0.013425433977544334
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2625.512,
+        "period_ms": 99.93959620000001,
+        "period_feasible_ms": [
+          99.13958166666667,
+          100.740851
+        ],
+        "primary_available": true,
+        "tail_s": 0.083248113,
+        "n_samples": 396,
+        "temp_min": 31.0,
+        "temp_max": 35.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1965.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 129.441,
+        "power_max": 133.357,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2541.204,
+        "period_ms": 99.98880430000001,
+        "period_feasible_ms": [
+          99.18678466666667,
+          100.790704
+        ],
+        "primary_available": true,
+        "tail_s": 0.086151713,
+        "n_samples": 396,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.588,
+        "power_max": 128.73,
+        "temp_precomputed": 30.8
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.174710411234751e-05,
+    "T_region_s": 19.790976947500003,
+    "host_load_1min": 31.04833984375
+  },
+  {
+    "launch_id": "s1-b1-p04",
+    "session": 1,
+    "block": 1,
+    "arm": "A",
+    "length_s": 10.0,
+    "R": 191207,
+    "w": 95604,
+    "E": {
+      "raw_counter": 2574.443,
+      "nominal_period": 2559.9832196901634,
+      "primary": 2559.9779665652327,
+      "sampled_instant": 2541.8291089180193
+    },
+    "J": {
+      "raw_counter": 0.013464167106852784,
+      "nominal_period": 0.013388543409447161,
+      "primary": 0.013388515935950215,
+      "sampled_instant": 0.013293598607362803
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1307.435,
+        "period_ms": 99.9490967,
+        "period_feasible_ms": [
+          99.14761499999999,
+          100.75137433333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.088125224,
+        "n_samples": 197,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1965.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.147,
+        "power_max": 131.97,
+        "temp_precomputed": 30.6
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1267.008,
+        "period_ms": 99.98597045,
+        "period_feasible_ms": [
+          99.20110133333334,
+          100.74578100000001
+        ],
+        "primary_available": true,
+        "tail_s": 0.090648298,
+        "n_samples": 197,
+        "temp_min": 31.0,
+        "temp_max": 33.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 117.129,
+        "power_max": 127.881,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.171686171008384e-05,
+    "T_region_s": 9.8894485045,
+    "host_load_1min": 32.9345703125
+  },
+  {
+    "launch_id": "s1-b1-p05",
+    "session": 1,
+    "block": 1,
+    "arm": "C",
+    "length_s": 2.5,
+    "R": 49145,
+    "w": 98289,
+    "E": {
+      "raw_counter": 684.1389999999999,
+      "nominal_period": 668.3798564541535,
+      "primary": 668.351669334512,
+      "sampled_instant": 642.5915770211369
+    },
+    "J": {
+      "raw_counter": 0.013920826126767726,
+      "nominal_period": 0.013600159862735852,
+      "primary": 0.013599586312636322,
+      "sampled_instant": 0.013075421243689834
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 347.53,
+        "period_ms": 99.78797335,
+        "period_feasible_ms": [
+          98.94097,
+          100.541229
+        ],
+        "primary_available": true,
+        "tail_s": 0.094118602,
+        "n_samples": 49,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1965.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 117.47,
+        "power_max": 137.216,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 336.609,
+        "period_ms": 99.89022550000001,
+        "period_feasible_ms": [
+          99.08675900000001,
+          100.641618
+        ],
+        "primary_available": true,
+        "tail_s": 0.096585665,
+        "n_samples": 49,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.465,
+        "power_max": 133.217,
+        "temp_precomputed": 30.8
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.0344961338895104e-05,
+    "T_region_s": 2.4751606725,
+    "host_load_1min": 38.07470703125
+  },
+  {
+    "launch_id": "s1-b1-p06",
+    "session": 1,
+    "block": 1,
+    "arm": "B",
+    "length_s": 40.0,
+    "R": 764769,
+    "w": 95597,
+    "E": {
+      "raw_counter": 10319.556,
+      "nominal_period": 10318.990142594801,
+      "primary": 10318.989458389053,
+      "sampled_instant": 10299.764185931093
+    },
+    "J": {
+      "raw_counter": 0.01349369025156616,
+      "nominal_period": 0.013492950345260858,
+      "primary": 0.013492949450604107,
+      "sampled_instant": 0.013467810784604363
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5255.247,
+        "period_ms": 99.87045369999998,
+        "period_feasible_ms": [
+          99.04881566666667,
+          100.64635500000001
+        ],
+        "primary_available": true,
+        "tail_s": 0.002710703,
+        "n_samples": 794,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1965.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 117.641,
+        "power_max": 133.884,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5064.309,
+        "period_ms": 99.90192144999999,
+        "period_feasible_ms": [
+          99.11898533333333,
+          100.70539766666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.004858773,
+        "n_samples": 794,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.106,
+        "power_max": 128.946,
+        "temp_precomputed": 30.6
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.186913977423248e-05,
+    "T_region_s": 39.668748427500006,
+    "host_load_1min": 37.2861328125
+  },
+  {
+    "launch_id": "s1-b1-p07",
+    "session": 1,
+    "block": 1,
+    "arm": "B",
+    "length_s": 2.5,
+    "R": 47799,
+    "w": 95597,
+    "E": {
+      "raw_counter": 656.894,
+      "nominal_period": 645.974683585536,
+      "primary": 645.96798703865,
+      "sampled_instant": 623.4638400372737
+    },
+    "J": {
+      "raw_counter": 0.013742839808364191,
+      "nominal_period": 0.013514397447342749,
+      "primary": 0.013514257349288688,
+      "sampled_instant": 0.01304344944532885
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 334.463,
+        "period_ms": 99.97473155,
+        "period_feasible_ms": [
+          99.13234033333333,
+          100.83238266666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.065028895,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 31.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1965.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 119.057,
+        "power_max": 131.37,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 322.431,
+        "period_ms": 99.91165035,
+        "period_feasible_ms": [
+          99.07576733333333,
+          100.73697299999999
+        ],
+        "primary_available": true,
+        "tail_s": 0.067551397,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.299,
+        "power_max": 126.913,
+        "temp_precomputed": 30.6
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.190055603673717e-05,
+    "T_region_s": 2.481597904,
+    "host_load_1min": 36.88671875
+  },
+  {
+    "launch_id": "s1-b1-p08",
+    "session": 1,
+    "block": 1,
+    "arm": "A",
+    "length_s": 20.0,
+    "R": 382413,
+    "w": 95604,
+    "E": {
+      "raw_counter": 5148.384,
+      "nominal_period": 5137.18946111126,
+      "primary": 5137.189553079368,
+      "sampled_instant": 5120.314085294902
+    },
+    "J": {
+      "raw_counter": 0.013462889598418465,
+      "nominal_period": 0.013433616171812308,
+      "primary": 0.013433616412306507,
+      "sampled_instant": 0.013389487505118555
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2619.155,
+        "period_ms": 100.02932655,
+        "period_feasible_ms": [
+          99.22137366666668,
+          100.87008566666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.070272146,
+        "n_samples": 397,
+        "temp_min": 30.0,
+        "temp_max": 34.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1965.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 123.212,
+        "power_max": 132.673,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2529.229,
+        "period_ms": 99.97009284999999,
+        "period_feasible_ms": [
+          99.17164733333333,
+          100.77272599999999
+        ],
+        "primary_available": true,
+        "tail_s": 0.072428145,
+        "n_samples": 397,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.654,
+        "power_max": 128.101,
+        "temp_precomputed": 30.6
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.180551278852968e-05,
+    "T_region_s": 19.811998057,
+    "host_load_1min": 31.43310546875
+  },
+  {
+    "launch_id": "s1-b1-p09",
+    "session": 1,
+    "block": 1,
+    "arm": "C",
+    "length_s": 40.0,
+    "R": 786308,
+    "w": 98289,
+    "E": {
+      "raw_counter": 10822.727,
+      "nominal_period": 10817.416382040545,
+      "primary": 10817.412516398152,
+      "sampled_instant": 10781.308212733795
+    },
+    "J": {
+      "raw_counter": 0.013763979254948443,
+      "nominal_period": 0.013757225390102282,
+      "primary": 0.013757220473908635,
+      "sampled_instant": 0.013711304237949754
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5483.02,
+        "period_ms": 99.95532815000001,
+        "period_feasible_ms": [
+          99.18278733333334,
+          100.64565
+        ],
+        "primary_available": true,
+        "tail_s": 0.035307414,
+        "n_samples": 796,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.761,
+        "power_max": 139.163,
+        "temp_precomputed": 30.4
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5339.707,
+        "period_ms": 99.91105549999999,
+        "period_feasible_ms": [
+          99.17410766666666,
+          100.63114999999999
+        ],
+        "primary_available": true,
+        "tail_s": 0.036931556,
+        "n_samples": 796,
+        "temp_min": 30.0,
+        "temp_max": 38.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.676,
+        "power_max": 135.327,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.061421641519608e-05,
+    "T_region_s": 39.8018121265,
+    "host_load_1min": 35.46826171875
+  },
+  {
+    "launch_id": "s1-b1-p10",
+    "session": 1,
+    "block": 1,
+    "arm": "A",
+    "length_s": 2.5,
+    "R": 47802,
+    "w": 95604,
+    "E": {
+      "raw_counter": 655.146,
+      "nominal_period": 646.1486318949644,
+      "primary": 646.1401282807424,
+      "sampled_instant": 605.4872392637287
+    },
+    "J": {
+      "raw_counter": 0.01370540981548889,
+      "nominal_period": 0.013517188232604586,
+      "primary": 0.013517010340168662,
+      "sampled_instant": 0.012666567073840607
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 333.255,
+        "period_ms": 100.00091615,
+        "period_feasible_ms": [
+          99.14629266666667,
+          100.83922333333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.053442739,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 31.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.26,
+        "power_max": 131.675,
+        "temp_precomputed": 30.6
+      },
+      {
+        "gpu": 5,
+        "raw_J": 321.891,
+        "period_ms": 99.82248200000001,
+        "period_feasible_ms": [
+          99.01351,
+          100.63001433333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.055474052,
+        "n_samples": 50,
+        "temp_min": 31.0,
+        "temp_max": 32.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 89.206,
+        "power_max": 127.242,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.1621707250742644e-05,
+    "T_region_s": 2.4686214915,
+    "host_load_1min": 31.45166015625
+  },
+  {
+    "launch_id": "s1-b1-p11",
+    "session": 1,
+    "block": 1,
+    "arm": "B",
+    "length_s": 10.0,
+    "R": 191193,
+    "w": 95597,
+    "E": {
+      "raw_counter": 2571.1459999999997,
+      "nominal_period": 2561.4682787709835,
+      "primary": 2561.464668362306,
+      "sampled_instant": 2531.737739411781
+    },
+    "J": {
+      "raw_counter": 0.013447908657743745,
+      "nominal_period": 0.013397291107786287,
+      "primary": 0.013397272224204369,
+      "sampled_instant": 0.013241790962073827
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1307.579,
+        "period_ms": 99.94765225,
+        "period_feasible_ms": [
+          99.14247633333333,
+          100.72886066666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.058794632,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1965.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.627,
+        "power_max": 131.686,
+        "temp_precomputed": 30.4
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1263.567,
+        "period_ms": 99.98552005,
+        "period_feasible_ms": [
+          99.233406,
+          100.82750333333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.060629193,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 103.134,
+        "power_max": 127.694,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.172562868410454e-05,
+    "T_region_s": 9.894280492,
+    "host_load_1min": 29.69970703125
+  },
+  {
+    "launch_id": "s1-b1-p12",
+    "session": 1,
+    "block": 1,
+    "arm": "C",
+    "length_s": 20.0,
+    "R": 393154,
+    "w": 98289,
+    "E": {
+      "raw_counter": 5397.385,
+      "nominal_period": 5393.582195527167,
+      "primary": 5393.578327152951,
+      "sampled_instant": 5359.504822960713
+    },
+    "J": {
+      "raw_counter": 0.013728424485061834,
+      "nominal_period": 0.01371875192806678,
+      "primary": 0.013718742088731008,
+      "sampled_instant": 0.013632075021392923
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2734.695,
+        "period_ms": 99.98383985000001,
+        "period_feasible_ms": [
+          99.15606566666666,
+          100.744347
+        ],
+        "primary_available": true,
+        "tail_s": 0.023284741,
+        "n_samples": 398,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 98.04,
+        "power_max": 138.656,
+        "temp_precomputed": 30.8
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2662.69,
+        "period_ms": 99.82849425,
+        "period_feasible_ms": [
+          99.064443,
+          100.611911
+        ],
+        "primary_available": true,
+        "tail_s": 0.025067816,
+        "n_samples": 398,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 107.67,
+        "power_max": 134.292,
+        "temp_precomputed": 30.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.057532818691912e-05,
+    "T_region_s": 19.884771285000003,
+    "host_load_1min": 32.94580078125
+  },
+  {
+    "launch_id": "s1-b2-p01",
+    "session": 1,
+    "block": 2,
+    "arm": "C",
+    "length_s": 40.0,
+    "R": 786308,
+    "w": 98289,
+    "E": {
+      "raw_counter": 10804.17,
+      "nominal_period": 10797.398181888144,
+      "primary": 10797.38716364283,
+      "sampled_instant": 10776.47096710929
+    },
+    "J": {
+      "raw_counter": 0.013740379088092707,
+      "nominal_period": 0.013731766918164566,
+      "primary": 0.013731752905531714,
+      "sampled_instant": 0.01370515239207701
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5473.012,
+        "period_ms": 99.85097744999999,
+        "period_feasible_ms": [
+          99.03814866666666,
+          100.64344933333332
+        ],
+        "primary_available": true,
+        "tail_s": 0.04511307,
+        "n_samples": 794,
+        "temp_min": 31.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 127.313,
+        "power_max": 139.324,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5331.158,
+        "period_ms": 99.85302069999999,
+        "period_feasible_ms": [
+          99.02951866666666,
+          100.63897233333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.046716559,
+        "n_samples": 794,
+        "temp_min": 30.0,
+        "temp_max": 38.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.426,
+        "power_max": 135.104,
+        "temp_precomputed": 30.4
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.053333506081586e-05,
+    "T_region_s": 39.735626934500004,
+    "host_load_1min": 31.1318359375
+  },
+  {
+    "launch_id": "s1-b2-p02",
+    "session": 1,
+    "block": 2,
+    "arm": "B",
+    "length_s": 10.0,
+    "R": 191193,
+    "w": 95597,
+    "E": {
+      "raw_counter": 2558.969,
+      "nominal_period": 2557.8922970639305,
+      "primary": 2557.8923145951812,
+      "sampled_instant": 2544.8545583869845
+    },
+    "J": {
+      "raw_counter": 0.013384219087518894,
+      "nominal_period": 0.013378587589838177,
+      "primary": 0.013378587681532175,
+      "sampled_instant": 0.013310396083470549
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1302.398,
+        "period_ms": 99.97894975,
+        "period_feasible_ms": [
+          99.194789,
+          100.79731966666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.005797218,
+        "n_samples": 197,
+        "temp_min": 31.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 125.98,
+        "power_max": 132.161,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1256.571,
+        "period_ms": 100.02097995,
+        "period_feasible_ms": [
+          99.18911266666667,
+          100.83686566666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.007401186,
+        "n_samples": 197,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.243,
+        "power_max": 127.718,
+        "temp_precomputed": 30.2
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.167914322177068e-05,
+    "T_region_s": 9.881462159,
+    "host_load_1min": 38.54736328125
+  },
+  {
+    "launch_id": "s1-b2-p03",
+    "session": 1,
+    "block": 2,
+    "arm": "A",
+    "length_s": 2.5,
+    "R": 47802,
+    "w": 95604,
+    "E": {
+      "raw_counter": 656.279,
+      "nominal_period": 641.263371949445,
+      "primary": 641.2468332290266,
+      "sampled_instant": 614.6478713570506
+    },
+    "J": {
+      "raw_counter": 0.013729111752646333,
+      "nominal_period": 0.013414990417753335,
+      "primary": 0.013414644433894536,
+      "sampled_instant": 0.012858204078428739
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 334.358,
+        "period_ms": 99.94459930000002,
+        "period_feasible_ms": [
+          99.10682266666667,
+          100.72086266666668
+        ],
+        "primary_available": true,
+        "tail_s": 0.089939272,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 31.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 98.319,
+        "power_max": 131.749,
+        "temp_precomputed": 30.8
+      },
+      {
+        "gpu": 5,
+        "raw_J": 321.921,
+        "period_ms": 99.85087589999999,
+        "period_feasible_ms": [
+          99.07770933333335,
+          100.68447966666668
+        ],
+        "primary_available": true,
+        "tail_s": 0.091375384,
+        "n_samples": 50,
+        "temp_min": 31.0,
+        "temp_max": 32.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 107.858,
+        "power_max": 127.148,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.1672111480691184e-05,
+    "T_region_s": 2.470785626,
+    "host_load_1min": 37.2685546875
+  },
+  {
+    "launch_id": "s1-b2-p04",
+    "session": 1,
+    "block": 2,
+    "arm": "B",
+    "length_s": 2.5,
+    "R": 47799,
+    "w": 95597,
+    "E": {
+      "raw_counter": 655.72,
+      "nominal_period": 643.2963490865448,
+      "primary": 643.2777501031455,
+      "sampled_instant": 607.6361527538866
+    },
+    "J": {
+      "raw_counter": 0.013718278625075839,
+      "nominal_period": 0.01345836417260915,
+      "primary": 0.013457975064397698,
+      "sampled_instant": 0.012712319352996644
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 333.395,
+        "period_ms": 99.86786019999998,
+        "period_feasible_ms": [
+          99.04528166666665,
+          100.707675
+        ],
+        "primary_available": true,
+        "tail_s": 0.074384708,
+        "n_samples": 49,
+        "temp_min": 30.0,
+        "temp_max": 31.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.647,
+        "power_max": 131.652,
+        "temp_precomputed": 30.4
+      },
+      {
+        "gpu": 5,
+        "raw_J": 322.325,
+        "period_ms": 99.8592392,
+        "period_feasible_ms": [
+          99.07827133333332,
+          100.71086166666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.075862409,
+        "n_samples": 49,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.508,
+        "power_max": 127.468,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.154266290089751e-05,
+    "T_region_s": 2.4644490165,
+    "host_load_1min": 28.5927734375
+  },
+  {
+    "launch_id": "s1-b2-p05",
+    "session": 1,
+    "block": 2,
+    "arm": "A",
+    "length_s": 10.0,
+    "R": 191207,
+    "w": 95604,
+    "E": {
+      "raw_counter": 2578.3419999999996,
+      "nominal_period": 2563.3729965717484,
+      "primary": 2563.3735565856687,
+      "sampled_instant": 2547.120551900973
+    },
+    "J": {
+      "raw_counter": 0.013484558619715804,
+      "nominal_period": 0.013406271718983868,
+      "primary": 0.013406274647819738,
+      "sampled_instant": 0.013321272505195799
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1311.254,
+        "period_ms": 99.9278852,
+        "period_feasible_ms": [
+          99.109894,
+          100.71155066666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.091573262,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 120.084,
+        "power_max": 132.189,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1267.088,
+        "period_ms": 100.08533165,
+        "period_feasible_ms": [
+          99.31683933333333,
+          100.90687933333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.093107111,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.386,
+        "power_max": 127.8,
+        "temp_precomputed": 30.8
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.175749073517183e-05,
+    "T_region_s": 9.897159549000001,
+    "host_load_1min": 39.63525390625
+  },
+  {
+    "launch_id": "s1-b2-p06",
+    "session": 1,
+    "block": 2,
+    "arm": "C",
+    "length_s": 20.0,
+    "R": 393154,
+    "w": 98289,
+    "E": {
+      "raw_counter": 5392.2119999999995,
+      "nominal_period": 5386.962099038927,
+      "primary": 5386.960669056015,
+      "sampled_instant": 5362.302041871075
+    },
+    "J": {
+      "raw_counter": 0.013715266791130193,
+      "nominal_period": 0.013701913497100187,
+      "primary": 0.01370190985989209,
+      "sampled_instant": 0.013639189838768205
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2734.017,
+        "period_ms": 99.98891125,
+        "period_feasible_ms": [
+          99.14720566666666,
+          100.79742233333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.032686972,
+        "n_samples": 399,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.833,
+        "power_max": 137.817,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2658.195,
+        "period_ms": 99.960611,
+        "period_feasible_ms": [
+          99.17114233333335,
+          100.78749233333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.034169338,
+        "n_samples": 399,
+        "temp_min": 31.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 120.125,
+        "power_max": 133.954,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.0738611055718626e-05,
+    "T_region_s": 19.9488686125,
+    "host_load_1min": 36.11669921875
+  },
+  {
+    "launch_id": "s1-b2-p07",
+    "session": 1,
+    "block": 2,
+    "arm": "B",
+    "length_s": 40.0,
+    "R": 764769,
+    "w": 95597,
+    "E": {
+      "raw_counter": 10390.184000000001,
+      "nominal_period": 10383.546486602776,
+      "primary": 10383.542303573668,
+      "sampled_instant": 10356.330544219536
+    },
+    "J": {
+      "raw_counter": 0.013586042321276099,
+      "nominal_period": 0.013577363212424635,
+      "primary": 0.013577357742761104,
+      "sampled_instant": 0.01354177607123136
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5281.227,
+        "period_ms": 100.01649280000001,
+        "period_feasible_ms": [
+          99.20319733333334,
+          100.87984366666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.044566056,
+        "n_samples": 799,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.817,
+        "power_max": 133.624,
+        "temp_precomputed": 30.2
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5108.957,
+        "period_ms": 99.86339515,
+        "period_feasible_ms": [
+          99.05285833333335,
+          100.65014133333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.045728101,
+        "n_samples": 799,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.511,
+        "power_max": 128.924,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.2208422166693475e-05,
+    "T_region_s": 39.9302401395,
+    "host_load_1min": 30.892578125
+  },
+  {
+    "launch_id": "s1-b2-p08",
+    "session": 1,
+    "block": 2,
+    "arm": "C",
+    "length_s": 10.0,
+    "R": 196577,
+    "w": 98289,
+    "E": {
+      "raw_counter": 2703.6940000000004,
+      "nominal_period": 2696.035028783398,
+      "primary": 2696.0257442472516,
+      "sampled_instant": 2661.9392210217184
+    },
+    "J": {
+      "raw_counter": 0.013753867441257117,
+      "nominal_period": 0.013714905755929728,
+      "primary": 0.013714858524889746,
+      "sampled_instant": 0.013541458161543406
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1367.342,
+        "period_ms": 99.9460048,
+        "period_feasible_ms": [
+          99.10648966666668,
+          100.72818966666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.046481014,
+        "n_samples": 199,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 111.367,
+        "power_max": 136.834,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1336.352,
+        "period_ms": 99.82915034999999,
+        "period_feasible_ms": [
+          99.06417333333333,
+          100.60857333333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.047760161,
+        "n_samples": 199,
+        "temp_min": 30.0,
+        "temp_max": 34.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.418,
+        "power_max": 133.68,
+        "temp_precomputed": 30.6
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.063353633436261e-05,
+    "T_region_s": 9.954159779500001,
+    "host_load_1min": 32.92529296875
+  },
+  {
+    "launch_id": "s1-b2-p09",
+    "session": 1,
+    "block": 2,
+    "arm": "A",
+    "length_s": 40.0,
+    "R": 764825,
+    "w": 95604,
+    "E": {
+      "raw_counter": 10389.283,
+      "nominal_period": 10383.802608750419,
+      "primary": 10383.798358727057,
+      "sampled_instant": 10367.063109530725
+    },
+    "J": {
+      "raw_counter": 0.013583869512633608,
+      "nominal_period": 0.013576703963325491,
+      "primary": 0.013576698406468222,
+      "sampled_instant": 0.013554817258236493
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5295.617,
+        "period_ms": 99.8440343,
+        "period_feasible_ms": [
+          99.01703766666667,
+          100.65653066666665
+        ],
+        "primary_available": true,
+        "tail_s": 0.036562118,
+        "n_samples": 799,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.301,
+        "power_max": 133.964,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5093.666,
+        "period_ms": 100.02171105,
+        "period_feasible_ms": [
+          99.26607266666667,
+          100.841346
+        ],
+        "primary_available": true,
+        "tail_s": 0.037655196,
+        "n_samples": 799,
+        "temp_min": 31.0,
+        "temp_max": 37.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 120.45,
+        "power_max": 128.862,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.223295565913772e-05,
+    "T_region_s": 39.9500344115,
+    "host_load_1min": 37.70263671875
+  },
+  {
+    "launch_id": "s1-b2-p10",
+    "session": 1,
+    "block": 2,
+    "arm": "C",
+    "length_s": 2.5,
+    "R": 49145,
+    "w": 98289,
+    "E": {
+      "raw_counter": 687.101,
+      "nominal_period": 682.1511184950782,
+      "primary": 682.142524347867,
+      "sampled_instant": 647.7969728952414
+    },
+    "J": {
+      "raw_counter": 0.013981096754501984,
+      "nominal_period": 0.01388037681341089,
+      "primary": 0.013880201940133625,
+      "sampled_instant": 0.013181340378375041
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 348.5,
+        "period_ms": 99.76293684999999,
+        "period_feasible_ms": [
+          98.97089833333335,
+          100.56403166666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.029219707,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.876,
+        "power_max": 136.598,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 338.601,
+        "period_ms": 99.92609865,
+        "period_feasible_ms": [
+          99.120184,
+          100.73982366666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.030642268,
+        "n_samples": 50,
+        "temp_min": 31.0,
+        "temp_max": 32.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 119.334,
+        "power_max": 133.305,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.052313506969172e-05,
+    "T_region_s": 2.4838107125,
+    "host_load_1min": 37.3955078125
+  },
+  {
+    "launch_id": "s1-b2-p11",
+    "session": 1,
+    "block": 2,
+    "arm": "A",
+    "length_s": 20.0,
+    "R": 382413,
+    "w": 95604,
+    "E": {
+      "raw_counter": 5119.183,
+      "nominal_period": 5113.065404383148,
+      "primary": 5113.061286137307,
+      "sampled_instant": 5091.779518319092
+    },
+    "J": {
+      "raw_counter": 0.013386529746635182,
+      "nominal_period": 0.013370532393990655,
+      "primary": 0.013370521624885418,
+      "sampled_instant": 0.013314870358275194
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2606.683,
+        "period_ms": 99.93852945,
+        "period_feasible_ms": [
+          99.12469266666666,
+          100.72912266666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.038255856,
+        "n_samples": 393,
+        "temp_min": 30.0,
+        "temp_max": 34.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.599,
+        "power_max": 133.554,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2512.5,
+        "period_ms": 99.93893795,
+        "period_feasible_ms": [
+          99.13143633333334,
+          100.72844233333332
+        ],
+        "primary_available": true,
+        "tail_s": 0.039198631,
+        "n_samples": 393,
+        "temp_min": 31.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 118.405,
+        "power_max": 128.812,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.136513995601614e-05,
+    "T_region_s": 19.6443104585,
+    "host_load_1min": 34.357421875
+  },
+  {
+    "launch_id": "s1-b2-p12",
+    "session": 1,
+    "block": 2,
+    "arm": "B",
+    "length_s": 20.0,
+    "R": 382385,
+    "w": 95597,
+    "E": {
+      "raw_counter": 5150.4580000000005,
+      "nominal_period": 5139.967170454198,
+      "primary": 5139.957391693905,
+      "sampled_instant": 5122.609913755681
+    },
+    "J": {
+      "raw_counter": 0.013469299266446123,
+      "nominal_period": 0.013441864012589923,
+      "primary": 0.013441838439514901,
+      "sampled_instant": 0.01339647191640802
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2619.926,
+        "period_ms": 99.93232250000001,
+        "period_feasible_ms": [
+          99.134678,
+          100.73422766666665
+        ],
+        "primary_available": true,
+        "tail_s": 0.066389636,
+        "n_samples": 397,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 112.621,
+        "power_max": 132.584,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2530.532,
+        "period_ms": 99.89645225,
+        "period_feasible_ms": [
+          99.09787166666666,
+          100.72969433333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.06713804,
+        "n_samples": 397,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.236,
+        "power_max": 128.229,
+        "temp_precomputed": 30.8
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.1834119654275134e-05,
+    "T_region_s": 19.8213942695,
+    "host_load_1min": 34.93359375
+  },
+  {
+    "launch_id": "s2-b1-p01",
+    "session": 2,
+    "block": 1,
+    "arm": "C",
+    "length_s": 10.0,
+    "R": 196577,
+    "w": 98289,
+    "E": {
+      "raw_counter": 2680.456,
+      "nominal_period": 2675.6317960943175,
+      "primary": 2675.6269711469995,
+      "sampled_instant": 2640.438349113896
+    },
+    "J": {
+      "raw_counter": 0.013635654222009696,
+      "nominal_period": 0.013611113182591643,
+      "primary": 0.01361108863777044,
+      "sampled_instant": 0.013432081826021845
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1355.216,
+        "period_ms": 99.86963279999998,
+        "period_feasible_ms": [
+          99.03619300000001,
+          100.65237933333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.029686794,
+        "n_samples": 199,
+        "temp_min": 29.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1965.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.561,
+        "power_max": 136.929,
+        "temp_precomputed": 29.4
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1325.24,
+        "period_ms": 99.952071,
+        "period_feasible_ms": [
+          99.12258933333334,
+          100.767592
+        ],
+        "primary_available": true,
+        "tail_s": 0.029888723,
+        "n_samples": 199,
+        "temp_min": 29.0,
+        "temp_max": 33.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.118,
+        "power_max": 133.811,
+        "temp_precomputed": 30.2
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.041396290512115e-05,
+    "T_region_s": 9.911020460500001,
+    "host_load_1min": 26.2783203125
+  },
+  {
+    "launch_id": "s2-b1-p02",
+    "session": 2,
+    "block": 1,
+    "arm": "A",
+    "length_s": 10.0,
+    "R": 191207,
+    "w": 95604,
+    "E": {
+      "raw_counter": 2575.193,
+      "nominal_period": 2564.753033175628,
+      "primary": 2564.733458582218,
+      "sampled_instant": 2547.6018219415687
+    },
+    "J": {
+      "raw_counter": 0.013468089557390683,
+      "nominal_period": 0.013413489219409477,
+      "primary": 0.013413386845576879,
+      "sampled_instant": 0.013323789515768611
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1312.19,
+        "period_ms": 99.79454189999998,
+        "period_feasible_ms": [
+          98.88703066666666,
+          100.62782633333335
+        ],
+        "primary_available": true,
+        "tail_s": 0.064315444,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 117.877,
+        "power_max": 132.18,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1263.003,
+        "period_ms": 99.8676935,
+        "period_feasible_ms": [
+          98.99680000000001,
+          100.68003266666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.064233308,
+        "n_samples": 198,
+        "temp_min": 31.0,
+        "temp_max": 33.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 111.665,
+        "power_max": 127.899,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.180239972908941e-05,
+    "T_region_s": 9.905734864500001,
+    "host_load_1min": 29.8310546875
+  },
+  {
+    "launch_id": "s2-b1-p03",
+    "session": 2,
+    "block": 1,
+    "arm": "B",
+    "length_s": 20.0,
+    "R": 382385,
+    "w": 95597,
+    "E": {
+      "raw_counter": 5168.046,
+      "nominal_period": 5155.0395951965575,
+      "primary": 5155.063641473907,
+      "sampled_instant": 5108.9805953354735
+    },
+    "J": {
+      "raw_counter": 0.013515294794513385,
+      "nominal_period": 0.01348128089542361,
+      "primary": 0.013481343780414785,
+      "sampled_instant": 0.013360828995215486
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2634.537,
+        "period_ms": 100.35327115,
+        "period_feasible_ms": [
+          98.75528650000001,
+          101.13594599999999
+        ],
+        "primary_available": true,
+        "tail_s": 0.082629401,
+        "n_samples": 396,
+        "temp_min": 29.0,
+        "temp_max": 34.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.71,
+        "power_max": 132.933,
+        "temp_precomputed": 30.6
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2533.509,
+        "period_ms": 99.96659315,
+        "period_feasible_ms": [
+          99.16711566666667,
+          100.76813833333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.082593036,
+        "n_samples": 396,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.251,
+        "power_max": 128.208,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.1853769148894436e-05,
+    "T_region_s": 19.8291254055,
+    "host_load_1min": 31.2841796875
+  },
+  {
+    "launch_id": "s2-b1-p04",
+    "session": 2,
+    "block": 1,
+    "arm": "A",
+    "length_s": 20.0,
+    "R": 382413,
+    "w": 95604,
+    "E": {
+      "raw_counter": 5180.321,
+      "nominal_period": 5167.167047956986,
+      "primary": 5167.161027214101,
+      "sampled_instant": 5154.059879226563
+    },
+    "J": {
+      "raw_counter": 0.013546404018691833,
+      "nominal_period": 0.013512006777899772,
+      "primary": 0.01351199103381449,
+      "sampled_instant": 0.013477731874247379
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2636.061,
+        "period_ms": 99.91930514999999,
+        "period_feasible_ms": [
+          99.09192566666667,
+          100.68452533333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.083373269,
+        "n_samples": 399,
+        "temp_min": 30.0,
+        "temp_max": 34.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 108.191,
+        "power_max": 132.52,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2544.26,
+        "period_ms": 100.00132584999999,
+        "period_feasible_ms": [
+          99.18756533333334,
+          100.82085466666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.083575701,
+        "n_samples": 399,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 101.768,
+        "power_max": 128.343,
+        "temp_precomputed": 30.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.214080146856932e-05,
+    "T_region_s": 19.940126225500002,
+    "host_load_1min": 29.23583984375
+  },
+  {
+    "launch_id": "s2-b1-p05",
+    "session": 2,
+    "block": 1,
+    "arm": "C",
+    "length_s": 40.0,
+    "R": 786308,
+    "w": 98289,
+    "E": {
+      "raw_counter": 10833.734,
+      "nominal_period": 10830.52380073633,
+      "primary": 10830.519826993084,
+      "sampled_instant": 10796.098309230885
+    },
+    "J": {
+      "raw_counter": 0.013777977586391084,
+      "nominal_period": 0.013773894963215851,
+      "primary": 0.013773889909543187,
+      "sampled_instant": 0.013730113783950927
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5494.582,
+        "period_ms": 100.01050844999999,
+        "period_feasible_ms": [
+          99.26544433333333,
+          100.74791833333335
+        ],
+        "primary_available": true,
+        "tail_s": 0.021579201,
+        "n_samples": 797,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.979,
+        "power_max": 139.394,
+        "temp_precomputed": 30.6
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5339.152,
+        "period_ms": 99.75155120000001,
+        "period_feasible_ms": [
+          99.061166,
+          100.56439266666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.021620869,
+        "n_samples": 797,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.039,
+        "power_max": 134.962,
+        "temp_precomputed": 30.8
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.067926527391302e-05,
+    "T_region_s": 39.850547429500004,
+    "host_load_1min": 36.97119140625
+  },
+  {
+    "launch_id": "s2-b1-p06",
+    "session": 2,
+    "block": 1,
+    "arm": "B",
+    "length_s": 40.0,
+    "R": 764769,
+    "w": 95597,
+    "E": {
+      "raw_counter": 10391.938999999998,
+      "nominal_period": 10391.459540952199,
+      "primary": 10391.458983317914,
+      "sampled_instant": 10352.81053338282
+    },
+    "J": {
+      "raw_counter": 0.01358833713186596,
+      "nominal_period": 0.013587710198703399,
+      "primary": 0.013587709469549517,
+      "sampled_instant": 0.013537173360037895
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5282.601,
+        "period_ms": 99.9014861,
+        "period_feasible_ms": [
+          99.12096533333334,
+          100.71272833333335
+        ],
+        "primary_available": true,
+        "tail_s": 0.003257921,
+        "n_samples": 798,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.452,
+        "power_max": 133.542,
+        "temp_precomputed": 30.6
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5109.338,
+        "period_ms": 99.8855437,
+        "period_feasible_ms": [
+          99.09061233333334,
+          100.74306133333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.003054011,
+        "n_samples": 798,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.141,
+        "power_max": 128.98,
+        "temp_precomputed": 30.8
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.2185519010315536e-05,
+    "T_region_s": 39.9111151645,
+    "host_load_1min": 31.57763671875
+  },
+  {
+    "launch_id": "s2-b1-p07",
+    "session": 2,
+    "block": 1,
+    "arm": "B",
+    "length_s": 10.0,
+    "R": 191193,
+    "w": 95597,
+    "E": {
+      "raw_counter": 2554.723,
+      "nominal_period": 2543.380973812535,
+      "primary": 2543.3740647907944,
+      "sampled_instant": 2527.437420313144
+    },
+    "J": {
+      "raw_counter": 0.013362011161496498,
+      "nominal_period": 0.013302688769005849,
+      "primary": 0.013302652632631919,
+      "sampled_instant": 0.013219298929945887
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1298.685,
+        "period_ms": 99.83558705,
+        "period_feasible_ms": [
+          99.019796,
+          100.666992
+        ],
+        "primary_available": true,
+        "tail_s": 0.070019888,
+        "n_samples": 196,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 119.092,
+        "power_max": 132.219,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1256.038,
+        "period_ms": 100.0649363,
+        "period_feasible_ms": [
+          99.27859066666666,
+          100.88212700000001
+        ],
+        "primary_available": true,
+        "tail_s": 0.069840122,
+        "n_samples": 196,
+        "temp_min": 31.0,
+        "temp_max": 33.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 113.556,
+        "power_max": 128.01,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.126800148541003e-05,
+    "T_region_s": 9.802815655,
+    "host_load_1min": 31.06884765625
+  },
+  {
+    "launch_id": "s2-b1-p08",
+    "session": 2,
+    "block": 1,
+    "arm": "A",
+    "length_s": 2.5,
+    "R": 47802,
+    "w": 95604,
+    "E": {
+      "raw_counter": 658.076,
+      "nominal_period": 652.598452647689,
+      "primary": 652.5981836585677,
+      "sampled_instant": 610.6322299841289
+    },
+    "J": {
+      "raw_counter": 0.013766704321994895,
+      "nominal_period": 0.013652116075638864,
+      "primary": 0.013652110448486835,
+      "sampled_instant": 0.012774198359569243
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 335.108,
+        "period_ms": 100.07467224999999,
+        "period_feasible_ms": [
+          99.05972200000001,
+          100.64447866666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.033034686,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 31.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 98.323,
+        "power_max": 131.692,
+        "temp_precomputed": 30.8
+      },
+      {
+        "gpu": 5,
+        "raw_J": 322.968,
+        "period_ms": 99.90842240000002,
+        "period_feasible_ms": [
+          99.03875233333333,
+          100.64686533333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.032969774,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.142,
+        "power_max": 127.338,
+        "temp_precomputed": 30.8
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.175190843479353e-05,
+    "T_region_s": 2.4746022355000004,
+    "host_load_1min": 32.9248046875
+  },
+  {
+    "launch_id": "s2-b1-p09",
+    "session": 2,
+    "block": 1,
+    "arm": "C",
+    "length_s": 2.5,
+    "R": 49145,
+    "w": 98289,
+    "E": {
+      "raw_counter": 685.56,
+      "nominal_period": 677.1869156452276,
+      "primary": 677.1832793328755,
+      "sampled_instant": 646.7530527338413
+    },
+    "J": {
+      "raw_counter": 0.013949740563638213,
+      "nominal_period": 0.013779365462310053,
+      "primary": 0.013779291470808332,
+      "sampled_instant": 0.013160098743185295
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 346.631,
+        "period_ms": 99.88938370000001,
+        "period_feasible_ms": [
+          99.06971566666668,
+          100.70760833333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.050774186,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 31.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.898,
+        "power_max": 136.21,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 338.929,
+        "period_ms": 100.03944720000001,
+        "period_feasible_ms": [
+          99.27725099999999,
+          100.76599800000001
+        ],
+        "primary_available": true,
+        "tail_s": 0.050289037,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 89.966,
+        "power_max": 133.522,
+        "temp_precomputed": 30.2
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.0511609848407774e-05,
+    "T_region_s": 2.484262353,
+    "host_load_1min": 28.08349609375
+  },
+  {
+    "launch_id": "s2-b1-p10",
+    "session": 2,
+    "block": 1,
+    "arm": "C",
+    "length_s": 20.0,
+    "R": 393154,
+    "w": 98289,
+    "E": {
+      "raw_counter": 5366.192,
+      "nominal_period": 5355.0050259455875,
+      "primary": 5354.991337323743,
+      "sampled_instant": 5339.632689857097
+    },
+    "J": {
+      "raw_counter": 0.013649084073925231,
+      "nominal_period": 0.013620629641172638,
+      "primary": 0.01362059482371728,
+      "sampled_instant": 0.013581529603811985
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2710.941,
+        "period_ms": 99.8355596,
+        "period_feasible_ms": [
+          99.028146,
+          100.67338866666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.071238111,
+        "n_samples": 396,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 104.638,
+        "power_max": 137.88,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2655.251,
+        "period_ms": 99.94732124999999,
+        "period_feasible_ms": [
+          99.09836533333333,
+          100.818081
+        ],
+        "primary_available": true,
+        "tail_s": 0.07123354,
+        "n_samples": 396,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.805,
+        "power_max": 134.662,
+        "temp_precomputed": 30.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.037796595736022e-05,
+    "T_region_s": 19.8070962395,
+    "host_load_1min": 33.5234375
+  },
+  {
+    "launch_id": "s2-b1-p11",
+    "session": 2,
+    "block": 1,
+    "arm": "B",
+    "length_s": 2.5,
+    "R": 47799,
+    "w": 95597,
+    "E": {
+      "raw_counter": 655.712,
+      "nominal_period": 647.206477022126,
+      "primary": 647.2004840633389,
+      "sampled_instant": 608.7280432469579
+    },
+    "J": {
+      "raw_counter": 0.013718111257557689,
+      "nominal_period": 0.013540167723637022,
+      "primary": 0.0135400423453072,
+      "sampled_instant": 0.012735162728236112
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 333.491,
+        "period_ms": 99.99428229999998,
+        "period_feasible_ms": [
+          99.13648833333332,
+          100.83419733333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.051831011,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 31.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.323,
+        "power_max": 131.163,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 322.221,
+        "period_ms": 99.87101305,
+        "period_feasible_ms": [
+          99.08041200000001,
+          100.67801833333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.051156428,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 31.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.186,
+        "power_max": 126.771,
+        "temp_precomputed": 30.8
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.2080656917508735e-05,
+    "T_region_s": 2.4901732335,
+    "host_load_1min": 35.77685546875
+  },
+  {
+    "launch_id": "s2-b1-p12",
+    "session": 2,
+    "block": 1,
+    "arm": "A",
+    "length_s": 40.0,
+    "R": 764825,
+    "w": 95604,
+    "E": {
+      "raw_counter": 10321.432,
+      "nominal_period": 10308.872302607648,
+      "primary": 10308.851696108113,
+      "sampled_instant": 10271.492584358937
+    },
+    "J": {
+      "raw_counter": 0.013495155100840062,
+      "nominal_period": 0.013478733439162748,
+      "primary": 0.01347870649639867,
+      "sampled_instant": 0.013429859882141584
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5257.324,
+        "period_ms": 99.84197830000001,
+        "period_feasible_ms": [
+          99.017659,
+          100.65466533333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.085725279,
+        "n_samples": 793,
+        "temp_min": 29.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.59,
+        "power_max": 133.548,
+        "temp_precomputed": 29.8
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5064.108,
+        "period_ms": 99.86034305,
+        "period_feasible_ms": [
+          99.00765233333333,
+          100.61943866666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.085098833,
+        "n_samples": 793,
+        "temp_min": 30.0,
+        "temp_max": 36.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 89.874,
+        "power_max": 129.372,
+        "temp_precomputed": 30.8
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.182043277874023e-05,
+    "T_region_s": 39.634485486500004,
+    "host_load_1min": 39.6171875
+  },
+  {
+    "launch_id": "s2-b2-p01",
+    "session": 2,
+    "block": 2,
+    "arm": "B",
+    "length_s": 40.0,
+    "R": 764769,
+    "w": 95597,
+    "E": {
+      "raw_counter": 10403.751,
+      "nominal_period": 10394.213155469097,
+      "primary": 10394.210359776174,
+      "sampled_instant": 10384.422501062285
+    },
+    "J": {
+      "raw_counter": 0.013603782318582475,
+      "nominal_period": 0.013591310782038886,
+      "primary": 0.013591307126434485,
+      "sampled_instant": 0.013578508675250024
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5283.766,
+        "period_ms": 99.92065725,
+        "period_feasible_ms": [
+          99.14131833333334,
+          100.67609499999999
+        ],
+        "primary_available": true,
+        "tail_s": 0.065245974,
+        "n_samples": 798,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 120.001,
+        "power_max": 133.361,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5119.985,
+        "period_ms": 100.03231604999999,
+        "period_feasible_ms": [
+          99.18736133333334,
+          100.83417733333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.064422692,
+        "n_samples": 798,
+        "temp_min": 31.0,
+        "temp_max": 37.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 114.313,
+        "power_max": 129.148,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.218405308531073e-05,
+    "T_region_s": 39.9124723265,
+    "host_load_1min": 33.8466796875
+  },
+  {
+    "launch_id": "s2-b2-p02",
+    "session": 2,
+    "block": 2,
+    "arm": "C",
+    "length_s": 20.0,
+    "R": 393154,
+    "w": 98289,
+    "E": {
+      "raw_counter": 5396.803,
+      "nominal_period": 5389.034526900352,
+      "primary": 5389.027805303036,
+      "sampled_instant": 5357.418674804527
+    },
+    "J": {
+      "raw_counter": 0.013726944149112052,
+      "nominal_period": 0.013707184784843476,
+      "primary": 0.01370716768824185,
+      "sampled_instant": 0.013626768835633178
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2728.038,
+        "period_ms": 99.91919985,
+        "period_feasible_ms": [
+          99.048919,
+          100.627372
+        ],
+        "primary_available": true,
+        "tail_s": 0.050134473,
+        "n_samples": 398,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.657,
+        "power_max": 137.919,
+        "temp_precomputed": 30.2
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2668.765,
+        "period_ms": 99.92342315,
+        "period_feasible_ms": [
+          99.07704866666667,
+          100.72975466666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.048593472,
+        "n_samples": 398,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.146,
+        "power_max": 134.504,
+        "temp_precomputed": 30.2
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.057463269100658e-05,
+    "T_region_s": 19.8844114985,
+    "host_load_1min": 38.81982421875
+  },
+  {
+    "launch_id": "s2-b2-p03",
+    "session": 2,
+    "block": 2,
+    "arm": "A",
+    "length_s": 20.0,
+    "R": 382413,
+    "w": 95604,
+    "E": {
+      "raw_counter": 5146.964,
+      "nominal_period": 5144.592430288967,
+      "primary": 5144.588132231274,
+      "sampled_instant": 5102.075340421698
+    },
+    "J": {
+      "raw_counter": 0.013459176335532527,
+      "nominal_period": 0.013452974742723096,
+      "primary": 0.013452963503414565,
+      "sampled_instant": 0.013341793663975067
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2615.628,
+        "period_ms": 99.8763621,
+        "period_feasible_ms": [
+          99.260328,
+          100.6740685
+        ],
+        "primary_available": true,
+        "tail_s": 0.015792264,
+        "n_samples": 396,
+        "temp_min": 30.0,
+        "temp_max": 34.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 98.162,
+        "power_max": 132.641,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2531.336,
+        "period_ms": 99.78451795000001,
+        "period_feasible_ms": [
+          99.14927899999999,
+          100.52902333333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.014086707,
+        "n_samples": 396,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 89.916,
+        "power_max": 128.353,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.1796355272964046e-05,
+    "T_region_s": 19.8083005915,
+    "host_load_1min": 32.72021484375
+  },
+  {
+    "launch_id": "s2-b2-p04",
+    "session": 2,
+    "block": 2,
+    "arm": "A",
+    "length_s": 2.5,
+    "R": 47802,
+    "w": 95604,
+    "E": {
+      "raw_counter": 657.398,
+      "nominal_period": 654.5464358649683,
+      "primary": 654.5426002251597,
+      "sampled_instant": 623.9709628962082
+    },
+    "J": {
+      "raw_counter": 0.01375252081502866,
+      "nominal_period": 0.013692867157545047,
+      "primary": 0.013692786917391736,
+      "sampled_instant": 0.013053239673992892
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 334.675,
+        "period_ms": 99.80182495,
+        "period_feasible_ms": [
+          99.04581300000001,
+          100.55684033333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.017766945,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 31.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 98.075,
+        "power_max": 131.183,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 322.723,
+        "period_ms": 99.96734624999999,
+        "period_feasible_ms": [
+          99.139072,
+          100.62571966666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.016502429,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.154,
+        "power_max": 126.801,
+        "temp_precomputed": 30.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.210489648968662e-05,
+    "T_region_s": 2.4914955075000003,
+    "host_load_1min": 33.2138671875
+  },
+  {
+    "launch_id": "s2-b2-p05",
+    "session": 2,
+    "block": 2,
+    "arm": "B",
+    "length_s": 20.0,
+    "R": 382385,
+    "w": 95597,
+    "E": {
+      "raw_counter": 5154.646,
+      "nominal_period": 5142.015191444471,
+      "primary": 5142.011540459709,
+      "sampled_instant": 5137.458307897166
+    },
+    "J": {
+      "raw_counter": 0.013480251578906076,
+      "nominal_period": 0.013447219926107121,
+      "primary": 0.013447210378178299,
+      "sampled_instant": 0.013435302922178345
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2623.198,
+        "period_ms": 99.8627961,
+        "period_feasible_ms": [
+          99.10727566666667,
+          100.76265533333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.08149775,
+        "n_samples": 396,
+        "temp_min": 30.0,
+        "temp_max": 34.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 125.601,
+        "power_max": 133.171,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2531.448,
+        "period_ms": 100.0982533,
+        "period_feasible_ms": [
+          99.21269133333334,
+          100.82085833333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.079408602,
+        "n_samples": 396,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 120.83,
+        "power_max": 128.57,
+        "temp_precomputed": 30.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.175260515449089e-05,
+    "T_region_s": 19.790150586000003,
+    "host_load_1min": 34.591796875
+  },
+  {
+    "launch_id": "s2-b2-p06",
+    "session": 2,
+    "block": 2,
+    "arm": "C",
+    "length_s": 10.0,
+    "R": 196577,
+    "w": 98289,
+    "E": {
+      "raw_counter": 2696.8810000000003,
+      "nominal_period": 2690.3187881785716,
+      "primary": 2690.314248886004,
+      "sampled_instant": 2658.608615497942
+    },
+    "J": {
+      "raw_counter": 0.013719209266597823,
+      "nominal_period": 0.013685826867734128,
+      "primary": 0.01368580377605724,
+      "sampled_instant": 0.013524515154356521
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1362.601,
+        "period_ms": 99.92088000000001,
+        "period_feasible_ms": [
+          99.09507166666667,
+          100.69921633333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.04082689,
+        "n_samples": 199,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 98.231,
+        "power_max": 137.295,
+        "temp_precomputed": 30.4
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1334.28,
+        "period_ms": 99.9552573,
+        "period_feasible_ms": [
+          99.159778,
+          100.815062
+        ],
+        "primary_available": true,
+        "tail_s": 0.039603342,
+        "n_samples": 199,
+        "temp_min": 30.0,
+        "temp_max": 34.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.124,
+        "power_max": 134.512,
+        "temp_precomputed": 30.4
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.048110819170096e-05,
+    "T_region_s": 9.9241589905,
+    "host_load_1min": 40.91259765625
+  },
+  {
+    "launch_id": "s2-b2-p07",
+    "session": 2,
+    "block": 2,
+    "arm": "C",
+    "length_s": 2.5,
+    "R": 49145,
+    "w": 98289,
+    "E": {
+      "raw_counter": 684.829,
+      "nominal_period": 677.251315204614,
+      "primary": 677.2444532139602,
+      "sampled_instant": 655.5563668746936
+    },
+    "J": {
+      "raw_counter": 0.013934866212229117,
+      "nominal_period": 0.013780675861320866,
+      "primary": 0.013780536233878527,
+      "sampled_instant": 0.013339228138665045
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 346.166,
+        "period_ms": 99.96779870000002,
+        "period_feasible_ms": [
+          99.22345933333334,
+          100.75445533333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.046089833,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 96.4,
+        "power_max": 136.499,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 338.663,
+        "period_ms": 99.8606516,
+        "period_feasible_ms": [
+          99.00983466666666,
+          100.61632633333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.044852654,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 91.197,
+        "power_max": 133.687,
+        "temp_precomputed": 30.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.041172308474922e-05,
+    "T_region_s": 2.4782254995,
+    "host_load_1min": 38.853515625
+  },
+  {
+    "launch_id": "s2-b2-p08",
+    "session": 2,
+    "block": 2,
+    "arm": "B",
+    "length_s": 2.5,
+    "R": 47799,
+    "w": 95597,
+    "E": {
+      "raw_counter": 656.74,
+      "nominal_period": 640.5561826897356,
+      "primary": null,
+      "sampled_instant": 627.8110844180194
+    },
+    "J": {
+      "raw_counter": 0.013739617983639825,
+      "nominal_period": 0.013401037316465523,
+      "primary": null,
+      "sampled_instant": 0.013134397883177879
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 334.391,
+        "period_ms": 98.5589204,
+        "period_feasible_ms": [
+          98.90147399999998,
+          101.03651133333334
+        ],
+        "primary_available": false,
+        "tail_s": 0.098582887,
+        "n_samples": 49,
+        "temp_min": 30.0,
+        "temp_max": 31.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 108.417,
+        "power_max": 131.63,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 322.349,
+        "period_ms": 101.41975559999999,
+        "period_feasible_ms": [
+          99.15468133333333,
+          101.09861899999999
+        ],
+        "primary_available": false,
+        "tail_s": 0.097109828,
+        "n_samples": 49,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 102.54,
+        "power_max": 127.304,
+        "temp_precomputed": 30.0
+      }
+    ],
+    "primary_unavailable_gpus": [
+      4,
+      5
+    ],
+    "t_gpu_s": 5.170849812757589e-05,
+    "T_region_s": 2.47233326,
+    "host_load_1min": 36.0009765625
+  },
+  {
+    "launch_id": "s2-b2-p09",
+    "session": 2,
+    "block": 2,
+    "arm": "A",
+    "length_s": 40.0,
+    "R": 764825,
+    "w": 95604,
+    "E": {
+      "raw_counter": 10342.546,
+      "nominal_period": 10334.6015333459,
+      "primary": 10334.594502958842,
+      "sampled_instant": 10326.643052761558
+    },
+    "J": {
+      "raw_counter": 0.013522761416010198,
+      "nominal_period": 0.01351237411609963,
+      "primary": 0.01351236492394841,
+      "sampled_instant": 0.013501968493134453
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5264.05,
+        "period_ms": 99.91090994999999,
+        "period_feasible_ms": [
+          99.11988666666666,
+          100.65753666666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.054484575,
+        "n_samples": 792,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 122.885,
+        "power_max": 133.985,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5078.496,
+        "period_ms": 99.9291118,
+        "period_feasible_ms": [
+          99.07430366666667,
+          100.77729566666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.053202106,
+        "n_samples": 792,
+        "temp_min": 31.0,
+        "temp_max": 37.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 116.434,
+        "power_max": 129.398,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.181010566077208e-05,
+    "T_region_s": 39.6264242815,
+    "host_load_1min": 31.3779296875
+  },
+  {
+    "launch_id": "s2-b2-p10",
+    "session": 2,
+    "block": 2,
+    "arm": "B",
+    "length_s": 10.0,
+    "R": 191193,
+    "w": 95597,
+    "E": {
+      "raw_counter": 2575.803,
+      "nominal_period": 2572.228679063096,
+      "primary": 2572.226744766498,
+      "sampled_instant": 2557.5789272298234
+    },
+    "J": {
+      "raw_counter": 0.013472266244057052,
+      "nominal_period": 0.013453571412463302,
+      "primary": 0.013453561295478905,
+      "sampled_instant": 0.013376948566264578
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1310.335,
+        "period_ms": 99.98136915,
+        "period_feasible_ms": [
+          99.20427066666667,
+          100.789844
+        ],
+        "primary_available": true,
+        "tail_s": 0.02272332,
+        "n_samples": 199,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 102.127,
+        "power_max": 131.98,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1265.468,
+        "period_ms": 99.91445075000001,
+        "period_feasible_ms": [
+          99.10772800000001,
+          100.81960400000001
+        ],
+        "primary_available": true,
+        "tail_s": 0.021190359,
+        "n_samples": 199,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 95.339,
+        "power_max": 127.453,
+        "temp_precomputed": 30.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.21148480383696e-05,
+    "T_region_s": 9.964726454500001,
+    "host_load_1min": 37.22998046875
+  },
+  {
+    "launch_id": "s2-b2-p11",
+    "session": 2,
+    "block": 2,
+    "arm": "A",
+    "length_s": 10.0,
+    "R": 191207,
+    "w": 95604,
+    "E": {
+      "raw_counter": 2574.97,
+      "nominal_period": 2564.395910856796,
+      "primary": 2564.386775312563,
+      "sampled_instant": 2530.3582875505904
+    },
+    "J": {
+      "raw_counter": 0.013466923282097412,
+      "nominal_period": 0.013411621493234013,
+      "primary": 0.013411573714940159,
+      "sampled_instant": 0.013233606968105719
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1307.12,
+        "period_ms": 99.92650409999999,
+        "period_feasible_ms": [
+          99.14827266666667,
+          100.73576000000001
+        ],
+        "primary_available": true,
+        "tail_s": 0.065789711,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.614,
+        "power_max": 131.956,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1267.85,
+        "period_ms": 99.91546865,
+        "period_feasible_ms": [
+          99.05954366666667,
+          100.731923
+        ],
+        "primary_available": true,
+        "tail_s": 0.064211806,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.137,
+        "power_max": 127.8,
+        "temp_precomputed": 30.8
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.1823508438498594e-05,
+    "T_region_s": 9.913179683500001,
+    "host_load_1min": 36.3935546875
+  },
+  {
+    "launch_id": "s2-b2-p12",
+    "session": 2,
+    "block": 2,
+    "arm": "C",
+    "length_s": 40.0,
+    "R": 786308,
+    "w": 98289,
+    "E": {
+      "raw_counter": 10810.075,
+      "nominal_period": 10804.626175975982,
+      "primary": 10804.620361162863,
+      "sampled_instant": 10788.026045917417
+    },
+    "J": {
+      "raw_counter": 0.0137478888679754,
+      "nominal_period": 0.013740959237316651,
+      "primary": 0.013740951842233402,
+      "sampled_instant": 0.013719847751666544
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5470.405,
+        "period_ms": 99.85003535000001,
+        "period_feasible_ms": [
+          99.13671133333332,
+          100.68983866666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.037742814,
+        "n_samples": 796,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.779,
+        "power_max": 139.125,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5339.67,
+        "period_ms": 99.96378984999998,
+        "period_feasible_ms": [
+          99.13146466666666,
+          100.73544833333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.036115422,
+        "n_samples": 796,
+        "temp_min": 30.0,
+        "temp_max": 38.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.17,
+        "power_max": 135.348,
+        "temp_precomputed": 30.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.056645563061803e-05,
+    "T_region_s": 39.761571744,
+    "host_load_1min": 37.59423828125
+  },
+  {
+    "launch_id": "s3-b1-p01",
+    "session": 3,
+    "block": 1,
+    "arm": "B",
+    "length_s": 2.5,
+    "R": 47799,
+    "w": 95597,
+    "E": {
+      "raw_counter": 639.182,
+      "nominal_period": 635.8344786662035,
+      "primary": 635.8284841321737,
+      "sampled_instant": 601.1024058896979
+    },
+    "J": {
+      "raw_counter": 0.013372288123182493,
+      "nominal_period": 0.013302254830983984,
+      "primary": 0.013302129419698607,
+      "sampled_instant": 0.01257562722838758
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 325.187,
+        "period_ms": 99.83824934999998,
+        "period_feasible_ms": [
+          99.035031,
+          100.64847866666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.021252909,
+        "n_samples": 50,
+        "temp_min": 28.0,
+        "temp_max": 30.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1965.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.245,
+        "power_max": 131.111,
+        "temp_precomputed": 29.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 313.995,
+        "period_ms": 99.83570080000001,
+        "period_feasible_ms": [
+          98.98193099999999,
+          100.59012266666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.019168493,
+        "n_samples": 50,
+        "temp_min": 29.0,
+        "temp_max": 31.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 89.716,
+        "power_max": 126.773,
+        "temp_precomputed": 30.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.1609608883031024e-05,
+    "T_region_s": 2.4676503050000003,
+    "host_load_1min": 31.5771484375
+  },
+  {
+    "launch_id": "s3-b1-p02",
+    "session": 3,
+    "block": 1,
+    "arm": "C",
+    "length_s": 2.5,
+    "R": 49145,
+    "w": 98289,
+    "E": {
+      "raw_counter": 683.5219999999999,
+      "nominal_period": 667.5859837934061,
+      "primary": 667.5825070944086,
+      "sampled_instant": 642.1639178266746
+    },
+    "J": {
+      "raw_counter": 0.013908271441652253,
+      "nominal_period": 0.01358400618157302,
+      "primary": 0.013583935437875849,
+      "sampled_instant": 0.013066719255807806
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 345.859,
+        "period_ms": 99.992212,
+        "period_feasible_ms": [
+          99.19430533333333,
+          100.79113
+        ],
+        "primary_available": true,
+        "tail_s": 0.097619553,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 31.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 98.128,
+        "power_max": 135.997,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 337.663,
+        "period_ms": 99.96654815,
+        "period_feasible_ms": [
+          99.13696566666665,
+          100.77916666666665
+        ],
+        "primary_available": true,
+        "tail_s": 0.09581324,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.062,
+        "power_max": 133.105,
+        "temp_precomputed": 30.4
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.062037401566792e-05,
+    "T_region_s": 2.488492249,
+    "host_load_1min": 35.5126953125
+  },
+  {
+    "launch_id": "s3-b1-p03",
+    "session": 3,
+    "block": 1,
+    "arm": "A",
+    "length_s": 20.0,
+    "R": 382413,
+    "w": 95604,
+    "E": {
+      "raw_counter": 5160.612,
+      "nominal_period": 5145.295623830712,
+      "primary": 5145.280821816328,
+      "sampled_instant": 5131.304382665838
+    },
+    "J": {
+      "raw_counter": 0.01349486549881934,
+      "nominal_period": 0.013454813575455627,
+      "primary": 0.013454774868574887,
+      "sampled_instant": 0.013418226845493845
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2626.253,
+        "period_ms": 99.9174097,
+        "period_feasible_ms": [
+          99.16785433333332,
+          100.68654966666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.098558815,
+        "n_samples": 396,
+        "temp_min": 30.0,
+        "temp_max": 34.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 111.811,
+        "power_max": 132.603,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2534.359,
+        "period_ms": 99.90587795000002,
+        "period_feasible_ms": [
+          99.21909066666667,
+          100.714343
+        ],
+        "primary_available": true,
+        "tail_s": 0.096229132,
+        "n_samples": 396,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 105.972,
+        "power_max": 128.15,
+        "temp_precomputed": 30.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.183875155917816e-05,
+    "T_region_s": 19.8245937,
+    "host_load_1min": 40.248046875
+  },
+  {
+    "launch_id": "s3-b1-p04",
+    "session": 3,
+    "block": 1,
+    "arm": "B",
+    "length_s": 10.0,
+    "R": 191193,
+    "w": 95597,
+    "E": {
+      "raw_counter": 2575.2380000000003,
+      "nominal_period": 2571.8182903601187,
+      "primary": 2571.8159768237306,
+      "sampled_instant": 2533.1801202448037
+    },
+    "J": {
+      "raw_counter": 0.013469311114946678,
+      "nominal_period": 0.013451424949449607,
+      "primary": 0.013451412848920884,
+      "sampled_instant": 0.01324933507107898
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1310.275,
+        "period_ms": 99.99466765,
+        "period_feasible_ms": [
+          99.213864,
+          100.80837566666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.022178563,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 98.015,
+        "power_max": 131.883,
+        "temp_precomputed": 30.6
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1264.963,
+        "period_ms": 99.86871545,
+        "period_feasible_ms": [
+          99.074275,
+          100.698893
+        ],
+        "primary_available": true,
+        "tail_s": 0.019834259,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.02,
+        "power_max": 127.442,
+        "temp_precomputed": 30.6
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.183773828016716e-05,
+    "T_region_s": 9.912392976500001,
+    "host_load_1min": 35.0
+  },
+  {
+    "launch_id": "s3-b1-p05",
+    "session": 3,
+    "block": 1,
+    "arm": "C",
+    "length_s": 40.0,
+    "R": 786308,
+    "w": 98289,
+    "E": {
+      "raw_counter": 10823.908,
+      "nominal_period": 10815.989914571615,
+      "primary": 10815.981529066441,
+      "sampled_instant": 10790.903858712854
+    },
+    "J": {
+      "raw_counter": 0.01376548121092498,
+      "nominal_period": 0.013755411256875951,
+      "primary": 0.013755400592473231,
+      "sampled_instant": 0.013723507656939589
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5487.659,
+        "period_ms": 99.90255905000001,
+        "period_feasible_ms": [
+          99.09857700000002,
+          100.76358499999999
+        ],
+        "primary_available": true,
+        "tail_s": 0.054831841,
+        "n_samples": 796,
+        "temp_min": 30.0,
+        "temp_max": 38.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.878,
+        "power_max": 139.6,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5336.249,
+        "period_ms": 99.904897,
+        "period_feasible_ms": [
+          98.6677035,
+          101.1420905
+        ],
+        "primary_available": true,
+        "tail_s": 0.052929496,
+        "n_samples": 796,
+        "temp_min": 30.0,
+        "temp_max": 38.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1920.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 89.971,
+        "power_max": 134.875,
+        "temp_precomputed": 30.2
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.0575869682109297e-05,
+    "T_region_s": 39.769245500000004,
+    "host_load_1min": 37.60302734375
+  },
+  {
+    "launch_id": "s3-b1-p06",
+    "session": 3,
+    "block": 1,
+    "arm": "A",
+    "length_s": 40.0,
+    "R": 764825,
+    "w": 95604,
+    "E": {
+      "raw_counter": 10367.962,
+      "nominal_period": 10358.806321376484,
+      "primary": 10358.811613344958,
+      "sampled_instant": 10328.500306314934
+    },
+    "J": {
+      "raw_counter": 0.013555992547314745,
+      "nominal_period": 0.013544021601512088,
+      "primary": 0.01354402852070076,
+      "sampled_instant": 0.013504396831059307
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5267.2,
+        "period_ms": 100.05675015,
+        "period_feasible_ms": [
+          99.35116866666665,
+          100.73220466666668
+        ],
+        "primary_available": true,
+        "tail_s": 0.064079417,
+        "n_samples": 797,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 98.118,
+        "power_max": 133.043,
+        "temp_precomputed": 30.2
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5100.762,
+        "period_ms": 100.04810850000001,
+        "period_feasible_ms": [
+          99.27106299999998,
+          100.72166166666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.061340759,
+        "n_samples": 797,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.063,
+        "power_max": 128.932,
+        "temp_precomputed": 30.4
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.21032487013369e-05,
+    "T_region_s": 39.852114851,
+    "host_load_1min": 33.529296875
+  },
+  {
+    "launch_id": "s3-b1-p07",
+    "session": 3,
+    "block": 1,
+    "arm": "C",
+    "length_s": 20.0,
+    "R": 393154,
+    "w": 98289,
+    "E": {
+      "raw_counter": 5380.43,
+      "nominal_period": 5372.7676801210555,
+      "primary": 5372.756186036617,
+      "sampled_instant": 5327.872633941543
+    },
+    "J": {
+      "raw_counter": 0.013685298890511097,
+      "nominal_period": 0.013665809530415704,
+      "primary": 0.01366578029483769,
+      "sampled_instant": 0.013551617518686172
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2724.66,
+        "period_ms": 99.91105545,
+        "period_feasible_ms": [
+          99.09092266666666,
+          100.714344
+        ],
+        "primary_available": true,
+        "tail_s": 0.002619293,
+        "n_samples": 396,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.61,
+        "power_max": 140.467,
+        "temp_precomputed": 30.8
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2655.77,
+        "period_ms": 99.86202790000002,
+        "period_feasible_ms": [
+          98.95803733333334,
+          100.605845
+        ],
+        "primary_available": true,
+        "tail_s": 0.100077396,
+        "n_samples": 396,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 89.583,
+        "power_max": 134.369,
+        "temp_precomputed": 31.6
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.039547261632846e-05,
+    "T_region_s": 19.815760849,
+    "host_load_1min": 38.56787109375
+  },
+  {
+    "launch_id": "s3-b1-p08",
+    "session": 3,
+    "block": 1,
+    "arm": "A",
+    "length_s": 10.0,
+    "R": 191207,
+    "w": 95604,
+    "E": {
+      "raw_counter": 2579.648,
+      "nominal_period": 2568.1867297003623,
+      "primary": 2568.172467188964,
+      "sampled_instant": 2552.603318498952
+    },
+    "J": {
+      "raw_counter": 0.0134913889135858,
+      "nominal_period": 0.013431447225783377,
+      "primary": 0.01343137263378937,
+      "sampled_instant": 0.013349947012917685
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1310.394,
+        "period_ms": 99.90664505,
+        "period_feasible_ms": [
+          99.14413333333334,
+          100.683626
+        ],
+        "primary_available": true,
+        "tail_s": 0.071835473,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 117.788,
+        "power_max": 132.022,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1269.254,
+        "period_ms": 99.86390735,
+        "period_feasible_ms": [
+          99.02484433333335,
+          100.63528966666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.069304877,
+        "n_samples": 198,
+        "temp_min": 31.0,
+        "temp_max": 33.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.079,
+        "power_max": 128.392,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.1780749643057e-05,
+    "T_region_s": 9.901617122500001,
+    "host_load_1min": 36.24755859375
+  },
+  {
+    "launch_id": "s3-b1-p09",
+    "session": 3,
+    "block": 1,
+    "arm": "B",
+    "length_s": 20.0,
+    "R": 382385,
+    "w": 95597,
+    "E": {
+      "raw_counter": 5173.601000000001,
+      "nominal_period": 5163.5220951081665,
+      "primary": 5163.507866134192,
+      "sampled_instant": 5160.072590025207
+    },
+    "J": {
+      "raw_counter": 0.013529822037998353,
+      "nominal_period": 0.013503464035221482,
+      "primary": 0.013503426824101867,
+      "sampled_instant": 0.013494443009075166
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2635.572,
+        "period_ms": 99.92424465,
+        "period_feasible_ms": [
+          99.127458,
+          100.67137100000001
+        ],
+        "primary_available": true,
+        "tail_s": 0.064934857,
+        "n_samples": 399,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 127.273,
+        "power_max": 133.067,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2538.029,
+        "period_ms": 99.81064699999999,
+        "period_feasible_ms": [
+          98.968436,
+          100.58649166666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.062740074,
+        "n_samples": 399,
+        "temp_min": 31.0,
+        "temp_max": 35.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 120.551,
+        "power_max": 128.217,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.210787945133831e-05,
+    "T_region_s": 19.925990128000002,
+    "host_load_1min": 31.1787109375
+  },
+  {
+    "launch_id": "s3-b1-p10",
+    "session": 3,
+    "block": 1,
+    "arm": "C",
+    "length_s": 10.0,
+    "R": 196577,
+    "w": 98289,
+    "E": {
+      "raw_counter": 2686.953,
+      "nominal_period": 2680.157829869424,
+      "primary": 2680.150155660326,
+      "sampled_instant": 2649.705091194879
+    },
+    "J": {
+      "raw_counter": 0.01366870488409122,
+      "nominal_period": 0.01363413741113876,
+      "primary": 0.013634098371937338,
+      "sampled_instant": 0.013479222346433607
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1358.529,
+        "period_ms": 99.85145595000002,
+        "period_feasible_ms": [
+          99.02761,
+          100.58747
+        ],
+        "primary_available": true,
+        "tail_s": 0.042997969,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.709,
+        "power_max": 137.035,
+        "temp_precomputed": 30.2
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1328.424,
+        "period_ms": 99.95070375000002,
+        "period_feasible_ms": [
+          99.113516,
+          100.80807833333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.040723856,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 34.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 89.982,
+        "power_max": 134.184,
+        "temp_precomputed": 30.4
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.047662223454423e-05,
+    "T_region_s": 9.923443143,
+    "host_load_1min": 38.5078125
+  },
+  {
+    "launch_id": "s3-b1-p11",
+    "session": 3,
+    "block": 1,
+    "arm": "B",
+    "length_s": 40.0,
+    "R": 764769,
+    "w": 95597,
+    "E": {
+      "raw_counter": 10322.228,
+      "nominal_period": 10319.767016745689,
+      "primary": 10319.767237795404,
+      "sampled_instant": 10301.469398614678
+    },
+    "J": {
+      "raw_counter": 0.01349718411703403,
+      "nominal_period": 0.013493966173767098,
+      "primary": 0.013493966462808251,
+      "sampled_instant": 0.013470040494076876
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5260.507,
+        "period_ms": 100.07894414999998,
+        "period_feasible_ms": [
+          99.29245433333334,
+          100.94201033333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.017934602,
+        "n_samples": 792,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 129.356,
+        "power_max": 133.69,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5061.721,
+        "period_ms": 99.91523305000001,
+        "period_feasible_ms": [
+          99.08709266666666,
+          100.70833566666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.015031245,
+        "n_samples": 792,
+        "temp_min": 31.0,
+        "temp_max": 37.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.167,
+        "power_max": 128.984,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.1770708294923046e-05,
+    "T_region_s": 39.593464080000004,
+    "host_load_1min": 37.74560546875
+  },
+  {
+    "launch_id": "s3-b1-p12",
+    "session": 3,
+    "block": 1,
+    "arm": "A",
+    "length_s": 2.5,
+    "R": 47802,
+    "w": 95604,
+    "E": {
+      "raw_counter": 654.723,
+      "nominal_period": 640.3311112469382,
+      "primary": 640.3125596879959,
+      "sampled_instant": 615.3183632038395
+    },
+    "J": {
+      "raw_counter": 0.013696560813355088,
+      "nominal_period": 0.013395487871782316,
+      "primary": 0.013395099780092797,
+      "sampled_instant": 0.012872230517631887
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 333.829,
+        "period_ms": 99.93295615,
+        "period_feasible_ms": [
+          99.15815666666667,
+          100.75033333333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.088678052,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 31.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.874,
+        "power_max": 131.772,
+        "temp_precomputed": 30.2
+      },
+      {
+        "gpu": 5,
+        "raw_J": 320.894,
+        "period_ms": 99.8252915,
+        "period_feasible_ms": [
+          98.97817466666667,
+          100.627431
+        ],
+        "primary_available": true,
+        "tail_s": 0.085883301,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.128,
+        "power_max": 126.892,
+        "temp_precomputed": 30.4
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.168432312455546e-05,
+    "T_region_s": 2.4719334155,
+    "host_load_1min": 38.498046875
+  },
+  {
+    "launch_id": "s3-b2-p01",
+    "session": 3,
+    "block": 2,
+    "arm": "B",
+    "length_s": 10.0,
+    "R": 191193,
+    "w": 95597,
+    "E": {
+      "raw_counter": 2549.7,
+      "nominal_period": 2542.9323061772693,
+      "primary": 2542.882366235871,
+      "sampled_instant": 2499.0137073179876
+    },
+    "J": {
+      "raw_counter": 0.013335739279157708,
+      "nominal_period": 0.013300342095041499,
+      "primary": 0.013300080893316548,
+      "sampled_instant": 0.013070633900393779
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1297.017,
+        "period_ms": 98.94516195,
+        "period_feasible_ms": [
+          98.7556925,
+          101.040669
+        ],
+        "primary_available": true,
+        "tail_s": 0.043193914,
+        "n_samples": 196,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 98.116,
+        "power_max": 132.185,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1252.683,
+        "period_ms": 99.79514745000002,
+        "period_feasible_ms": [
+          98.87558966666667,
+          100.69610833333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.040154563,
+        "n_samples": 196,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 89.545,
+        "power_max": 128.044,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.1174009011836214e-05,
+    "T_region_s": 9.7848725855,
+    "host_load_1min": 35.4990234375
+  },
+  {
+    "launch_id": "s3-b2-p02",
+    "session": 3,
+    "block": 2,
+    "arm": "C",
+    "length_s": 40.0,
+    "R": 786308,
+    "w": 98289,
+    "E": {
+      "raw_counter": 10779.983,
+      "nominal_period": 10774.5674722227,
+      "primary": 10774.562857538465,
+      "sampled_instant": 10747.974494415801
+    },
+    "J": {
+      "raw_counter": 0.013709618877081246,
+      "nominal_period": 0.01370273159146632,
+      "primary": 0.01370272572266652,
+      "sampled_instant": 0.013668911539009905
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5454.183,
+        "period_ms": 99.91052875,
+        "period_feasible_ms": [
+          99.136643,
+          100.70768033333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.038244125,
+        "n_samples": 794,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.788,
+        "power_max": 138.698,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5325.8,
+        "period_ms": 99.93661495,
+        "period_feasible_ms": [
+          99.099063,
+          100.76898666666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.035275462,
+        "n_samples": 794,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 89.863,
+        "power_max": 135.035,
+        "temp_precomputed": 30.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.047464503477008e-05,
+    "T_region_s": 39.689434815000006,
+    "host_load_1min": 36.01806640625
+  },
+  {
+    "launch_id": "s3-b2-p03",
+    "session": 3,
+    "block": 2,
+    "arm": "A",
+    "length_s": 40.0,
+    "R": 764825,
+    "w": 95604,
+    "E": {
+      "raw_counter": 10332.916000000001,
+      "nominal_period": 10323.311116700599,
+      "primary": 10323.309164345272,
+      "sampled_instant": 10294.994563979151
+    },
+    "J": {
+      "raw_counter": 0.013510170300395516,
+      "nominal_period": 0.01349761202458157,
+      "primary": 0.013497609471899156,
+      "sampled_instant": 0.01346058845354055
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5260.575,
+        "period_ms": 99.99843539999999,
+        "period_feasible_ms": [
+          99.24159033333332,
+          100.77093866666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.066897791,
+        "n_samples": 791,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.254,
+        "power_max": 133.985,
+        "temp_precomputed": 30.2
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5072.341,
+        "period_ms": 99.96174420000001,
+        "period_feasible_ms": [
+          99.12400833333334,
+          100.77679166666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.063650002,
+        "n_samples": 791,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.25,
+        "power_max": 129.254,
+        "temp_precomputed": 30.4
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.173240202006995e-05,
+    "T_region_s": 39.568517719,
+    "host_load_1min": 28.2216796875
+  },
+  {
+    "launch_id": "s3-b2-p04",
+    "session": 3,
+    "block": 2,
+    "arm": "A",
+    "length_s": 2.5,
+    "R": 47802,
+    "w": 95604,
+    "E": {
+      "raw_counter": 655.608,
+      "nominal_period": 646.2498325002794,
+      "primary": 646.2333959970415,
+      "sampled_instant": 605.1265337640934
+    },
+    "J": {
+      "raw_counter": 0.013715074683067653,
+      "nominal_period": 0.013519305311499087,
+      "primary": 0.013518961465985555,
+      "sampled_instant": 0.012659021249405746
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 334.099,
+        "period_ms": 99.83446314999999,
+        "period_feasible_ms": [
+          99.04255433333333,
+          100.54487933333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.058518729,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 31.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.917,
+        "power_max": 131.919,
+        "temp_precomputed": 30.8
+      },
+      {
+        "gpu": 5,
+        "raw_J": 321.509,
+        "period_ms": 99.84672795,
+        "period_feasible_ms": [
+          99.048494,
+          100.67315166666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.054564836,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.116,
+        "power_max": 127.175,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.158151765616502e-05,
+    "T_region_s": 2.466537352,
+    "host_load_1min": 35.380859375
+  },
+  {
+    "launch_id": "s3-b2-p05",
+    "session": 3,
+    "block": 2,
+    "arm": "C",
+    "length_s": 10.0,
+    "R": 196577,
+    "w": 98289,
+    "E": {
+      "raw_counter": 2705.371,
+      "nominal_period": 2690.4801657353228,
+      "primary": 2690.4676883703646,
+      "sampled_instant": 2649.427745536158
+    },
+    "J": {
+      "raw_counter": 0.013762398449462553,
+      "nominal_period": 0.01368664780587415,
+      "primary": 0.013686584332706088,
+      "sampled_instant": 0.013477811471007076
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1367.656,
+        "period_ms": 99.87416689999999,
+        "period_feasible_ms": [
+          99.16843633333332,
+          100.546699
+        ],
+        "primary_available": true,
+        "tail_s": 0.093791662,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 98.049,
+        "power_max": 137.225,
+        "temp_precomputed": 30.4
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1337.715,
+        "period_ms": 99.98042419999999,
+        "period_feasible_ms": [
+          99.27242233333334,
+          100.69602133333332
+        ],
+        "primary_available": true,
+        "tail_s": 0.090459478,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 34.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.474,
+        "power_max": 133.998,
+        "temp_precomputed": 30.4
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.046202672744014e-05,
+    "T_region_s": 9.9236121925,
+    "host_load_1min": 34.701171875
+  },
+  {
+    "launch_id": "s3-b2-p06",
+    "session": 3,
+    "block": 2,
+    "arm": "B",
+    "length_s": 2.5,
+    "R": 47799,
+    "w": 95597,
+    "E": {
+      "raw_counter": 657.0989999999999,
+      "nominal_period": 650.4960462600745,
+      "primary": 650.4942536806711,
+      "sampled_instant": 613.887917810631
+    },
+    "J": {
+      "raw_counter": 0.013747128601016756,
+      "nominal_period": 0.01360898860352883,
+      "primary": 0.013608951101083101,
+      "sampled_instant": 0.012843112153196324
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 334.973,
+        "period_ms": 99.9224058,
+        "period_feasible_ms": [
+          99.21290633333332,
+          100.75582133333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.041401948,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 31.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.283,
+        "power_max": 131.736,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 322.126,
+        "period_ms": 100.039246,
+        "period_feasible_ms": [
+          99.16988366666668,
+          100.82214733333332
+        ],
+        "primary_available": true,
+        "tail_s": 0.038191668,
+        "n_samples": 50,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 105.675,
+        "power_max": 126.755,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.165579738069834e-05,
+    "T_region_s": 2.4698800905000002,
+    "host_load_1min": 39.30029296875
+  },
+  {
+    "launch_id": "s3-b2-p07",
+    "session": 3,
+    "block": 2,
+    "arm": "A",
+    "length_s": 20.0,
+    "R": 382413,
+    "w": 95604,
+    "E": {
+      "raw_counter": 5132.653,
+      "nominal_period": 5131.782129100026,
+      "primary": 5131.782522045806,
+      "sampled_instant": 5115.265554645647
+    },
+    "J": {
+      "raw_counter": 0.013421753444574322,
+      "nominal_period": 0.01341947613993255,
+      "primary": 0.013419477167475494,
+      "sampled_instant": 0.013376285729422501
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2604.243,
+        "period_ms": 100.1366984,
+        "period_feasible_ms": [
+          99.40297066666666,
+          100.880919
+        ],
+        "primary_available": true,
+        "tail_s": 0.007342606,
+        "n_samples": 395,
+        "temp_min": 29.0,
+        "temp_max": 34.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 116.521,
+        "power_max": 132.549,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2528.41,
+        "period_ms": 99.81622835,
+        "period_feasible_ms": [
+          98.99289033333334,
+          100.64306433333333
+        ],
+        "primary_available": true,
+        "tail_s": 0.003373771,
+        "n_samples": 395,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 108.718,
+        "power_max": 128.68,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.1673313603355535e-05,
+    "T_region_s": 19.761287831500002,
+    "host_load_1min": 36.52001953125
+  },
+  {
+    "launch_id": "s3-b2-p08",
+    "session": 3,
+    "block": 2,
+    "arm": "B",
+    "length_s": 40.0,
+    "R": 764769,
+    "w": 95597,
+    "E": {
+      "raw_counter": 10348.121,
+      "nominal_period": 10341.090957561373,
+      "primary": 10341.089386264997,
+      "sampled_instant": 10320.215216879262
+    },
+    "J": {
+      "raw_counter": 0.013531041399429108,
+      "nominal_period": 0.01352184902573375,
+      "primary": 0.013521846971131148,
+      "sampled_instant": 0.013494552233261627
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 5267.592,
+        "period_ms": 100.09603155,
+        "period_feasible_ms": [
+          99.306638,
+          100.893579
+        ],
+        "primary_available": true,
+        "tail_s": 0.050106203,
+        "n_samples": 797,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.936,
+        "power_max": 133.581,
+        "temp_precomputed": 30.6
+      },
+      {
+        "gpu": 5,
+        "raw_J": 5080.529,
+        "period_ms": 99.8406856,
+        "period_feasible_ms": [
+          99.01432366666667,
+          100.655501
+        ],
+        "primary_available": true,
+        "tail_s": 0.045682913,
+        "n_samples": 797,
+        "temp_min": 30.0,
+        "temp_max": 37.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 89.922,
+        "power_max": 129.001,
+        "temp_precomputed": 30.6
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.2098089627063856e-05,
+    "T_region_s": 39.8459667415,
+    "host_load_1min": 33.42041015625
+  },
+  {
+    "launch_id": "s3-b2-p09",
+    "session": 3,
+    "block": 2,
+    "arm": "C",
+    "length_s": 20.0,
+    "R": 393154,
+    "w": 98289,
+    "E": {
+      "raw_counter": 5371.198,
+      "nominal_period": 5370.009596281948,
+      "primary": 5370.007186936532,
+      "sampled_instant": 5336.140724230545
+    },
+    "J": {
+      "raw_counter": 0.013661816997919391,
+      "nominal_period": 0.013658794254368384,
+      "primary": 0.013658788126119871,
+      "sampled_instant": 0.013572647675543286
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2716.531,
+        "period_ms": 99.84779040000001,
+        "period_feasible_ms": [
+          99.04100333333332,
+          100.62706133333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.009209181,
+        "n_samples": 396,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.84,
+        "power_max": 137.733,
+        "temp_precomputed": 30.4
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2654.667,
+        "period_ms": 99.75579115000001,
+        "period_feasible_ms": [
+          98.91924766666666,
+          100.58539166666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.005435017,
+        "n_samples": 396,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 90.086,
+        "power_max": 134.349,
+        "temp_precomputed": 30.4
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.046554892484879e-05,
+    "T_region_s": 19.841643936,
+    "host_load_1min": 36.96240234375
+  },
+  {
+    "launch_id": "s3-b2-p10",
+    "session": 3,
+    "block": 2,
+    "arm": "A",
+    "length_s": 10.0,
+    "R": 191207,
+    "w": 95604,
+    "E": {
+      "raw_counter": 2565.5240000000003,
+      "nominal_period": 2559.3521818676327,
+      "primary": 2559.3424156942756,
+      "sampled_instant": 2513.097147468039
+    },
+    "J": {
+      "raw_counter": 0.013417521325056093,
+      "nominal_period": 0.013385243123251934,
+      "primary": 0.01338519204680935,
+      "sampled_instant": 0.013143332343836989
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 1306.075,
+        "period_ms": 99.76989985,
+        "period_feasible_ms": [
+          98.99398566666667,
+          100.54991366666667
+        ],
+        "primary_available": true,
+        "tail_s": 0.04012698,
+        "n_samples": 198,
+        "temp_min": 29.0,
+        "temp_max": 33.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 97.12,
+        "power_max": 131.67,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 1259.449,
+        "period_ms": 99.96089964999999,
+        "period_feasible_ms": [
+          99.11472833333333,
+          100.812292
+        ],
+        "primary_available": true,
+        "tail_s": 0.036474394,
+        "n_samples": 198,
+        "temp_min": 30.0,
+        "temp_max": 33.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 89.644,
+        "power_max": 127.093,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.1623565606907695e-05,
+    "T_region_s": 9.8715968445,
+    "host_load_1min": 40.7177734375
+  },
+  {
+    "launch_id": "s3-b2-p11",
+    "session": 3,
+    "block": 2,
+    "arm": "B",
+    "length_s": 20.0,
+    "R": 382385,
+    "w": 95597,
+    "E": {
+      "raw_counter": 5131.516,
+      "nominal_period": 5123.62177354198,
+      "primary": null,
+      "sampled_instant": 5099.233702383817
+    },
+    "J": {
+      "raw_counter": 0.013419762804503313,
+      "nominal_period": 0.013399118097053964,
+      "primary": null,
+      "sampled_instant": 0.013335339258558305
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 2602.51,
+        "period_ms": 98.80269375,
+        "period_feasible_ms": [
+          98.84167999999998,
+          100.66248766666666
+        ],
+        "primary_available": false,
+        "tail_s": 0.004598982,
+        "n_samples": 395,
+        "temp_min": 30.0,
+        "temp_max": 34.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 102.487,
+        "power_max": 132.563,
+        "temp_precomputed": 31.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 2529.006,
+        "period_ms": 99.7125937,
+        "period_feasible_ms": [
+          98.62711150000001,
+          101.040733
+        ],
+        "primary_available": true,
+        "tail_s": 0.100622037,
+        "n_samples": 395,
+        "temp_min": 30.0,
+        "temp_max": 35.0,
+        "graphics_min": 1920.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 96.302,
+        "power_max": 128.47,
+        "temp_precomputed": 31.0
+      }
+    ],
+    "primary_unavailable_gpus": [
+      4
+    ],
+    "t_gpu_s": 5.1603995318854036e-05,
+    "T_region_s": 19.7343844695,
+    "host_load_1min": 36.1376953125
+  },
+  {
+    "launch_id": "s3-b2-p12",
+    "session": 3,
+    "block": 2,
+    "arm": "C",
+    "length_s": 2.5,
+    "R": 49145,
+    "w": 98289,
+    "E": {
+      "raw_counter": 684.184,
+      "nominal_period": 676.3259925005782,
+      "primary": 676.3086911149126,
+      "sampled_instant": 655.4434365223897
+    },
+    "J": {
+      "raw_counter": 0.01392174178451521,
+      "nominal_period": 0.01376184744125706,
+      "primary": 0.013761495393527572,
+      "sampled_instant": 0.0133369302375092
+    },
+    "per_gpu": [
+      {
+        "gpu": 4,
+        "raw_J": 345.561,
+        "period_ms": 99.93528835,
+        "period_feasible_ms": [
+          99.22062,
+          100.69664533333334
+        ],
+        "primary_available": true,
+        "tail_s": 0.049376434,
+        "n_samples": 49,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1950.0,
+        "graphics_max": 1950.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 100.217,
+        "power_max": 135.698,
+        "temp_precomputed": 30.0
+      },
+      {
+        "gpu": 5,
+        "raw_J": 338.623,
+        "period_ms": 99.6387412,
+        "period_feasible_ms": [
+          98.82125333333333,
+          100.47846366666666
+        ],
+        "primary_available": true,
+        "tail_s": 0.045530075,
+        "n_samples": 49,
+        "temp_min": 30.0,
+        "temp_max": 32.0,
+        "graphics_min": 1935.0,
+        "graphics_max": 1935.0,
+        "mem_clocks": [
+          7601.0
+        ],
+        "power_min": 94.672,
+        "power_max": 133.436,
+        "temp_precomputed": 30.0
+      }
+    ],
+    "primary_unavailable_gpus": [],
+    "t_gpu_s": 5.053677653881371e-05,
+    "T_region_s": 2.4871901345,
+    "host_load_1min": 36.75439453125
+  }
+]

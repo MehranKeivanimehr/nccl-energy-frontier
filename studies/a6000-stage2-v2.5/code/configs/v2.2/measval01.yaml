@@ -1,0 +1,35 @@
+# v2.2 gate 3b measurement validation (approved 2026-10-09 on GPUs 4,5 by the user, after smoke v2.2-smoke-02 passed).
+# Plan and pre-specified analysis: docs/v2/v22_audit/stage3_plan_rev1.md §3, §4, §7; src/ncclenergy/v2/measval.py.
+campaign: v2.2-measval-01
+mode: MEASUREMENT_VALIDATION
+method: v2.2
+seed: 20261009
+output_root: data/v2.2/raw
+allocation: [4, 5]            # explicitly allocated by the user for gate 3b
+placements:
+- id: P2_NVL
+  gpus: [4, 5]
+collectives: [all_gather]
+sizes:
+  list: [2097152]
+configs: [auto, Ring/Simple, Ring/LL128]   # A, B (identical-execution control for A), C
+region_lengths_s: [2.5, 10, 20, 40]        # 12 conditions per block, seeded random order within each block
+sampler_period_s: 0.05
+T_min_s: 2.0
+T_star_s: 2.5
+power_lag_s: 0.75
+max_attempts: 1               # no retries of any kind
+stop:
+  temp_c: 80
+  disk_floor_gb: 20
+  mem_used_mib_max: 16
+timeouts:                     # per process: 3 x planned (warm-up + timed) + 60 s
+  factor: 3
+  add_s: 60
+  min_s: 60
+idle:
+  duration_s: 30
+  settle_s: 10
+  p8_timeout_s: 300
+max_blocks: 6
+frozen_file: configs/v2.2/measval01_frozen.json

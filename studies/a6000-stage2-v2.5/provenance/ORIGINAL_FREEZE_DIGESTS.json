@@ -1,0 +1,32 @@
+{
+  "FREEZE_C_CALIB1.json": {
+    "original_sha256": "45b127f3f29a65f64552f00525e13b26670226dac6ccd765cd78ae6aa390278c",
+    "original_bytes_public": false,
+    "public_view": "protocol/FREEZE_C_CALIB1.json",
+    "note": "Original freeze digest, not a checksum of the privacy derivative"
+  },
+  "FREEZE_H_S1.json": {
+    "original_sha256": "bc2c2935ec5b1753bb77dffbaeda2ac667150b392108d2d9990309a07655d6a6",
+    "original_bytes_public": false,
+    "public_view": "protocol/FREEZE_H_S1.json",
+    "note": "Original freeze digest, not a checksum of the privacy derivative"
+  },
+  "FREEZE_H_S2.json": {
+    "original_sha256": "f58300377ceb27e919a8440d2d5f0826f93ac7f50eb5b519d1e3c46081d40e4b",
+    "original_bytes_public": false,
+    "public_view": "protocol/FREEZE_H_S2.json",
+    "note": "Original freeze digest, not a checksum of the privacy derivative"
+  },
+  "FREEZE_H_S3.json": {
+    "original_sha256": "a95104a92f2477df0aa448b6c44b4ffab0071b5be9306e3b0bbbbc0d1409d6c1",
+    "original_bytes_public": false,
+    "public_view": "protocol/FREEZE_H_S3.json",
+    "note": "Original freeze digest, not a checksum of the privacy derivative"
+  },
+  "FREEZE_S_SMOKE1.json": {
+    "original_sha256": "22cfae14ba04fa1f9468bb7e19ce01b88201bdd184f1c7ba7c8fe36c458816ff",
+    "original_bytes_public": false,
+    "public_view": null,
+    "note": "Original freeze digest, not a checksum of the privacy derivative"
+  }
+}

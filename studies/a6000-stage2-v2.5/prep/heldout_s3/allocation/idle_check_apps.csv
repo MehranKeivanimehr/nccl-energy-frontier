@@ -1,0 +1,4 @@
+gpu_uuid, pid, process_name, used_gpu_memory [MiB]
+A6000-70baeda9, 1288189, python, 34188 MiB
+A6000-5ddfa67e, 1309443, python, 344 MiB
+A6000-6165bcc6, 1289939, python, 44328 MiB

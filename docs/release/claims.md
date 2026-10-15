@@ -1,11 +1,18 @@
 # Claim status — v2.2 pilot release (2026-10-09)
 
+The historical categories and numerical claims below remain separate from
+the completed [A6000 Stage 2 claims](../../studies/a6000-stage2-v2.5/docs/claims.md)
+and [held-out results](../../studies/a6000-stage2-v2.5/docs/results.md).
+The new selected comparison does not promote historical C7 to a global
+optimum claim, establish physical accuracy, or repair unrecorded training
+correctness.
+
 ## Scope of every claim
 
 * One host: 8× RTX A6000, NCCL 2.27.5.
 * Driver 580.178.04 for v2 and v2.2; driver 550 for the pilot.
-* 2–4 GPUs, single node, FP32 sum.
-* **GPU-board energy of the participating GPUs.** This is not
+* 2–4 GPUs, single node, FP32; sum for the reduction collectives.
+* **NVML-reported GPU-board energy of the participating GPUs.** This is not
   communication-only energy and not whole-system energy.
 * No external power reference.
 * Blocks of each campaign ran back to back in one session. They are

@@ -1,0 +1,7 @@
+kind	estimator	item	session	block	reason
+estimator_unavailable	primary	s2-b2-p08	2	2	RANK0: PRIMARY_PERIOD_INCOMPATIBLE: least-squares P_hat 98.5589 ms lies outside the hard feasible period interval [98.9015, 101.0365] ms of the constant-period model; not clipped
+estimator_unavailable	primary	s2-b2-p08	2	2	RANK1: PRIMARY_PERIOD_INCOMPATIBLE: least-squares P_hat 101.4198 ms lies outside the hard feasible period interval [99.1547, 101.0986] ms of the constant-period model; not clipped
+estimator_unavailable	primary	s3-b2-p11	3	2	RANK0: PRIMARY_PERIOD_INCOMPATIBLE: least-squares P_hat 98.8027 ms lies outside the hard feasible period interval [98.8417, 100.6625] ms of the constant-period model; not clipped
+block_contrast_missing	primary	HD1:['B', 2.5]	2	2	MISSING
+block_contrast_missing	primary	HD1:['B', 20.0]	3	2	MISSING
+block_contrast_missing	primary	HD3:20.0	3	2	MISSING

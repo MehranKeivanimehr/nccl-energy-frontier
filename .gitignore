@@ -13,6 +13,11 @@
 __pycache__/
 *.pyc
 logs/
+reproduced/
+node_modules/
+.venv/
+.pytest_cache/
+**/native/*/build/
 
 # built from source by scripts/build_nccl_tests.sh
 third_party/nccl-tests/

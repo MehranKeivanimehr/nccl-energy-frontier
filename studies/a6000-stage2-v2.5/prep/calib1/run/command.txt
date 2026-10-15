@@ -1,0 +1,1 @@
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src <EXPERIMENT_ENV>/bin/python -u -m ncclenergy.v2.stage2_runner calibration --campaign configs/stage2/calib01.yaml

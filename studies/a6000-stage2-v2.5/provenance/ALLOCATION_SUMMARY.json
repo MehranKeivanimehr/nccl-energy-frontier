@@ -1,0 +1,23 @@
+{
+  "source": "immutable original smoke/calibration/held-out authorization and scope records",
+  "smoke": {
+    "pair": [
+      4,
+      5
+    ],
+    "selection": "pair and window selected under recorded user delegation after availability checks",
+    "individual_pair_named_by_user": false,
+    "scheduler_or_administrator_reservation": false
+  },
+  "calibration_and_heldout": {
+    "pair": [
+      4,
+      5
+    ],
+    "same_physical_pair": true,
+    "permission": "recorded user permission and bounded windows; conditional idle checks",
+    "scheduler_or_administrator_reservation": false
+  },
+  "privacy": "Original correspondence omitted; summaries do not convert delegated selection into individually confirmed allocation",
+  "exclusive_host_access": false
+}

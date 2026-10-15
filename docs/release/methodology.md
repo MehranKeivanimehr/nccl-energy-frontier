@@ -39,11 +39,15 @@
 
 ### Counter interpretation (local, not an NVML guarantee)
 
-The local Phase 4 experiments support this reading on driver 580:
-* the counter updates about every 100 ms;
-* a read discards the not-yet-committed energy.
+The local Phase 4 experiments observed counter changes at about 100 ms and
+read-frequency-associated differences in reported energy on driver 580.
+Discarding not-yet-committed energy is a local model hypothesis, not a
+documented NVML guarantee or an established physical mechanism. Later
+calibration did not establish a systematic physical-error bound.
 
-Therefore the controller never reads the counter inside a region.
+The ordinary-region controller avoids additional counter reads as a
+precaution. See the [completed Stage 2 method](../../studies/a6000-stage2-v2.5/docs/methodology.md)
+and [calibration outcome](../../studies/a6000-stage2-v2.5/docs/results.md).
 
 ### Execution evidence and QC
 

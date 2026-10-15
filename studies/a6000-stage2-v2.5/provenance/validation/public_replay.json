@@ -1,0 +1,18 @@
+{
+  "provenance_status": "PUBLIC_DERIVATIVE_REPLAY",
+  "comparison": {
+    "numeric_fields_checked": 3557,
+    "max_absolute_difference": 2.4424906541753444e-15,
+    "relative_tolerance": 1e-11,
+    "absolute_tolerance": 1e-11,
+    "scientific_decisions_and_missingness": "UNCHANGED"
+  },
+  "tables": {
+    "units.tsv": "IDENTICAL_TEXT",
+    "exclusions.tsv": "IDENTICAL_TEXT",
+    "contrasts.tsv": "IDENTICAL_TEXT",
+    "thermal_control.tsv": "IDENTICAL_TEXT",
+    "adequacy.tsv": "IDENTICAL_TEXT",
+    "execution.tsv": "IDENTICAL_TEXT"
+  }
+}

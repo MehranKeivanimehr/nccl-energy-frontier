@@ -1,0 +1,302 @@
+# calib-1 FINAL config (2026-10-13): calib01_DRAFT.yaml + allocation, window, scope_expected, freeze_record. Units and counts unchanged.
+implementation_id: stage2-cg1-2026-10-12
+method_id: v2.5-stage2-region
+output_root: data/stage2
+energy_source: counter
+max_attempts: 1
+collective: all_gather
+size_bytes: 2097152
+counts:
+  A:
+    w: 95604
+    R:
+      '2.5': 47802
+      '10': 191207
+      '20': 382413
+      '40': 764825
+  B:
+    w: 95597
+    R:
+      '2.5': 47799
+      '10': 191193
+      '20': 382385
+      '40': 764769
+  C:
+    w: 98289
+    R:
+      '2.5': 49145
+      '10': 196577
+      '20': 393154
+      '40': 786308
+power_lag_s: 0.75
+sampler_period_s: 0.05
+allocation:
+- 4
+- 5
+placements:
+- id: P2_NVL
+  gpus:
+  - 4
+  - 5
+allocation_confirmation:
+  confirmed_by: user
+  gpus:
+  - 4
+  - 5
+  window_start_utc: '2026-10-13T05:08:30+00:00'
+  window_end_utc: '2026-10-13T06:23:30+00:00'
+  user_authorization_sha256: e5f0bb49bfcbbfad34f268cfbdec9502c19bc36372d1fb532a231852d1e3650b
+  scope_read_sha256: c52a6113aa95c649dc47f9eeb553d4acfbc63bec87a0e4db1cb21c061f8f80b9
+  note: explicit user authorization for the 23-launch calibration on GPUs 4,5 (UUIDs/PCI verified); fixed absolute deadline;
+    not a scheduler reservation
+scope_expected:
+  gpu_name: NVIDIA RTX A6000
+  driver: 580.178.04
+  link: NV4
+  uuids:
+  - A6000-b10caa4a
+  - A6000-f5f81ac3
+  numa:
+    '4': 1
+    '5': 1
+  power_limit_mw:
+  - 300000
+  - 300000
+  max_clk_gr_mhz:
+  - 2100
+  - 2100
+freeze_record: ../protocol/FREEZE_C_CALIB1.json
+campaign: v2.5-calib-01
+mode: STAGE2_CALIBRATION
+total_power_samples: true
+units:
+- part: S0a
+  length_s: 2.5
+  dose: E0
+  pos: 1
+  arm: B
+  launch_id: S0a-01
+  pause_ns: 97721965
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: S0b
+  length_s: 2.5
+  dose: D100
+  pos: 2
+  arm: B
+  launch_id: S0b-02
+  pause_ns: 26019624
+  dose_period_ms: 100
+  poller_active: true
+  post_probe: true
+- part: C1r1
+  length_s: 20.0
+  dose: E0
+  pos: 3
+  arm: B
+  launch_id: C1r1-03
+  pause_ns: 47538035
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C1r1
+  length_s: 2.5
+  dose: E0
+  pos: 4
+  arm: B
+  launch_id: C1r1-04
+  pause_ns: 98576661
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C1r1
+  length_s: 40.0
+  dose: E0
+  pos: 5
+  arm: B
+  launch_id: C1r1-05
+  pause_ns: 87435893
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C1r1
+  length_s: 10.0
+  dose: E0
+  pos: 6
+  arm: B
+  launch_id: C1r1-06
+  pause_ns: 31616328
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C2r1
+  length_s: 10.0
+  dose: E0
+  pos: 7
+  arm: B
+  launch_id: C2r1-07
+  pause_ns: 22904930
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C2r1
+  length_s: 10.0
+  dose: D100
+  pos: 8
+  arm: B
+  launch_id: C2r1-08
+  pause_ns: 31370978
+  dose_period_ms: 100
+  poller_active: true
+  post_probe: true
+- part: C2r1
+  length_s: 10.0
+  dose: D500
+  pos: 9
+  arm: B
+  launch_id: C2r1-09
+  pause_ns: 54594235
+  dose_period_ms: 500
+  poller_active: true
+  post_probe: true
+- part: C1r2
+  length_s: 20.0
+  dose: E0
+  pos: 10
+  arm: B
+  launch_id: C1r2-10
+  pause_ns: 45335987
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C1r2
+  length_s: 2.5
+  dose: E0
+  pos: 11
+  arm: B
+  launch_id: C1r2-11
+  pause_ns: 73840292
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C1r2
+  length_s: 10.0
+  dose: E0
+  pos: 12
+  arm: B
+  launch_id: C1r2-12
+  pause_ns: 10652846
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C1r2
+  length_s: 40.0
+  dose: E0
+  pos: 13
+  arm: B
+  launch_id: C1r2-13
+  pause_ns: 32243972
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C2r2
+  length_s: 10.0
+  dose: D100
+  pos: 14
+  arm: B
+  launch_id: C2r2-14
+  pause_ns: 77488537
+  dose_period_ms: 100
+  poller_active: true
+  post_probe: true
+- part: C2r2
+  length_s: 10.0
+  dose: D500
+  pos: 15
+  arm: B
+  launch_id: C2r2-15
+  pause_ns: 20379932
+  dose_period_ms: 500
+  poller_active: true
+  post_probe: true
+- part: C2r2
+  length_s: 10.0
+  dose: E0
+  pos: 16
+  arm: B
+  launch_id: C2r2-16
+  pause_ns: 12474374
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C1r3
+  length_s: 2.5
+  dose: E0
+  pos: 17
+  arm: B
+  launch_id: C1r3-17
+  pause_ns: 29385343
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C1r3
+  length_s: 20.0
+  dose: E0
+  pos: 18
+  arm: B
+  launch_id: C1r3-18
+  pause_ns: 90352201
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C1r3
+  length_s: 40.0
+  dose: E0
+  pos: 19
+  arm: B
+  launch_id: C1r3-19
+  pause_ns: 10578095
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C1r3
+  length_s: 10.0
+  dose: E0
+  pos: 20
+  arm: B
+  launch_id: C1r3-20
+  pause_ns: 95906071
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C2r3
+  length_s: 10.0
+  dose: D500
+  pos: 21
+  arm: B
+  launch_id: C2r3-21
+  pause_ns: 85015104
+  dose_period_ms: 500
+  poller_active: true
+  post_probe: true
+- part: C2r3
+  length_s: 10.0
+  dose: E0
+  pos: 22
+  arm: B
+  launch_id: C2r3-22
+  pause_ns: 68637119
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+- part: C2r3
+  length_s: 10.0
+  dose: D100
+  pos: 23
+  arm: B
+  launch_id: C2r3-23
+  pause_ns: 40756348
+  dose_period_ms: 100
+  poller_active: true
+  post_probe: true

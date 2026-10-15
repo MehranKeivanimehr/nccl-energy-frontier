@@ -1,0 +1,32 @@
+{
+ "frozen_utc": "2026-10-09T18:59:36Z",
+ "method": "v2.2",
+ "purpose": "gate 3a smoke (SMOKE; not used for inference)",
+ "entries_sha256": "6dde8944bc3da6e21141a3a4fd13c41db6daaccb97705ce07bd43785b8508feb",
+ "entries": {
+  "P2_NVL__all_gather__auto__2097152": {
+   "R": 47802,
+   "w": 3825,
+   "count": 262144,
+   "t_gpu_cal_s": 5.229958726908331e-05,
+   "target_region_s": 2.5,
+   "source": "median t_gpu of 12 accepted historical units (confirmatory)"
+  },
+  "P2_NVL__all_gather__Ring-Simple__2097152": {
+   "R": 47799,
+   "w": 3824,
+   "count": 262144,
+   "t_gpu_cal_s": 5.230343513580975e-05,
+   "target_region_s": 2.5,
+   "source": "median t_gpu of 2 accepted historical units (exploratory)"
+  },
+  "P2_NVL__all_gather__Ring-LL128__2097152": {
+   "R": 49145,
+   "w": 3932,
+   "count": 262144,
+   "t_gpu_cal_s": 5.087066746836944e-05,
+   "target_region_s": 2.5,
+   "source": "median t_gpu of 12 accepted historical units (confirmatory)"
+  }
+ }
+}

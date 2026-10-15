@@ -1,0 +1,108 @@
+# smoke-1 FINAL config (2026-10-13): smoke01_DRAFT.yaml + allocation (delegated selection), scope_expected and
+# freeze_record. Software gate only; data are never analysed with calibration or held-out data.
+implementation_id: stage2-cg1-2026-10-12
+method_id: v2.5-stage2-region
+output_root: data/stage2
+energy_source: counter
+max_attempts: 1
+collective: all_gather
+size_bytes: 2097152
+counts:
+  A:
+    w: 95604
+    R:
+      '2.5': 47802
+      '10': 191207
+      '20': 382413
+      '40': 764825
+  B:
+    w: 95597
+    R:
+      '2.5': 47799
+      '10': 191193
+      '20': 382385
+      '40': 764769
+  C:
+    w: 98289
+    R:
+      '2.5': 49145
+      '10': 196577
+      '20': 393154
+      '40': 786308
+power_lag_s: 0.75
+sampler_period_s: 0.05
+allocation:
+- 4
+- 5
+placements:
+- id: P2_NVL
+  gpus:
+  - 4
+  - 5
+allocation_confirmation:
+  confirmed_by: user
+  mode: 'delegated selection: the user delegated the choice of an idle pair and of the window to Claude (statements 3 and
+    4); the pair below was selected by Claude after a read-only idle check'
+  gpus:
+  - 4
+  - 5
+  window_start_utc: '2026-10-13T03:53:00+00:00'
+  window_end_utc: '2026-10-13T04:53:00+00:00'
+  user_statements_sha256: da9e8df8d0f376f739f86ef769535e7887532bfbf621ddf9a123f81148294da7
+  selection_evidence:
+    ../prep/smoke1/allocation/round2/idle_check_apps.csv: c937e21055ba770c1a329c653edaeddc23f5227f49d702112006bacd358b6a4a
+    ../prep/smoke1/allocation/round2/idle_check_end_utc.txt: a379438d2ba357573c7ad22db6047400143e2a703646cd976f4bb3667d2ef2d1
+    ../prep/smoke1/allocation/round2/idle_check_gpus.csv: 93633580a8ffdce6832a0b39950bad90e8e6f3e762d9e6781b2dc364aa0fc31c
+    ../prep/smoke1/allocation/round2/idle_check_start_utc.txt: c8269a49ac53d66c889e9ca5ed85e20e280dbd86b0906e7d06953e27ec6fef71
+    ../prep/smoke1/allocation/round2/idle_clock_events.csv: 43b994725ea7f79dd007b7fdeb65762add76cdb196eee42bfac7bbb7558d4bdb
+    ../prep/smoke1/allocation/round2/scope_read_4_5.json: d0008107e08d83e2f44df0c29e4de7d3cb8eca817612e1c52dff870e1f2d1ed1
+    ../prep/smoke1/allocation/round2/selection.json: cf20b3e2158ef663f79dcf4dbd038dc4124be8c93357ba0d3ac7b40731b3d51e
+  note: not a scheduler reservation; idle state does not establish exclusive use
+scope_expected:
+  gpu_name: NVIDIA RTX A6000
+  driver: 580.178.04
+  link: NV4
+  uuids:
+  - A6000-b10caa4a
+  - A6000-f5f81ac3
+  numa:
+    '4': 1
+    '5': 1
+  power_limit_mw:
+  - 300000
+  - 300000
+  max_clk_gr_mhz:
+  - 2100
+  - 2100
+freeze_record: ../protocol/FREEZE_S_SMOKE1.json
+campaign: v2.5-s2-smoke
+mode: STAGE2_SMOKE
+total_power_samples: true
+units:
+- part: SMOKE
+  launch_id: SMOKE-01
+  arm: B
+  length_s: 2.5
+  dose: E0
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+  pause_ns: 95504453
+- part: SMOKE
+  launch_id: SMOKE-02
+  arm: B
+  length_s: 2.5
+  dose: D100
+  dose_period_ms: 100
+  poller_active: true
+  post_probe: true
+  pause_ns: 47298398
+- part: SMOKE
+  launch_id: SMOKE-03
+  arm: B
+  length_s: 2.5
+  dose: D500
+  dose_period_ms: 500
+  poller_active: true
+  post_probe: true
+  pause_ns: 73968092

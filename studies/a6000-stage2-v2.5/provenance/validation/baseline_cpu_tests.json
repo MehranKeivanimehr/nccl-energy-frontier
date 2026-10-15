@@ -1,0 +1,8 @@
+{
+  "tests": 124,
+  "passed": 118,
+  "did_not_complete": 6,
+  "runner_exit_code": 1,
+  "reason": "GCC/G++ and Make absent locally; six native compiler-dependent tests could not execute",
+  "historical_2026_10_11_server_result": "124/124 recorded separately; not represented as this local rerun"
+}

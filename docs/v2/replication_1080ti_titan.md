@@ -1,5 +1,10 @@
 # Replication on a 6× GTX 1080 Ti + 3× Titan cluster (methodology v2)
 
+> **Archived proposal (2026-10-14).** This replication was not performed and
+> is no longer part of the current project scope. The completed release is
+> A6000-only. The design and limitations below are retained as historical
+> material, not an instruction or authorization to run this campaign.
+
 > **Release-candidate correction (2026-10-11).** Python sampled paths pass
 > CPU no-counter tests, but this does not validate the native executable.
 > The historical v2.1 patch is unchanged. The new

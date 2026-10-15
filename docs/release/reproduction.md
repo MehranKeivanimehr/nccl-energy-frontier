@@ -1,5 +1,31 @@
 # Reproduction — v2.2 pilot release
 
+## Completed A6000 Stage 2 addition
+
+This subsection is separate from the historical 14-step replay below. Use
+Python with `requirements-analysis.txt` on Linux/WSL. No GPU, live NVML or
+administrator access is needed by the analysis adapter.
+
+```bash
+python studies/a6000-stage2-v2.5/scripts/reproduce_public.py
+python -m unittest discover -s studies/a6000-stage2-v2.5/tests -p 'test_public_replay.py' -v
+```
+
+The adapter checks public hashes and original source identities, recomputes
+72 unit records and the 55 estimator/contrast entries, and compares all
+scientific fields and six tables against the retained analysis. It writes
+to a fresh `reproduced/a6000-stage2-v2.5/` directory; choose `--output` for a
+later replay. `--check` writes no result files. Status is
+`PUBLIC_DERIVATIVE_REPLAY`, not original private Freeze-H verification.
+The original final writer generates JSON/TSV, not the explanatory Markdown
+report. See the [provenance and limitations](../../studies/a6000-stage2-v2.5/docs/publication_status.md).
+
+The frozen Stage 2 source/tests are retained under the study's `code/`.
+Their historical full suite had one stale draft-identity test; this release
+does not change that frozen test after seeing the data. Native CPU tests
+additionally require GCC/G++ and Make. New public-export tests are separate
+from hardware validation; absent compiler tests must not be called passed.
+
 There are two separate paths:
 * **§1–2, analysis only**: CPU, no GPU access, no NVML, no administrator
   rights. It reproduces every published analysis from the retained
@@ -145,8 +171,9 @@ experiment needs its own plan and approval, and all of these requirements:
 * **No silent retries**: `max_attempts: 1` for validation campaigns, and no
   significance-driven stopping.
 * **Never read the cumulative energy counter on a GPU with a running
-  experiment.** On driver 580 a read discards the open 100 ms window (local
-  interpretation).
+  experiment.** Read-frequency sensitivity was observed locally on driver
+  580; discarding an open 100 ms window is a hypothesis, not an NVML contract
+  or a physically identified mechanism.
 * **Data**: a new campaign ID and a new raw directory, never pooled with
   earlier method IDs.
 

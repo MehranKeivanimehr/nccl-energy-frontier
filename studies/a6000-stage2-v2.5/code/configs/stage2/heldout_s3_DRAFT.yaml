@@ -1,0 +1,211 @@
+# DRAFT - not runnable (readiness rules and pair identity are set at Freeze-H)
+implementation_id: stage2-cg1-2026-10-12
+method_id: v2.5-stage2-region
+output_root: data/stage2
+energy_source: counter
+max_attempts: 1
+collective: all_gather
+size_bytes: 2097152
+counts:
+  A:
+    w: 95604
+    R:
+      '2.5': 47802
+      '10': 191207
+      '20': 382413
+      '40': 764825
+  B:
+    w: 95597
+    R:
+      '2.5': 47799
+      '10': 191193
+      '20': 382385
+      '40': 764769
+  C:
+    w: 98289
+    R:
+      '2.5': 49145
+      '10': 196577
+      '20': 393154
+      '40': 786308
+power_lag_s: 0.75
+sampler_period_s: 0.05
+allocation: null
+placements: null
+allocation_confirmation: null
+scope_expected: null
+freeze_record: null
+campaign: v2.5-heldout
+mode: STAGE2_HELDOUT
+session: 3
+total_power_samples: false
+readiness_rules: null
+units:
+- launch_id: s3-b1-p01
+  arm: B
+  length_s: 2.5
+  pause_ns: 9050263
+  block: 1
+  pos: 1
+  triple: 1
+- launch_id: s3-b1-p02
+  arm: C
+  length_s: 2.5
+  pause_ns: 11775862
+  block: 1
+  pos: 2
+  triple: 1
+- launch_id: s3-b1-p03
+  arm: A
+  length_s: 20.0
+  pause_ns: 74981107
+  block: 1
+  pos: 3
+  triple: 1
+- launch_id: s3-b1-p04
+  arm: B
+  length_s: 10.0
+  pause_ns: 63376715
+  block: 1
+  pos: 4
+  triple: 2
+- launch_id: s3-b1-p05
+  arm: C
+  length_s: 40.0
+  pause_ns: 77281743
+  block: 1
+  pos: 5
+  triple: 2
+- launch_id: s3-b1-p06
+  arm: A
+  length_s: 40.0
+  pause_ns: 82250148
+  block: 1
+  pos: 6
+  triple: 2
+- launch_id: s3-b1-p07
+  arm: C
+  length_s: 20.0
+  pause_ns: 79559449
+  block: 1
+  pos: 7
+  triple: 3
+- launch_id: s3-b1-p08
+  arm: A
+  length_s: 10.0
+  pause_ns: 24639577
+  block: 1
+  pos: 8
+  triple: 3
+- launch_id: s3-b1-p09
+  arm: B
+  length_s: 20.0
+  pause_ns: 7176352
+  block: 1
+  pos: 9
+  triple: 3
+- launch_id: s3-b1-p10
+  arm: C
+  length_s: 10.0
+  pause_ns: 31634426
+  block: 1
+  pos: 10
+  triple: 4
+- launch_id: s3-b1-p11
+  arm: B
+  length_s: 40.0
+  pause_ns: 86336313
+  block: 1
+  pos: 11
+  triple: 4
+- launch_id: s3-b1-p12
+  arm: A
+  length_s: 2.5
+  pause_ns: 37239385
+  block: 1
+  pos: 12
+  triple: 4
+- launch_id: s3-b2-p01
+  arm: B
+  length_s: 10.0
+  pause_ns: 70028458
+  block: 2
+  pos: 1
+  triple: 1
+- launch_id: s3-b2-p02
+  arm: C
+  length_s: 40.0
+  pause_ns: 70535663
+  block: 2
+  pos: 2
+  triple: 1
+- launch_id: s3-b2-p03
+  arm: A
+  length_s: 40.0
+  pause_ns: 62623226
+  block: 2
+  pos: 3
+  triple: 1
+- launch_id: s3-b2-p04
+  arm: A
+  length_s: 2.5
+  pause_ns: 73546109
+  block: 2
+  pos: 4
+  triple: 2
+- launch_id: s3-b2-p05
+  arm: C
+  length_s: 10.0
+  pause_ns: 80843012
+  block: 2
+  pos: 5
+  triple: 2
+- launch_id: s3-b2-p06
+  arm: B
+  length_s: 2.5
+  pause_ns: 86811061
+  block: 2
+  pos: 6
+  triple: 2
+- launch_id: s3-b2-p07
+  arm: A
+  length_s: 20.0
+  pause_ns: 29560750
+  block: 2
+  pos: 7
+  triple: 3
+- launch_id: s3-b2-p08
+  arm: B
+  length_s: 40.0
+  pause_ns: 2017756
+  block: 2
+  pos: 8
+  triple: 3
+- launch_id: s3-b2-p09
+  arm: C
+  length_s: 20.0
+  pause_ns: 47230191
+  block: 2
+  pos: 9
+  triple: 3
+- launch_id: s3-b2-p10
+  arm: A
+  length_s: 10.0
+  pause_ns: 86334196
+  block: 2
+  pos: 10
+  triple: 4
+- launch_id: s3-b2-p11
+  arm: B
+  length_s: 20.0
+  pause_ns: 59160515
+  block: 2
+  pos: 11
+  triple: 4
+- launch_id: s3-b2-p12
+  arm: C
+  length_s: 2.5
+  pause_ns: 61627138
+  block: 2
+  pos: 12
+  triple: 4

@@ -1,0 +1,68 @@
+# DRAFT - pre-Freeze-C software gate on real GPUs; data never analysed. Not runnable (no allocation, confirmation or Freeze-S)
+implementation_id: stage2-cg1-2026-10-12
+method_id: v2.5-stage2-region
+output_root: data/stage2
+energy_source: counter
+max_attempts: 1
+collective: all_gather
+size_bytes: 2097152
+counts:
+  A:
+    w: 95604
+    R:
+      '2.5': 47802
+      '10': 191207
+      '20': 382413
+      '40': 764825
+  B:
+    w: 95597
+    R:
+      '2.5': 47799
+      '10': 191193
+      '20': 382385
+      '40': 764769
+  C:
+    w: 98289
+    R:
+      '2.5': 49145
+      '10': 196577
+      '20': 393154
+      '40': 786308
+power_lag_s: 0.75
+sampler_period_s: 0.05
+allocation: null
+placements: null
+allocation_confirmation: null
+scope_expected: null
+freeze_record: null
+campaign: v2.5-s2-smoke
+mode: STAGE2_SMOKE
+total_power_samples: true
+units:
+- part: SMOKE
+  launch_id: SMOKE-01
+  arm: B
+  length_s: 2.5
+  dose: E0
+  dose_period_ms: 0
+  poller_active: false
+  post_probe: true
+  pause_ns: 95504453
+- part: SMOKE
+  launch_id: SMOKE-02
+  arm: B
+  length_s: 2.5
+  dose: D100
+  dose_period_ms: 100
+  poller_active: true
+  post_probe: true
+  pause_ns: 47298398
+- part: SMOKE
+  launch_id: SMOKE-03
+  arm: B
+  length_s: 2.5
+  dose: D500
+  dose_period_ms: 500
+  poller_active: true
+  post_probe: true
+  pause_ns: 73968092

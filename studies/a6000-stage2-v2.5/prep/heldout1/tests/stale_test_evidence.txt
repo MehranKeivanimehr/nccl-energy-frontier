@@ -1,0 +1,38 @@
+# runner 'check' on every configs/stage2/*.yaml (CPU only; same command as test_cli_check_refuses_the_drafts), 2026-10-13T22:40:28Z
+== configs/stage2/calib01_DRAFT.yaml (sha256 57976c026a59d742)
+  - allocation must be exactly two distinct GPU indices (confirmed by the user)
+  - exactly one placement using exactly the two allocated GPUs, in allocation order
+  - allocation_confirmation missing: an idle GPU is not an allocation
+  - scope_expected must give ('gpu_name', 'driver', 'link', 'uuids', 'numa', 'power_limit_mw', 'max_clk_gr_mhz') (validated against the pair before any launch)
+  - freeze_record missing: nothing runs before the freeze
+== configs/stage2/calib01.yaml (sha256 10f185002abc7239)
+  - now is outside the confirmed access window
+== configs/stage2/heldout_s1_DRAFT.yaml (sha256 2200fad1ff3ed25d)
+  - allocation must be exactly two distinct GPU indices (confirmed by the user)
+  - exactly one placement using exactly the two allocated GPUs, in allocation order
+  - allocation_confirmation missing: an idle GPU is not an allocation
+  - scope_expected must give ('gpu_name', 'driver', 'link', 'uuids', 'numa', 'power_limit_mw', 'max_clk_gr_mhz') (validated against the pair before any launch)
+  - held-out requires readiness_rules (frozen at Freeze-H)
+  - freeze_record missing: nothing runs before the freeze
+== configs/stage2/heldout_s2_DRAFT.yaml (sha256 28fbbb5a1d6d3cbb)
+  - allocation must be exactly two distinct GPU indices (confirmed by the user)
+  - exactly one placement using exactly the two allocated GPUs, in allocation order
+  - allocation_confirmation missing: an idle GPU is not an allocation
+  - scope_expected must give ('gpu_name', 'driver', 'link', 'uuids', 'numa', 'power_limit_mw', 'max_clk_gr_mhz') (validated against the pair before any launch)
+  - held-out requires readiness_rules (frozen at Freeze-H)
+  - freeze_record missing: nothing runs before the freeze
+== configs/stage2/heldout_s3_DRAFT.yaml (sha256 e4656b69fbaf2b70)
+  - allocation must be exactly two distinct GPU indices (confirmed by the user)
+  - exactly one placement using exactly the two allocated GPUs, in allocation order
+  - allocation_confirmation missing: an idle GPU is not an allocation
+  - scope_expected must give ('gpu_name', 'driver', 'link', 'uuids', 'numa', 'power_limit_mw', 'max_clk_gr_mhz') (validated against the pair before any launch)
+  - held-out requires readiness_rules (frozen at Freeze-H)
+  - freeze_record missing: nothing runs before the freeze
+== configs/stage2/smoke01_DRAFT.yaml (sha256 2aa63e64611d063f)
+  - allocation must be exactly two distinct GPU indices (confirmed by the user)
+  - exactly one placement using exactly the two allocated GPUs, in allocation order
+  - allocation_confirmation missing: an idle GPU is not an allocation
+  - scope_expected must give ('gpu_name', 'driver', 'link', 'uuids', 'numa', 'power_limit_mw', 'max_clk_gr_mhz') (validated against the pair before any launch)
+  - freeze_record missing: nothing runs before the freeze
+== configs/stage2/smoke01.yaml (sha256 5448106b81d522e9)
+  - now is outside the confirmed access window

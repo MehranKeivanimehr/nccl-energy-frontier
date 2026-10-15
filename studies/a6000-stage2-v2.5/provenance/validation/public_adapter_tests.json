@@ -1,0 +1,6 @@
+{
+  "tests": 18,
+  "passed": 18,
+  "failed": 0,
+  "scope": "new public integrity/replay guards; CPU only"
+}

@@ -1,0 +1,326 @@
+{
+ "schema": "nccle-stage2-freeze-v1",
+ "kind": "Freeze-H",
+ "status": "FROZEN",
+ "session": 2,
+ "utc": "2026-10-14T01:38:50.667137+00:00",
+ "repo_head": "2b73580e848986905c45bc8ee10706383dc5cd72",
+ "repo_worktree": "uncommitted Stage 2 changes on top of repo_head; every bound file is hashed below",
+ "implementation_id": "stage2-cg1-2026-10-12",
+ "method_id": "v2.5-stage2-region",
+ "approved_by_user": {
+  "authorization_verbatim": [
+   "if they are idle we can use them",
+   "Window question answer: \"Now, 120 min (Recommended)\" - Start when your answer arrives; fixed end at start + 120 min, same as session 1. I recheck that GPUs 4 and 5 are idle and refuse to launch if they are not."
+  ],
+  "authorization_file": "../prep/heldout_s2/allocation/user_authorization.json",
+  "authorization_sha256": "835ff01301f9d3aaef1fc44c5f8889e4e1b08daf136f0d781693437a9717d900",
+  "interpretation": [
+   "Pair: the user wrote 'if they are idle we can use them' in reply to the request for a fresh session-2 confirmation of NVML GPUs 4 and 5: permission for GPUs 4 and 5, conditional on a read-only check that they are idle (no process). If they are not idle, nothing runs and no other pair is substituted.",
+   "Window: the user chose 'Now, 120 min' (start when the answer arrived; fixed end at start + 120 min). 'Now' is the moment this authorization was processed (this timestamp); the end is not extended if the run starts late."
+  ],
+  "window": {
+   "start_utc": "2026-10-14T01:38:31+00:00",
+   "end_utc_fixed_deadline": "2026-10-14T03:38:31+00:00"
+  },
+  "approves_gate": {
+   "packet": "../prep/heldout1_r1/HELDOUT1_GATE_PACKET_r1.md",
+   "sha256": "95ee9ecda41661b2a57b27dc832cab9c00bed8d3e153eb2c6a236f8e7910ce73"
+  },
+  "authorizes": "exactly the 24 launches of session 2 (configs/stage2/heldout_s2_DRAFT.yaml schedule), once; no retries, replacements, dose, M4d, threshold changes or extra conditions",
+  "scope_read": {
+   "file": "../prep/heldout_s2/allocation/scope_read_4_5.json",
+   "sha256": "f4e24f2a28791ef287888a326da8b611691a4745cc5560317b666910db1fdf9e",
+   "rank_mapping": [
+    {
+     "rank": 0,
+     "nvml_index": 4,
+     "uuid": "A6000-b10caa4a",
+     "pci": "00000000:81:00.0"
+    },
+    {
+     "rank": 1,
+     "nvml_index": 5,
+     "uuid": "A6000-f5f81ac3",
+     "pci": "00000000:A1:00.0"
+    }
+   ]
+  }
+ },
+ "roles": {
+  "config": "configs/stage2/heldout_s2.yaml",
+  "protocol": "../protocol/STAGE2_HELDOUT1_PROTOCOL.md",
+  "patch": "patches/nccl-tests-afd59ab-v2.5-stage2.patch",
+  "binary": "third_party/nccl-tests-stage2-v25/build/all_gather_perf",
+  "build_record": "third_party/nccl-tests-stage2-v25/BUILD_RECORD.txt",
+  "plugin": "native/nccl_profiler_algo/build/libnccl-profiler-nccle.so",
+  "code": [
+   "src/ncclenergy/__init__.py",
+   "src/ncclenergy/v2/__init__.py",
+   "src/ncclenergy/v2/attempts.py",
+   "src/ncclenergy/v2/common.py",
+   "src/ncclenergy/v2/evidence.py",
+   "src/ncclenergy/v2/preflight.py",
+   "src/ncclenergy/v2/procctl.py",
+   "src/ncclenergy/v2/qc.py",
+   "src/ncclenergy/v2/region.py",
+   "src/ncclenergy/v2/runner.py",
+   "src/ncclenergy/v2/selection.py",
+   "src/ncclenergy/v2/stage2_budget.py",
+   "src/ncclenergy/v2/stage2_calibration.py",
+   "src/ncclenergy/v2/stage2_decisions.py",
+   "src/ncclenergy/v2/stage2_energy.py",
+   "src/ncclenergy/v2/stage2_phase.py",
+   "src/ncclenergy/v2/stage2_readiness.py",
+   "src/ncclenergy/v2/stage2_runner.py",
+   "src/ncclenergy/v2/stage2_schedule.py",
+   "src/ncclenergy/v2/telemetry.py",
+   "src/ncclenergy/v2/topology.py",
+   "src/ncclenergy/v2/watchdog.py"
+  ],
+  "analysis": [
+   "src/ncclenergy/v2/stage2_heldout.py",
+   "src/ncclenergy/v2/stage2_decisions.py",
+   "src/ncclenergy/v2/stage2_calibration.py",
+   "src/ncclenergy/v2/stage2_energy.py",
+   "src/ncclenergy/v2/stage2_phase.py",
+   "src/ncclenergy/v2/stage2_readiness.py"
+  ],
+  "calibration_analysis": "../prep/calib1/run/calibration_analysis.json",
+  "schedule": [
+   "configs/stage2/heldout_s2_DRAFT.yaml"
+  ]
+ },
+ "files": {
+  "configs/stage2/heldout_s2.yaml": {
+   "sha256": "7881fe3fe1e6aba1a06434fb2e83058d5019dd1bc1134dd26bf1c2963b3a8140",
+   "bytes": 4435
+  },
+  "../protocol/STAGE2_HELDOUT1_PROTOCOL.md": {
+   "sha256": "67dad4292d6b2f9f5d6470934858b020718adb9f5481e25e65745962f16e9b64",
+   "bytes": 11029
+  },
+  "patches/nccl-tests-afd59ab-v2.5-stage2.patch": {
+   "sha256": "492523e7a79cc85649d74c83f8bcf02c61b36418ec98ef980c01aae755876f2f",
+   "bytes": 17254
+  },
+  "third_party/nccl-tests-stage2-v25/build/all_gather_perf": {
+   "sha256": "38d7a32748721819899bfd3bd4cef1dcf4f549e919cae1aa20d9b9e554ab2cf7",
+   "bytes": 5688752
+  },
+  "third_party/nccl-tests-stage2-v25/BUILD_RECORD.txt": {
+   "sha256": "43c5c4fa297a3264db4fe4032e8f73b950f4c87066884ec16c095680a99f5056",
+   "bytes": 1644
+  },
+  "native/nccl_profiler_algo/build/libnccl-profiler-nccle.so": {
+   "sha256": "0b96c10d120f461c876958dc98ad686aa97316f2c51d08248b19ea2703b2817b",
+   "bytes": 16664
+  },
+  "../prep/calib1/run/calibration_analysis.json": {
+   "sha256": "152dd0a5a8cac1e8f587941eef1ac490c8095de073b2e0422580045fc59d89f4",
+   "bytes": 98944
+  },
+  "src/ncclenergy/__init__.py": {
+   "sha256": "63515ab2a088469785ea0e57caed227462fe52497119f557cd077e2c6edc8dab",
+   "bytes": 594
+  },
+  "src/ncclenergy/v2/__init__.py": {
+   "sha256": "377a9b1f4a24f80ebfa3b2105fd4af0890e23dcd597bb487c873e034f2ed7530",
+   "bytes": 386
+  },
+  "src/ncclenergy/v2/attempts.py": {
+   "sha256": "a5f1acbca52c7944a6f2b29252cee5644582b957cf98b096f2322c3df8ec3872",
+   "bytes": 1624
+  },
+  "src/ncclenergy/v2/common.py": {
+   "sha256": "b5581311389ff8f3ca7656509ff2e1ab62b1c17bcb4aa4909a70ce4fba6e0f8a",
+   "bytes": 3800
+  },
+  "src/ncclenergy/v2/evidence.py": {
+   "sha256": "2fe3b99ea6c7d2874238244d9bce687a88f308ccb81e723e3b7ba0b790bc8d6d",
+   "bytes": 3703
+  },
+  "src/ncclenergy/v2/preflight.py": {
+   "sha256": "f1a672aa02676130b7811d5a1fe2e39414a6ba4cbad0e1219451573ea5336dec",
+   "bytes": 8724
+  },
+  "src/ncclenergy/v2/procctl.py": {
+   "sha256": "b55179ad4865dd06f2dc8526cbd39ec563a49dc18b5eaf9be045ba5c7b5e1ccc",
+   "bytes": 15791
+  },
+  "src/ncclenergy/v2/qc.py": {
+   "sha256": "08299484208f7930c2081759f2d1c757c04fc05f65821d55557998fe91b4a40b",
+   "bytes": 6825
+  },
+  "src/ncclenergy/v2/region.py": {
+   "sha256": "def13f52bf4889b413be947e091618d0a4451639c181d20f74d597c92c05443b",
+   "bytes": 7566
+  },
+  "src/ncclenergy/v2/runner.py": {
+   "sha256": "98c47112a249de80e6e60ccb04e907c2ee5d22a4fec2ace2e8a46e6ac03e149d",
+   "bytes": 42261
+  },
+  "src/ncclenergy/v2/selection.py": {
+   "sha256": "19380d42fcd37b2079f9476f4dbcf7d8a857a3a1c7cfe16e88eb68f0c55f0db1",
+   "bytes": 1969
+  },
+  "src/ncclenergy/v2/stage2_budget.py": {
+   "sha256": "ef1a7926cf5f638038863075352314b9d3be57605687978e950b330850fb7854",
+   "bytes": 8074
+  },
+  "src/ncclenergy/v2/stage2_calibration.py": {
+   "sha256": "b88ad3c110800293718a642c2351c1c04389edd43bab0bd0efe91db0a7803124",
+   "bytes": 25174
+  },
+  "src/ncclenergy/v2/stage2_decisions.py": {
+   "sha256": "ea82214b90f9d26d54d12544ee3763c9cd028b06e5a47cace75197cd4e692b72",
+   "bytes": 19918
+  },
+  "src/ncclenergy/v2/stage2_energy.py": {
+   "sha256": "d3317beab273fd475cc97ff4e0f97b7cb6d47208386571e5ce8798a568c61c00",
+   "bytes": 23703
+  },
+  "src/ncclenergy/v2/stage2_phase.py": {
+   "sha256": "b399bf6cbe9de7ac92132983f176535cbbca23ecd150f30b84084bf961d837ed",
+   "bytes": 14922
+  },
+  "src/ncclenergy/v2/stage2_readiness.py": {
+   "sha256": "2491ebe6e70e61dfdb3b525e5bb1c00fc5109083855d399869906063db423460",
+   "bytes": 18558
+  },
+  "src/ncclenergy/v2/stage2_runner.py": {
+   "sha256": "6a9793188debab82c3c082c5a3cd6ef2007e08e052e122930f421608d3957d9d",
+   "bytes": 63068
+  },
+  "src/ncclenergy/v2/stage2_schedule.py": {
+   "sha256": "c4764e6a19f0cc7a83071660148fac0341120afa9a95e16d88faa9d981995154",
+   "bytes": 7222
+  },
+  "src/ncclenergy/v2/telemetry.py": {
+   "sha256": "63d85db5e5c36e9e490e30373192afdb3146540df03d58e6b403da9c864e1a99",
+   "bytes": 12754
+  },
+  "src/ncclenergy/v2/topology.py": {
+   "sha256": "0e7416fac8731e4060e367ed10b8fabdfb698917a43500b1e15ceb628082aff5",
+   "bytes": 3170
+  },
+  "src/ncclenergy/v2/watchdog.py": {
+   "sha256": "1371a415d8e29eb8d45706ccd76be8f2d25f5f5681b44a414f323b43b9f9b958",
+   "bytes": 6067
+  },
+  "src/ncclenergy/v2/stage2_heldout.py": {
+   "sha256": "ae8c9c6b504f45ed3039fa04abb5a53abb51dc3736daef9d5fec33c4cc29b4ee",
+   "bytes": 46855
+  },
+  "configs/stage2/heldout_s2_DRAFT.yaml": {
+   "sha256": "28fbbb5a1d6d3cbb359ee9825a7ede227333b396181c461f8f4b4d1bfbeaddfb",
+   "bytes": 3273
+  },
+  "tests/v2/test_stage2_calibration.py": {
+   "sha256": "f48045ea54f180f2ff207a7710d3efb5881d4bc004ecab4576a542ff006488f2",
+   "bytes": 8825
+  },
+  "tests/v2/test_stage2_cg1_regressions.py": {
+   "sha256": "b0ba9af407a5aa3d1214577185bd7c0958c505ad27d7bd6a797b1f523f695e7f",
+   "bytes": 10492
+  },
+  "tests/v2/test_stage2_heldout.py": {
+   "sha256": "4de5f5376a991e7682fdfda2563a24255eef6cf1370496db12da0902633dc9ee",
+   "bytes": 55604
+  },
+  "tests/v2/test_stage2_identity_gate.py": {
+   "sha256": "5c80e0d6a4787c7d3a6d3725e84d7145f950df52934b9ea862818e5dd67c79dc",
+   "bytes": 17821
+  },
+  "tests/v2/test_stage2_patch.py": {
+   "sha256": "e9470c00191b5a4a62c51da9fd0477f3462b5c1396a9e831e40b7d601cc96be6",
+   "bytes": 14553
+  },
+  "tests/v2/test_stage2_runner.py": {
+   "sha256": "9663803a9560ab240c3bf2c8138994952810f3d4336f63acdca8de36a24da166",
+   "bytes": 6659
+  },
+  "tests/v2/test_stage2_smoke1_regressions.py": {
+   "sha256": "17135c21e3ce1b52f63281817d7997e87ba4ebcc6e110d284ba172296c9ea72e",
+   "bytes": 18635
+  },
+  "tests/v2/test_stage2_spec.py": {
+   "sha256": "21f4f8279af7b9cc4a5334a76181a8b5b3169b2ffa9327fd15a38f5fbc470894",
+   "bytes": 38893
+  },
+  "tests/v2/test_stage2_telemetry.py": {
+   "sha256": "bbdfd024a090ead0eac3402fb738cb4260a0d80e71119a76723900fa323dffef",
+   "bytes": 2043
+  },
+  "tests/v2/helpers/stage2_session.py": {
+   "sha256": "b764d47a10360ae685048497bdc8c3b0a7659837da01601c3ce969acee3459c1",
+   "bytes": 10492
+  },
+  "tests/v2/helpers/fake_bench_stage2.py": {
+   "sha256": "7652febaa8f937eeffce749e37c0f17fb532c50473ebf2a416b5f991b980ed10",
+   "bytes": 8442
+  },
+  "patches/nccl-tests-afd59ab-v2.1-region.patch": {
+   "sha256": "293527e3ab71ece12ff42088b84f47763ba48e62f08999edbfa4ff04bad2e0b8",
+   "bytes": 12243
+  },
+  "scripts/build_nccl_tests_stage2.sh": {
+   "sha256": "05a6db6be0df0275c23e22c9278a1bf875071353f5858aff32337adae0198eca",
+   "bytes": 2973
+  },
+  "scripts/env.sh": {
+   "sha256": "09bf92a55e322120fca3e983e66398b6cf198c756888c73f474ee29cae49b403",
+   "bytes": 578
+  },
+  "configs/stage2/heldout_s1_DRAFT.yaml": {
+   "sha256": "2200fad1ff3ed25d9e3c0ed53e8eb3144b4f1bcdc579c9d221365e60078b00d3",
+   "bytes": 3270
+  },
+  "configs/stage2/heldout_s3_DRAFT.yaml": {
+   "sha256": "e4656b69fbaf2b704bd5c7ae4b767c823b2569dfb359032bbdaae6bcbe10ae3d",
+   "bytes": 3270
+  },
+  "../prep/heldout1/CHANGE_LEDGER.md": {
+   "sha256": "14d1eb42431c9c18a99e71a2311fd62e6b5cd68998a06ac5fe30190a0e66160a",
+   "bytes": 12802
+  },
+  "../prep/heldout1_r1/CHANGE_LEDGER_r1.md": {
+   "sha256": "65c3a8577a43ed8a2677100a7cde4002104a72b38d89db4fc93fcd4346d5c7cd",
+   "bytes": 12031
+  },
+  "../prep/heldout1_r1/HELDOUT1_GATE_PACKET_r1.md": {
+   "sha256": "95ee9ecda41661b2a57b27dc832cab9c00bed8d3e153eb2c6a236f8e7910ce73",
+   "bytes": 8424
+  },
+  "../prep/heldout1_r1/build_gate_r1.py": {
+   "sha256": "5ff158d8b3b07e48493442a24a034e8f2dc3bb8a71b19e3c5f0893b0b138d3bf",
+   "bytes": 11579
+  },
+  "../prep/heldout1_r1/gate/SCHEDULE_72.tsv": {
+   "sha256": "63474b856d5a2b8c86a250c8def82926c15844aa18781b9901954c5724329354",
+   "bytes": 3508
+  },
+  "../prep/heldout_s2/allocation/user_authorization.json": {
+   "sha256": "835ff01301f9d3aaef1fc44c5f8889e4e1b08daf136f0d781693437a9717d900",
+   "bytes": 1671
+  },
+  "../prep/heldout_s2/allocation/scope_read_4_5.json": {
+   "sha256": "f4e24f2a28791ef287888a326da8b611691a4745cc5560317b666910db1fdf9e",
+   "bytes": 6203
+  },
+  "../prep/heldout_s2/finalize_freeze_h_s2.py": {
+   "sha256": "70a541ba5d033f9711e4e1fe752ebdba56941fb4338f5bd45150f4033cfd98eb",
+   "bytes": 7768
+  }
+ },
+ "external": {
+  "libnccl": {
+   "path": "<EXPERIMENT_ENV>/lib/python3.11/site-packages/nvidia/nccl/lib/libnccl.so.2",
+   "sha256": "1d9c10322efacde695cf640db1f29fc1586c929f1087f0e1202d2d5e70fb7168"
+  }
+ },
+ "parent": {
+  "path": "../protocol/FREEZE_C_CALIB1.json",
+  "sha256": "45b127f3f29a65f64552f00525e13b26670226dac6ccd765cd78ae6aa390278c"
+ }
+}

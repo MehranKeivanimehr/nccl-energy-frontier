@@ -1,0 +1,6 @@
+# Linux CPU tests only; no GPU benchmark or real NVML driver is needed.
+# GCC with its C++ frontend and Make are needed for native helper/plugin tests.
+-r requirements-analysis.txt
+nvidia-ml-py==13.610.43
+# Install the matching CPU wheel separately from the official CPU index.
+# python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.9.1+cpu

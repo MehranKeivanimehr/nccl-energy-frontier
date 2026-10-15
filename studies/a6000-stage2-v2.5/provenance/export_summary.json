@@ -1,0 +1,14 @@
+{
+  "schema": "a6000-public-export-v1",
+  "date": "2026-10-14",
+  "baseline_public_commit": "2b73580e848986905c45bc8ee10706383dc5cd72",
+  "dispositions": {
+    "RETAINED_BYTE_IDENTICAL": 1051,
+    "PUBLIC_DERIVATIVE": 343,
+    "PRIVATE_OR_OMITTED_FROM_PUBLIC_COPY": 101
+  },
+  "scientific_numeric_changes": 0,
+  "historical_authorship_or_git_history_rewritten": false,
+  "new_gpu_work": false,
+  "verification_scope": "PUBLIC_DERIVATIVE_REPLAY; not original private freeze byte identity"
+}

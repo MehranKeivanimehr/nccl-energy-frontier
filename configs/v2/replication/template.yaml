@@ -1,4 +1,4 @@
-# Replication campaign template (copy per homogeneous GPU group; fill every <...>).
+# Archived, unexecuted replication template; not part of the A6000 release.
 campaign: <cluster>_<group>_exploratory      # e.g. c2_1080ti_exploratory
 mode: EXPLORATORY
 seed: <integer>
@@ -10,7 +10,7 @@ placements:                                  # from caps.json topo_m; ids are fr
   - {id: <P4_...>, gpus: [<a>, <b>, <c>, <d>]}
   # - {id: <P2_..._SHM>, gpus: [<a>, <b>], env: {NCCL_P2P_DISABLE: "1"}}   # only if default P2P hangs
 collectives: [all_reduce, all_gather, reduce_scatter]
-sizes: {min: 1024, max: <largest size that fits: 3 x size + 2 GiB <= free memory>, factor: 2}
+sizes: {min: 1024, max: "<largest size that fits: 3 x size + 2 GiB <= free memory>", factor: 2}
 configs: [auto, Ring/Simple, Ring/LL, Ring/LL128, Tree/Simple, Tree/LL, Tree/LL128]   # filtered by NCCL's table
 sampler_period_s: 0.05
 T_min_s: <2.0 counter | 4.0 sampled>

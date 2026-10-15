@@ -1,0 +1,477 @@
+{
+  "scope": "Local rerun of retained archival Stage 2 source tests, not the active public-export suite",
+  "counts": {
+    "PASS": 91,
+    "FAIL": 8,
+    "NOT_RUN": 12
+  },
+  "runner_exit_code": 1,
+  "early_return_skips_reclassified": 5,
+  "tests": [
+    {
+      "test": "test_stage2_calibration.py::test_calibration_analysis_runs_on_a_fake_session_and_reports_insufficiency",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_calibration.py::test_end_alignment_is_a_conditional_timing_contribution_never_a_bound",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_calibration.py::test_m4c_decision_rule",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_calibration.py::test_q2_channel_description_known_answer",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_calibration.py::test_q4_secondary_estimator_only_if_delay_interval_excludes_zero",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_calibration.py::test_thermal_slope_is_an_association_and_refuses_degenerate_or_confounded_fits",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_cg1_regressions.py::test_D1_required_channels_are_enforced_in_counter_mode",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_cg1_regressions.py::test_D2_smoke_criteria_pause_postprobe_and_dose",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_cg1_regressions.py::test_D3_complete_is_execution_not_acceptance",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_cg1_regressions.py::test_E1_dose_rule_boundary_cases_are_deterministic",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_cg1_regressions.py::test_G1_minimum_effect_test_has_valid_size_at_both_margins",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_cg1_regressions.py::test_G1_null_sizes_difference_tost_and_holm_family",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_cg1_regressions.py::test_G2_duration_family_covers_every_measured_length",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_cg1_regressions.py::test_historical_replay_from_a_verified_complete_dataset",
+      "status": "NOT_RUN",
+      "reason": "Frozen test printed SKIP and returned early; not counted as a pass"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_R1_and_R2_are_reverified_offline_with_per_gpu_bands",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_R3_is_per_gpu_and_overrides_only_the_between_arm_contrasts",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_adequacy_is_not_established_even_when_every_statistical_criterion_is_met",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_clock_domains_field_timestamps_never_used_as_sample_time",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_control_validity_includes_channels_and_excludes_the_block",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_end_to_end_on_session_directories_reproduces_the_known_answers_with_exact_accounting",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_estimator_separation_no_promotion_no_substitution",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_exact_operation_accounting_and_attempt_refusals",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_interface_on_runner_format_data_all_estimators_and_exact_R",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_invalid_period_counter_and_coverage_make_only_that_estimator_unavailable",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_known_answers_HD1_HD2_HD4",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_known_answers_HD3_session_t_holm_tost_and_verdicts",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_labels_and_scope_statement",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_missing_primary_stays_missing_and_partial_sessions_use_available_blocks",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_module_is_analysis_only_and_the_shared_code_role_is_unchanged",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_production_config_is_the_bound_bytes_and_equals_the_frozen_draft",
+      "status": "FAIL",
+      "reason": "Original-private production fixture requires omitted compiled benchmark/plugin artifacts"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_production_freeze_h_coverage_validity_parent_and_analysis_binding",
+      "status": "FAIL",
+      "reason": "Original-private production fixture requires omitted compiled benchmark/plugin artifacts"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_production_happy_path_real_format_q1_ceiling_and_freeze_coverage",
+      "status": "FAIL",
+      "reason": "Original-private production fixture requires omitted compiled benchmark/plugin artifacts"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_production_refuses_changed_calibration_q1_with_unchanged_q3",
+      "status": "FAIL",
+      "reason": "Original-private production fixture requires omitted compiled benchmark/plugin artifacts"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_production_refuses_wrong_or_missing_identity_and_changed_w",
+      "status": "FAIL",
+      "reason": "Original-private production fixture requires omitted compiled benchmark/plugin artifacts"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_provenance_refusals_and_bindings",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_readiness_rules_must_be_the_calibration_derived_ones",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_real_calibration_only_for_interface_and_regression_checks",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_schedule_is_the_frozen_72_launch_schedule",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_three_sessions_are_required_and_never_replaced_by_blocks",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_heldout.py::test_unfrozen_regression_drafts_refused_as_drafts_and_executed_configs_only_as_expired",
+      "status": "FAIL",
+      "reason": "Public privacy derivatives and omitted external runtime also fail original private-byte gates, as expected"
+    },
+    {
+      "test": "test_stage2_identity_gate.py::test_build_cmd_default_unchanged_and_stage2_binary_separate",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_identity_gate.py::test_cli_check_refuses_the_drafts",
+      "status": "FAIL",
+      "reason": "Known stale frozen test: executed configs are not unfinalized drafts"
+    },
+    {
+      "test": "test_stage2_identity_gate.py::test_config_rules_scope_and_identifiers",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_identity_gate.py::test_freeze_refusals_irrelevant_external_config_parent_code",
+      "status": "NOT_RUN",
+      "reason": "Frozen test printed SKIP and returned early; not counted as a pass"
+    },
+    {
+      "test": "test_stage2_identity_gate.py::test_historical_runner_refuses_stage2_config_before_nvml",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_identity_gate.py::test_output_path_containment",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_identity_gate.py::test_proposed_manifest_is_complete_but_unapproved",
+      "status": "FAIL",
+      "reason": "Original manifest builder requires the omitted external NCCL library"
+    },
+    {
+      "test": "test_stage2_identity_gate.py::test_stage2_counter_calls_only_in_the_gated_baseline_helper",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_identity_gate.py::test_stage2_env_sets_only_allowed_variables_and_refuses_holdout_dose",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_identity_gate.py::test_stage2_refuses_every_historical_config",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_identity_gate.py::test_valid_freeze_chain_binds_config_code_binary_nccl_and_parent",
+      "status": "NOT_RUN",
+      "reason": "Frozen test printed SKIP and returned early; not counted as a pass"
+    },
+    {
+      "test": "test_stage2_patch.py::test_built_tree_is_afd59ab_plus_v21_plus_v25",
+      "status": "NOT_RUN",
+      "reason": "GCC/G++ unavailable for native-helper module"
+    },
+    {
+      "test": "test_stage2_patch.py::test_every_benchtime_insertion_is_guarded_by_stage2_mode",
+      "status": "NOT_RUN",
+      "reason": "GCC/G++ unavailable for native-helper module"
+    },
+    {
+      "test": "test_stage2_patch.py::test_native_counts_every_counter_call_including_the_v21_probe",
+      "status": "NOT_RUN",
+      "reason": "GCC/G++ unavailable for native-helper module"
+    },
+    {
+      "test": "test_stage2_patch.py::test_native_json_writer_parses",
+      "status": "NOT_RUN",
+      "reason": "GCC/G++ unavailable for native-helper module"
+    },
+    {
+      "test": "test_stage2_patch.py::test_native_pause_dose_pacing_stop_and_postprobe_bounds",
+      "status": "NOT_RUN",
+      "reason": "GCC/G++ unavailable for native-helper module"
+    },
+    {
+      "test": "test_stage2_patch.py::test_native_refuses_invalid_and_holdout_dose_or_m4d",
+      "status": "NOT_RUN",
+      "reason": "GCC/G++ unavailable for native-helper module"
+    },
+    {
+      "test": "test_stage2_patch.py::test_v21_unchanged_and_v25_is_additions_only",
+      "status": "NOT_RUN",
+      "reason": "GCC/G++ unavailable for native-helper module"
+    },
+    {
+      "test": "test_stage2_runner.py::test_baseline_counter_reads_only_after_validity",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_runner.py::test_budget_is_checked_before_the_start_baseline_and_before_each_unit",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_runner.py::test_calibration_session_end_to_end_with_v25_dose_rule",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_runner.py::test_heldout_schedule_with_dose_is_refused_before_anything_runs",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_runner.py::test_heldout_session_readiness_and_pre_region_checks",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_runner.py::test_no_end_baseline_after_contention_policy_change_or_interruption",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_runner.py::test_readiness_never_launches_on_expiry",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_runner.py::test_scope_mismatch_stops_before_any_counter_read_or_launch",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_runner.py::test_unit_acceptance_failures_stop_calibration_after_s0a_without_retry",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_A_active_poller_order_work_end_stop_join_is_enforced",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_A_inactive_poller_E0_needs_no_stop_or_join_times",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_A_inflight_read_at_stop_is_logged_never_delivered_and_not_a_failure",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_A_smoke_s5_threshold_unchanged_and_order_checked",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_B_end_alignment_denominator_substitution_is_recorded",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_B_ls_period_outside_the_feasible_interval_makes_aligned_hat_unavailable_without_clipping",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_B_unit_energies_keep_raw_and_nominal_when_aligned_hat_is_unavailable",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_C_baseline_raw_evidence_saved_with_no_extra_counter_call",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_C_first_read_evidence_is_kept_when_the_baseline_fails_later",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_F_LD_PRELOAD_is_refused_in_config_check_and_per_launch",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_F_smoke_deadline_is_the_earlier_of_reservation_end_and_start_plus_30_min",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_G_idle_trace_like_gate3b_passes_baseline_and_readiness_but_other_bits_fail",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_G_row_rule_tolerates_only_idle_bits_and_only_at_P8",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_G_sessions_idle_bits_pass_the_baselines_in_region_rule_unchanged_other_bits_refused",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_smoke1_regressions.py::test_smoke_schedule_end_to_end_on_cpu_reports_S5_per_launch",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_aligned_correction_known_answer_and_period_variants",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_budget_names_estimates_honestly_and_gate_reserves_cleanup",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_calibration_schedule_dose_and_m4d_only_in_calibration",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_clock_domains_are_not_mixed",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_counter_units_and_validity",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_coverage_and_missing_samples_are_rejected_not_interpolated",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_derivation_replays_the_full_gate_not_the_first_temperature_crossing",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_exact_operation_denominator_refuses_float_bool_and_nonfinite",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_gate_uses_allocated_gpus_current_window_and_never_expiry",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_hard_interval_contains_every_feasible_truth_and_covariance_is_carried",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_hd3_decisions_use_holm_and_unadjusted_intervals_are_descriptive",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_heldout_schedule_constraints_and_no_dose_fields",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_historical_replay_reproduces_committed_decisions",
+      "status": "NOT_RUN",
+      "reason": "Frozen test printed SKIP and returned early; not counted as a pass"
+    },
+    {
+      "test": "test_stage2_spec.py::test_infeasible_constant_period_brackets_are_never_certified",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_nonfinite_missing_insufficient_and_zero_variance_never_yield_a_verdict",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_p8_baseline_fail_closed_including_nonfinite_power_gaps_and_ownership",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_period_feasible_model_hard_interval_and_labelled_approximation",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_pre_region_check_and_per_gpu_contrast_balance_fail_closed",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_probe_only_never_identifies_the_end_update_and_post_probe_does_under_the_model",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_q1_separate_doses_difference_and_bound_and_nonsignificance_is_not_absence",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_s2_metrics_prep_to_c0_skew_inventory_and_dose",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_s2_parser_flags_unknown_and_partial_lines",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_schedules_reproduce_the_packet_v2_drafts",
+      "status": "NOT_RUN",
+      "reason": "Frozen test printed SKIP and returned early; not counted as a pass"
+    },
+    {
+      "test": "test_stage2_spec.py::test_scope_specific_adequacy_and_unknown_systematics_are_not_zero",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_trapezoid_and_hold_known_answers",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_warning_mechanism_of_the_v2_spec_defect_is_reproduced_and_removed",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_spec.py::test_wrapped_phase_with_interval_below_zero_is_ambiguous",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_telemetry.py::test_default_sampler_unchanged_and_v3_appends_columns",
+      "status": "PASS"
+    },
+    {
+      "test": "test_stage2_telemetry.py::test_total_power_samples_recorded_or_failure_recorded_never_substituted",
+      "status": "PASS"
+    }
+  ],
+  "limitations": "Frozen tests and private trust anchors are not weakened to disguise unavailable prerequisites or stale expectations"
+}

@@ -1,0 +1,24 @@
+# Methodology v2 - exploratory screen (label EXPLORATORY). Full allowed matrix, 21 sizes.
+campaign: exploratory
+mode: EXPLORATORY
+seed: 20261008
+output_root: data/v2/raw
+allocation: [4, 5, 6, 7]          # idle GPUs authorized by the user on 2026-10-08; max 6, default 4
+placements:
+  - {id: P2_NVL, gpus: [4, 5]}    # one NVLink bridge
+  # 5-6 under NCCL defaults selects P2P/direct pointer over PCIe and the first collective
+  # never completes (3/3 probes timed out, 2026-10-08). The host-path control therefore
+  # disables P2P, giving the SHM transport NCCL itself uses for these links inside P4_MIX.
+  - {id: P2_PCI_SHM, gpus: [5, 6], env: {NCCL_P2P_DISABLE: "1"}}
+  - {id: P4_MIX, gpus: [4, 5, 6, 7]}
+collectives: [all_reduce, all_gather, reduce_scatter]
+sizes: {min: 1024, max: 1073741824, factor: 2}
+configs: [auto, Ring/Simple, Ring/LL, Ring/LL128, Tree/Simple, Tree/LL, Tree/LL128]
+sampler_period_s: 0.05
+T_min_s: 2.0
+T_star_s: 2.5
+power_lag_s: 0.75     # PowerUsage averaging lag (Phase 4); cross-check only
+stop: {temp_c: 80, disk_floor_gb: 20, mem_used_mib_max: 16}
+timeouts: {min_s: 120, factor: 10}
+idle: {duration_s: 30, settle_s: 10, p8_timeout_s: 300}
+max_blocks: 3

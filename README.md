@@ -4,7 +4,7 @@
 choice of algorithm and protocol leave energy on the table?**
 
 ![study: pilot characterization](https://img.shields.io/badge/study-pilot%20characterization-orange)
-![hardware: 8x RTX A6000](https://img.shields.io/badge/hardware-8%C3%97%20RTX%20A6000-76B900)
+![measured: 2-4 RTX A6000 GPUs](https://img.shields.io/badge/measured-2%E2%80%934%20RTX%20A6000-76B900)
 ![NCCL 2.27.5](https://img.shields.io/badge/NCCL-2.27.5-76B900)
 ![python 3.11](https://img.shields.io/badge/python-3.11-3776AB)
 ![CPU validation 2026-10-11](https://img.shields.io/badge/CPU%20validation%202026--10--11-124%2F124%20tests%20%C2%B7%2014%2F14%20repro%20steps-2ea44f)
@@ -17,6 +17,9 @@ protocols. It was measured on one server: 8× RTX A6000, driver 580, NCCL
 
 It is **not** a general deployment claim, and **not** a completed proof of a
 latency–energy tradeoff.
+
+Energy values are NVML-reported estimates of participating-GPU board energy.
+No external physical-energy reference or absolute error bound was established.
 
 <p align="center">
   <img src="docs/media/rq1_cells.gif" width="640"
@@ -45,12 +48,38 @@ latency–energy tradeoff.
 > presentation/code corrections are listed in
 > [`docs/release/corrections_2026-10-11.md`](docs/release/corrections_2026-10-11.md).
 
+## Completed A6000 measurement characterization (2026-10-14)
+
+The [Stage 2 study](studies/a6000-stage2-v2.5/README.md) adds 3 smoke launches,
+23 calibration launches and 72 accepted held-out launches on the same NVLink
+pair, GPUs 4 and 5. The primary estimator is available for 70 of the 72
+held-out launches. These are new, separately reported campaigns; they do not
+replace or pool with the older results below.
+
+For AllGather 2 MiB, LL128 versus automatic at 40 s used **+1.6454%**
+NVML-reported board energy (descriptive 95% CI **[+1.0047%, +2.2901%]**).
+The same-execution B/A control at 10 s was compatible with its prespecified
+approximately ±0.5% mean-ratio equivalence margin. The precision target was
+missed, every aggregate adequacy scope remains unmet/unestablished, and
+global latency-versus-energy optima remain unresolved. The three sessions
+ran on one host during the same evening, not independent days or machines.
+
+Read the [results and limitations](studies/a6000-stage2-v2.5/docs/results.md),
+[method and evidence](studies/a6000-stage2-v2.5/docs/methodology.md), or the
+[50-page Persian educational guide](docs/teaching/NCCL_Energy_Frontier_FA.pdf).
+This closes the bounded A6000 pilot; no Ti/Titan replication was performed
+or is required for this release.
+
+The older release banners above describe historical versions. Their private
+branch name `ext/v2.2-audit` is not the public branch
+`extension-pilot-reviewed` from which this addition was prepared.
+
 ## At a glance
 
 | | |
 |---|---|
-| 🔬 **What was measured** | NVML board energy and latency of the participating GPUs for AllReduce, AllGather and ReduceScatter, 1 KiB–1 GiB, every NCCL algorithm × protocol |
-| 🖥️ **Where** | One host: 8× RTX A6000, NCCL 2.27.5, 2–4 GPUs, single node, FP32 sum |
+| 🔬 **What was measured** | NVML board energy and latency of the participating GPUs for AllReduce, AllGather and ReduceScatter, 1 KiB–1 GiB, the tested automatic/Ring/Tree × automatic/Simple/LL/LL128 matrix where supported |
+| 🖥️ **Where** | One host: 8× RTX A6000, NCCL 2.27.5, 2–4 GPUs, single node, FP32; sum where applicable |
 | ✅ **Strongest result** | A pre-registered pick used less board energy than automatic in 36 of 39 cells |
 | 📉 **Largest effect** | 4-GPU AllReduce 512 KiB, Tree/Simple vs automatic's Ring/LL: energy ratio 0.312 [0.308, 0.317] |
 | ⚖️ **Open question** | Do latency and energy optima differ? **Unresolved**: the measurement-validation precision gate was not met |
@@ -270,7 +299,29 @@ Bootstrap intervals from three trials are descriptive at best.
 
 </details>
 
+The new [Stage 2 category](studies/a6000-stage2-v2.5/README.md) has its own
+source, raw records, protocols and public-derivative replay. It is never
+pooled with categories 1–4 above.
+
+Historical v1 figure/table labels such as “ran” describe the initial-probe
+inference, not TUNING recorded in every timed process. Those historical
+artifacts remain unchanged; the newer profiler-verified execution evidence
+is a different measurement category.
+
 ## Reproduce
+
+For the completed Stage 2 study, after installing the analysis dependencies:
+
+```bash
+python studies/a6000-stage2-v2.5/scripts/reproduce_public.py
+python -m unittest discover -s studies/a6000-stage2-v2.5/tests -p 'test_public_replay.py' -v
+```
+
+The replay verifies the public derivative manifest and frozen numerical
+kernels before recomputing the raw-to-result analysis. It is not a claim
+that privacy-transformed files match the original private freeze bytes.
+See [publication status](studies/a6000-stage2-v2.5/docs/publication_status.md).
+The historical commands below still apply only to their original categories.
 
 **Analysis only** (CPU, no GPU, no NVML, no PyTorch), Python 3.11:
 
@@ -286,7 +337,7 @@ python -m pip install -r requirements-analysis.txt
 PYTHONPATH=src python -m ncclenergy.v2.release_repro --out logs/release_repro/my_run
 ```
 
-* `release_repro` re-runs every published analysis from the retained
+* `release_repro` re-runs the historical categories 1–4 from the retained
   evidence into the new directory. It compares each output file with the
   committed one and verifies that no frozen output changed.
 * The full CPU test suite additionally needs PyTorch's CPU wheel, the

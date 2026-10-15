@@ -1,0 +1,936 @@
+{
+ "python": "3.10.12",
+ "repo": "<repo>",
+ "steps": [
+  {
+   "step": "pilot_analyze",
+   "cmd": "python -m ncclenergy analyze --run data/raw/full --out <out>/pilot/processed_full",
+   "rc": 0,
+   "seconds": 29.2,
+   "comparison": [
+    {
+     "output": "pilot/processed_full/exclusions.csv",
+     "reference": "data/processed/full/exclusions.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/idle.csv",
+     "reference": "data/processed/full/idle.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/launches.csv",
+     "reference": "data/processed/full/launches.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/optima.csv",
+     "reference": "data/processed/full/optima.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/pareto.csv",
+     "reference": "data/processed/full/pareto.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/qc.json",
+     "reference": "data/processed/full/qc.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/regions.csv",
+     "reference": "data/processed/full/regions.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/selection.csv",
+     "reference": "data/processed/full/selection.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/summary.csv",
+     "reference": "data/processed/full/summary.csv",
+     "status": "IDENTICAL"
+    }
+   ],
+   "audit": {
+    "n_inputs": 1,
+    "outside_reads": []
+   },
+   "pass": true
+  },
+  {
+   "step": "pilot_report",
+   "cmd": "python -m ncclenergy report --processed <out>/pilot/processed_full",
+   "rc": 0,
+   "seconds": 8.3,
+   "comparison": [
+    {
+     "output": "pilot/processed_full/exclusions.csv",
+     "reference": "data/processed/full/exclusions.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/idle.csv",
+     "reference": "data/processed/full/idle.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/launches.csv",
+     "reference": "data/processed/full/launches.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/optima.csv",
+     "reference": "data/processed/full/optima.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/pareto.csv",
+     "reference": "data/processed/full/pareto.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/qc.json",
+     "reference": "data/processed/full/qc.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/rank_correlation.csv",
+     "reference": "data/processed/full/rank_correlation.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/regions.csv",
+     "reference": "data/processed/full/regions.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/results_summary.json",
+     "reference": "data/processed/full/results_summary.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/results_summary.md",
+     "reference": "data/processed/full/results_summary.md",
+     "status": "IDENTICAL_EXCEPT_SOURCE_PATH"
+    },
+    {
+     "output": "pilot/processed_full/selection.csv",
+     "reference": "data/processed/full/selection.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/processed_full/summary.csv",
+     "reference": "data/processed/full/summary.csv",
+     "status": "IDENTICAL"
+    }
+   ],
+   "audit": {
+    "n_inputs": 0,
+    "outside_reads": []
+   },
+   "pass": true
+  },
+  {
+   "step": "pilot_plot",
+   "cmd": "python -m ncclenergy plot --processed <out>/pilot/processed_full --out <out>/pilot/figures_full",
+   "rc": 0,
+   "seconds": 41.1,
+   "comparison": [
+    {
+     "output": "pilot/figures_full/fig1_latency_vs_size.png",
+     "reference": "figures/full/fig1_latency_vs_size.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/fig2a_energy_per_op_vs_size.png",
+     "reference": "figures/full/fig2a_energy_per_op_vs_size.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/fig2b_energy_dyn_per_op_vs_size.png",
+     "reference": "figures/full/fig2b_energy_dyn_per_op_vs_size.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/fig3a_gb_per_j_vs_size.png",
+     "reference": "figures/full/fig3a_gb_per_j_vs_size.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/fig3b_gb_per_j_dyn_vs_size.png",
+     "reference": "figures/full/fig3b_gb_per_j_dyn_vs_size.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/fig4_edp_vs_size.png",
+     "reference": "figures/full/fig4_edp_vs_size.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/fig5a_pareto_2gpu_nvlink_raw.png",
+     "reference": "figures/full/fig5a_pareto_2gpu_nvlink_raw.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/fig5a_pareto_4gpu_raw.png",
+     "reference": "figures/full/fig5a_pareto_4gpu_raw.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/fig5b_pareto_2gpu_nvlink_dyn.png",
+     "reference": "figures/full/fig5b_pareto_2gpu_nvlink_dyn.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/fig5b_pareto_4gpu_dyn.png",
+     "reference": "figures/full/fig5b_pareto_4gpu_dyn.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/fig6_heatmap_latency_optimal.png",
+     "reference": "figures/full/fig6_heatmap_latency_optimal.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/fig7a_heatmap_energy_optimal.png",
+     "reference": "figures/full/fig7a_heatmap_energy_optimal.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/fig7b_heatmap_dyn_energy_optimal.png",
+     "reference": "figures/full/fig7b_heatmap_dyn_energy_optimal.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/fig8_heatmap_disagreement.png",
+     "reference": "figures/full/fig8_heatmap_disagreement.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/figS1_power_per_gpu_vs_size.png",
+     "reference": "figures/full/figS1_power_per_gpu_vs_size.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/figS2_latency_rel_auto.png",
+     "reference": "figures/full/figS2_latency_rel_auto.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/figS3_energy_rel_auto.png",
+     "reference": "figures/full/figS3_energy_rel_auto.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "pilot/figures_full/method_example_trace.png",
+     "reference": "figures/full/method_example_trace.png",
+     "status": "KNOWN_UNREPRODUCED",
+     "why": "illustrative pilot figure made once by plots.example_trace() for an unrecorded launch; not produced by `ncclenergy plot`; no reported number depends on it"
+    }
+   ],
+   "audit": {
+    "n_inputs": 0,
+    "outside_reads": []
+   },
+   "pass": true
+  },
+  {
+   "step": "v2_exploratory",
+   "cmd": "python -m ncclenergy.v2.analyze_cli exploratory --campaign data/v2/raw/exploratory --out <out>/v2/exploratory",
+   "rc": 0,
+   "seconds": 63.0,
+   "comparison": [
+    {
+     "output": "v2/exploratory/attempts.csv",
+     "reference": "data/v2/processed/exploratory/attempts.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/exploratory/candidates.json",
+     "reference": "data/v2/processed/exploratory/candidates.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/exploratory/cell_config.csv",
+     "reference": "data/v2/processed/exploratory/cell_config.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/exploratory/cell_effective.csv",
+     "reference": "data/v2/processed/exploratory/cell_effective.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/exploratory/paired_vs_auto.csv",
+     "reference": "data/v2/processed/exploratory/paired_vs_auto.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/exploratory/policies.csv",
+     "reference": "data/v2/processed/exploratory/policies.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/exploratory/summary.json",
+     "reference": "data/v2/processed/exploratory/summary.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/exploratory/units.csv",
+     "reference": "data/v2/processed/exploratory/units.csv",
+     "status": "IDENTICAL"
+    }
+   ],
+   "audit": {
+    "n_inputs": 4037,
+    "outside_reads": []
+   },
+   "pass": true
+  },
+  {
+   "step": "v2_confirmatory",
+   "cmd": "python -m ncclenergy.v2.analyze_cli confirmatory --campaign data/v2/raw/confirmatory --prereg docs/v2/prereg.json --out <out>/v2/confirmatory",
+   "rc": 0,
+   "seconds": 25.8,
+   "comparison": [
+    {
+     "output": "v2/confirmatory/attempts.csv",
+     "reference": "data/v2/processed/confirmatory/attempts.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/rq1.csv",
+     "reference": "data/v2/processed/confirmatory/rq1.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/rq2.csv",
+     "reference": "data/v2/processed/confirmatory/rq2.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/summary.json",
+     "reference": "data/v2/processed/confirmatory/summary.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/units.csv",
+     "reference": "data/v2/processed/confirmatory/units.csv",
+     "status": "IDENTICAL"
+    }
+   ],
+   "audit": {
+    "n_inputs": 2809,
+    "outside_reads": []
+   },
+   "pass": true
+  },
+  {
+   "step": "v2_phase89",
+   "cmd": "python -m ncclenergy.v2.phase89 --campaign data/v2/raw/confirmatory --prereg docs/v2/prereg.json --processed <out>/v2/confirmatory --figures <out>/v2/figures_confirmatory",
+   "rc": 0,
+   "seconds": 63.6,
+   "comparison": [
+    {
+     "output": "v2/confirmatory/latency_policy.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/latency_policy.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/nccl_tuner_P2_NVL.conf",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/nccl_tuner_P2_NVL.conf",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/nccl_tuner_P2_NVL_latency.conf",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/nccl_tuner_P2_NVL_latency.conf",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/nccl_tuner_P2_PCI_SHM.conf",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/nccl_tuner_P2_PCI_SHM.conf",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/nccl_tuner_P2_PCI_SHM_latency.conf",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/nccl_tuner_P2_PCI_SHM_latency.conf",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/nccl_tuner_P4_MIX.conf",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/nccl_tuner_P4_MIX.conf",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/nccl_tuner_P4_MIX_latency.conf",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/nccl_tuner_P4_MIX_latency.conf",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/order_temperature.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/order_temperature.json",
+     "status": "NUMERIC_EQUAL",
+     "max_rel_diff": 0.0
+    },
+    {
+     "output": "v2/confirmatory/placement_meta.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/placement_meta.json",
+     "status": "EQUAL_EXCEPT_REPO_PATH",
+     "max_rel_diff": 0.0
+    },
+    {
+     "output": "v2/confirmatory/recommender_lobo.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/recommender_lobo.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/recommender_lobo_summary.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/recommender_lobo_summary.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/robustness.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/robustness.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/figures_confirmatory/counter_vs_integration.png",
+     "reference": "figures/v2/confirmatory/counter_vs_integration.png",
+     "status": "REGENERATED"
+    },
+    {
+     "output": "v2/figures_confirmatory/rq1_per_block.png",
+     "reference": "figures/v2/confirmatory/rq1_per_block.png",
+     "status": "REGENERATED"
+    }
+   ],
+   "context_vs_frozen_v21": [
+    {
+     "output": "v2/confirmatory/latency_policy.csv",
+     "reference": "data/v2/processed/confirmatory/latency_policy.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/nccl_tuner_P2_NVL.conf",
+     "reference": "data/v2/processed/confirmatory/nccl_tuner_P2_NVL.conf",
+     "status": "DIFFERENT",
+     "why": "bytes differ (not a table)"
+    },
+    {
+     "output": "v2/confirmatory/nccl_tuner_P2_NVL_latency.conf",
+     "reference": "data/v2/processed/confirmatory/nccl_tuner_P2_NVL_latency.conf",
+     "status": "DIFFERENT",
+     "why": "bytes differ (not a table)"
+    },
+    {
+     "output": "v2/confirmatory/nccl_tuner_P2_PCI_SHM.conf",
+     "reference": "data/v2/processed/confirmatory/nccl_tuner_P2_PCI_SHM.conf",
+     "status": "DIFFERENT",
+     "why": "bytes differ (not a table)"
+    },
+    {
+     "output": "v2/confirmatory/nccl_tuner_P2_PCI_SHM_latency.conf",
+     "reference": "data/v2/processed/confirmatory/nccl_tuner_P2_PCI_SHM_latency.conf",
+     "status": "DIFFERENT",
+     "why": "bytes differ (not a table)"
+    },
+    {
+     "output": "v2/confirmatory/nccl_tuner_P4_MIX.conf",
+     "reference": "data/v2/processed/confirmatory/nccl_tuner_P4_MIX.conf",
+     "status": "DIFFERENT",
+     "why": "bytes differ (not a table)"
+    },
+    {
+     "output": "v2/confirmatory/nccl_tuner_P4_MIX_latency.conf",
+     "reference": "data/v2/processed/confirmatory/nccl_tuner_P4_MIX_latency.conf",
+     "status": "DIFFERENT",
+     "why": "bytes differ (not a table)"
+    },
+    {
+     "output": "v2/confirmatory/order_temperature.json",
+     "reference": "data/v2/processed/confirmatory/order_temperature.json",
+     "status": "NUMERIC_EQUAL",
+     "max_rel_diff": 0.0
+    },
+    {
+     "output": "v2/confirmatory/placement_meta.json",
+     "reference": "data/v2/processed/confirmatory/placement_meta.json",
+     "status": "DIFFERENT",
+     "max_rel_diff": Infinity
+    },
+    {
+     "output": "v2/confirmatory/recommender_lobo.csv",
+     "reference": "data/v2/processed/confirmatory/recommender_lobo.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/recommender_lobo_summary.json",
+     "reference": "data/v2/processed/confirmatory/recommender_lobo_summary.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/confirmatory/robustness.csv",
+     "reference": "data/v2/processed/confirmatory/robustness.csv",
+     "status": "IDENTICAL"
+    }
+   ],
+   "audit": {
+    "n_inputs": 6757,
+    "outside_reads": []
+   },
+   "pass": true
+  },
+  {
+   "step": "v2_phase10",
+   "cmd": "python -m ncclenergy.v2.phase10 analyze --policy-dir data/v2/processed/confirmatory --out <out>/v2/phase10",
+   "rc": 0,
+   "seconds": 8.8,
+   "comparison": [
+    {
+     "output": "v2/phase10/phase10_summary.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase10_v22/phase10_summary.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/phase10/workload_execution.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase10_v22/workload_execution.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/phase10/workload_runs.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase10_v22/workload_runs.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/phase10/figures/workload_blocks.png",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/figures/phase10_v22/workload_blocks.png",
+     "status": "REGENERATED"
+    }
+   ],
+   "context_vs_frozen_v21": [
+    {
+     "output": "v2/phase10/phase10_summary.json",
+     "reference": "data/v2/processed/phase10/phase10_summary.json",
+     "status": "DIFFERENT",
+     "max_rel_diff": Infinity
+    },
+    {
+     "output": "v2/phase10/workload_execution.csv",
+     "reference": "data/v2/processed/phase10/workload_execution.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v2/phase10/workload_runs.csv",
+     "reference": "data/v2/processed/phase10/workload_runs.csv",
+     "status": "IDENTICAL"
+    }
+   ],
+   "audit": {
+    "n_inputs": 252,
+    "outside_reads": []
+   },
+   "pass": true
+  },
+  {
+   "step": "v22_reanalysis",
+   "cmd": "python -m ncclenergy.v2.reanalysis --out <out>/v22/reanalysis",
+   "rc": 0,
+   "seconds": 152.6,
+   "comparison": [
+    {
+     "output": "v22/reanalysis/ar1g_tost.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/ar1g_tost.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/figures/phase10_v22/workload_blocks.png",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/figures/phase10_v22/workload_blocks.png",
+     "status": "REGENERATED"
+    },
+    {
+     "output": "v22/reanalysis/figures/phase89_v22/counter_vs_integration.png",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/figures/phase89_v22/counter_vs_integration.png",
+     "status": "REGENERATED"
+    },
+    {
+     "output": "v22/reanalysis/figures/phase89_v22/rq1_per_block.png",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/figures/phase89_v22/rq1_per_block.png",
+     "status": "REGENERATED"
+    },
+    {
+     "output": "v22/reanalysis/figures/rq1_threshold.png",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/figures/rq1_threshold.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/figures/rq2_estimators.png",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/figures/rq2_estimators.png",
+     "status": "REGENERATED"
+    },
+    {
+     "output": "v22/reanalysis/ledger.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/ledger.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/order_temperature.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/order_temperature.json",
+     "status": "NUMERIC_EQUAL",
+     "max_rel_diff": 0.0
+    },
+    {
+     "output": "v22/reanalysis/phase10_v22/phase10_summary.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase10_v22/phase10_summary.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/phase10_v22/workload_execution.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase10_v22/workload_execution.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/phase10_v22/workload_runs.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase10_v22/workload_runs.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/phase89_v22/latency_policy.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/latency_policy.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/phase89_v22/nccl_tuner_P2_NVL.conf",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/nccl_tuner_P2_NVL.conf",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/phase89_v22/nccl_tuner_P2_NVL_latency.conf",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/nccl_tuner_P2_NVL_latency.conf",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/phase89_v22/nccl_tuner_P2_PCI_SHM.conf",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/nccl_tuner_P2_PCI_SHM.conf",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/phase89_v22/nccl_tuner_P2_PCI_SHM_latency.conf",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/nccl_tuner_P2_PCI_SHM_latency.conf",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/phase89_v22/nccl_tuner_P4_MIX.conf",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/nccl_tuner_P4_MIX.conf",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/phase89_v22/nccl_tuner_P4_MIX_latency.conf",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/nccl_tuner_P4_MIX_latency.conf",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/phase89_v22/order_temperature.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/order_temperature.json",
+     "status": "NUMERIC_EQUAL",
+     "max_rel_diff": 0.0
+    },
+    {
+     "output": "v22/reanalysis/phase89_v22/placement_meta.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/placement_meta.json",
+     "status": "EQUAL_EXCEPT_REPO_PATH",
+     "max_rel_diff": 0.0
+    },
+    {
+     "output": "v22/reanalysis/phase89_v22/recommender_lobo.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/recommender_lobo.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/phase89_v22/recommender_lobo_summary.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/recommender_lobo_summary.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/phase89_v22/robustness.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/robustness.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/phase89_v22/rq1.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/phase89_v22/rq1.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/qc_reclassification.csv.gz",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/qc_reclassification.csv.gz",
+     "status": "NUMERIC_EQUAL",
+     "max_rel_diff": 0.0
+    },
+    {
+     "output": "v22/reanalysis/qc_reclassification.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/qc_reclassification.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/read_latency.csv.gz",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/read_latency.csv.gz",
+     "status": "NUMERIC_EQUAL",
+     "max_rel_diff": 0.0
+    },
+    {
+     "output": "v22/reanalysis/read_latency.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/read_latency.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/recommender_v22.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/recommender_v22.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/reproduced/attempts.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/reproduced/attempts.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/reproduced/rq1.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/reproduced/rq1.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/reproduced/rq2.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/reproduced/rq2.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/reproduced/summary.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/reproduced/summary.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/reproduced/units.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/reproduced/units.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/rq1_threshold.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/rq1_threshold.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/rq2_estimator_definitions.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/rq2_estimator_definitions.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/rq2_estimator_inputs.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/rq2_estimator_inputs.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/rq2_estimators.csv",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/rq2_estimators.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/sampling_intervals.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/sampling_intervals.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "v22/reanalysis/summary.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit/summary.json",
+     "status": "NUMERIC_EQUAL",
+     "max_rel_diff": 0.0
+    }
+   ],
+   "audit": {
+    "n_inputs": 9102,
+    "outside_reads": []
+   },
+   "pass": true
+  },
+  {
+   "step": "v22_addendum",
+   "cmd": "python -m ncclenergy.v2.reanalysis_addendum --out <out>/v22/addendum1",
+   "rc": 0,
+   "seconds": 20.9,
+   "comparison": [
+    {
+     "output": "v22/addendum1/uncertainty_components.csv.gz",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit-addendum1/uncertainty_components.csv.gz",
+     "status": "NUMERIC_EQUAL",
+     "max_rel_diff": 0.0
+    },
+    {
+     "output": "v22/addendum1/uncertainty_components.json",
+     "reference": "data/v2/reanalysis/2026-10-09_v2.2-audit-addendum1/uncertainty_components.json",
+     "status": "IDENTICAL"
+    }
+   ],
+   "audit": {
+    "n_inputs": 1073,
+    "outside_reads": []
+   },
+   "pass": true
+  },
+  {
+   "step": "gate3a_smoke_check",
+   "cmd": "python -m ncclenergy.v2.smoke_check --s2 data/v2.2/raw/v2.2-smoke-02 --s3 data/v2.2/raw/v2.2-smoke-02-s3 --s4 data/v2.2/raw/v2.2-smoke-02-s4 --audit-dir data/v2.2/raw/v2.2-smoke-02/nvml_audit --after data/v2.2/processed/v2.2-smoke-02/after.json --out <out>/v22/smoke02/smoke_check.json",
+   "rc": 0,
+   "seconds": 0.8,
+   "comparison": [
+    {
+     "output": "v22/smoke02/smoke_check.json",
+     "reference": "data/v2.2/processed/v2.2-smoke-02/smoke_check.json",
+     "status": "IDENTICAL"
+    }
+   ],
+   "audit": {
+    "n_inputs": 19,
+    "outside_reads": []
+   },
+   "pass": true
+  },
+  {
+   "step": "gate3b_measval",
+   "cmd": "python -m ncclenergy.v2.measval --campaign data/v2.2/raw/v2.2-measval-01 --out <out>/v22/measval01",
+   "rc": 0,
+   "seconds": 8.8,
+   "comparison": [
+    {
+     "output": "v22/measval01/decisions.json",
+     "reference": "data/v2.2/processed/v2.2-measval-01/decisions.json",
+     "status": "NUMERIC_EQUAL",
+     "max_rel_diff": 0.0
+    },
+    {
+     "output": "v22/measval01/processes.csv",
+     "reference": "data/v2.2/processed/v2.2-measval-01/processes.csv",
+     "status": "IDENTICAL"
+    }
+   ],
+   "audit": {
+    "n_inputs": 229,
+    "outside_reads": []
+   },
+   "pass": true
+  },
+  {
+   "step": "gate3b_posthoc",
+   "cmd": "python -m ncclenergy.v2.measval_posthoc --campaign data/v2.2/raw/v2.2-measval-01 --out <out>/v22/measval01/posthoc_temperature.json",
+   "rc": 0,
+   "seconds": 5.2,
+   "comparison": [
+    {
+     "output": "v22/measval01/posthoc_temperature.json",
+     "reference": "data/v2.2/processed/v2.2-measval-01/posthoc_temperature.json",
+     "status": "NUMERIC_EQUAL",
+     "max_rel_diff": 0.0
+    }
+   ],
+   "audit": {
+    "n_inputs": 76,
+    "outside_reads": []
+   },
+   "pass": true
+  },
+  {
+   "step": "gate3b_amendment_check",
+   "cmd": "python -m ncclenergy.v2.amendment_check --campaign data/v2.2/raw/v2.2-measval-01 --out <out>/v22/amendment_check.json",
+   "rc": 0,
+   "seconds": 9.5,
+   "comparison": [],
+   "audit": {
+    "n_inputs": 230,
+    "outside_reads": []
+   },
+   "pass": true
+  },
+  {
+   "step": "release_tables",
+   "cmd": "python -m ncclenergy.v2.release_tables --out <out>/release_tables",
+   "rc": 0,
+   "seconds": 12.8,
+   "comparison": [
+    {
+     "output": "release_tables/counts.json",
+     "reference": "results/release-corrections_2026-10-11/counts.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "release_tables/doc_check.json",
+     "reference": "results/release-corrections_2026-10-11/doc_check.json",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "release_tables/figures/gate3b_D3_identical_execution_control.png",
+     "reference": "results/release-corrections_2026-10-11/figures/gate3b_D3_identical_execution_control.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "release_tables/figures/gate3b_POSTHOC_matched_window_gap.png",
+     "reference": "results/release-corrections_2026-10-11/figures/gate3b_POSTHOC_matched_window_gap.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "release_tables/figures/gate3b_POSTHOC_temperature_association.png",
+     "reference": "results/release-corrections_2026-10-11/figures/gate3b_POSTHOC_temperature_association.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "release_tables/figures/historical_phase10/workload_blocks.png",
+     "reference": "results/release-corrections_2026-10-11/figures/historical_phase10/workload_blocks.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "release_tables/figures/rq2_estimator_sensitivity.png",
+     "reference": "results/release-corrections_2026-10-11/figures/rq2_estimator_sensitivity.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "release_tables/figures/v2_confirmatory/counter_vs_integration.png",
+     "reference": "results/release-corrections_2026-10-11/figures/v2_confirmatory/counter_vs_integration.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "release_tables/figures/v2_confirmatory/rq1_per_block.png",
+     "reference": "results/release-corrections_2026-10-11/figures/v2_confirmatory/rq1_per_block.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "release_tables/figures/v2_exploratory/default_regret.png",
+     "reference": "results/release-corrections_2026-10-11/figures/v2_exploratory/default_regret.png",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "release_tables/gate3b_decisions.csv",
+     "reference": "results/release-corrections_2026-10-11/gate3b_decisions.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "release_tables/gate3b_posthoc.csv",
+     "reference": "results/release-corrections_2026-10-11/gate3b_posthoc.csv",
+     "status": "IDENTICAL"
+    },
+    {
+     "output": "release_tables/key_numbers.csv",
+     "reference": "results/release-corrections_2026-10-11/key_numbers.csv",
+     "status": "IDENTICAL"
+    }
+   ],
+   "audit": {
+    "n_inputs": 161,
+    "outside_reads": []
+   },
+   "pass": true
+  }
+ ],
+ "frozen_files_hashed": 145,
+ "frozen_files_changed": [],
+ "pass": true,
+ "outside_reads": 0
+}

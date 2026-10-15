@@ -1,0 +1,18 @@
+# nccl-tests version 2.21.1 (afd59ab-dirty) nccl-headers=22705 nccl-library=22705
+# Collective test starting: all_gather_perf
+# nThread 2 nGpus 1 minBytes 2097152 maxBytes 2097152 step: 2(factor) warmup iters: 95604 iters: 191207 agg iters: 1 validation: 1 graph: 0 unalign: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid 1304609 on experiment-host device  0 [0000:81:00] NVIDIA RTX A6000
+#  Rank  1 Group  0 Pid 1304609 on experiment-host device  1 [0000:a1:00] NVIDIA RTX A6000
+#
+#                                                              out-of-place                       in-place
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)             (us)  (GB/s)  (GB/s)        
+     2097152        262144     float    none      -1    51.80   40.48   20.24       0                                
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 20.2418 
+#
+# Collective test concluded: all_gather_perf
+#
+

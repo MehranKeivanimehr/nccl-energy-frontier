@@ -1,0 +1,16 @@
+{
+ "frozen_utc": "2026-10-09T18:59:36Z",
+ "method": "v2.2",
+ "purpose": "gate 3a smoke (SMOKE; not used for inference)",
+ "entries_sha256": "ea12ff01a0791dac4d19c478fe4f94ddf862a03acc1172e4f15e7f7cb484921f",
+ "entries": {
+  "P2_NVL__all_gather__auto__2097152": {
+   "R": 382413,
+   "w": 3825,
+   "count": 262144,
+   "t_gpu_cal_s": 5.229958726908331e-05,
+   "target_region_s": 20.0,
+   "source": "median t_gpu of 12 accepted historical units (confirmatory)"
+  }
+ }
+}

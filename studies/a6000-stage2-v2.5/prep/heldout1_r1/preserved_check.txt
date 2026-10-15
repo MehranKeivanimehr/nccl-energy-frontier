@@ -1,0 +1,8 @@
+OK   387 pre-heldout-1 baseline files (acquisition, helpers, tests, configs): []
+OK   16 preserved files from the r1 pre-edit snapshot (Freeze-S/C, configs, calibration analysis, heldout-1 packet/ledger/builder, evidence ZIPs): []
+OK   live verify_freeze Freeze-S (22cfae14ba04fa1f): []
+OK   live verify_freeze Freeze-C (45b127f3f29a65f6): []
+OK   calibration raw session files: 305 files vs prep/calib1/run/session_files.sha256: []
+OK   smoke raw session files: 45 files vs prep/smoke1/run/session_files.sha256: []
+OK   prep/heldout1 equals the delivered heldout-1 manifest: []
+ALL PRESERVED

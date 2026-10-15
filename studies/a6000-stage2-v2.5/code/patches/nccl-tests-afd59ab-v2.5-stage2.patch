@@ -1,0 +1,317 @@
+diff --git a/src/common.cu b/src/common.cu
+--- a/src/common.cu
++++ b/src/common.cu
+@@ -109,6 +109,203 @@
+ 
+ // ===== nccl-energy-frontier methodology-v2 region instrumentation (end) =====
+ 
++// ===== nccl-energy-frontier Stage 2 (v2.5) additions (begin) =====
++// Active only when NCCLE_STAGE2_MODE is set (and NCCLE_REGION_FILE, which it requires). Without any NCCLE_STAGE2 /
++// NCCLE_S2 / pause / dose / post-probe variable the binary behaves exactly as v2.1: no extra counter read, no pause,
++// no extra output. Every invalid or inconsistent Stage 2 request is refused (testInternalError) before any GPU work.
++//   NCCLE_STAGE2_MODE    "calibration" | "heldout"
++//   NCCLE_S2_FILE        required: one JSON line per region (schema nccle-s2-v1); the v2.1 region record is unchanged
++//   NCCLE_START_PAUSE_NS required: requested start pause d_req (M4c), integer in [0, 100000000)
++//   NCCLE_DOSE_PERIOD_MS optional, calibration only: 100 or 500 -> in-region counter reads at that period (M4b)
++//   NCCLE_POST_PROBE     optional, calibration only: "1" -> bounded probe after the post read (M4d); "0" = off
++// Requires one GPU per thread (-g 1) so per-thread times are per-GPU times. All times are CLOCK_MONOTONIC ns.
++// v2.5: the synchronized GPU-work end (after the end-of-loop stream sync and barrier) is recorded BEFORE the dose
++// poller is stopped and joined; whether a dose read was in flight at the stop request is logged.
++#include <atomic>
++#include <chrono>
++#include <errno.h>
++#define NCCLE_DOSE_MAX 1024
++#define NCCLE_PP_MAX 2048
++struct NccleS2Cfg {
++  int active = 0, calibration = 0, doseMs = 0, postProbe = 0; long long pauseNs = -1;
++  const char* file = nullptr; const char* err = nullptr;
++};
++struct NccleDoseRead { long long k, req, ta, tb; unsigned long long v; int rc; };
++struct NccleProbeRead { long long ta, tb; unsigned long long v; int rc; };
++struct NccleS2Gpu {
++  std::atomic<unsigned long long> nReads;           // every cumulative-counter call on this GPU, from any thread
++  unsigned long long ePrep0; int rcPrep0; long long tPrep0a, tPrep0b;   // C_prep0 (M4a i), before the warm-up
++  long long tPrepStart, tPrepEnd;                   // around the warm-up; end after its stream synchronization (M4a ii)
++  long long tProbeStart, tProbeEnd; unsigned long long probeReads0, probeReads;  // v2.1 probe span and read count (M4a iii)
++  long long tPauseA, tPauseB;                       // requested pause, actual bracket (M4c)
++  std::thread* doseThread; std::mutex doseMu; std::condition_variable doseCv; bool doseStop, doseReading;
++  long long tWorkEndNs; int doseInflightAtStop;     // v2.5: work end before the poller stop; read in flight at stop
++  long long doseBase, doseStopReq, doseJoined; int doseN, doseSkipped, doseOverflow, doseStartFailed;
++  NccleDoseRead dose[NCCLE_DOSE_MAX];               // M4b raw reads: (k, requested, before, after, value, status)
++  long long ppStart, ppEnd; int ppN, ppEdges, ppOverflow;
++  NccleProbeRead pp[NCCLE_PP_MAX];                  // M4d raw reads: (before, after, value, status)
++};
++static NccleS2Cfg nccleS2;
++static std::once_flag nccleS2Once, nccleS2ShimOnce;
++static NccleS2Gpu nccleS2Gpu[NCCLE_MAX_GPUS];
++static int (*nccleEnergyRaw)(nccleNvmlDevice_t, unsigned long long*) = nullptr;
++
++static long long nccleS2ParseInt(const char* s, int* ok) {
++  char* end = nullptr; errno = 0;
++  long long v = strtoll(s, &end, 10);
++  *ok = (s[0] != '\0' && end != nullptr && *end == '\0' && errno == 0);
++  return v;
++}
++static void nccleS2Parse() {
++  NccleS2Cfg& C = nccleS2;
++  const char* mode = getenv("NCCLE_STAGE2_MODE");
++  const char* file = getenv("NCCLE_S2_FILE");
++  const char* pause = getenv("NCCLE_START_PAUSE_NS");
++  const char* dose = getenv("NCCLE_DOSE_PERIOD_MS");
++  const char* pp = getenv("NCCLE_POST_PROBE");
++  int ok = 0;
++  if (mode == nullptr) {
++    if (file || pause || dose || pp) C.err = "Stage 2 variables set without NCCLE_STAGE2_MODE";
++    return;                                         // v2.1 behaviour
++  }
++  C.active = 1;
++  if (strcmp(mode, "calibration") == 0) C.calibration = 1;
++  else if (strcmp(mode, "heldout") != 0) { C.err = "NCCLE_STAGE2_MODE must be calibration or heldout"; return; }
++  if (getenv("NCCLE_REGION_FILE") == nullptr) { C.err = "NCCLE_STAGE2_MODE requires NCCLE_REGION_FILE"; return; }
++  if (file == nullptr || file[0] == '\0') { C.err = "NCCLE_S2_FILE is required"; return; }
++  C.file = file;
++  if (pause == nullptr) { C.err = "NCCLE_START_PAUSE_NS is required"; return; }
++  C.pauseNs = nccleS2ParseInt(pause, &ok);
++  if (!ok || C.pauseNs < 0 || C.pauseNs >= 100000000LL) { C.err = "NCCLE_START_PAUSE_NS must be an integer in [0, 100000000)"; return; }
++  if (dose != nullptr) {
++    if (!C.calibration) { C.err = "NCCLE_DOSE_PERIOD_MS is refused outside calibration"; return; }
++    long long v = nccleS2ParseInt(dose, &ok);
++    if (!ok || (v != 100 && v != 500)) { C.err = "NCCLE_DOSE_PERIOD_MS must be 100 or 500"; return; }
++    C.doseMs = (int)v;
++  }
++  if (pp != nullptr) {
++    if (strcmp(pp, "0") == 0) C.postProbe = 0;
++    else if (strcmp(pp, "1") == 0) {
++      if (!C.calibration) { C.err = "NCCLE_POST_PROBE is refused outside calibration"; return; }
++      C.postProbe = 1;
++    } else { C.err = "NCCLE_POST_PROBE must be 0 or 1"; return; }
++  }
++}
++// Counting wrapper around the counter read (installed once, Stage 2 only): the result is the unmodified NVML result.
++static int nccleS2EnergyCounted(nccleNvmlDevice_t h, unsigned long long* e) {
++  for (int i = 0; i < NCCLE_MAX_GPUS; i++)
++    if (nccleGpu[i].set && nccleGpu[i].hRc == 0 && nccleGpu[i].h == h) { nccleS2Gpu[i].nReads.fetch_add(1); break; }
++  return nccleEnergyRaw(h, e);
++}
++static void nccleS2InstallShim() {
++  if (nccleNvml.energy != nullptr && nccleNvml.energy != nccleS2EnergyCounted) {
++    nccleEnergyRaw = nccleNvml.energy; nccleNvml.energy = nccleS2EnergyCounted;
++  }
++}
++static void nccleS2Reset(int idx) {
++  NccleS2Gpu& S = nccleS2Gpu[idx];
++  S.nReads.store(0);
++  S.ePrep0 = 0; S.rcPrep0 = -1; S.tPrep0a = S.tPrep0b = S.tPrepStart = S.tPrepEnd = -1;
++  S.tProbeStart = S.tProbeEnd = -1; S.probeReads0 = S.probeReads = 0; S.tPauseA = S.tPauseB = -1;
++  S.doseThread = nullptr; S.doseStop = false; S.doseReading = false; S.doseBase = S.doseStopReq = S.doseJoined = -1;
++  S.tWorkEndNs = -1; S.doseInflightAtStop = 0;
++  S.doseN = S.doseSkipped = S.doseOverflow = S.doseStartFailed = 0;
++  S.ppStart = S.ppEnd = -1; S.ppN = S.ppEdges = S.ppOverflow = 0;
++}
++// Absolute CLOCK_MONOTONIC sleep, resumed after signal interruptions.
++static long long nccleS2SleepUntil(long long tNs) {
++  struct timespec ts; ts.tv_sec = tNs / 1000000000LL; ts.tv_nsec = tNs % 1000000000LL;
++  while (clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, &ts, nullptr) == EINTR) {}
++  return nccleNowNs();
++}
++// M4b dose poller: read k at doseBase + k * period (k = 1, 2, ...) until stopped; late reads never burst (missed
++// request times are counted in doseSkipped, never made up).
++static void nccleS2DoseLoop(int idx) {
++  NccleGpu& G = nccleGpu[idx]; NccleS2Gpu& S = nccleS2Gpu[idx];
++  const long long P = (long long)nccleS2.doseMs * 1000000LL;
++  long long k = 1;
++  std::unique_lock<std::mutex> lk(S.doseMu);
++  while (!S.doseStop) {
++    const long long tReq = S.doseBase + k * P;
++    const long long now = nccleNowNs();
++    if (tReq > now && S.doseCv.wait_for(lk, std::chrono::nanoseconds(tReq - now), [&S] { return S.doseStop; })) break;
++    if (S.doseStop) break;
++    if (S.doseN >= NCCLE_DOSE_MAX) { S.doseOverflow = 1; break; }
++    NccleDoseRead& r = S.dose[S.doseN];
++    r.k = k; r.req = tReq;
++    S.doseReading = true;
++    lk.unlock();
++    r.ta = nccleNowNs();
++    if (G.hRc == 0) r.rc = nccleNvml.energy(G.h, &r.v); else { r.rc = 1000 + G.hRc; r.v = 0; }
++    r.tb = nccleNowNs();
++    lk.lock();
++    S.doseReading = false;
++    S.doseN++;
++    const long long kNext = (nccleNowNs() - S.doseBase) / P + 1;
++    if (kNext > k + 1) { S.doseSkipped += (int)(kNext - k - 1); k = kNext; } else { k++; }
++  }
++}
++static void nccleS2DoseStart(int idx) {
++  NccleS2Gpu& S = nccleS2Gpu[idx];
++  S.doseBase = nccleGpu[idx].t0b; S.doseStop = false;
++  try { S.doseThread = new std::thread(nccleS2DoseLoop, idx); }
++  catch (...) { S.doseThread = nullptr; S.doseStartFailed = 1; }   // recorded; the dose run is then invalid offline
++}
++static void nccleS2DoseStop(int idx) {
++  NccleS2Gpu& S = nccleS2Gpu[idx];
++  if (S.doseThread == nullptr) return;
++  { std::lock_guard<std::mutex> g(S.doseMu); S.doseStopReq = nccleNowNs(); S.doseInflightAtStop = S.doseReading ? 1 : 0;
++    S.doseStop = true; }
++  S.doseCv.notify_all();
++  S.doseThread->join(); delete S.doseThread; S.doseThread = nullptr;
++  S.doseJoined = nccleNowNs();
++}
++// M4d post-region probe (after the post read; outside C0..Cpost): same stopping rule as the v2.1 probe (4 value
++// changes or 4 nominal periods), bounded by NCCLE_PP_MAX reads, every read kept raw.
++static void nccleS2PostProbe(int idx) {
++  NccleGpu& G = nccleGpu[idx]; NccleS2Gpu& S = nccleS2Gpu[idx];
++  S.ppN = S.ppEdges = S.ppOverflow = 0; S.ppStart = nccleNowNs();
++  if (G.hRc == 0) {
++    const long long tStop = S.ppStart + 4 * ncclePeriodNs();
++    unsigned long long prev = 0; bool first = true;
++    while (nccleNowNs() < tStop && S.ppEdges < 4) {
++      if (S.ppN >= NCCLE_PP_MAX) { S.ppOverflow = 1; break; }
++      NccleProbeRead& r = S.pp[S.ppN];
++      r.ta = nccleNowNs(); r.rc = nccleNvml.energy(G.h, &r.v); r.tb = nccleNowNs();
++      S.ppN++;
++      if (r.rc != 0) break;
++      if (!first && r.v != prev) S.ppEdges++;
++      first = false; prev = r.v;
++    }
++  }
++  S.ppEnd = nccleNowNs();
++}
++static void nccleS2WriteGpu(FILE* f, int g) {
++  NccleGpu& G = nccleGpu[g]; NccleS2Gpu& S = nccleS2Gpu[g];
++  fprintf(f, "%s{\"rank\":%d,\"pci\":\"%s\",\"n_counter_reads\":%llu,\"e_prep0_mJ\":%llu,\"rc_prep0\":%d,"
++             "\"t_prep0_a_ns\":%lld,\"t_prep0_b_ns\":%lld,\"t_prep_start_ns\":%lld,\"t_prep_end_ns\":%lld,"
++             "\"t_probe_start_ns\":%lld,\"t_probe_end_ns\":%lld,\"probe_reads\":%llu,\"t_pause_a_ns\":%lld,\"t_pause_b_ns\":%lld,"
++             "\"t_work_end_ns\":%lld,"
++             "\"dose\":{\"base_ns\":%lld,\"stop_req_ns\":%lld,\"joined_ns\":%lld,\"n\":%d,\"skipped\":%d,\"overflow\":%d,"
++             "\"start_failed\":%d,\"inflight_at_stop\":%d,\"reads\":[",
++          g ? "," : "", g, G.pci, (unsigned long long)S.nReads.load(), S.ePrep0, S.rcPrep0, S.tPrep0a, S.tPrep0b,
++          S.tPrepStart, S.tPrepEnd, S.tProbeStart, S.tProbeEnd, S.probeReads, S.tPauseA, S.tPauseB, S.tWorkEndNs,
++          S.doseBase, S.doseStopReq, S.doseJoined, S.doseN, S.doseSkipped, S.doseOverflow, S.doseStartFailed,
++          S.doseInflightAtStop);
++  for (int k = 0; k < S.doseN; k++) {
++    const NccleDoseRead& r = S.dose[k];
++    fprintf(f, "%s[%lld,%lld,%lld,%lld,%llu,%d]", k ? "," : "", r.k, r.req, r.ta, r.tb, r.v, r.rc);
++  }
++  fprintf(f, "]},\"post_probe\":{\"start_ns\":%lld,\"end_ns\":%lld,\"n\":%d,\"edges\":%d,\"overflow\":%d,\"reads\":[",
++          S.ppStart, S.ppEnd, S.ppN, S.ppEdges, S.ppOverflow);
++  for (int k = 0; k < S.ppN; k++) {
++    const NccleProbeRead& r = S.pp[k];
++    fprintf(f, "%s[%lld,%lld,%llu,%d]", k ? "," : "", r.ta, r.tb, r.v, r.rc);
++  }
++  fprintf(f, "]}}");
++}
++// ===== nccl-energy-frontier Stage 2 (v2.5) additions (end) =====
++
+ #if defined(NCCL_OS_LINUX)
+ #pragma weak ncclCommWindowRegister
+ #pragma weak ncclCommWindowDeregister
+@@ -813,11 +1010,36 @@
+     TESTCHECK(args->collTest->initData(args, type, op, root, 99, in_place));
+   }
+ 
++  // ---- NCCLE Stage 2 (v2.4): refuse invalid requests; C_prep0 and preparation start (M4a) ----
++  std::call_once(nccleS2Once, nccleS2Parse);
++  if (nccleS2.err != nullptr) { fprintf(stderr, "NCCLE: %s\n", nccleS2.err); return testInternalError; }
++  if (nccleS2.active) {
++    if (cudaGraphLaunches >= 1 || blocking_coll != 0 || per_iter_timing || args->nProcs != 1 || args->nGpus != 1 ||
++        args->nThreads * args->nGpus > NCCLE_MAX_GPUS) {
++      fprintf(stderr, "NCCLE: Stage 2 requires -G 0 -z 0 -I 0, a single process, -g 1 and <= %d GPUs\n", NCCLE_MAX_GPUS);
++      return testInternalError;
++    }
++    std::call_once(nccleOnce, nccleLoad);
++    for (int i = 0; i < args->nGpus; i++) nccleBindGpu(args->thread*args->nGpus + i, args->gpus[i]);
++    std::call_once(nccleS2ShimOnce, nccleS2InstallShim);
++    TESTCHECK(testStreamSynchronize(args->nGpus, args->streams, args->comms));
++    Barrier(args);
++    for (int i = 0; i < args->nGpus; i++) {
++      const int idx = args->thread*args->nGpus + i;
++      NccleS2Gpu& S = nccleS2Gpu[idx];
++      nccleS2Reset(idx);
++      nccleRead(nccleGpu[idx], &S.ePrep0, &S.rcPrep0, &S.tPrep0a, &S.tPrep0b);
++      S.tPrepStart = nccleNowNs();
++    }
++  }
++
+   // Warm-up immediately after data initialization
+   for (int iter = 0; iter < warmup_iters; iter++) {
+     TESTCHECK(startColl(args, type, op, root, in_place, iter));
+   }
+   TESTCHECK(completeColl(args));
++  if (nccleS2.active)
++    for (int i = 0; i < args->nGpus; i++) nccleS2Gpu[args->thread*args->nGpus + i].tPrepEnd = nccleNowNs();
+ 
+   Barrier(args);
+ 
+@@ -834,8 +1056,24 @@
+     for (int i = 0; i < args->nGpus; i++) nccleBindGpu(args->thread*args->nGpus + i, args->gpus[i]);
+     TESTCHECK(testStreamSynchronize(args->nGpus, args->streams, args->comms));
+     Barrier(args);
++    if (nccleS2.active)
++      for (int i = 0; i < args->nGpus; i++) {
++        NccleS2Gpu& S = nccleS2Gpu[args->thread*args->nGpus + i]; S.probeReads0 = S.nReads.load(); S.tProbeStart = nccleNowNs();
++      }
+     for (int i = 0; i < args->nGpus; i++) nccleProbePhase(nccleGpu[args->thread*args->nGpus + i]);
++    if (nccleS2.active)
++      for (int i = 0; i < args->nGpus; i++) {
++        NccleS2Gpu& S = nccleS2Gpu[args->thread*args->nGpus + i]; S.tProbeEnd = nccleNowNs(); S.probeReads = S.nReads.load() - S.probeReads0;
++      }
+     Barrier(args);
++    if (nccleS2.active) {   // M4c: requested start pause, GPU idle, then re-synchronize before C0
++      const long long tA = nccleNowNs();
++      const long long tB = nccleS2.pauseNs > 0 ? nccleS2SleepUntil(tA + nccleS2.pauseNs) : nccleNowNs();
++      for (int i = 0; i < args->nGpus; i++) {
++        NccleS2Gpu& S = nccleS2Gpu[args->thread*args->nGpus + i]; S.tPauseA = tA; S.tPauseB = tB;
++      }
++      Barrier(args);
++    }
+     for (int i = 0; i < args->nGpus; i++) {
+       NccleGpu& G = nccleGpu[args->thread*args->nGpus + i];
+       nccleRead(G, &G.e0, &G.rc0, &G.t0a, &G.t0b);
+@@ -847,6 +1085,8 @@
+       CUDACHECK(cudaEventCreate(&nccleEvE[i]));
+       CUDACHECK(cudaEventRecord(nccleEvS[i], args->streams[i]));
+     }
++    if (nccleS2.active && nccleS2.doseMs > 0)   // M4b (calibration only): poller starts after C0 and the start event
++      for (int i = 0; i < args->nGpus; i++) nccleS2DoseStart(args->thread*args->nGpus + i);
+   }
+ 
+ #if CUDART_VERSION >= 11030
+@@ -926,6 +1166,10 @@
+   if (nccle) {
+     TESTCHECK(testStreamSynchronize(args->nGpus, args->streams, args->comms));
+     Barrier(args);
++    if (nccleS2.active)   // v2.5: synchronized GPU-work end, recorded before the dose poller is stopped and joined
++      for (int i = 0; i < args->nGpus; i++) nccleS2Gpu[args->thread*args->nGpus + i].tWorkEndNs = nccleNowNs();
++    if (nccleS2.active && nccleS2.doseMs > 0)   // M4b: stopped and joined after the work end, before the v2.1 loop-end time
++      for (int i = 0; i < args->nGpus; i++) nccleS2DoseStop(args->thread*args->nGpus + i);
+     {
+       const long long P = ncclePeriodNs(), guard = 2000000LL, margin = 8000000LL;
+       for (int i = 0; i < args->nGpus; i++) {
+@@ -943,6 +1187,7 @@
+         // one more commit: energy from the end read to the next commit, at idle-with-context power
+         if (G.tCommitNs >= 0) nccleSleepUntil(G.tCommitNs + P + margin); else nccleSleepUntil(G.t1b + P + margin);
+         nccleRead(G, &G.ePost, &G.rcPost, &G.tPostA, &G.tPostB);
++        if (nccleS2.active && nccleS2.postProbe) nccleS2PostProbe(args->thread*args->nGpus + i);   // M4d (calibration only)
+       }
+     }
+     Barrier(args);
+@@ -1008,6 +1253,19 @@
+     }
+     fprintf(f, "]}\n");
+     fflush(f); fsync(fileno(f)); fclose(f);
++    if (nccleS2.active) {   // Stage 2 record, separate file; the v2.1 region record above is unchanged
++      FILE* s2 = fopen(nccleS2.file, "a");
++      if (s2 == nullptr) { fprintf(stderr, "NCCLE: cannot open Stage 2 file\n"); return testInternalError; }
++      fprintf(s2, "{\"schema\":\"nccle-s2-v1\",\"pid\":%d,\"mode\":\"%s\",\"coll\":\"%s\",\"size_bytes\":%zu,\"R\":%lld,"
++                  "\"warmup_iters\":%d,\"pause_req_ns\":%lld,\"dose_period_ms\":%d,\"post_probe\":%d,\"commit_period_ns\":%lld,"
++                  "\"gpus\":[",
++              (int)getpid(), nccleS2.calibration ? "calibration" : "heldout", args->collTest->name,
++              std::max(args->sendBytes, args->expectedBytes), (long long)iters*agg_iters, warmup_iters, nccleS2.pauseNs,
++              nccleS2.doseMs, nccleS2.postProbe, ncclePeriodNs());
++      for (int g = 0; g < nTot; g++) nccleS2WriteGpu(s2, g);
++      fprintf(s2, "]}\n");
++      fflush(s2); fsync(fileno(s2)); fclose(s2);
++    }
+   }
+ 
+   int64_t wrongElts = 0;

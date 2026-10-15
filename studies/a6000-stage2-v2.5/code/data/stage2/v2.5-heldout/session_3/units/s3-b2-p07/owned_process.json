@@ -1,0 +1,21 @@
+{
+ "pid": 1320169,
+ "rc": 0,
+ "timed_out": false,
+ "stop_reason": null,
+ "exception": null,
+ "cleanup": {
+  "errors": [],
+  "sigterm": false,
+  "sigkill": false,
+  "survivors": [],
+  "tracked": 1,
+  "ok": true
+ },
+ "wall_s": 26.945860521984287,
+ "subreaper": true,
+ "signals_during_cleanup": [],
+ "watchdog_trip": null,
+ "watchdog_trip_mono": null,
+ "written_utc": "2026-10-14T03:00:51Z"
+}
